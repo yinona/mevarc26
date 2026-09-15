@@ -65,3 +65,62 @@ Figure numbers refer to the 12-page submitted PDF; source labels refer to
 | `rfx/docs/drawings/Dis_107_rev0.pdf` | Electrode drawing | Primary geometry document for RFX sample; confirms AISI 304 in the title block according to `STATUS.md`. |
 | `rfx/docs/Electric_field_distributions.pptx` and `rfx/data/field-simulation/*.txt` | RFX field material | Geometry/simulation source. Confirm which surface vector and normalization correspond to the tested cathodes before plotting. |
 
+## Prior presentation (direct predecessor)
+
+| File | Role | Evidence status |
+|---|---|---|
+| `/Users/yinona/Library/CloudStorage/GoogleDrive-Yinon.Ash@mail.huji.ac.il/My Drive/Clic_huji_microscopy/Presentations/mevarc25_huji_v2.pdf` | MeVArc 2025 HUJI talk, "Observing plastic evolution related to high-field conditioning" (31 slides). | Contextual/authorial. The direct prequel: presents the MDDF model (rate-vs-field, dark-current spikes) and the local STEM/FIB microscopy (denuded zones, top ~100 nm, 300 K and 30 K), and closes asking for "other materials? more samples?". Confirms affiliations: Profatilova, Jacewicz = Uppsala; Popov = HUJI; Bjelland, Wuensch, Millar, Calatroni = CERN. Note the ~100 nm (2025) vs ~200 nm (paper) depth discrepancy. |
+| `.../Presentations/mevarc25_huji_v2.pptx` (and `_comp.pptx`, `v1.pptx`) | Editable 2025 source | Asset source. MDDF and STEM figures are embedded here; extract only with approval before reuse in the 2026 deck. |
+
+## Collected source files (sources/) — 2026-07-20
+
+Local copies in `mevarc26/sources/` (original filenames preserved).
+
+| Copied file | Original path | Identification |
+|---|---|---|
+| `Engelberg_MDDF_FieldDependent.pdf` | `../sideprojects/plast/papers/Engelberg_MDDF_FieldDependent.pdf` | Engelberg et al., PRL 120, 124801 (2018) — MDDF field-dependent breakdown model. |
+| `Field_Dependent_Conditioning_Correct_Publisher.pdf` | `../cond26/private/ref_pdfs/Field_Dependent_Conditioning_Correct_Publisher.pdf` | Engelberg et al., PRAB 22, 083501 (2019) — field-dependent conditioning. |
+| `Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | `../sideprojects/plast/papers/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | Engelberg et al., PRAB 23, 123501 (2020) — dark-current spikes / MDDF. |
+| `Jacewicz_2024_Surface_Modifications_Cu.pdf` | `../sideprojects/plast/papers/Jacewicz_2024_Surface_Modifications_Cu.pdf` | Jacewicz et al., JAP 137, 193302 (2025) — Cu surface / denuded-zone STEM. |
+| `main.pdf` | `../cond26/main.pdf` | cond26 PRAB manuscript (compiled PDF). LaTeX source: `../cond26/main.tex`; bibliography: `../cond26/refs.bib`. |
+| `mevarc25_huji_v2.pdf` | `.../Clic_huji_microscopy/Presentations/mevarc25_huji_v2.pdf` | MeVArc 2025 HUJI deck (31 slides; MDDF + STEM microscopy). |
+| `RMP_Review_Wuensch_2026.pdf` | `../sideprojects/plast/papers/RMP_Review_Wuensch_2026.pdf` | Wuensch et al., RMP 98, 025004 (2026) — conditioning review. |
+| `Nordlund and Djurabekova - 2012 - Defect model for the dependence of breakdown rate .pdf` | `../people/collaborators/ilan/Nordlund and Djurabekova - 2012 - Defect model for the dependence of breakdown rate .pdf` | Nordlund & Djurabekova, PRSTAB 15, 071002 (2012) — defect breakdown model. |
+| `Korsback_2020_arXiv_DC_Conditioning.pdf` | `../sideprojects/plast/papers/Korsback_2020_arXiv_DC_Conditioning.pdf` | Korsbäck et al. (2020) — dark-current conditioning simulation. |
+| `mevarc24_ashkenazy_v3.pdf` | `../research/microscopy/microscopy_24/mevarc24_ashkenazy_v3.pdf` | MeVArc 2024 microscopy talk (16 MB; SEM/FIB/EBSD). |
+| `mevarc2013_ashkenazy_v01.1.pdf` | `../meetings/mevarc/2013/mevarc2013_ashkenazy_v01.1.pdf` | MeVArc 2013 group talk (6.5 MB; early MDDF/conditioning). |
+| `Degiovanni_2016_PRAB_Conditioning.pdf` | https://inspirehep.net/files/65b4ebd41c8d6eca5d34c0e15ea5ff1e | Degiovanni et al., PRAB 19, 032001 (2016) — conditioning vs. RF pulses. |
+| `Mughrabi_2009_MMTB_CyclicSlip.pdf` | https://link.springer.com/content/pdf/10.1007/s11663-009-9240-4.pdf | Mughrabi, MMTB 40, 431 (2009) — cyclic slip irreversibilities / fatigue damage. |
+
+### Added by user 2026-07-20 (afternoon)
+
+| File | Identification |
+|---|---|
+| `StanzlTschegg_2010_Procedia_VHCF.pdf` (copy of `1-s2.0-S1877705810001682-main.pdf`) | Stanzl-Tschegg & Schönbauer, Procedia Eng. 2 (2010) — VHCF near-threshold fatigue. Resolves the "not found" item below. |
+| `CERN_logo.png` | Official CERN logo → installed to `figures/logo_cern.png` (replaced placeholder wordmark). |
+| `rfx_logo.jpg` | Official RFX logo → installed to `figures/logo_rfx.jpg` (title page now references the `.jpg`). |
+
+**Still a placeholder:** `figures/logo_uppsala.png` — no official Uppsala
+University logo supplied yet; swap when available.
+
+### Not found (web search + download attempts, 2026-07-20)
+
+| Sought reference | Notes |
+|---|---|
+| Stanzl-Tschegg et al., Int. J. Fatigue 29, 2050 (2007); DOI 10.1016/j.ijfatigue.2007.03.010 (manuscript citation) | Elsevier paywall; same Cloudflare block on direct PDF fetch. |
+
+Alternate manuscript paths exist but were not copied (already represented above): `../manuscripts/prl_2017/editor/main.pdf` (PRL 2018), `../manuscripts/prstab_2019/main.pdf` (PRAB 2019), `../manuscripts/eli_2020/main.pdf` (PRAB 2020), `../reports/2026_interim/images/submitted_manuscript.pdf` (earlier cond26 render).
+
+### Related presentations in `../presentations/` (listed only)
+
+| Path | Notes |
+|---|---|
+| `../presentations/clic-intro.pdf` / `clic-intro.pptx` | General CLIC introduction. |
+| `../presentations/clic_short_nor.pptx` | Short CLIC overview. |
+| `../presentations/seminar_clic_rafael.pdf` / `seminar_clic_rafael.pptx` | CLIC seminar (Rafael). |
+| `../presentations/CLIC_2007_07_05_fatigue.ppt` | CLIC fatigue (2007). |
+| `../presentations/microscopy_pres/huji_clic_ilvisit_v1.pptx` | HUJI CLIC microscopy visit deck (v1, ~8 MB). |
+| `../presentations/microscopy_pres/huji_clic_ilvisit_v2.pptx` | Same visit deck v2 (~76 MB; not copied). |
+
+Additional group decks outside `../presentations/` (not copied unless noted above): `../meetings/mevarc/2025/mevarc25_huji_v2.pdf` (duplicate of 2025 deck), `../sources/breakdown_in_rf_ww.pptx`, `../sources/mevarc_wuensch_final.pptx`, `../sources/20120929MeVArc12_UppsalaSEM.pptx`.
+
