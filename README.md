@@ -1,8 +1,10 @@
-# MeVArc 2026 — conditioning and subsurface structural memory
+# MeVArc 2026 — does conditioning leave a structural memory?
 
-LaTeX Beamer source for a 30-minute talk connecting the completed copper
-conditioning study (`cond26`) to the RFX stainless-steel project as a future
-direction.
+LaTeX Beamer source for a 30-minute talk (MeVArc 2026, Montreux, Monday
+5 October 2026, 12:00, Conditioning session). The talk connects the copper
+EBSD conditioning study (`../cond26`, PRAB under revision, arXiv:2606.19192)
+to the MDDF dislocation model and to the RFX stainless-steel programme as
+ongoing work.
 
 ## Build
 
@@ -10,27 +12,16 @@ direction.
 make
 ```
 
-Outputs:
+Outputs: `main.pdf` (16:9 slides) and `main-notes.pdf` (slides with speaker
+notes on the right). Both are tracked.
 
-- `main.pdf` — audience-facing 16:9 slides
-- `main-notes.pdf` — slides with speaker notes on the right
+## Structure
 
-The talk is review-weighted (30 min excluding questions), the sequel to the
-MeVArc 2025 HUJI talk. 22 frames total: 18 core (5 background: operational
-problem, MDDF model, 2025 Uppsala STEM, Maxwell/VHCF, last-year recap; 7 copper
-results; 6 limits/future, including two RFX slides and one optional RFX
-preliminary) plus 4 backup slides. `E_S` is delayed to a single mention in the
-interpretation. The template uses the trilingual HUJI logo and emblem branding
-(redesigned 2026-07-20).
+22 frames: 18 core (5 background, 8 copper results including the elastic-
+screening analogy, 4 limits and outlook including one stainless-steel slide,
+and the conclusion) plus 4 backup (RFX first look, RFX status table, 2025 STEM
+pair, full-size infographic). Content reflects the manuscript and the RFX
+record as of 15–28 September 2026.
 
-Scientific status statements are frozen at the project record of 13 July 2026.
-Refresh the RFX slides (15, 15b, and the backup tables) when newer acquisition
-or conditioning data arrive. See `HANDOFF.md` for the current state and next
-steps, and `QUESTIONS.md` for open decisions.
-
-## Source material
-
-- `cond26/main.tex` and its figures — copper EBSD manuscript
-- `reports/2026_interim/` — interim report and depth-resolved work plan
-- `rfx/` — project status, SEM survey, electrode geometry, and artifact review
-
+See `HANDOFF.md` for history, current state and next steps; `QUESTIONS.md`
+for open decisions; `knowledge/` for the evidence base with sources.

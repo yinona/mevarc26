@@ -78,7 +78,7 @@ Local copies in `mevarc26/sources/` (original filenames preserved).
 
 | Copied file | Original path | Identification |
 |---|---|---|
-| `Engelberg_MDDF_FieldDependent.pdf` | `../sideprojects/plast/papers/Engelberg_MDDF_FieldDependent.pdf` | Engelberg et al., PRL 120, 124801 (2018) — MDDF field-dependent breakdown model. |
+| ~~`Engelberg_MDDF_FieldDependent.pdf`~~ (removed 2026-09-28; same paper as the publisher PDF below) | `../sideprojects/plast/papers/Engelberg_MDDF_FieldDependent.pdf` | Engelberg et al. — MDDF field-dependent breakdown model. |
 | `Field_Dependent_Conditioning_Correct_Publisher.pdf` | `../cond26/private/ref_pdfs/Field_Dependent_Conditioning_Correct_Publisher.pdf` | Engelberg et al., PRAB 22, 083501 (2019) — field-dependent conditioning. |
 | `Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | `../sideprojects/plast/papers/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | Engelberg et al., PRAB 23, 123501 (2020) — dark-current spikes / MDDF. |
 | `Jacewicz_2024_Surface_Modifications_Cu.pdf` | `../sideprojects/plast/papers/Jacewicz_2024_Surface_Modifications_Cu.pdf` | Jacewicz et al., JAP 137, 193302 (2025) — Cu surface / denuded-zone STEM. |
@@ -96,12 +96,12 @@ Local copies in `mevarc26/sources/` (original filenames preserved).
 
 | File | Identification |
 |---|---|
-| `StanzlTschegg_2010_Procedia_VHCF.pdf` (copy of `1-s2.0-S1877705810001682-main.pdf`) | Stanzl-Tschegg & Schönbauer, Procedia Eng. 2 (2010) — VHCF near-threshold fatigue. Resolves the "not found" item below. |
-| `CERN_logo.png` | Official CERN logo → installed to `figures/logo_cern.png` (replaced placeholder wordmark). |
-| `rfx_logo.jpg` | Official RFX logo → installed to `figures/logo_rfx.jpg` (title page now references the `.jpg`). |
+| `StanzlTschegg_2010_Procedia_VHCF.pdf` (the duplicate `1-s2.0-S1877705810001682-main.pdf` was removed 2026-09-28) | Stanzl-Tschegg & Schönbauer, Procedia Eng. 2 (2010) — VHCF near-threshold fatigue. Resolves the "not found" item below. |
+| `CERN_logo.png` (removed from `sources/` 2026-09-28; lives as `figures/logo_cern.png`) | Official CERN logo. |
+| `rfx_logo.jpg` (removed 2026-09-28; the deck uses `figures/logo_rfx.png`) | Official RFX logo. |
 
-**Still a placeholder:** `figures/logo_uppsala.png` — no official Uppsala
-University logo supplied yet; swap when available.
+Uppsala and long-form HUJI logos were removed on 2026-09-28: the July template
+redesign credits partners on the title and RFX slides only.
 
 ### Not found (web search + download attempts, 2026-07-20)
 

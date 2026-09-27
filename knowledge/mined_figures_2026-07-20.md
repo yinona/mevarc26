@@ -4,6 +4,10 @@ Brief pass over `sources/mevarc24_ashkenazy_v3.pdf` (31 pp) and
 `sources/mevarc2013_ashkenazy_v01.1.pdf` (23 pp). Thumbnails at 60 DPI;
 selected pages rendered at 200 DPI into `figures/mined/`.
 
+**2026-09-28:** the `figures/mined/*.png` renders (9.6 MB, never used in the
+deck) were deleted. Re-render any page listed below from the source deck in
+`sources/` with PyMuPDF: `python3 -c "import fitz; fitz.open('sources/X.pdf')[N-1].get_pixmap(dpi=200).save('figures/mined/X_pN.png')"`.
+
 **Already in `figures/` (not re-mined):** MDDF critical-transition, rate-vs-field,
 nucleation-rate plots; STEM denuded-zone / 300 K FE–REF panels; cond26 EBSD maps.
 

@@ -3,14 +3,12 @@
 Resolved on 2026-09-28 and removed: RFX status (refreshed to 15 Sep 2026),
 manuscript status (arXiv:2606.19192 verified live; PRAB minor revision
 ZT10260 implemented 27 Sep, resubmission pending), slide 15b (moved to
-backup). Mark a choice with `x` or answer inline; each has a recommended
-default.
+backup), abstract (in the Indico programme, Mon 5 Oct 12:00; deck title and
+subtitle aligned to the registered title). Mark a choice with `x` or answer
+inline; each has a recommended default.
 
 ## Needs your action
 
-3. **Abstract submission.** Was `abstract_mevarc26.md` submitted to MeVArc?
-   Does its title still match the deck?
-   [ ] submitted, matches  [ ] needs action: ____
 14. **PRAB resubmission.** `\condref` says "PRAB, under revision". Resubmit
    at authors.aps.org (cond26 `TODO.md` item 5); if accepted before 5 Oct,
    change the string to "accepted"/"in press".

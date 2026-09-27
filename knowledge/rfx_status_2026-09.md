@@ -46,3 +46,20 @@ We cannot claim a stainless-steel field effect: the July apex-versus-side contra
 - L590 “Outstanding: full conditioning report; numerical E(θ); alloy certificate; electropolishing protocol” → report and E(θ) arrived 21 Jul; 304L confirmed, certificate unrecoverable; EP partly known (40 °C, 4–8 min, Ricerca Chimica).
 - L591 “Needed: quantitative EBSD quality metrics and raw patterns” → metrics exist; five-map .ang in (14 Sep); no .up2 (15 Sep); wide-class .ang still open.
 - L572 “RFX status 13 Jul 2026” (backup SEM source line) → same refresh as L529.
+
+## Addendum 2026-09-28 — cross-check against ../rfx/HANDOFF.md and NEEDED.md (both 15 Sep 2026)
+
+Corrections applied to the deck:
+- "two matched references" → "two unexposed controls": XRD splits the pairs (δ-ferrite 1.3/2.3 wt% in #1/#2 vs <0.2 in #3/#4; Δa = +0.004 Å), replicated on interior cut faces, so Ref-vs-FE is not a clean field comparison; the clean comparison is apex vs side within one electrode (HANDOFF.md:41–47, 225–227).
+- "five per-pixel maps" → "per-pixel data for five narrow-grain maps"; 26 maps already have per-pixel LAM (HANDOFF.md:52–53, 119–123).
+- "matched EDS overlayer checks" → the live ask is matrix Cr/Ni (and δ) EDS at ≳10 µm on existing sections (NEEDED.md:13–17, 87–97).
+
+Next steps recorded in rfx (not yet acted on):
+- Ask Inna for the whole scan folders (.osc) of the seven wide-class apex maps; do not ask for .up2 (HANDOFF.md:287–295, 318–327).
+- Then: paired apex/side difference-in-differences per electrode, reference wide maps as the null (HANDOFF.md:338–344).
+- Nicola's firing/bake question for #3/#4 (heated above ~800 °C?) is drafted but unsent (HANDOFF.md:297–301; NEEDED.md:256–257).
+- A second #1 side map at h = 2–3 mm closes the 2×2 (NEEDED.md:214–216); mechanical-back XRD .xy patterns and polish depth outstanding (NEEDED.md:24–25).
+
+Corridor asks at MeVArc (Pilan and De Lorenzi are on the programme): thermal history of #3/#4; matrix Cr/Ni EDS on all four under identical conditions.
+
+Reusable material in ../rfx/presentation/ (Sep 2026): summary_2026-09.pdf (14 Sep, 15 slides), slide_ebsd_orientations_2026-09-14.pdf, slide_ebsd_parameters_schematic.pdf, and the s09_*.png figures (2–5 Sep).

@@ -21,8 +21,15 @@ Beamer source is generated or modified by this knowledge pass.
 - `results_conclusions.md` — principal findings and conclusions.
 - `equations_figures_numbers_citations.md` — presentation-ready evidence index.
 - `limitations_future.md` — limitations, unresolved issues, and future work.
-- `confirmation_needed.md` — claims and choices requiring Yinon's confirmation.
+- `status_refresh_2026-07-20.md` — July status answers (RFX, manuscript, one-cathode caveat).
+- `cond26_changes_2026-09.md` — manuscript July→September diff, per deck frame (2026-09-28).
+- `rfx_status_2026-09.md` — RFX record after 13 July, corrections and asks (2026-09-28).
+- `mevarc26_programme.md` — talk slot and the neighbouring MeVArc 2026 talks cross-referenced in the deck.
+- `mevarc25_assets.md`, `mined_figures_2026-07-20.md` — reusable figures from the 2013/2024/2025 decks.
 - `style_inventory.md` — reusable presentation style material in other projects.
 
-The proposed talk structure is in `../presentation_map.md`.
+The proposed talk structure is in `../presentation_map.md` (historical). The
+July questionnaire `confirmation_needed.md` was retired on 2026-09-28: every
+item is either a decision recorded in `../HANDOFF.md` or an open item in
+`../QUESTIONS.md`.
 
