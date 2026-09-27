@@ -1,63 +1,73 @@
 # Handoff — MeVArc 2026 presentation (mevarc26)
 
-Last updated: **2026-09-15**. Prepared for resuming work on 2026-09-16.
-**The talk is at MeVArc 2026, 5–8 October, Montreux — about three weeks away.**
+Last updated: **2026-09-28**. **The talk is at MeVArc 2026, 5–8 October,
+Montreux — one week away.**
 
 ## Where things stand
 
-The deck is at final-draft quality and compiles cleanly on this machine
-(verified 2026-09-15): `main.pdf` and `main-notes.pdf`, 22 pages each.
+The deck compiles cleanly (`main.pdf` and `main-notes.pdf`, 22 pages each,
+16:9) and has been aligned with the September manuscript and the September
+RFX record. Remaining overfull boxes are all below 3 pt.
 
-- **Structure (22 frames):** 18 core + 4 backup. Part I (5): operational
-  problem, MDDF model, 2025 Uppsala STEM, Maxwell/VHCF, last-year-recap bridge.
-  Part II (7): geometry, EBSD method, how-to-read-LAM, FE-vs-REF visual,
-  three-tier ~75% result, distribution tail, MDDF-confirmation payoff.
-  Part III (6): established-vs-open + cooperation call, depth+material,
-  stainless-steel test, optional RFX preliminary (15b, skippable), conclusion
-  with 2025 bookend. Backups: RFX SEM survey, RFX status table, 2025 STEM pair,
-  copper infographic.
-- **All content decisions are applied:** `E_S` delayed to one line on the
-  payoff slide + conclusion; MDDF and Uppsala STEM prior work strengthened;
-  RFX limited to two main-path slides (+ optional 15b); 2025 figures reused;
-  ~200 nm denuded-zone wording; AI-tell text pass done (2026-07-20).
-- **Template:** redesigned 2026-07-20 evening (Yinon, other computer):
-  trilingual HUJI logo + Nano on title, HUJI emblem on content slides, compact
-  footer, RFX credited on the future-directions slide only.
-- **Git:** everything through the template redesign is in commit `ea22740`
-  (synced with GitHub `origin/main`). Work after it (knowledge refreshes,
-  answered questions, abstract draft, mined figures, `sources/` papers, this
-  handoff) was committed and pushed on 2026-09-15 as the resume baseline.
+- **Structure (22 frames):** 18 core + 4 backup.
+  Part I (5): operational problem, MDDF model, 2025 Uppsala STEM (now labelled
+  hard, as-machined Cu), Maxwell/VHCF with a pulse-train sketch, recap bridge.
+  Part II (8): geometry (heat-treated OFE Cu), EBSD method (information depth
+  a few tens of nm), how-to-read-LAM, FE-vs-REF visual, three-tier ~75%
+  result, distribution tail, MDDF-confirmation payoff, **new elastic-screening
+  analogy slide (14)**.
+  Part III (4): established-vs-open + cooperation call, depth+material (with
+  thumbnails), stainless-steel test with a one-line Sep-2026 status,
+  conclusion with 2025 bookend.
+  Backups: RFX first look (the former optional 15b, refreshed), RFX status
+  table (15 Sep 2026), 2025 STEM pair, copper infographic (new Sep-27 version).
+- **cond26 manuscript alignment (2026-09-28):** headline numbers unchanged
+  (~75%, ~1.2° vs ~0.68°, eightfold tail, ~200 nm TEM zone). Changed and now
+  reflected in the deck: screening length is `ℓ_D ≈ 25 nm` (the 200 nm layer
+  is ~8 ℓ_D; thickness not predicted), not ~100 nm; EBSD information depth is a
+  few tens of nm (3 µm step is lateral only); the STEM depletion was in hard
+  Cu, the EBSD build-up in heat-treated Cu ("one mechanism, two starting
+  populations"); `infographic.pdf` replaced; three new manuscript references
+  (Lemaître 2021, Livne 2023, Chen 2011). `\condref` now reads "PRAB, under
+  revision; arXiv:2606.19192" — the arXiv ID was verified live on 2026-09-28
+  (title and five authors match). Details: `knowledge/cond26_changes_2026-09.md`.
+- **RFX status (record through 15 Sep 2026):** #3-25 ran 90 h and #4-25 73 h
+  of continuous DC at 59–61 MV/m peak with no full breakdowns; #1-25, #2-25,
+  #3-25 give indexable EBSD (97–99.5%), #4-25 still does not and will not be
+  repolished; the July apex-vs-side contrast reproduced on the never-installed
+  #2-25, so no stainless-steel field effect is claimed. Alloy confirmed 304L.
+  Details: `knowledge/rfx_status_2026-09.md`.
+- **Review pass (2026-09-28):** two independent style reviews merged;
+  uncontroversial items applied (slashes, standalone "this", US spelling,
+  siunitx units, "no full breakdowns", 59–61 MV/m, slide-14 claim strength
+  corrected to "dislocations screen the *internal* stress of a depleted
+  layer"). Judgement calls are in `QUESTIONS.md` items 7–15.
+- **Git:** all work through the review pass is committed and pushed to
+  GitHub `origin/main` in phase-sized commits (Phase 0 rules, cond26
+  alignment, RFX refresh, new slide, visual pass, review fixes).
+- **Toolchain note:** poppler (`pdfinfo`, `pdftoppm`) is not installed on
+  this machine; PyMuPDF (`python3 -c "import fitz"`) was used for page counts
+  and slide rendering.
 
-## Timeline check (done 2026-09-15)
+## Priority list (2026-09-28 → talk week)
 
-- Deck edits: none since 2026-07-20 17:37 (commit `ea22740`).
-- Post-July-20 additions found: `presentation_map.pdf` (Jul 21),
-  `abstract_mevarc26.md` (Jul 29), file touches through Aug 6 (likely Drive
-  sync). No content in the repo is dated after 2026-07-20.
-
-## Priority list for tomorrow (2026-09-16)
-
-1. **Refresh RFX status — most stale item.** Slides 15/15b and both RFX backup
-   slides reflect the record of **13 July 2026** ("#2-25/#3-25 EBSD planned").
-   Two months have passed: check Inna's emails / `../rfx/STATUS.md` for the
-   14 Jul acquisitions and anything later; update or drop slide 15b
-   accordingly. If field-exposed samples are still unindexable, that itself is
-   worth one line on slide 15.
-2. **Verify the manuscript citation.** Slides cite "submitted to PRAB;
-   arXiv:2606.19192" (`\condref`, `main.tex` line 76). Confirm the arXiv ID is
-   live and correct, and check for PRAB referee reports since 23 June — a
-   verdict would change the source lines and possibly the novelty wording.
-3. **Abstract:** `abstract_mevarc26.md` (drafted ~Jul 29). Confirm it was
-   actually submitted to the conference; align its title with the deck title if
-   either changed.
-4. **Timing rehearsal.** 18 core slides in 30 min is tight. Removal order if
-   long: 15b (RFX preliminary, marked skippable) → 5b (recap bridge) → merge
-   slides 7+8 (EBSD method + LAM reading). The optional Sigma-3/grain-skeleton
-   slide was left OUT; assets are ready (`figures/full_range_overlay.pdf`, IPF
-   maps) if you decide to add it.
-5. **Final polish:** check logo rendering on the title slide, footer venue
-   text, and run one full read of speaker notes (they were deliberately left in
-   spoken register).
+1. **Timing rehearsal.** 18 core slides in 30 min. Cut order if long (both
+   reviewers agreed): drop 6 (recap bridge, ~60 s) → move 14 (elastic
+   screening) to backup (~100 s) → merge 9 into 10 (LAM how-to, ~50 s) →
+   merge 15 into 16 or fold the slide-12 tail box onto 11 (~50–60 s). Total
+   ≈ 4.5 min, which is the 25-min fallback.
+2. **Manuscript status before the talk.** PRAB minor revision (ZT10260) was
+   implemented on 2026-09-27; the resubmission is Yinon's action. If a verdict
+   lands before 5 Oct, change `\condref` (`main.tex` ~line 116) to "accepted"
+   or "in press".
+3. **Decide the QUESTIONS.md items 7–10** (claim verb "confirms" vs "appears
+   to"; E_S on the conclusion slide; periphery "~0 MV/m" legend in the
+   manuscript figures; infographic legibility on slide 18). Each is a
+   five-minute edit once decided.
+4. **Abstract:** confirm `abstract_mevarc26.md` was submitted and that its
+   title matches the deck (QUESTIONS.md item 3).
+5. **Final read of speaker notes** in `main-notes.pdf`; check the title-slide
+   logos and the footer once on the conference laptop.
 
 ## Build
 
@@ -71,16 +81,22 @@ latexmk -pdf -jobname=main-notes -usepretex='\def\shownotes{}' -interaction=nons
 ## Key files
 
 - `main.tex` — the deck (single file, self-contained preamble).
+- `knowledge/` — evidence base with source citations.
+  `cond26_changes_2026-09.md` (manuscript July→September diff, per deck
+  frame) and `rfx_status_2026-09.md` (RFX record after 13 July) are the
+  September refreshes; `status_refresh_2026-07-20.md` is the July one.
+- `.cursor/rules/` — `general-english-writing.mdc`,
+  `physics-research-writing.mdc` (copied from aihome on 2026-09-28).
 - `presentation_map.md` — approved plan (historical; deck has evolved past it).
-- `knowledge/` — evidence base with source citations; `mevarc25_assets.md` and
-  `mined_figures_2026-07-20.md` map reusable figures from the 2013/2024/2025
-  decks; `status_refresh_2026-07-20.md` answers the July status questions.
 - `abstract_mevarc26.md` — conference abstract draft (submission unverified).
-- `QUESTIONS.md` — only the still-open decisions (trimmed 2026-09-15).
-- `sources/` — cited papers and the 2013/2024/2025 MeVArc decks.
+- `QUESTIONS.md` — only the still-open decisions (trimmed 2026-09-28).
+- `sources/` — cited papers and the 2013/2024/2025 MeVArc decks;
+  `sources/main.pdf` is the July manuscript snapshot.
 
 ## Decisions already made — do not re-open
 
 30 min excluding questions; review-weighted balance; `E_S` delayed; "candidate
 structural basis for `E_S`" claim strength; ~200 nm denuded zone; two RFX
-main-path slides; 2025 figure reuse; template branding per commit `ea22740`.
+main-path slides (15b now in backup); 2025 figure reuse; template branding per
+commit `ea22740`; elastic-screening slide states the manuscript's claim
+strength (ℓ_D ≈ 25 nm, thickness not predicted) and does not name `E_S`.

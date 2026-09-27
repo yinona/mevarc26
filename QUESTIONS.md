@@ -1,31 +1,61 @@
-# Open questions — MeVArc 2026 deck (trimmed 2026-09-15)
+# Open questions — MeVArc 2026 deck (trimmed 2026-09-28)
 
-All July decisions were applied to the deck on 2026-07-20 (see the git history
-and `HANDOFF.md`). Only the items below remain open. Mark a choice with `x` or
-answer inline; each has a recommended default.
+Resolved on 2026-09-28 and removed: RFX status (refreshed to 15 Sep 2026),
+manuscript status (arXiv:2606.19192 verified live; PRAB minor revision
+ZT10260 implemented 27 Sep, resubmission pending), slide 15b (moved to
+backup). Mark a choice with `x` or answer inline; each has a recommended
+default.
 
-## Blocking-ish (affect slide content)
+## Needs your action
 
-1. **RFX status refresh.** The RFX slides reflect 13 July 2026. What happened
-   with the #2-25 / #3-25 EBSD acquisitions, and did #4-25's poor patterns
-   repeat or resolve? Update slides 15/15b + backup tables accordingly.
-   Status: ____ (check with Inna / `../rfx/STATUS.md`)
-2. **Manuscript status.** Any PRAB referee reports since 23 June? Is
-   arXiv:2606.19192 live and correct (used in every source line via
-   `\condref`)?
-   Status: ____
 3. **Abstract submission.** Was `abstract_mevarc26.md` submitted to MeVArc?
    Does its title still match the deck?
    [ ] submitted, matches  [ ] needs action: ____
+14. **PRAB resubmission.** `\condref` says "PRAB, under revision". Resubmit
+   at authors.aps.org (cond26 `TODO.md` item 5); if accepted before 5 Oct,
+   change the string to "accepted"/"in press".
+   Status: ____
 
 ## Speaker's choice (no new data needed)
 
-4. **Optional slide 15b (RFX preliminary).** Keep on main path, or demote to
-   backup after the status refresh?
-   [ ] keep if refreshed (recommended)  [ ] backup
-5. **Optional Sigma-3 / grain-skeleton slide.** Assets are ready
-   (`full_range_overlay.pdf`, IPF maps). Add to Part II, or leave out?
+5. **Optional Sigma-3 / grain-skeleton slide.** Assets ready
+   (`full_range_overlay.pdf`, IPF maps).
    [ ] leave out (recommended for 30 min)  [ ] add
-6. **Timing.** After a dry run, cut order if long: 15b, then 5b (recap bridge),
-   then merge 7+8 (EBSD method + LAM reading).
+6. **Timing.** Cut order after a dry run: 6 (recap bridge) → 14 (elastic
+   screening, to backup) → merge 9 into 10 → merge 15 into 16 or fold the
+   slide-12 tail box onto 11.
    Dry-run time: ____ min
+
+## Raised by the 2026-09-28 style reviews (judgement calls)
+
+7. **Claim verb.** Slide 13 title says the test "confirms the model's
+   prediction"; slide 18 title says conditioning "appears to leave" a memory.
+   One reviewer read the pair as inconsistent.
+   [ ] keep both (recommended: payoff strong, conclusion hedged)
+   [ ] soften 13 to "matches"  [ ] strengthen 18 to "leaves"
+8. **E_S on the conclusion slide.** The July decision says "one line on the
+   payoff slide + conclusion", but slide 18 names E_S only through the
+   infographic ("candidate physical basis of the conditioning state").
+   [ ] accept as is (recommended)  [ ] add one hedged E_S line to slide 18
+9. **Manuscript figure labels.** `mean_vs_radius.pdf` and
+   `low_angle_overlay.pdf` label the periphery "~0 MV/m" while the notes say
+   "at most about 2.5 MV/m"; the slide-10 map pair has 200 µm vs 100 µm scale
+   bars under "same LAM color scale".
+   [ ] accept, explain aloud (recommended)  [ ] regenerate from cond26
+10. **Infographic on slide 18** at 0.42 text width was judged illegible by
+   both reviewers (full size is backup 22).
+   [ ] keep as a visual anchor (recommended)  [ ] crop to the three-tier panel
+11. **Author line.** The title slide lists S. Calatroni (CERN); the manuscript
+   author list is Ashkenazy, Popov, Bjelland, Millar, Wuensch.
+   [ ] deliberate, keep  [ ] remove
+12. **"~8×" tail increase.** 0.14/0.016 ≈ 8.8; the manuscript says
+   "eightfold".
+   [ ] keep "~8×" (recommended, matches manuscript)  [ ] "~9×"
+13. **Priority claims.** "First direct structural evidence" (slide 4) and
+   "First large-area confirmation" (slide 13).
+   [ ] keep (recommended; matches the manuscript's novelty statement)
+   [ ] prefix "to our knowledge"
+15. **Rhetorical pattern.** Both reviewers counted the "X, not Y" antithesis
+   more than ten times and the last-year/this-year callback seven times
+   (slides 1, 4, 5, 6, 7, 18 and notes).
+   [ ] leave (recommended; it is the talk's spine)  [ ] thin to slides 6 and 18
