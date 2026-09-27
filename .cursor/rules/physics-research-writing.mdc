@@ -1,0 +1,366 @@
+---
+description: Physics research article writing style guide — sentence structure, voice, APS/AIP conventions, AI-tell avoidance
+globs: "**/*.tex,**/*.md,**/*.txt,**/*.bib"
+alwaysApply: false
+---
+
+# Physics Research Article Style Guide
+
+> Full reference: `style/STYLE_GUIDE_RESEARCH_ARTICLES.md` (or in the project
+> root if copied there).
+> This rule is the actionable condensation. When in doubt, consult the full guide.
+
+## 1 — Core Constraint
+
+The text must read as if written by a human physicist. Be direct. Be modest.
+Keep sentences short (15–20 words average). Avoid nested subordinate clauses.
+Use simple words where they suffice. Never inflate vocabulary to sound impressive.
+
+---
+
+## 2 — Sentence Structure (Reader Expectations)
+
+### Topic position (sentence opening)
+Place **old, backward-linking information** first. The opening identifies whose
+story the sentence tells and connects to the previous discourse.
+
+### Stress position (sentence ending)
+Place **new, emphasis-worthy information** at the end of the clause — the point
+of syntactic closure. Readers assign extra emphasis here.
+
+### Subject–verb proximity
+Keep subject and verb together. Material between them reads as an interruption
+of lesser importance.
+
+### Action in the verb
+Unsmother nominalisations. "We calculated the pH" not "A calculation of the pH
+was made."
+
+| Smothered (avoid)        | Verb form (prefer) |
+|--------------------------|--------------------|
+| make an assessment       | assess             |
+| provide assistance       | assist             |
+| perform a calculation    | calculate          |
+| made the measurement of  | measured           |
+
+### Old → new flow
+Move from known/contextual to new/emphasis-worthy within each sentence.
+
+### One function per unit
+Each clause, sentence, paragraph, and section serves a single function.
+Split when a sentence has more stress candidates than stress positions.
+
+---
+
+## 3 — Voice and Tone
+
+### Quiet confidence
+Show expertise through content, not adjectives. No "groundbreaking,"
+"revolutionary," or "exceptional" unless citing specific metrics.
+
+### Precision and economy
+Eliminate filler: "it should be noted that," "it is interesting to note,"
+"it is well known that." Get to the point.
+
+Reserve **"significant"** exclusively for statistical findings.
+
+### No exaggeration
+- Replace "countless" with "many" or give the actual number.
+- Do not call your own research "thorough" — that is the reader's judgement.
+- Take care with **prove** (geometric-proof rigour) and **optimal** (maximum
+  of a continuous function).
+
+### Appropriate hedging
+Use "may," "might," "suggests" only when uncertainty is scientifically
+warranted. Never stack hedges.
+
+### First person
+"We" is widely accepted. Avoid placing "I" or "we" as the first word.
+Begin with an infinitive or dependent clause: "To test this, we …"
+
+---
+
+## 4 — Active vs. Passive Voice
+
+No blanket rule — blend both voices deliberately.
+
+**Prefer active when:**
+- The actor matters: "We installed filters …"
+- Reducing word count: "Process X improves yield"
+- The journal requests it
+
+**Use passive when:**
+- The actor is unknown or irrelevant
+- The object/recipient is the main story
+- Balancing the Methods section
+
+**Avoid:**
+- Verbs at sentence ends (accelerator then brakes)
+- "There is / there are" (sap energy — rewrite)
+- "It was determined / decided" (shirks responsibility)
+
+---
+
+## 5 — Vocabulary
+
+### Prefer shorter, familiar words
+
+| Avoid          | Prefer       |
+|----------------|--------------|
+| utilise        | use          |
+| elucidate      | reveal       |
+| facilitate     | enable, help |
+| advantageous   | better       |
+| indeterminate  | unknown      |
+| in order to    | to           |
+| due to the fact that | because |
+| a large number of    | many    |
+| at this point in time | now    |
+
+### Remove redundancy
+
+| Redundant           | Reduced      |
+|---------------------|--------------|
+| completely eliminate | eliminate    |
+| period of time      | period       |
+| still persists      | persists     |
+| basic fundamentals  | fundamentals |
+
+### Writing zeroes — delete on sight
+
+- "it is interesting to note that"
+- "it should be pointed out that"
+- "as a matter of fact"
+- "the fact that"
+
+### Do not use synonyms for variety
+Repeating the right word beats substituting an inexact one.
+
+---
+
+## 6 — AI-Tell Words and Phrases
+
+Clusters of three or more in a paragraph signal machine origin. Replace with
+plain, specific language.
+
+**Verbs to replace:**
+
+| AI-tell           | Plain alternative              |
+|-------------------|-------------------------------|
+| delve (into)      | examine, study                |
+| leverage          | use, build on                 |
+| harness           | use, apply                    |
+| underscore        | show, highlight               |
+| streamline        | simplify, speed up            |
+| facilitate        | help, enable                  |
+| navigate          | handle, work through          |
+| revolutionize     | change, transform (sparingly) |
+| bolster           | support, strengthen           |
+| foster            | encourage, promote            |
+| elucidate         | explain, clarify              |
+| illuminate        | show, reveal                  |
+
+**Adjectives to replace:**
+
+| AI-tell           | Plain alternative             |
+|-------------------|-------------------------------|
+| pivotal           | important, key                |
+| robust            | strong, reliable              |
+| multifaceted      | complex, varied               |
+| nuanced           | subtle, detailed              |
+| comprehensive     | full, thorough                |
+| cutting-edge      | recent, new                   |
+| seamless          | smooth                        |
+| paramount         | most important                |
+| groundbreaking    | (show the advance instead)    |
+| transformative    | (describe the change instead) |
+
+**Nouns to replace:**
+
+| AI-tell           | Plain alternative             |
+|-------------------|-------------------------------|
+| landscape (metaph.) | field, area, context        |
+| realm             | field, area, domain           |
+| tapestry          | (delete; describe the structure) |
+| synergy           | combined effect, interplay    |
+| paradigm (unless genuinely Kuhnian) | framework, model |
+| trajectory        | trend, path, direction        |
+
+**Filler phrases — delete on sight:**
+
+- "It is worth noting that …" → state the fact
+- "In today's rapidly evolving landscape …" → delete
+- "In the realm of …" → "In …"
+- "This serves as a testament to …" → "This shows …"
+- "A myriad of …" → "many" or give the number
+- "Plays a crucial/pivotal role …" → "matters because …"
+
+### Structural tells to catch
+- **Flat rhythm:** vary sentence lengths (5–8, 15–20, 25–30 words)
+- **Formulaic triads:** don't default to "X, Y, and Z" in every sentence
+- **Repetitive summarising:** state each idea once; trust the reader
+- **Unwarranted optimism:** no "exciting findings open new avenues"
+- **Loss of personal voice:** use "We measured …", "Our results suggest …"
+
+---
+
+## 7 — Tense Consistency
+
+| Situation                          | Tense   |
+|------------------------------------|---------|
+| Established fact                   | Present |
+| Question / hypothesis at study time | Present |
+| Attribution to prior work          | Past    |
+| Your methods                       | Past    |
+| Your results                       | Past    |
+| Conclusions / beliefs              | Present |
+
+---
+
+## 8 — Paragraph Construction
+
+1. **Topic sentence** — announces what the paragraph is about
+2. **Supporting sentences** — in logical sequence
+3. **Wrapping-up sentence** — closes or bridges to the next paragraph
+
+Begin each new sentence by connecting to the previous one. Vary the type of
+connection (what, when, where, how, why) to automatically vary openers.
+
+Aim for at least five different opener types per section:
+subject noun, prepositional phrase, adverb, infinitive phrase, dependent clause.
+
+---
+
+## 9 — Section Guidelines
+
+### Title
+- Specify scope; avoid qualitative words ("novel," "important," "efficient")
+- No new acronyms; use a colon to split area from distinguishing detail
+
+### Introduction (funnel)
+1. Context → 2. Problem → 3. Question/hypothesis → 4. Approach
+- Last paragraph: self-contained mini-summary
+- Show, don't just tell, importance ("… because the gas is 500 °C hotter than
+  the melting point" not "… is important")
+
+### Methods
+- Detailed enough to reproduce; cite established methods, describe modifications
+- Subheadings mirror Results
+
+### Results
+- Logical sequence, not chronological
+- Let figures carry the data; don't restate numbers already in figures
+- No interpretation here
+
+### Discussion
+1. Summary of main findings → 2. Strengths/weaknesses → 3. Comparison with
+   other work → 4. Balanced conclusion → 5. Future direction
+- Do not begin with a second introduction or repeat all results
+
+### Conclusions — summary format indicators (adopted 2026-06-10)
+Exactly three short paragraphs, in this order:
+1. **Core finding** — qualitative statement of the central result.
+   NO specific numbers, p-values, statistical-test names, metric
+   acronyms, equipment, or sample sizes. Refer to evidence generically
+   ("independent metrics," "distribution-level statistical tests").
+2. **Broader impact** — what the finding means for the field; connect
+   to the framework or open question the paper addresses. Hedge
+   mechanism claims once ("may be," "suggests").
+3. **Future outlook** — concise list of concrete next steps, woven
+   into prose, no equipment names.
+NO literature citations anywhere in the Conclusions. Quantitative
+claims live in Results/Discussion; the Conclusions restate them
+qualitatively. Project-specific mandatory sentences (e.g., a guarded
+future-work mention) override the brevity rule — check the project's
+editorial guardrails.
+
+### Abstract (write last) — summary format indicators (adopted 2026-06-10)
+- Single paragraph, self-contained, no numbered references or display equations
+- Order: (1) relevance opening — what the studied process is and why the
+  community cares; (2) the gap; (3) method, in one sentence with the key
+  design feature; (4) quantified main result WITH evidentiary detail
+  (sample/region count, headline number, independent checks, statistics);
+  (5) priority claim, hedged with "to our knowledge" and attached to what
+  was *observed*, never to the inferred cause; (6) the structured
+  result pattern and what model/variable it matches; (7) hedged
+  mechanistic close ("candidate," "may").
+- Budget: ~50 % results, rest split among background/methods/conclusion
+- Include key numbers
+
+---
+
+## 10 — APS/AIP Physics Conventions
+
+### Spelling
+American English for APS/AIP: "color," "analyze," "center."
+
+### Notation
+- **Variables** (single letters): italic — *T*, *k*, *σ*
+- **Multi-letter abbreviations** as subscripts: roman — T_eff, not *T_eff*
+- **Vectors**: boldface italic — ***B***, ***r***
+- **Operators/functions**: roman — sin, cos, ln, exp, d, Tr, Re, Im
+- **Units**: roman, thin space from number — 300 K, 5.2 T, 10 μm
+- **SI units** throughout (unless strong field convention, e.g. eV)
+- **Equations** are grammatical parts of sentences; punctuate them
+
+### Figures
+- Arabic numerals: Fig. 1, Fig. 2 (spell out at sentence start)
+- Axis labels: quantity (unit) — e.g. "Temperature (K)"
+- Consistent colour schemes; readable in greyscale
+
+### Tables
+- Roman numerals: Table I, Table II (APS)
+- Caption above; horizontal rules only (no vertical, no shading)
+
+### References
+- Follow journal style exactly; include DOIs
+- Do not cite in abstract
+- **Verify every reference exists** — AI fabricates plausible citations
+
+### Supplemental Material
+- Main paper stands alone without the supplement
+- Cite as: "See Supplemental Material at [URL] for [description]"
+
+---
+
+## 11 — Common Pitfalls
+
+- **"We discuss … / We present …"** as opening sentence → state the finding
+- **"Respectively"** overuse → restructure: "Sample A at 300 K; sample B at 500 K"
+- **"Good agreement"** without quantification → "within 3 %"
+- **"It can be shown that …"** → show it or cite where it is shown
+- **"Clearly" / "Obviously"** → delete; let the evidence convince
+- **Standalone "this"** → always specify: "This finding," "This approach"
+- **"Only"** placement → put directly before the word it modifies
+
+---
+
+## 12 — AI-Assisted Writing Rules
+
+1. AI output is a draft, never a finished product
+2. Verify every factual claim against primary literature
+3. Read every cited reference yourself
+4. The Discussion must reflect **your** interpretation
+5. Disclose AI use per journal policy
+6. Do not list AI as an author
+7. If text sounds generic, rewrite with specific details and your own voice
+
+---
+
+## 13 — Self-Check (apply to every paragraph)
+
+1. Who is the audience? Am I writing from their perspective?
+2. Whose story? Is that entity in the topic position?
+3. What is the emphasis-worthy info? Is it at the end of the clause?
+4. Is the subject close to its verb?
+5. Is the real action in the verb?
+6. Does the sentence flow old → new?
+7. Have I varied sentence openers?
+8. Is every qualifier earned?
+9. Could the sentence be shorter?
+10. Is there ambiguity (pronouns, "this," word order)?
+11. Is the paragraph doing one job?
+12. Are tenses consistent?
+13. Do illustrations match the text?
+14. Have AI-generated claims and references been verified?
+15. Does this read like **me**, not a bot?

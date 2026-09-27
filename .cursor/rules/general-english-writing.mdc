@@ -1,0 +1,115 @@
+---
+description: General English writing standards — clarity, concision, no AI tells, professional tone. Portable across projects.
+alwaysApply: true
+---
+
+# General English Writing Standards
+
+These principles apply to all text produced in this workspace: manuscripts,
+documentation, correspondence, reports, and code comments.
+
+## 1 — Clarity Above All
+
+- One idea per sentence. One topic per paragraph.
+- Average sentence length: 15–20 words. Allow variation (5–30 words) but
+  never nest more than one subordinate clause.
+- Lead with old/known information; end with new/emphasis-worthy information.
+
+## 2 — Concision
+
+- Eliminate filler phrases:
+
+| Delete                        | Replace with     |
+|-------------------------------|------------------|
+| in order to                   | to               |
+| due to the fact that          | because          |
+| at this point in time         | now              |
+| it is important to note that  | (state the fact) |
+| a large number of             | many             |
+| has the ability to            | can              |
+| in the event that             | if               |
+| serves the function of being  | is               |
+
+- Remove redundancy: "completely eliminate" → "eliminate," "still persists" →
+  "persists," "basic fundamentals" → "fundamentals."
+- If a word adds no meaning, cut it.
+
+## 3 — Word Choice
+
+- Prefer short, familiar words: "use" not "utilise," "help" not "facilitate,"
+  "better" not "advantageous."
+- Choose words for exact meaning (denotation) and associations (connotation).
+  "Cheap" denotes inexpensive but connotes shoddy.
+- Do not swap synonyms for variety. Repeating the right word is better than
+  substituting an inexact one.
+- Avoid the slash (/). Write "or," "and," "without" — not "and/or," "w/o."
+
+## 4 — Active, Energetic Verbs
+
+- Prefer active voice when the actor matters or to reduce word count.
+- Use passive voice when the actor is unknown, irrelevant, or when the
+  object is the main story.
+- Unsmother nominalisations: "We decided" not "A decision was made."
+- Eliminate "there is / there are" constructions.
+- Move verbs away from sentence ends.
+
+## 5 — Avoid AI-Tell Language
+
+These words and phrases appear far more often in AI output than in human
+writing. Replace with plain alternatives:
+
+**Verbs:** delve, leverage, utilize, harness, underscore, streamline,
+facilitate, navigate, revolutionize, bolster, foster, elucidate, illuminate.
+
+**Adjectives:** pivotal, robust (unless technical), multifaceted, nuanced,
+comprehensive, cutting-edge, innovative, seamless, paramount, groundbreaking,
+transformative.
+
+**Nouns:** landscape (metaphorical), realm, tapestry, synergy, testament,
+paradigm (unless Kuhnian), trajectory, toolkit.
+
+**Filler phrases — delete on sight:**
+- "It is worth noting that …"
+- "In today's rapidly evolving …"
+- "In the realm of …"
+- "This serves as a testament to …"
+- "A myriad of …"
+
+**Structural tells to catch:**
+- Flat, predictable rhythm (all sentences similar length)
+- Formulaic three-item lists in every sentence
+- Repetitive summarising (state each idea once)
+- Unwarranted optimism ("exciting," "groundbreaking")
+- Loss of personal voice (impersonal encyclopedia style)
+
+## 6 — Tone and Register
+
+- Professional and collegial. Objective even when disagreeing.
+- Show expertise through content, not adjectives.
+- No false modesty ("I just wanted to …") and no exaggeration
+  ("revolutionary," "exceptional").
+- Use hedging ("may," "suggests") only when the uncertainty is real.
+  Never stack hedges.
+
+## 7 — Ambiguity Prevention
+
+- Never use standalone "this" — always specify: "This finding," "This method."
+- Place "only" directly before the word it modifies.
+- Always use the serial (Oxford) comma.
+- Insert a comma after introductory phrases.
+- If "as" could mean "while" or "because," choose the explicit word.
+
+## 8 — Formatting
+
+- Use sentence case for headings (easier to read, fewer inconsistencies).
+- Define abbreviations at first use; if used only once, write the full term.
+- Avoid ALL CAPITALS except standard abbreviations (DNA, NASA).
+
+## 9 — Self-Check
+
+Before finalising any text:
+1. Could each sentence be shorter without losing meaning?
+2. Is every qualifier earned?
+3. Does each paragraph have one clear topic?
+4. Are sentence openers varied (not all starting with the subject)?
+5. Does it sound like a human wrote it — not a press release or a bot?
