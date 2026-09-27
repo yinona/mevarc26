@@ -113,7 +113,7 @@
     \end{beamercolorbox}}}
 
 % Shorthand for the copper-result manuscript reference.
-\newcommand{\condref}{submitted to PRAB; arXiv:2606.19192}
+\newcommand{\condref}{PRAB, under revision; arXiv:2606.19192}
 
 % ═══════════════════════════════════════════════════════════════════════════
 %  Metadata (PDF properties; the title frame is typeset manually below)
@@ -210,7 +210,7 @@
   \begin{columns}[c]
     \column{0.56\textwidth}
       \includegraphics[width=\linewidth]{stem_denuded_zone.png}\\[-1mm]
-      {\scriptsize Cross-sectional STEM of conditioned Cu: dislocation-denuded zone in the top ${\sim}\SI{200}{nm}$.}
+      {\scriptsize Cross-sectional STEM of conditioned hard (as-machined) Cu: dislocation-denuded zone in the top ${\sim}\SI{200}{nm}$.}
     \column{0.42\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item First \alert{direct} structural evidence of field-driven near-surface plasticity.
@@ -308,15 +308,16 @@
     \column{0.49\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item Large area where TEM could only sample a point
-        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step
+        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step sets the lateral resolution only
+        \item Information depth: a few tens of nm
         \item ${\sim}24{,}000$ indexed points per ROI
         \item LAM, KAM, and LOS probe intragrain orientation gradients
         \item Misorientation is a proxy for GND density
       \end{itemize}
   \end{columns}
   \claim{We measure the cumulative response to the field, not crater damage.}
-  \source{Ashkenazy et al., \condref.}
-  \note{EBSD is chosen precisely because it is large-area where TEM is local. A shallow FIB clean removes oxide, under 10 nm by AFM, then we map orientation gradients. All ROIs are deliberately far from craters, so we measure the cumulative material response to the field, not arc damage. LAM is the primary metric; KAM and LOS check that the result does not depend on one analysis choice.}
+  \source{Ashkenazy et al., \condref; information depth after Chen et al., Ultramicroscopy 111, 1488 (2011).}
+  \note{EBSD is chosen precisely because it is large-area where TEM is local. A shallow FIB clean removes oxide, under 10 nm by AFM, then we map orientation gradients. The 3 micron step and kernel fix only the lateral resolution; the backscattered electrons that carry the pattern come from the top few tens of nanometres of copper at 15 kV, so this is a near-surface measurement. All ROIs are deliberately far from craters, so we measure the cumulative material response to the field, not arc damage. LAM is the primary metric; KAM and LOS check that the result does not depend on one analysis choice.}
 \end{frame}
 
 % ── 8. How to read a LAM map ─────────────────────────────────────────────────
@@ -404,13 +405,13 @@
   \vspace{0.5cm}
   \begin{itemize}\setlength\itemsep{0.35em}
     \item First \alert{large-area} confirmation that conditioning evolves the near-surface dislocation structure, as MDDF predicted.
-    \item No conflict with the 2025 denuded zone: dislocations annihilate at the surface ($\ell_D\!\sim\!\SI{100}{nm}$) and accumulate deeper down.
+    \item No conflict with the 2025 denuded zone: one mechanism, two starting populations. Dense as-machined Cu depletes at the surface; the heat-treated Cu here builds curvature.
     \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.
   \end{itemize}
   \vspace{0.15cm}
   \claim{Before, dislocations were plausible. Now, a dislocation-sensitive state maps the conditioning history.}
-  \source{Ashkenazy et al., \condref; Groma et al., PRL 96, 165503 (2006).}
-  \note{This is the payoff. The measured hierarchy is the large-area structural signature the model predicted and the STEM saw locally. The surface denuded zone and the deeper EBSD accumulation are not in conflict: near the surface, enhanced mobility annihilates dislocations at the free surface over a screening length of about 100 nm, while deeper in, curvature accumulates. Only now, and only in one line, do I connect to E\_S: the spatial ordering matches the simulated E\_S profile, so the dislocation population is a candidate structural basis for it. I never say we measured E\_S.}
+  \source{Ashkenazy et al., \condref.}
+  \note{This is the payoff. The measured hierarchy is the large-area structural signature the model predicted and the STEM saw locally. The surface denuded zone and the EBSD curvature are not in conflict: they are one mechanism acting on two very different starting populations. In dense, as-machined copper the cyclic stress lets near-surface dislocations escape to the surface or annihilate, which is the depleted layer the TEM saw; in the heat-treated copper measured here there is little to deplete, so the same load generates and rearranges dislocations, which is the curvature EBSD records. The next slide says how the two pictures connect. Only now, and only in one line, do I connect to E\_S: the spatial ordering matches the simulated E\_S profile, so the dislocation population is a candidate structural basis for it. I never say we measured E\_S.}
 \end{frame}
 
 % ══ PART III — Limits and the future ═════════════════════════════════════════
@@ -442,7 +443,7 @@
     Call for cooperation: more cathodes, other materials, other facilities --- let's compare notes.
   \end{beamercolorbox}
   \claim{A stronger test changes both the material and the loading history.}
-  \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. Invite collaboration on replication and cross-facility comparisons. Depth matters because STEM reports the top 200 nm while EBSD integrates a larger volume---these may be one redistribution profile. The next experiments therefore add depth, and change the material and loading mode.}
+  \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. Invite collaboration on replication and cross-facility comparisons. Depth matters because the STEM depletion was seen in hard copper and the EBSD curvature in heat-treated copper, each in the top few hundred nanometres at most; a depth profile on one material would show whether they are two ends of one redistribution. The next experiments therefore add depth, and change the material and loading mode.}
 \end{frame}
 
 % ── 14. Two next coordinates (RFX 1) ─────────────────────────────────────────
@@ -454,7 +455,7 @@
         \item Matched high-field / reference pilot FIB lamellae
         \item Artifact controls learned from the 2025 ``red herrings''
         \item Correlated TEM/STEM $+$ EBSD through the top ${\sim}\SI{1}{\micro m}$
-        \item Does the ${\sim}\SI{200}{nm}$ depletion join the deeper accumulation?
+        \item Do hard-Cu depletion (STEM) and soft-Cu curvature (EBSD) form one depth profile?
       \end{itemize}
     \column{0.48\textwidth}
       \tagbox{steel}{Material \& loading}
@@ -549,7 +550,7 @@
   \end{beamercolorbox}
   \vspace{0.08cm}
   {\footnotesize\color{muted}Copper result: \condref.}
-  \note{Close the loop from the title and from last year. The model predicted a structural memory; the STEM saw it at one spot; the large-area EBSD confirms it across the electrode with a 75 percent effect and a three-tier hierarchy. The stainless-steel and depth programs are the next round of comparative forensics I promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite the manuscript as submitted to PRAB with arXiv:2606.19192.}
+  \note{Close the loop from the title and from last year. The model predicted a structural memory; the STEM saw it at one spot; the large-area EBSD confirms it across the electrode with a 75 percent effect and a three-tier hierarchy. The stainless-steel and depth programs are the next round of comparative forensics I promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
 \end{frame}
 
 % ══ Backup ═══════════════════════════════════════════════════════════════════
