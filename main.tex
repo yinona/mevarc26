@@ -197,8 +197,8 @@
       \end{itemize}
     \column{0.44\textwidth}
       \centering
-      \includegraphics[height=3.0cm,keepaspectratio]{mddf_critical_transition.png}\\[0.15cm]
-      \includegraphics[height=2.7cm,keepaspectratio]{mddf_rate_vs_field.png}
+      \includegraphics[height=2.85cm,keepaspectratio]{mddf_critical_transition.png}\\[0.1cm]
+      \includegraphics[height=2.6cm,keepaspectratio]{mddf_rate_vs_field.png}
   \end{columns}
   \claim{Central prediction: conditioning \emph{evolves the near-surface dislocation structure}.}
   \source{Engelberg et al., PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020).}
@@ -208,15 +208,17 @@
 % ── 4. Prior microscopy (2025 STEM) ─────────────────────────────────────────
 \begin{frame}{STEM already saw it, at single spots}
   \begin{columns}[c]
-    \column{0.56\textwidth}
-      \includegraphics[width=\linewidth]{stem_denuded_zone.png}\\[-1mm]
+    \column{0.52\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=4.1cm,keepaspectratio]{stem_denuded_zone.png}\\[-1mm]
       {\scriptsize Cross-sectional STEM of conditioned hard (as-machined) Cu: dislocation-denuded zone in the top ${\sim}\SI{200}{nm}$.}
-    \column{0.42\textwidth}
-      \begin{itemize}\setlength\itemsep{0.45em}
+    \column{0.46\textwidth}
+      \small
+      \begin{itemize}\setlength\itemsep{0.2em}
         \item First \alert{direct} structural evidence of field-driven near-surface plasticity.
         \item Seen at both 300 K and 30 K.
-        \item Fits the macroscopic clue: soft Cu conditions far more slowly than hard Cu, so the starting dislocation population matters.
-        \item Hard lesson: FIB preparation plants its own dislocations. Trust only large-scale structure.
+        \item Fits the clue that soft Cu conditions far more slowly than hard Cu: the starting population matters.
+        \item FIB preparation plants its own dislocations; trust only large-scale structure.
         \item One cross-section cannot speak for the whole electrode.
       \end{itemize}
   \end{columns}
@@ -236,6 +238,16 @@
         at $\SI{80}{MV/m}$: \alert{$\SI{0.028}{MPa}$}\\[0.2cm]
         \scriptsize ${\sim}10^3\times$ below the yield of annealed Cu
       \end{beamercolorbox}
+      \vspace{0.2cm}
+      \centering
+      \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize]
+        \draw[->,ink] (0,0) -- (5.0,0) node[below left=-1pt,font=\tiny] {$t$};
+        \draw[thick,copper] (0,0) -- (0.4,0) -- (0.4,0.55) -- (0.5,0.55) -- (0.5,0) -- (1.4,0) -- (1.4,0.55) -- (1.5,0.55) -- (1.5,0) -- (2.4,0) -- (2.4,0.55) -- (2.5,0.55) -- (2.5,0) -- (3.0,0);
+        \node[color=copper] at (3.6,0.3) {$\cdots\times10^{9}$};
+        \draw[<->,muted] (0.5,0.68) -- (1.4,0.68) node[midway,above=-1pt,font=\tiny] {$\SI{1}{ms}$};
+        \node[color=muted,font=\tiny,anchor=south] at (0.45,0.57) {$\SI{1}{\micro s}$};
+        \node[anchor=west,color=muted,font=\tiny] at (0,-0.35) {$\sigma_M(t)$: the only cyclic load};
+      \end{tikzpicture}
     \column{0.55\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
         \item Fatigue at $10^{8}$--$10^{10}$ cycles rearranges dislocations irreversibly, well below yield.
@@ -308,8 +320,7 @@
     \column{0.49\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item Large area where TEM could only sample a point
-        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step sets the lateral resolution only
-        \item Information depth: a few tens of nm
+        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step (lateral only); information depth a few tens of nm
         \item ${\sim}24{,}000$ indexed points per ROI
         \item LAM, KAM, and LOS probe intragrain orientation gradients
         \item Misorientation is a proxy for GND density
@@ -326,7 +337,7 @@
     \column{0.49\textwidth}
       \centering
       \includegraphics[width=\linewidth,height=4.6cm,keepaspectratio]{lam_widescale.png}\\[-1mm]
-      \tagbox{steel}{$0$--$\ang{50}$ scale: grain boundaries dominate}
+      \tagbox{steel}{$0$--$\ang{50}$: grain boundaries dominate}
     \column{0.49\textwidth}
       \centering
       \figorbox{lam_lowscale.png}{width=\linewidth,height=4.6cm,keepaspectratio}{same area, $0$--$\ang{5}$ scale: intragrain curvature appears}\\[-1mm]
@@ -402,13 +413,13 @@
     \node[draw=teal,fill=teal!10,rounded corners,minimum width=2.8cm,minimum height=1.3cm,align=center,right=of c] (d) {Measured LAM\\hierarchy};
     \draw[->,very thick,ink] (a)--(b); \draw[->,very thick,ink] (b)--(c); \draw[->,very thick,ink] (c)--(d);
   \end{tikzpicture}
-  \vspace{0.5cm}
+  \vspace{0.4cm}
   \begin{itemize}\setlength\itemsep{0.35em}
     \item First \alert{large-area} confirmation that conditioning evolves the near-surface dislocation structure, as MDDF predicted.
-    \item No conflict with the 2025 denuded zone: one mechanism, two starting populations. Dense as-machined Cu depletes at the surface; the heat-treated Cu here builds curvature.
+    \item No conflict with the 2025 denuded zone: one mechanism, two starting populations (hard Cu depletes; heat-treated Cu builds curvature).
     \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.
   \end{itemize}
-  \vspace{0.15cm}
+  \vspace{0.1cm}
   \claim{Before, dislocations were plausible. Now, a dislocation-sensitive state maps the conditioning history.}
   \source{Ashkenazy et al., \condref.}
   \note{This is the payoff. The measured hierarchy is the large-area structural signature the model predicted and the STEM saw locally. The surface denuded zone and the EBSD curvature are not in conflict: they are one mechanism acting on two very different starting populations. In dense, as-machined copper the cyclic stress lets near-surface dislocations escape to the surface or annihilate, which is the depleted layer the TEM saw; in the heat-treated copper measured here there is little to deplete, so the same load generates and rearranges dislocations, which is the curvature EBSD records. The next slide says how the two pictures connect. Only now, and only in one line, do I connect to E\_S: the spatial ordering matches the simulated E\_S profile, so the dislocation population is a candidate structural basis for it. I never say we measured E\_S.}
@@ -419,7 +430,7 @@
   \begin{columns}[T,onlytextwidth]
     \column{0.49\textwidth}
       \centering
-      \resizebox{\linewidth}{!}{%
+      \resizebox{0.80\linewidth}{!}{%
       \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize]
         \node[anchor=south,font=\small\bfseries,color=teal] at (2.15,3.5) {Dielectric in an applied field};
         \foreach \x in {0.7,1.5,2.3,3.1} {
@@ -444,7 +455,7 @@
       \end{tikzpicture}}
     \column{0.49\textwidth}
       \centering
-      \resizebox{\linewidth}{!}{%
+      \resizebox{0.80\linewidth}{!}{%
       \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize]
         \node[anchor=south,font=\small\bfseries,color=copper] at (2.15,3.5) {Copper under the Maxwell traction};
         \foreach \x in {0.7,1.5,2.3,3.1} {\draw[->,thick,teal] (\x,3.4) -- (\x,2.6);}
@@ -458,22 +469,21 @@
         \foreach \p in {(0.6,1.55),(1.15,0.85),(1.7,1.6),(2.1,0.35),(2.55,1.25),(3.05,0.7),(3.6,1.5),(0.75,0.25),(3.45,0.15),(1.95,1.1),(2.9,1.65),(0.55,0.95),(3.75,0.85),(1.4,0.2)} {
           \node[color=purple] at \p {$\bot$};
         }
-        \node[anchor=west,color=teal,align=left,text width=2.7cm] at (4.1,3.05) {field $E$ stops at the\\surface charge layer};
-        \node[anchor=west,color=copper,align=left,text width=2.7cm] at (4.1,2.15) {$\sigma_M=\varepsilon_0E^2/2$ enters\\as elastic stress};
-        \node[anchor=west,color=ink,align=left,text width=2.7cm] at (4.1,1.4) {denuded ${\sim}\SI{200}{nm}$\\$\approx 8\,\ell_D$ (hard Cu)};
-        \node[anchor=west,color=purple,align=left,text width=2.7cm] at (4.1,0.5) {ensemble screens stress\\over $\ell_D\!=\!1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$};
+        \node[anchor=west,color=teal,align=left,text width=3.3cm] at (4.15,3.05) {field $E$ stops at the\\surface charge layer};
+        \node[anchor=west,color=copper,align=left,text width=3.3cm] at (4.15,2.3) {$\sigma_M=\varepsilon_0E^2/2$ enters\\as elastic stress};
+        \node[anchor=west,color=ink,align=left,text width=3.3cm] at (4.15,1.55) {denuded ${\sim}\SI{200}{nm}$\\$\approx 8\,\ell_D$ (hard Cu)};
+        \node[anchor=west,color=purple,align=left,text width=3.3cm] at (4.15,0.35) {ensemble screens stress over\\$\ell_D=1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$};
       \end{tikzpicture}}
   \end{columns}
-  \vspace{0.18cm}
   {\scriptsize
    applied field $\leftrightarrow$ Maxwell traction \;$\cdot$\;
    bound charge $\leftrightarrow$ dislocations (dipole regime) \;$\cdot$\;
    Debye length $\leftrightarrow$ $\ell_D$ \;$\cdot$\;
-   screened interior field $\leftrightarrow$ internal stress of the depleted layer\\[0.1em]
-   \color{muted}Two-dimensional single-slip theory, ${\rho\sim10^{14}}\,\si{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted. Not to scale.}
-  \vspace{0.12cm}
+   screened interior field $\leftrightarrow$ internal stress of the depleted layer\\[0.05em]
+   \color{muted}2D single-slip theory at ${\rho\sim10^{14}}\,\si{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted.}
+  \vspace{0.08cm}
   \claim{The field is screened by charge at the surface. The stress is screened by dislocations below it.}
-  \source{Groma, Gy\"orgyi, Kocsis, PRL 96, 165503 (2006); Lema\^{\i}tre et al., PRE 104, 024904 (2021); Livne, Schiller, Moshe, PRE 107, 055004 (2023); Ashkenazy et al., \condref.}
+  \source{Groma et al., PRL 96, 165503 (2006); Lema\^{\i}tre et al., PRE 104, 024904 (2021); Livne et al., PRE 107, 055004 (2023); \condref.}
   \note{Picture the dislocation population as the bound charge of a dielectric: the Maxwell traction is the applied field, the dislocations rearrange in response, and in Groma's Debye-like theory the internal stress of any depleted or enriched layer is screened by the surrounding ensemble over about 25 nanometres for as-machined copper. Note the contrast on the right: the electric field itself is screened by surface charge within a nanometre and never enters the metal, whereas the load enters as elastic stress, so the electrostatic screening length says nothing about depth. The STEM denuded zone in hard copper is about eight of these screening lengths thick; no theory yet treats a cyclically loaded free surface, so that thickness is an observation, not a prediction.}
 \end{frame}
 
@@ -514,20 +524,24 @@
   \begin{columns}[T]
     \column{0.48\textwidth}
       \tagbox{purple}{Depth}
-      \begin{itemize}\setlength\itemsep{0.4em}
-        \item Matched high-field / reference pilot FIB lamellae
-        \item Artifact controls learned from the 2025 ``red herrings''
-        \item Correlated TEM/STEM $+$ EBSD through the top ${\sim}\SI{1}{\micro m}$
-        \item Do hard-Cu depletion (STEM) and soft-Cu curvature (EBSD) form one depth profile?
+      \small
+      \begin{itemize}\setlength\itemsep{0.2em}
+        \item Matched high-field / reference FIB lamellae; TEM/STEM $+$ EBSD through the top ${\sim}\SI{1}{\micro m}$
+        \item Artifact controls from the 2025 ``red herrings''
+        \item One depth profile from STEM depletion to EBSD curvature?
       \end{itemize}
+      \vspace{0.05cm}
+      \centering\includegraphics[height=0.95cm]{stem_fe_300k.png}\hspace{0.15cm}\includegraphics[height=0.95cm]{lam_fe_center.png}
     \column{0.48\textwidth}
       \tagbox{steel}{Material \& loading}
-      \begin{itemize}\setlength\itemsep{0.4em}
-        \item Stainless steel: lower stacking-fault energy
-        \item Different dislocation mobility and slip
+      \small
+      \begin{itemize}\setlength\itemsep{0.2em}
+        \item Stainless steel: lower stacking-fault energy, different dislocation mobility and slip
         \item Continuous DC instead of pulsed loading
         \item Possible metastable phase transformation
       \end{itemize}
+      \vspace{0.05cm}
+      \centering\includegraphics[height=0.95cm]{cut_samples.png}\hspace{0.15cm}\includegraphics[height=0.95cm]{sem_page-4.png}
   \end{columns}
   \claim{Depth continues the Uppsala STEM line; material tests the mechanism itself.}
   \source{Interim work plan (2026); RFX project plan.}
@@ -538,23 +552,23 @@
 \begin{frame}{Stainless steel: a test chosen to be hard on the model}
   \begin{columns}[c]
     \column{0.40\textwidth}
-      \begin{beamercolorbox}[rounded=true,sep=.28cm]{block body}
-        \centering\bfseries\color{copper}Copper\\[0.12cm]
+      \begin{beamercolorbox}[rounded=true,sep=.22cm]{block body}
+        \centering\bfseries\color{copper}Copper\\[0.08cm]
         \normalfont\small FCC, higher SFE\\pulsed DC, ${\sim}10^9$ cycles
       \end{beamercolorbox}
-      \vspace{0.15cm}
-      \begin{beamercolorbox}[rounded=true,sep=.28cm]{block body}
-        \centering\bfseries\color{steel}AISI 304L SS\\[0.12cm]
+      \vspace{0.08cm}
+      \begin{beamercolorbox}[rounded=true,sep=.22cm]{block body}
+        \centering\bfseries\color{steel}AISI 304L SS\\[0.08cm]
         \normalfont\small metastable austenite, lower SFE\\continuous DC, possible $\gamma\!\to\!\alpha'$
       \end{beamercolorbox}
     \column{0.58\textwidth}
-      \tagbox{good}{SS tracks field} \; supports a cross-material structural state\\[0.35em]
-      \tagbox{purple}{SS differs} \; identifies material-specific carriers\\[0.35em]
-      \tagbox{warn}{no resolved change} \; bounds depth, dose, sensitivity\\[0.4em]
-      {\small Design: apex-to-periphery gradient; two exposed $+$ two matched references.}\\[0.3em]
-      {\small Status: 90 h and 73 h of DC at up to $\SI{61}{MV/m}$, no breakdowns; EBSD indexes three of four samples, one field-exposed sample still does not.}\\[0.45em]
+      \tagbox{good}{SS tracks field} \; supports a cross-material structural state\\[0.2em]
+      \tagbox{purple}{SS differs} \; identifies material-specific carriers\\[0.2em]
+      \tagbox{warn}{no resolved change} \; bounds depth, dose, sensitivity\\[0.25em]
+      {\footnotesize Design: apex-to-periphery gradient; two exposed $+$ two matched references.}\\[0.15em]
+      {\footnotesize Status: 90 h and 73 h of DC at up to $\SI{61}{MV/m}$, no breakdowns; EBSD indexes three of four samples, one field-exposed sample still does not.}\\[0.25em]
       {\footnotesize\color{muted}In collaboration with}\quad
-      \raisebox{-0.34\height}{\includegraphics[height=0.6cm]{logo_rfx.png}}\\[0.1em]
+      \raisebox{-0.34\height}{\includegraphics[height=0.5cm]{logo_rfx.png}}\\[0.05em]
       {\scriptsize\color{muted}Consorzio RFX --- A.~De~Lorenzi, N.~Pilan, E.~Spada}
   \end{columns}
   \claim{Every outcome teaches us something. This is not a pass-or-fail test.}
@@ -574,12 +588,10 @@
     \column{0.42\textwidth}
       \includegraphics[width=\linewidth]{infographic.pdf}
   \end{columns}
-  \vspace{0.15cm}
   \begin{beamercolorbox}[rounded=true,sep=.26cm]{block body}
     \centering\large\bfseries\color{purple}
     Last year: ``more samples? other materials?'' --- this is the large-area answer.
   \end{beamercolorbox}
-  \vspace{0.08cm}
   {\footnotesize\color{muted}Copper result: \condref.}
   \note{Close the loop from the title and from last year. The model predicted a structural memory; the STEM saw it at one spot; the large-area EBSD confirms it across the electrode with a 75 percent effect and a three-tier hierarchy. The stainless-steel and depth programs are the next round of comparative forensics I promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
 \end{frame}
@@ -589,30 +601,31 @@
 
 \begin{frame}{Backup: RFX first look (preliminary)}
   \tagbox{warn}{Preliminary --- no field effect claimed}
-  \vspace{0.08cm}
+  \vspace{0.05cm}
   \begin{columns}[T]
-    \column{0.40\textwidth}
-      \begin{itemize}\setlength\itemsep{0.38em}
-        \item AISI 304L at RFX HVPTF; continuous DC: 90 h (\#3-25) and 73 h (\#4-25), peak 59--$\SI{61}{MV/m}$, no full breakdowns
-        \item As-received SEM: ``exploded'' near-surface inclusions (3--7~\si{\micro\metre}) on field-exposed samples; reference cavities round and clean
-        \item Plan-view EBSD: \#1-25, \#2-25, \#3-25 index at 97--99.5\%; \#4-25 poor patterns, left unpolished
-        \item Early apex-vs-side contrast reproduces on never-installed \#2-25: forming geography, not field
+    \column{0.44\textwidth}
+      \footnotesize
+      \begin{itemize}\setlength\itemsep{0.25em}
+        \item AISI 304L at RFX HVPTF; continuous DC: 90 h (\#3-25), 73 h (\#4-25); peak 59--$\SI{61}{MV/m}$; no full breakdowns
+        \item SEM: ``exploded'' near-surface inclusions (3--7~\si{\micro\metre}) on field-exposed samples; reference cavities round and clean
+        \item EBSD: \#1-25, \#2-25, \#3-25 index (97--99.5\%); \#4-25 poor, left unpolished
+        \item Apex-vs-side contrast reproduces on never-installed \#2-25: forming geography
       \end{itemize}
-    \column{0.58\textwidth}
+    \column{0.54\textwidth}
       \begin{columns}[c,onlytextwidth]
         \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=2.35cm,keepaspectratio]{sem_page-2.png}\\[-1mm]
+          \includegraphics[width=\linewidth,height=1.95cm,keepaspectratio]{sem_page-2.png}\\[-1mm]
           {\tiny Ref vs field-exposed overview}
         \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=2.35cm,keepaspectratio]{cut_samples.png}\\[-1mm]
+          \includegraphics[width=\linewidth,height=1.95cm,keepaspectratio]{cut_samples.png}\\[-1mm]
           {\tiny Sectioned electrode}
       \end{columns}
-      \vspace{0.1cm}
+      \vspace{0.08cm}
       \begin{columns}[c,onlytextwidth]
         \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=2.2cm,keepaspectratio]{sem_page-4.png}
+          \includegraphics[width=\linewidth,height=1.85cm,keepaspectratio]{sem_page-4.png}
         \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=2.2cm,keepaspectratio]{sem_page-6.png}
+          \includegraphics[width=\linewidth,height=1.85cm,keepaspectratio]{sem_page-6.png}
       \end{columns}
   \end{columns}
   \source{RFX project record through 15 Sep 2026; SEM report, Inna Popov (20 May 2026).}
@@ -621,7 +634,7 @@
 
 \begin{frame}{Backup: RFX sample and data status (15 Sep 2026)}
   \small
-  \begin{tabular}{@{}llll@{}}
+  \begin{tabular}{@{}llp{3.3cm}p{6.2cm}@{}}
     \toprule
     Sample & Role & Exposure & Status \\
     \midrule
@@ -631,7 +644,7 @@
     \#4-25 & field-exposed & 73 h DC, peak $\SI{59}{MV/m}$ & SEM/EDS; EBSD patterns poor, not repolished \\
     \bottomrule
   \end{tabular}
-  \vspace{0.45cm}
+  \vspace{0.4cm}
   \begin{itemize}\setlength\itemsep{0.3em}
     \item Received since July: conditioning report and $E(\theta)$; alloy confirmed 304L (certificate unrecoverable); electropolishing partly documented; five per-pixel maps.
     \item Still open: raw patterns unavailable; per-pixel data for the wide-grain class; matched EDS overlayer checks.
@@ -644,11 +657,11 @@
     \column{0.49\textwidth}
       \centering
       \includegraphics[width=\linewidth,height=5.4cm,keepaspectratio]{stem_fe_300k.png}\\[-1mm]
-      \tagbox{copper}{Field-exposed --- denuded near surface}
+      \tagbox{copper}{Field-exposed: denuded near surface}
     \column{0.49\textwidth}
       \centering
       \includegraphics[width=\linewidth,height=5.4cm,keepaspectratio]{stem_ref_300k.png}\\[-1mm]
-      \tagbox{teal}{Reference --- dislocation-rich to surface}
+      \tagbox{teal}{Reference: dislocation-rich to surface}
   \end{columns}
   \source{Jacewicz et al., JAP 137, 193302 (2025).}
   \note{The direct field-exposed vs reference STEM comparison behind the denuded-zone claim.}
