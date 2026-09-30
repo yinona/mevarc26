@@ -17,11 +17,11 @@ notes on the right). Both are tracked.
 
 ## Structure
 
-22 frames: 18 core (5 background, 8 copper results including the elastic-
+23 frames: 18 core (5 background, 8 copper results including the elastic-
 screening analogy, 4 limits and outlook including one stainless-steel slide,
-and the conclusion) plus 4 backup (RFX first look, RFX status table, 2025 STEM
-pair, full-size infographic). Content reflects the manuscript and the RFX
-record as of 15–28 September 2026.
+and the conclusion) plus 5 backup (RFX first look, RFX status table, RFX apex
+vs unexposed range, 2025 STEM pair, full-size infographic). Content reflects
+the manuscript as of 28 September and the RFX record as of 29 September 2026.
 
 External reviewers start at `REVIEW_CONTEXT.md` (claims, derivations, pointers).
 See `HANDOFF.md` for history, current state and next steps; `QUESTIONS.md`

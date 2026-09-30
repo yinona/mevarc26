@@ -65,7 +65,10 @@ us, N. Pilan (RFX) right after. Programme notes: `knowledge/mevarc26_programme.m
 | `442f588` | 28 Sep | New slide 14: elastic-screening analogy (dielectric vs dislocation screening). |
 | `20b45e7` | 28 Sep | Visual pass: overfull frames fixed, pulse-train sketch (slide 5), thumbnails (slide 16). |
 | `e6e95ca` | 28 Sep | Two independent style reviews merged and applied; HANDOFF/QUESTIONS rewritten. |
-| (this) | 28 Sep | Cleanup of unused files; Indico programme cross-references; RFX wording corrected from `../rfx/HANDOFF.md`; this handoff. |
+| `7c1ee35` | 28 Sep | Cleanup of unused files; Indico programme cross-references; RFX wording corrected from `../rfx/HANDOFF.md`; handoff rewritten. |
+| `0d391ec` | 30 Sep | `REVIEW_CONTEXT.md` for external review of slides and derivations. |
+| `53d0f0b` | 30 Sep | 29 Sep RFX record digested (`knowledge/rfx_status_2026-09.md` addendum). |
+| (this) | 30 Sep | RFX edits applied: slide 17 status line and note, backups 19–20 updated to 29 Sep, new backup 21 (apex vs unexposed range, null at low power). |
 
 The agent workflow on 28 Sep used subagents (`grok-4.7-high-fast` for reading
 and mechanical passes, `claude-opus-5-5-medium` once as second reviewer); the
@@ -77,7 +80,7 @@ page counts and renders.
 
 ## 2. Where things stand
 
-### Deck (22 frames = 18 core + 4 backup; `main.pdf` and `main-notes.pdf` compile clean)
+### Deck (23 frames = 18 core + 5 backup; `main.pdf` and `main-notes.pdf` compile clean)
 
 | # | Frame | Notes |
 |---|---|---|
@@ -97,9 +100,9 @@ page counts and renders.
 | 14 | **Elastic screening: dislocations respond like bound charge** | new; ℓ_D ≈ 25 nm, 200 nm ≈ 8 ℓ_D, "not predicted"; no E_S |
 | 15 | Copper establishes the effect, not universality | cooperation call; cross-ref Coman 11:30 |
 | 16 | Next: go deeper, and change the material | thumbnails |
-| 17 | Stainless steel: a test chosen to be hard on the model | one-line Sep-2026 RFX status; cross-ref Pilan 12:30 |
+| 17 | Stainless steel: a test chosen to be hard on the model | status line as of 29 Sep: all 26 maps, apex inside unexposed range, "no field indication yet"; note names H_saturated as a hypothesis; cross-ref Pilan 12:30 |
 | 18 | Conditioning appears to leave a subsurface memory | conclusion, 2025 bookend, new infographic |
-| 19–22 | Backup | RFX first look (ex-15b); RFX status table (15 Sep); 2025 STEM pair; infographic full size |
+| 19–23 | Backup | RFX first look (ex-15b); RFX status table (29 Sep); RFX apex vs unexposed range (board figure from `../rfx/analysis/ebsd_orientations_all_2026-09-29/`, power line); 2025 STEM pair; infographic full size |
 
 ### What changed in the manuscript since July and is now in the deck
 
@@ -152,31 +155,17 @@ ready assets for the optional Sigma-3 slide remain.
    nothing more to ask Inna for the talk. Do not ask for `.up2`.
 5. **Final checks on the conference laptop:** title-slide logos, footer,
    fonts; bring `main.pdf` and `main-notes.pdf` (both ~20 MB).
-6. **RFX edits proposed 30 Sep, not yet applied** (source:
-   `knowledge/rfx_status_2026-09.md`, addendum 30 Sep; `REVIEW_CONTEXT.md` §6).
-   Apply after Yinon confirms; keep RFX minimal, no field claim.
-   - Slide 17 status line (L571): replace "EBSD indexes three of four samples,
-     one field-exposed sample still does not" with "all 26 EBSD maps in hand;
-     the exposed apex sits inside the unexposed range on every quantity tested,
-     so no field indication yet". Note (L577): drop "sample-preparation
-     problem"; add one sentence that the runs stopped at emission switch-on
-     with zero breakdowns, so the dataset is a pre-conditioning baseline, and
-     one sentence naming H_saturated as a hypothesis to test, not a finding.
-   - Slide 17 source (L576), backup sources (L632, L655), backup title (L636):
-     "15 Sep" → "29 Sep 2026".
-   - Backup 19 bullet 3 (L612): "#4-25 patterns poor, not repolished" → "#4-25:
-     two maps, one an outlier on confidence index; position unrecorded".
-   - Backup 20 bullets (L651, L653): "per-pixel data for five narrow-grain
-     maps" → "all 26 catalogue maps (36 scans), 28 Sep"; "Still open: scan
-     folders…" → "Still open: thermal history of #3/#4; matrix Cr/Ni EDS; SEM
-     θ-survey as the first exposure marker". Add one bullet: "Wide-vs-narrow
-     map class = grain size and indexing quality (on never-installed #2 too),
-     not field."
-   - Optional new backup (only if a null is stated aloud): one figure
-     `../rfx/analysis/ebsd_orientations_all_2026-09-29/figures/board_apex_vs_unexposed.png`
-     with the power line "80 % power at 1 SD needs ≈ 17 maps per group; we
-     have 2–4".
-   - Slide 18 bullet 3 stays; the steel test is still ahead, not failed.
+6. **RFX edits of 30 Sep — applied** (source: `knowledge/rfx_status_2026-09.md`,
+   addendum 30 Sep; `REVIEW_CONTEXT.md` §6). Slide 17 status line and note now
+   state the 29 Sep null ("no field indication yet"), the zero-breakdown
+   baseline, and H_saturated as a hypothesis; backups 19–20 carry the 29 Sep
+   record; new backup 21 shows the apex-vs-unexposed board figure
+   (`figures/rfx_board_apex_vs_unexposed.png`, copied from
+   `../rfx/analysis/ebsd_orientations_all_2026-09-29/figures/`) with the power
+   line. Known limit: the board figure's panel labels are small at conference
+   distance; if the slide is ever shown, regenerate the figure in `../rfx/`
+   with larger type. Slide 18 bullet 3 unchanged — the steel test is ahead,
+   not failed.
 
 ---
 

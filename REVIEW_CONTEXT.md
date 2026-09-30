@@ -41,7 +41,7 @@ Slot: Monday 5 Oct 2026, 12:00–12:30, Conditioning session (K/mevarc26_program
 | Need | File | Notes |
 |---|---|---|
 | Slide text and speaker notes | `main.tex` (single file) | frames listed in §2; `\note{}` = spoken register |
-| Rendered slides | `main.pdf` (22 pp, 16:9); `main-notes.pdf` | render PNGs with PyMuPDF, see HANDOFF §4 |
+| Rendered slides | `main.pdf` (23 pp, 16:9); `main-notes.pdf` | render PNGs with PyMuPDF, see HANDOFF §4 |
 | Manuscript (authoritative source) | `../cond26/main.tex`, `../cond26/refs.bib` | anchors: abstract L35, intro L49, methods L84, results L194, discussion L364, conclusions L437 |
 | July manuscript snapshot | `sources/main.pdf` | what the deck was first built from |
 | July→Sep manuscript diff, per deck frame | `K/cond26_changes_2026-09.md` | 19-row table |
@@ -82,7 +82,7 @@ Frame numbers = PDF page numbers. Line = `main.tex` frame start.
 | 16 | 524 | Next: depth and material | FIB lamellae, TEM/STEM+EBSD through ~1 µm; stainless steel, continuous DC, possible γ→α′ | Plan | `../reports/2026_interim/workplan.tex`; RFX project plan |
 | 17 | 553 | Stainless steel: a test chosen to be hard on the model | 304L; three outcomes all informative; status line (90 h / 73 h DC, 59–61 MV/m, no full breakdowns; 3 of 4 samples index) | Preliminary — no field effect claimed | §6; `K/rfx_status_2026-09.md` |
 | 18 | 581 | Conditioning appears to leave a subsurface memory | recap; infographic | — | cond26 fig `infographic` L466–477 |
-| 19–22 | 603–673 | Backup | RFX first look; RFX status table (15 Sep); 2025 STEM pair; infographic | Preliminary / Established | §6 |
+| 19–23 | 603– | Backup | RFX first look; RFX status table (29 Sep); RFX apex vs unexposed range (null at low power); 2025 STEM pair; infographic | Preliminary / Established | §6 |
 
 ---
 
@@ -284,12 +284,12 @@ breakdowns, never engaged conditioning. #4-25: two 8 Jul scans exist; Area 2
 is an outlier on confidence index (88 % of points CI < 0.1), location on the
 electrode unrecorded, cause open.
 
-**Deck lines that are stale against the 29 Sep record** (as of 30 Sep, not
-yet edited): `main.tex:571` and the note at L577 ("one field-exposed sample
-still does not [index]… sample-preparation problem"); L576, L632, L636, L655
-("through 15 Sep 2026"); L651 ("per-pixel data for five narrow-grain maps");
-L653 ("Still open: scan folders for the seven wide-grain apex maps"). What
-may now be said: "no field indication from the EBSD in hand"; "the runs
+**Deck state (30 Sep, edits applied):** slide 17 status line reads "all 26
+EBSD maps in hand; the exposed apex sits inside the unexposed range on every
+quantity tested, so no field indication yet"; its note names the zero-breakdown
+baseline and H_saturated as a hypothesis. Backups 19–20 reflect the 29 Sep
+record; backup 21 (new) shows the apex-vs-unexposed board figure with the
+power line (≈17 maps per group at 1 SD). What may be said: "no field indication from the EBSD in hand"; "the runs
 stopped at switch-on with zero breakdowns, so this is not yet a conditioning
 test". What may not: any field effect; that the null proves H_saturated; that
 #4-25's poor patterns are a preparation problem; any #1/#2 vs #3/#4 contrast
