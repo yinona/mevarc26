@@ -266,12 +266,34 @@ unexposed range. **Therefore: no stainless-steel field effect is claimed
 anywhere in the deck.** The deck carries one status line on slide 17 and two
 backup slides (19, 20).
 
-New since 28 Sep (`../rfx/` rewritten 29 Sep; raw EBSD export
-`data/huji/ebsd_2026-09-28_all_raw/`, five SEM/IQ maps
-`data/huji/ebsd_2026-09-28_sem_iq_5maps/`, histogram-ensemble analysis
-`analysis/ebsd_histogram_ensemble_2026-09-28/REVIEW.md`, Inna thread 26 Sep):
-a Grok summary is in progress and its outcome will be appended to
-`K/rfx_status_2026-09.md`. Until then the deck reflects 15 Sep.
+New since 28 Sep (`../rfx/` rewritten 29 Sep; full digest in
+`K/rfx_status_2026-09.md`, addendum 30 Sep). All 26 catalogue maps (36 OIM
+scans) are in hand, including the seven wide apex maps. Two analyses
+(`../rfx/analysis/ebsd_histogram_ensemble_2026-09-28/FINDINGS.md`,
+`../rfx/analysis/ebsd_orientations_all_2026-09-29/FINDINGS.md`) put the #3-25
+apex *inside* the same-class unexposed range on every quantity tested,
+including at matched confidence index; where it differs it is cleaner, not
+rougher. Wide-vs-narrow map class is grain size and indexing quality, present
+on every apex including never-installed #2. The 29 Sep decision
+(`../rfx/HANDOFF.md:23–33`, `STATUS.md:786–790`): "no indication of field
+exposure is establishable from the data in hand" (dose ~10⁻⁴ of yield; emitter
+sampling ~10⁻⁴ per map). Prominent *untested* hypothesis H_saturated
+(`STATUS.md:547–559`): as-manufactured 304L is already at its conditioned
+dislocation state and the runs, which stopped at emission switch-on with zero
+breakdowns, never engaged conditioning. #4-25: two 8 Jul scans exist; Area 2
+is an outlier on confidence index (88 % of points CI < 0.1), location on the
+electrode unrecorded, cause open.
+
+**Deck lines that are stale against the 29 Sep record** (as of 30 Sep, not
+yet edited): `main.tex:571` and the note at L577 ("one field-exposed sample
+still does not [index]… sample-preparation problem"); L576, L632, L636, L655
+("through 15 Sep 2026"); L651 ("per-pixel data for five narrow-grain maps");
+L653 ("Still open: scan folders for the seven wide-grain apex maps"). What
+may now be said: "no field indication from the EBSD in hand"; "the runs
+stopped at switch-on with zero breakdowns, so this is not yet a conditioning
+test". What may not: any field effect; that the null proves H_saturated; that
+#4-25's poor patterns are a preparation problem; any #1/#2 vs #3/#4 contrast
+as a field contrast.
 
 Corridor asks recorded in `../rfx/NEEDED.md`: thermal history of #3/#4 (vacuum
 firing above ~800 °C?); matrix Cr/Ni EDS on all four under identical

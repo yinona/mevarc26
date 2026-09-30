@@ -144,13 +144,39 @@ ready assets for the optional Sigma-3 slide remain.
 3. **Decide QUESTIONS 7–10** (claim verb, E_S on slide 18, periphery
    "~0 MV/m" legend in the manuscript figures, infographic legibility).
    Each is a five-minute edit.
-4. **RFX corridor asks** for Pilan/De Lorenzi (from `../rfx/NEEDED.md`):
-   thermal history of #3/#4 (vacuum firing above ~800 °C?); matrix Cr/Ni EDS
-   on all four under identical conditions. For Inna: scan folders of the seven
-   wide-grain apex maps (`.osc`), one more #1 side map at h = 2–3 mm. Do not
-   ask for `.up2`.
+4. **RFX corridor asks** for Pilan/De Lorenzi (from `../rfx/NEEDED.md`, items
+   31–36 not yet asked): thermal history of #3/#4 (vacuum firing above
+   ~800 °C?); matrix Cr/Ni EDS on all four under identical conditions; full RFX
+   run log; a next campaign of annealed vs as-received 304L, each with a sham,
+   driven into breakdowns (NEEDED 34). The seven wide apex maps arrived 28 Sep;
+   nothing more to ask Inna for the talk. Do not ask for `.up2`.
 5. **Final checks on the conference laptop:** title-slide logos, footer,
    fonts; bring `main.pdf` and `main-notes.pdf` (both ~20 MB).
+6. **RFX edits proposed 30 Sep, not yet applied** (source:
+   `knowledge/rfx_status_2026-09.md`, addendum 30 Sep; `REVIEW_CONTEXT.md` §6).
+   Apply after Yinon confirms; keep RFX minimal, no field claim.
+   - Slide 17 status line (L571): replace "EBSD indexes three of four samples,
+     one field-exposed sample still does not" with "all 26 EBSD maps in hand;
+     the exposed apex sits inside the unexposed range on every quantity tested,
+     so no field indication yet". Note (L577): drop "sample-preparation
+     problem"; add one sentence that the runs stopped at emission switch-on
+     with zero breakdowns, so the dataset is a pre-conditioning baseline, and
+     one sentence naming H_saturated as a hypothesis to test, not a finding.
+   - Slide 17 source (L576), backup sources (L632, L655), backup title (L636):
+     "15 Sep" → "29 Sep 2026".
+   - Backup 19 bullet 3 (L612): "#4-25 patterns poor, not repolished" → "#4-25:
+     two maps, one an outlier on confidence index; position unrecorded".
+   - Backup 20 bullets (L651, L653): "per-pixel data for five narrow-grain
+     maps" → "all 26 catalogue maps (36 scans), 28 Sep"; "Still open: scan
+     folders…" → "Still open: thermal history of #3/#4; matrix Cr/Ni EDS; SEM
+     θ-survey as the first exposure marker". Add one bullet: "Wide-vs-narrow
+     map class = grain size and indexing quality (on never-installed #2 too),
+     not field."
+   - Optional new backup (only if a null is stated aloud): one figure
+     `../rfx/analysis/ebsd_orientations_all_2026-09-29/figures/board_apex_vs_unexposed.png`
+     with the power line "80 % power at 1 SD needs ≈ 17 maps per group; we
+     have 2–4".
+   - Slide 18 bullet 3 stays; the steel test is still ahead, not failed.
 
 ---
 

@@ -63,3 +63,26 @@ Next steps recorded in rfx (not yet acted on):
 Corridor asks at MeVArc (Pilan and De Lorenzi are on the programme): thermal history of #3/#4; matrix Cr/Ni EDS on all four under identical conditions.
 
 Reusable material in ../rfx/presentation/ (Sep 2026): summary_2026-09.pdf (14 Sep, 15 slides), slide_ebsd_orientations_2026-09-14.pdf, slide_ebsd_parameters_schematic.pdf, and the s09_*.png figures (2–5 Sep).
+
+## Addendum 2026-09-30 — the 28–29 Sep record (../rfx HANDOFF.md, STATUS.md, NEEDED.md rewritten 29 Sep)
+
+Data received 28 Sep (WeTransfer from Inna; `data/huji/ebsd_2026-09-28_all_raw/README.md`):
+- 36 OIM scans (.osc/.dat/.par) = all 26 catalogue maps, including the seven wide-class apex maps (NEEDED 8 closed), plus ten extras: two #4-25 maps of 8 Jul, Ref1 as-is at 1 µm, trials. `.up2` files do not exist on the machine.
+- SEM/IQ/IPF images for five narrow ROIs in `data/huji/ebsd_2026-09-28_sem_iq_5maps/`.
+- Inna (26 Sep): copper EBSD was at 15 kV, steel always at 30 kV; Monte Carlo information depth < 50 nm for Cu (screenshot pending, NEEDED 316–319).
+- #4-25: two scans exist; Area 2 has CI < 0.1 on 88 % of points, IQ 2049, 4 pixels at CI ≥ 0.5; higher beam current and dwell did not recover the signal; location on the electrode unrecorded. Cause (preparation vs position) open — do not assign it.
+
+Analyses (`analysis/ebsd_histogram_ensemble_2026-09-28/`, `analysis/ebsd_orientations_all_2026-09-29/`, FINDINGS.md in each):
+- Wide vs narrow class is grain size (ECD 9–16 µm narrow vs 3.7–8.1 µm wide), boundary density, and indexing quality (CI < 0.1 on 57–87 % of wide-map points; class correlates with CI ρ = 0.83, BCC votes 0.92, high-angle pairs 0.96); it survives at CI ≥ 0.2 and ≥ 0.5; present on every apex, including never-installed #2.
+- #3-25 apex vs same-class unexposed apex: inside the range on 5 of 7 histogram indicators and on GOS, θ(L) slope, interior KAM; where it differs it is *below* (cleaner), p ≥ 0.10 at n = 2–3 vs 3–4 (floor). Within-#3 apex vs side composite one-sided p = 0.80 (wrong sign for apex hardening).
+- Power: 80 % at 1 SD needs ≈ 17 maps per group; at 2 SD, 6.
+
+Decisions 29 Sep (STATUS.md 759–813, 786–790, 547–559; HANDOFF.md 23–33):
+- "no indication of field exposure is establishable from the data in hand" (dose 10⁻⁴ of yield; emitter-site sampling ~10⁻⁴ per map; no unexposed apex with the FE heat).
+- Prominent, untested hypothesis H_saturated: as-manufactured 304L is already at its conditioned dislocation state; the runs stopped at emission switch-on with zero breakdowns, so conditioning was never engaged; under it every EBSD null is the prediction. Literature numbers cited there are not results of this experiment.
+- Cleaner #3 interiors are an electrode property (thermal history candidate), never field.
+- Next: deck to Inna, then Nicola; SEM θ-survey (NEEDED 32, "the one cheap measurement that can establish an exposure marker"); skin test (33); hardness profile (35); full RFX log (36); campaign = annealed vs as-received, each with a sham, driven into breakdowns (34, supersedes 30). Items 31–36 not yet asked.
+
+Deck statements now stale (see REVIEW_CONTEXT.md §6 and the 30 Sep suggestion list in HANDOFF.md §3): "record through 15 Sep"; "one field-exposed sample still does not [index]" and "sample-preparation problem"; "per-pixel data for five narrow-grain maps"; "still open: scan folders for the seven wide-grain apex maps".
+
+Figures worth a backup slide (28–29 Sep): `analysis/ebsd_orientations_all_2026-09-29/figures/board_apex_vs_unexposed.png` (FE3 apex vs same-class unexposed range, map = unit), `board_partition_B.png` (matched CI), `wide_vs_indexing.png`, `fe4_quality.png`; `analysis/ebsd_histogram_ensemble_2026-09-28/figures/class_vs_indexing_quality.png`, `hist_indicator_board.png`.
