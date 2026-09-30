@@ -186,6 +186,9 @@ Render slides for inspection without poppler:
 - `presentation_map.md` — the July plan (historical).
 - `.cursor/rules/` — `general-english-writing.mdc`, `physics-research-writing.mdc`.
 - `QUESTIONS.md` — open decisions only.
+- `REVIEW_CONTEXT.md` (30 Sep) — self-contained brief for an external
+  reviewing agent: slide-by-slide claims with strength labels, every number
+  with its derivation, manuscript line anchors, RFX claim limits, checks to run.
 
 ### Sibling directories (read-only from here)
 

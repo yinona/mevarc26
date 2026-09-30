@@ -23,5 +23,6 @@ and the conclusion) plus 4 backup (RFX first look, RFX status table, 2025 STEM
 pair, full-size infographic). Content reflects the manuscript and the RFX
 record as of 15–28 September 2026.
 
+External reviewers start at `REVIEW_CONTEXT.md` (claims, derivations, pointers).
 See `HANDOFF.md` for history, current state and next steps; `QUESTIONS.md`
 for open decisions; `knowledge/` for the evidence base with sources.

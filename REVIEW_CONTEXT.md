@@ -1,0 +1,299 @@
+# Review context — MeVArc 2026 talk "Does conditioning leave a structural memory?"
+
+Written 2026-09-30 for an external reviewing agent. Purpose: give the full
+scientific and editorial context of the deck, every quantitative claim with its
+derivation or source, and pointers to deeper material, so the reviewer can
+check the slides and the reasoning without re-deriving the project history.
+
+Conventions. `main.tex:L430` = line in the deck source. `cond26:L372` = line in
+the manuscript source `../cond26/main.tex` (state of 2026-09-28). `K/` =
+`knowledge/`. Paths starting with `../` are siblings of this repo on the same
+drive (`.../clic/cond26`, `.../clic/rfx`, `.../clic/reports/2026_interim`).
+Claim-strength labels: **Established** (in the manuscript, referee-reviewed),
+**Interpretation** (manuscript discussion), **Analogy** (talk-only framing),
+**Preliminary** (RFX, no claim allowed).
+
+---
+
+## 0. The talk in one paragraph
+
+Conditioning (the slow rise of the field a vacuum gap holds under repeated
+high-field pulses) is universal in high-gradient devices but its material
+basis is unknown. Our MDDF model (mobile-dislocation density and flux,
+2018–2020) predicts that conditioning evolves the near-surface dislocation
+structure. 2025 cross-sectional STEM of a conditioned hard-copper cathode saw a
+dislocation-denuded top ~200 nm, locally. The new result (manuscript under
+revision at PRAB, arXiv:2606.19192) is a large-area EBSD comparison across one
+CERN pulsed-DC cathode of heat-treated OFE copper: low-angle misorientation is
+~75 % higher in the high-field centre and edge than in an unexposed reference,
+the field-exposed periphery is intermediate, and the misorientation distribution
+grows an eightfold tail. The ordering matches the simulated profile of the
+conditioning-state variable E_S, so the dislocation population is a *candidate*
+structural basis for it. The talk closes with two next steps: depth-resolved
+microscopy and a stainless-steel test at RFX (ongoing, no result claimed).
+
+Slot: Monday 5 Oct 2026, 12:00–12:30, Conditioning session (K/mevarc26_programme.md).
+
+---
+
+## 1. Files the reviewer should open
+
+| Need | File | Notes |
+|---|---|---|
+| Slide text and speaker notes | `main.tex` (single file) | frames listed in §2; `\note{}` = spoken register |
+| Rendered slides | `main.pdf` (22 pp, 16:9); `main-notes.pdf` | render PNGs with PyMuPDF, see HANDOFF §4 |
+| Manuscript (authoritative source) | `../cond26/main.tex`, `../cond26/refs.bib` | anchors: abstract L35, intro L49, methods L84, results L194, discussion L364, conclusions L437 |
+| July manuscript snapshot | `sources/main.pdf` | what the deck was first built from |
+| July→Sep manuscript diff, per deck frame | `K/cond26_changes_2026-09.md` | 19-row table |
+| Numbers, equations, figures index | `K/equations_figures_numbers_citations.md` | presentation-ready evidence index |
+| Results and conclusions summary | `K/results_conclusions.md` | |
+| Methods and assumptions | `K/questions_methods_assumptions.md` | |
+| Limitations | `K/limitations_future.md` | |
+| Background and motivation | `K/motivation_background.md` | |
+| RFX status | `K/rfx_status_2026-09.md` (+28 Sep addendum); `../rfx/HANDOFF.md`, `STATUS.md`, `NEEDED.md` (rewritten 29 Sep) | see §6 |
+| Cited PDFs | `sources/*.pdf` | list in `K/source_inventory.md` |
+| Prior decks (lineage) | `sources/mevarc2013_*.pdf`, `mevarc24_*.pdf`, `mevarc25_*.pdf` | |
+| Decisions, history, next steps | `HANDOFF.md`, `QUESTIONS.md` | decisions in HANDOFF §5 are frozen |
+| Writing rules the deck follows | `.cursor/rules/*.mdc` | US spelling, no AI-tell words, sentence-case titles |
+
+---
+
+## 2. Slide-by-slide map with claims and sources
+
+Frame numbers = PDF page numbers. Line = `main.tex` frame start.
+
+| # | L | Title | Claim(s) on the slide | Strength | Source pointers |
+|---|---|---|---|---|---|
+| 1 | 133 | Title | registered title/subtitle; authors Ashkenazy, Popov, Bjelland, Wuensch, Millar, Calatroni | — | Indico; note: manuscript author list has no Calatroni (QUESTIONS 11) |
+| 2 | 166 | Conditioning works. What does it change? | BD rate ∝ ~E^30; conditioning follows pulse count, not breakdown count; field drives it | Established (literature) | Wuensch et al. Rep. Prog. Phys. 2026; Degiovanni PRAB 2016; cond26:L60–67 |
+| 3 | 191 | Our model: MDDF | field holding FCC→BCC→HCP order; runaway of mobile-dislocation population nucleates BD; one model gives E^30, T-dependence, dark-current spikes | Established (our papers) | Engelberg PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020) — `sources/Field_Dependent_Conditioning_Correct_Publisher.pdf`, `sources/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf`; §3.1 below |
+| 4 | 210 | STEM already saw it | denuded top ~200 nm in conditioned *hard* Cu, 300 K and 30 K; soft Cu conditions slower than hard; FIB artefacts | Established | Jacewicz et al. JAP 137, 193302 (2025) `sources/Jacewicz_2024_*.pdf`; Korsbäck PRAB 23, 033102 (2020); cond26:L64–65 |
+| 5 | 232 | A tiny stress, repeated a billion times | σ_M = ε0E²/2 = 0.028 MPa at 80 MV/m, ~10³ below yield; VHCF rearranges dislocations below yield; pulsed DC → Maxwell stress is the only cyclic load; MDDF threshold-free | Established + Interpretation | §3.2; Mughrabi MMTB 40, 431 (2009); Stanzl-Tschegg; cond26:L69–70, L396–400 |
+| 6 | 266 | Last year we asked… | visual recap, no numbers | — | 2025 deck |
+| 7 | 296 | One cathode… coordinate | heat-treated OFE Cu, 1 µs pulses at 1 kHz, ~80 MV/m peak, nine EBSD regions | Established | cond26 §Methods L84–191; `K/questions_methods_assumptions.md`; §3.3 |
+| 8 | 315 | EBSD maps plastic activity far from craters | 500 µm maps, 3 µm step (lateral only), information depth a few tens of nm, ~24 000 points/ROI, LAM/KAM/LOS, misorientation ∝ GND | Established | cond26:L179–193, L383–384; Chen et al. Ultramicroscopy 111, 1488 (2011) |
+| 9 | 336 | How to read a LAM map | 0–50° vs 0–5° scale | — | cond26 fig `LAM_boundary_vs_intragranular` L235–243 |
+| 10 | 353 | High-field Cu contains more intragrain curvature | visual pair, same scale | Established | cond26 fig `LAM_FE_ref_pair` L265–273; QUESTIONS 9 (scale bars differ) |
+| 11 | 369 | Three exposure tiers | centre/edge ~1.2°, reference ~0.68°, ~75 % higher; grain size does not follow | Established | cond26:L320, L333, Table I (`tab:low_angle_modes` L306), fig `mean_vs_radius` L343; §3.4 |
+| 12 | 387 | High-misorientation tail | P(LAM>2°) ~0.14 vs ~0.016 (~8×); gamma shape k≈2.7 fixed, scale doubles | Established | cond26:L284–330; §3.5 |
+| 13 | 408 | Large-area test confirms the prediction | first large-area confirmation; no conflict with denuded zone (one mechanism, two starting populations); ordering tracks E_S → candidate structural basis | Established + Interpretation | cond26:L376–388 (discussion), L443–445 (conclusions); §3.6 |
+| 14 | 430 | Elastic screening: dislocations respond like bound charge | dielectric analogy; ℓ_D = 1/(4.2√ρ) ≈ 25 nm; 200 nm ≈ 8 ℓ_D; thickness not predicted; field screened by surface charge, load enters as stress | Analogy on top of Interpretation | cond26:L374–381; Groma PRL 96, 165503 (2006); Lemaître PRE 104, 024904 (2021); Livne PRE 107, 055004 (2023); §3.7 |
+| 15 | 494 | Copper establishes the effect, not universality | one cathode/one experiment; open: depth, orientation, more cathodes, materials | Established (limitations) | `K/limitations_future.md`; cond26:L446–451 |
+| 16 | 524 | Next: depth and material | FIB lamellae, TEM/STEM+EBSD through ~1 µm; stainless steel, continuous DC, possible γ→α′ | Plan | `../reports/2026_interim/workplan.tex`; RFX project plan |
+| 17 | 553 | Stainless steel: a test chosen to be hard on the model | 304L; three outcomes all informative; status line (90 h / 73 h DC, 59–61 MV/m, no full breakdowns; 3 of 4 samples index) | Preliminary — no field effect claimed | §6; `K/rfx_status_2026-09.md` |
+| 18 | 581 | Conditioning appears to leave a subsurface memory | recap; infographic | — | cond26 fig `infographic` L466–477 |
+| 19–22 | 603–673 | Backup | RFX first look; RFX status table (15 Sep); 2025 STEM pair; infographic | Preliminary / Established | §6 |
+
+---
+
+## 3. Every number on the slides, with its derivation
+
+### 3.1 MDDF model (slide 3) — what "one model" means
+
+Birth–death dynamics of the mobile-dislocation density n on an active slip
+plane; breakdown nucleates when n runs away above a critical density. The
+2020 PRAB form of the rates (Engelberg et al., PRAB 23, 123501, Eq. 1):
+
+$$\lambda_n=\frac{25\,\kappa C_t c}{G^2 b\,\Delta\rho}\,\sigma^2\,
+e^{-\frac{E_a-\Omega\sigma}{k_BT}},\qquad
+\mu_n=\frac{50\,\xi C_t c}{G}\,\sigma n,$$
+
+with σ = ε0(βE)²/2 + Z G b Δρ n the stress on the slip plane, β the local
+field-enhancement factor, T temperature. The ~E^30 dependence of the breakdown
+rate comes from the exponential in σ ∝ E² near the critical point; the
+temperature dependence from k_BT; dark-current spikes from fluctuations of n
+before runaway. Deeper: `sources/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf`
+(pp. 1–2), `sources/Field_Dependent_Conditioning_Correct_Publisher.pdf`
+(the 2019 PRAB), `K/motivation_background.md`. The deck shows only two figures
+from these papers (`figures/mddf_critical_transition.png`,
+`figures/mddf_rate_vs_field.png`); no equation appears on the slide.
+
+**What may be said:** the model *predicts* an evolving near-surface dislocation
+structure (cond26:L61). **What may not:** that E_S has been measured or that
+the model is confirmed in detail.
+
+### 3.2 Maxwell stress and the cycle count (slide 5)
+
+$$\sigma_M=\tfrac{1}{2}\varepsilon_0E^2
+=\tfrac12\,(8.854\times10^{-12}\,\mathrm{F/m})\,(8\times10^{7}\,\mathrm{V/m})^2
+=2.83\times10^{4}\,\mathrm{Pa}=0.028\,\mathrm{MPa}.$$
+
+Yield of annealed Cu 30–70 MPa (cond26:L70) → ratio ~10⁻³. Cycle count: 1 µs
+pulses at 1 kHz; "~10⁹ pulses" is the conditioning history of this cathode
+(cond26 methods; 10⁹ pulses at 1 kHz ≈ 280 h of running). Fields on the
+cathode: ~80 MV/m at the flat centre, 69–77 MV/m in the edge region, ≲2.5 MV/m
+(fringe ~2.9 %) beyond the anode radius (cond26:L101–191, fig
+`efield_on_cathode` L176). Breakdown densities 24 / 12 / 5 cm⁻² for
+centre / edge / periphery (cond26 methods).
+
+The "field screened, load not" statement (cond26:L374–375): the electric field
+ends in the surface charge layer, but the Maxwell traction is a mechanical
+boundary condition carried into the metal as elastic stress, quasi-statically on
+the pulse timescale, so the electrostatic screening length says nothing about
+the depth of the response.
+
+### 3.3 Geometry and controls (slide 7)
+
+Sloped anode: inner radius r_i = 6.5 mm, outer r_o = 20 mm, gap heights 60/70 µm
+(cond26:L87–140). Nine ROIs: field-exposed centre (2), edge (2), periphery (2),
+plus external reference cathode ROIs (identically prepared, never installed).
+Grain size 26–30 µm in all regions (cond26 results) — grain size does *not*
+follow the misorientation hierarchy (slide 11).
+
+### 3.4 The ~75 % result (slide 11)
+
+Mean low-angle LAM: centre and edge 1.18–1.24°; periphery 0.78–0.79°;
+reference 0.65–0.71° (~0.68°) (cond26:L333, Table I L306).
+Ratio 1.2 / 0.68 = 1.76 → "approximately 75 %" (cond26:L79, L333, L372).
+Errors are grain-corrected standard errors of the mean (fig 9 caption,
+cond26:L340). The periphery saw ≲2.5 MV/m: it is a *low-field* control, not a
+zero-field one; its intermediate value is "consistent with" residual exposure
+(note on slide 11). Manuscript figures label the periphery "~0 MV/m"
+(QUESTIONS 9).
+
+### 3.5 Distribution tail and shape (slide 12)
+
+Fraction of LAM above 2°: ~0.016 (reference) → ~0.14 (field-exposed); ratio
+8.75, quoted as "eightfold" in the manuscript (cond26:L320) and "~8×" on the
+slide (QUESTIONS 12). Gamma fits: shape k ≈ 2.6–2.9 common to all ROIs; scale
+θ ≈ 0.22° → 0.46° (cond26:L298, L321–328). Kolmogorov–Smirnov distance
+D_KS > 0.25 for every centre/edge ROI vs unexposed (> 0.31 vs the external
+reference); chi-squared and Anderson–Darling agree (deck note, slide 12).
+Mid-angle (Mackenzie-normalised) excess 2–3×; Σ3 fraction 7–11 % (cond26:L349–350;
+not on slides). Interpretation "fixed-shape stretch = progressive deformation"
+is discussion-level (cond26 §Discussion L367+).
+
+### 3.6 The payoff and the E_S connection (slide 13)
+
+Established: the spatial ordering centre ≈ edge > periphery > reference.
+Interpretation: this is the large-area signature the MDDF model predicted
+(cond26:L61, L376–388). E_S: Monte-Carlo simulations of the conditioning-state
+variable give a spatial profile in the same order (cond26:L443–445, citing the
+CERN simulation work); the manuscript says the dislocation population "may be
+the physical mechanism tracked by E_S" (L445) and, as an outlook, "a description
+that would give E_S a microstructural definition" (L450). The deck uses
+"candidate structural basis" once (slide 13) — a frozen decision (HANDOFF §5).
+
+"One mechanism, two starting populations" (cond26:L376–382): in dense
+as-machined Cu the cyclic stress lets near-surface dislocations escape to the
+surface or annihilate (TEM depletion); in heat-treated Cu there is little to
+deplete, so the same load generates and rearranges dislocations (EBSD
+curvature). The phrase "two starting populations" is deck wording; the manuscript
+argues the same point in prose (L376–382, L389). This is Interpretation, stated
+as such on the slide.
+
+### 3.7 Elastic screening (slide 14) — the one talk-only construction
+
+Source facts (cond26:L377–381): Groma, Györgyi, Kocsis (PRL 96, 165503, 2006)
+show that in a 2D single-slip dislocation ensemble the long-range internal
+stress of a density perturbation is screened Debye-like with wavenumber
+k_0 ≈ 4.2√ρ. Hence
+
+$$\ell_D=\frac{1}{k_0}=\frac{1}{4.2\sqrt{\rho}}
+=\frac{1}{4.2\times10^{7}\,\mathrm{m^{-1}}}\approx 24\ \mathrm{nm}\approx 25\ \mathrm{nm}
+\quad(\rho\sim10^{14}\ \mathrm{m^{-2}},\ \text{as-machined Cu}),$$
+
+so the ~200 nm denuded layer is ~8 ℓ_D. Lemaître et al. (PRE 104, 024904, 2021)
+and Livne, Schiller, Moshe (PRE 107, 055004, 2023) give the general "geometric
+theory of mechanical screening" in which dislocations are the screening charges
+of the *dipole* regime — the formal basis of the dielectric analogy. Neither
+theory treats a cyclically loaded crystal with a free surface, so **the 200 nm
+thickness is observed, not predicted** (cond26:L380; stated on the slide).
+
+The analogy as drawn: applied field E₀ ↔ Maxwell traction σ_M; bound charge
+(polarisation) ↔ dislocation rearrangement (dipole regime); Debye length ↔ ℓ_D;
+screened interior field ↔ screened internal stress of the depleted layer. The
+claim box was deliberately limited on 28 Sep to "Dislocations screen the
+*internal* stress of a depleted layer, over ~25 nm" — the applied traction is
+*not* said to be screened (that would exceed Groma). The July deck had said
+ℓ_D ~ 100 nm "matching" the layer; the September manuscript corrected this
+(K/cond26_changes_2026-09.md row (b)). Points a reviewer may want to probe:
+the mixing of a dielectric (uniform E₀/ε_r, no length scale) with a Debye
+length (plasma/electrolyte picture) — the manuscript itself uses both words
+("Debye-like", "dipole regime"); and whether "dislocations respond like bound
+charge" is a fair one-line summary of the dipole regime of Livne et al.
+
+### 3.8 Information depth (slide 8)
+
+Backscattered-electron pattern formation depth in Cu at 15 kV: a few tens of
+nanometres (Chen, Kuo, Wu, Ultramicroscopy 111, 1488, 2011). The manuscript
+says only "thin surface layer" (cond26:L383) and carries an open author query
+to I. Popov on whether to quote a number (L384, commented out); the deck quotes
+the number on the authority of Chen 2011 and Popov's 27 Sep confirmation
+(`K/cond26_changes_2026-09.md`). A reviewer should treat "few tens of nm" as
+literature-supported but not yet in the referee-reviewed text. The 3 µm step
+and kernel set only the lateral resolution. Consequence: the EBSD signal comes from within the depth range
+where the hard-Cu TEM saw depletion — the two experiments are on different
+starting materials, not different depths (slide 13 note, slide 15 note).
+
+---
+
+## 4. Design decisions the reviewer should not re-open (HANDOFF §5)
+
+30 min excluding questions; review-weighted balance (5 background frames);
+E_S delayed to one line on slide 13 (plus the infographic on 18); "candidate
+structural basis" wording; ~200 nm denuded zone; two RFX main-path slides,
+RFX framed as ongoing with no field claim; reuse of 2025 figures; template
+(trilingual HUJI logo, emblem, footer); slide 14 states the manuscript's
+screening claim and does not name E_S; title/subtitle per Indico registration.
+
+## 5. Open questions the reviewer *may* weigh in on (`QUESTIONS.md`)
+
+7 claim verb ("confirms" on 13 vs "appears to" on 18); 8 E_S on the conclusion
+slide; 9 manuscript-figure legends ("~0 MV/m" periphery; mismatched scale bars
+on slide 10); 10 infographic legibility on 18; 11 Calatroni on the author line;
+12 "~8×" vs 8.75; 13 "first" priority claims (manuscript says "to our
+knowledge"); 15 rhetorical patterns ("X, not Y" > 10 times; last-year/this-year
+callback 7 times). Timing fallback (cut order) in HANDOFF §3.
+
+---
+
+## 6. RFX stainless-steel programme — what may and may not be said
+
+Facts as of the 15 Sep record (`K/rfx_status_2026-09.md`; `../rfx/STATUS.md`):
+AISI 304L electrodes at RFX HVPTF (Padova; De Lorenzi, Pilan, Spada).
+#3-25: 90 h 07 m continuous DC, peak 61 MV/m at 58 kV, 7 current bursts (all
+before switch-on), no full breakdowns. #4-25: 72 h 41 m, peak 59 MV/m at 56 kV,
+4 bursts, no full breakdowns. #1-25, #2-25: never installed (unexposed controls).
+EBSD: #1-25 97 % indexed, #3-25 99.5 % (CI 0.13, IQ ~2800), #2-25 three apex
+maps (18 Aug) + side; #4-25 poor patterns, not repolished (decision 13 Aug).
+XRD: δ-ferrite 1.3/2.3 wt % in #1/#2 vs < 0.2 in #3/#4 (Δa = +0.004 Å),
+replicated on interior cut faces → the control and exposed pairs are not
+matched material; the clean comparison is apex vs side within one electrode.
+The July apex-vs-side LAM contrast on #3-25 reproduced on never-installed
+#2-25 (forming geography), and later tests put the #3 apex inside the
+unexposed range. **Therefore: no stainless-steel field effect is claimed
+anywhere in the deck.** The deck carries one status line on slide 17 and two
+backup slides (19, 20).
+
+New since 28 Sep (`../rfx/` rewritten 29 Sep; raw EBSD export
+`data/huji/ebsd_2026-09-28_all_raw/`, five SEM/IQ maps
+`data/huji/ebsd_2026-09-28_sem_iq_5maps/`, histogram-ensemble analysis
+`analysis/ebsd_histogram_ensemble_2026-09-28/REVIEW.md`, Inna thread 26 Sep):
+a Grok summary is in progress and its outcome will be appended to
+`K/rfx_status_2026-09.md`. Until then the deck reflects 15 Sep.
+
+Corridor asks recorded in `../rfx/NEEDED.md`: thermal history of #3/#4 (vacuum
+firing above ~800 °C?); matrix Cr/Ni EDS on all four under identical
+conditions; scan folders of the seven wide-grain apex maps; one more #1 side
+map at h = 2–3 mm.
+
+---
+
+## 7. Checks the reviewer is invited to run
+
+1. Arithmetic in §3.2, §3.4, §3.5, §3.7 (all reproduce to the quoted rounding).
+2. Every slide number against `cond26` at the cited lines; flag any slide number
+   that is not in the manuscript (there should be none except the RFX status).
+3. Claim strength: any sentence on slides 13, 14, 17, 18 stronger than the
+   manuscript's discussion (§3.6, §3.7) or than "Preliminary" for RFX.
+4. Consistency of symbols and units across slides (siunitx; ℓ_D italic D per
+   manuscript; LAM/KAM/LOS/GND defined on slide 8).
+5. Whether the elastic-screening analogy (slide 14) would mislead a plasma or
+   condensed-matter physicist, and if so which single word to change.
+6. Timing: 18 core slides in 30 min; proposed cut order HANDOFF §3.
+
+## 8. Build and render
+
+`make` → `main.pdf`, `main-notes.pdf`. Poppler is not installed; PNGs via
+PyMuPDF: `python3 -c "import fitz; d=fitz.open('main.pdf'); [p.get_pixmap(dpi=100).save(f'/tmp/s-{i+1:02d}.png') for i,p in enumerate(d)]"`.
