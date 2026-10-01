@@ -183,7 +183,7 @@
       \end{tikzpicture}
   \end{columns}
   \claim{Something in the metal stores the improvement. We do not know what.}
-  \source{Wuensch et al., Rep. Prog. Phys. (2026); Degiovanni et al., PRAB (2016). See also W.~Wuensch, this morning (09:15).}
+  \source{Wuensch et al., Rev. Mod. Phys. 98, 025004 (2026); Degiovanni et al., PRAB (2016). See also W.~Wuensch, this morning (09:15).}
   \note{Open on the operational fact and the puzzle. Do not introduce E\_S here. Two macroscopic clues already constrain the answer: the near-thirtieth-power field dependence, and that conditioning follows pulse count rather than breakdown count. Both say the applied field, not the arc, is doing the work---so we should look for a field-driven change in the metal itself.}
 \end{frame}
 
@@ -223,9 +223,9 @@
         \item One cross-section cannot speak for the whole electrode.
       \end{itemize}
   \end{columns}
-  \claim{Confirmed at one spot. The large-area comparison was still missing.}
+  \claim{Seen at one spot. The large-area comparison was still missing.}
   \source{Jacewicz et al., J.\ Appl.\ Phys.\ 137, 193302 (2025) --- Uppsala/FREIA; Popov, HUJI. Korsb\"ack et al., PRAB 23, 033102 (2020). Shown at MeVArc 2025.}
-  \note{These are our 2025 STEM images. The dark band is the protective coating over the surface; just beneath it the field-exposed region is denuded of dislocations, while the reference stays dislocation-rich to the surface. The hard-versus-soft copper contrast (Korsb\"ack 2020) is an independent macroscopic clue pointing the same way: about 25 million pulses to condition hard copper versus roughly 600 million for soft, consistent with different starting dislocation populations. Two lessons carried forward: FIB sample preparation itself generates dislocations and loops---real red herrings---so only larger-scale structure is trustworthy; and TEM/STEM is intrinsically local. Last year I closed by asking for more comparative forensics: other materials, more samples. That is exactly the gap the next slides fill.}
+  \note{These are our 2025 STEM images. The dark band is the protective coating over the surface; just beneath it the field-exposed region is denuded of dislocations, while the reference stays dislocation-rich to the surface. The hard-versus-soft copper contrast (Korsb\"ack 2020) is an independent macroscopic clue pointing the same way: hard copper conditioned within about 25 million pulses in that test, while one soft sample only began to saturate near 600 million and the others stayed unsaturated longer, consistent with different starting dislocation populations. Two lessons carried forward: FIB sample preparation itself generates dislocations and loops---real red herrings---so only larger-scale structure is trustworthy; and TEM/STEM is intrinsically local. Last year I closed by asking for more comparative forensics: other materials, more samples. That is exactly the gap the next slides fill.}
 \end{frame}
 
 % ── 5. Maxwell stress + VHCF, and the bridge to results ──────────────────────
@@ -321,15 +321,15 @@
     \column{0.49\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item Large area where TEM could only sample a point
-        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step (lateral only); information depth a few tens of \si{nm}
+        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step (lateral only); information depth ${\sim}\SI{40}{nm}$ at \SI{15}{kV}
         \item ${\sim}24{,}000$ indexed points per ROI
         \item LAM, KAM, and LOS probe intragrain orientation gradients
         \item Misorientation is a proxy for GND density
       \end{itemize}
   \end{columns}
   \claim{We measure the cumulative response to the field, not crater damage.}
-  \source{Ashkenazy et al., \condref; information depth after Chen et al., Ultramicroscopy 111, 1488 (2011).}
-  \note{EBSD is chosen precisely because it is large-area where TEM is local. A shallow FIB clean removes oxide, under 10 nm by AFM, then we map orientation gradients. The 3 micron step and kernel fix only the lateral resolution; the backscattered electrons that carry the pattern come from the top few tens of nanometers of copper at 15 kV, so this is a near-surface measurement. All ROIs are deliberately far from craters, so we measure the cumulative material response to the field, not arc damage. LAM is the primary metric; KAM and LOS check that the result does not depend on one analysis choice.}
+  \source{Ashkenazy et al., \condref; information depth after Chen et al., Ultramicroscopy 111, 1488 (2011) and Drouin et al., Scanning 29, 92 (2007).}
+  \note{EBSD is chosen precisely because it is large-area where TEM is local. A shallow FIB clean removes oxide, under 10 nm by AFM, then we map orientation gradients. The 3 micron step and kernel fix only the lateral resolution; the backscattered electrons that carry the pattern come from the top 40 nanometers or so of copper at 15 kV, so this is a near-surface measurement. All ROIs are deliberately far from craters, so we measure the cumulative material response to the field, not arc damage. LAM is the primary metric; KAM and LOS check that the result does not depend on one analysis choice.}
 \end{frame}
 
 % ── 8. How to read a LAM map ─────────────────────────────────────────────────
@@ -361,7 +361,7 @@
       \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{lam_ref_edge.png}\\[-1mm]
       \tagbox{teal}{Unexposed reference}
   \end{columns}
-  \source{Ashkenazy et al., \condref. Same LAM color scale.}
+  \source{Ashkenazy et al., \condref. Same LAM color scale; magnifications differ (scale bars \SI{200}{\micro m} and \SI{100}{\micro m}).}
   \note{Now the comparison. Look at the spatial texture, not just the average color: the field-exposed region carries far more high-misorientation structure inside the grains. The pair shown is representative; the quantitative conclusion uses all nine ROIs.}
 \end{frame}
 
@@ -404,8 +404,8 @@
   \note{The mean is not the whole story. The low-angle distribution broadens and grows a long tail: the fraction above two degrees rises roughly eightfold. The gamma shape parameter stays near 2.7 while the scale roughly doubles---a fixed-shape stretch, the signature of progressive deformation. LAM, KAM, and LOS agree, and KS, chi-squared, and Anderson--Darling all separate the distributions; every center or edge ROI differs from the unexposed ones with a KS distance above 0.25. I quote effect sizes and grain-corrected errors rather than the extreme pixel-pair p-values.}
 \end{frame}
 
-% ── 12. Confirms the MDDF prediction ─────────────────────────────────────────
-\begin{frame}{The large-area test confirms the model's prediction}
+% ── 12. Supports the MDDF prediction ─────────────────────────────────────────
+\begin{frame}{The large-area test supports the model's prediction}
   \centering
   \begin{tikzpicture}[node distance=0.42cm]
     \node[draw=copper,fill=copper!12,rounded corners,minimum width=2.6cm,minimum height=1.3cm,align=center] (a) {Pulsed field\\$E(r,t)$};
@@ -416,7 +416,7 @@
   \end{tikzpicture}
   \vspace{0.4cm}
   \begin{itemize}\setlength\itemsep{0.35em}
-    \item First \alert{large-area} confirmation that conditioning evolves the near-surface dislocation structure, as MDDF predicted.
+    \item To our knowledge, the first \alert{large-area} observation that conditioning evolves the near-surface dislocation structure, as MDDF predicted.
     \item No conflict with the 2025 denuded zone: one mechanism, two starting populations (hard Cu depletes; heat-treated Cu builds curvature).
     \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.
   \end{itemize}
@@ -499,7 +499,7 @@
         \item Large-area structural difference
         \item Three independent metrics
         \item Internal and external controls
-        \item Confirms the MDDF prediction
+        \item Supports the MDDF prediction
       \end{itemize}
     \column{0.48\textwidth}
       \tagbox{warn}{What remains open}
@@ -567,14 +567,14 @@
     \column{0.54\textwidth}
       \tagbox{good}{SS tracks field} \;{\small cross-material structural state}\\[0.3em]
       \tagbox{purple}{SS differs} \;{\small material-specific carriers}\\[0.3em]
-      \tagbox{warn}{no resolved change} \;{\small bounds dose and sensitivity}\\[0.45em]
+      \tagbox{warn}{no resolved change} \;{\small informative only with enough maps}\\[0.45em]
       {\footnotesize Status: \SI{90}{h} and \SI{73}{h} DC, peak 59--\SI{61}{MV/m}, no full breakdowns; all 26 EBSD maps in hand; the exposed apex sits inside the unexposed range on every quantity tested, so no field indication yet.}\\[0.35em]
       \raisebox{-0.34\height}{\includegraphics[height=0.5cm]{logo_rfx.png}}\;
       {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada}
   \end{columns}
   \claim{Any of the three outcomes constrains the mechanism; the test is not pass-or-fail.}
   \source{RFX electrode geometry and plan; project record through 29 Sep 2026; first-look data in backup. RFX HV work: N.~Pilan, next talk (12:30).}
-  \note{Stainless steel is chosen because it is hard: it changes the stacking-fault energy, the dislocation mobility, the loading mode, and adds a possible austenite-to-martensite transformation. That is what makes it discriminating. A field-correlated response supports a broad structural mechanism; a qualitatively different response identifies which material degrees of freedom store the state; a well-quantified null result bounds the sensitivity and may separate cyclic from continuous loading. Where we stand: the two exposed electrodes ran about 90 and 73 hours of continuous DC at up to 61 megavolts per meter with no full breakdowns. All 26 EBSD maps are in hand, and the exposed apex sits inside the unexposed range on every quantity we tested, so there is no field indication yet. The runs stopped at emission switch-on with zero breakdowns, so this dataset is a pre-conditioning baseline. One hypothesis we will test: as-manufactured 304L is already in its conditioned dislocation state, so the run never engaged conditioning. An early apex-versus-side contrast turned out to reproduce on a never-installed reference, so it is forming geography. No stainless-steel field effect is claimed. First-look SEM and EBSD are in backup.}
+  \note{Stainless steel is chosen because it is hard: it changes the stacking-fault energy, the dislocation mobility, the loading mode, and adds a possible austenite-to-martensite transformation. That is what makes it discriminating. A field-correlated response supports a broad structural mechanism; a qualitatively different response identifies which material degrees of freedom store the state; a null result is informative only once the statistics can bound the sensitivity, which at the current two to four maps per group they cannot; with enough maps it may separate cyclic from continuous loading. Where we stand: the two exposed electrodes ran about 90 and 73 hours of continuous DC at up to 61 megavolts per meter with no full breakdowns. All 26 EBSD maps are in hand, and the exposed apex sits inside the unexposed range on every quantity we tested, so there is no field indication yet. The runs stopped at emission switch-on with zero breakdowns. One hypothesis we will test: as-manufactured 304L is already in its conditioned dislocation state, so the run never engaged conditioning. An early apex-versus-side contrast turned out to reproduce on a never-installed reference, so it is forming geography. No stainless-steel field effect is claimed. First-look SEM and EBSD are in backup.}
 \end{frame}
 
 % ── 16. Conclusion + 2025 bookend ────────────────────────────────────────────
@@ -583,7 +583,7 @@
     \column{0.56\textwidth}
       \begin{enumerate}\setlength\itemsep{0.5em}
         \item Our model predicts conditioning evolves the near-surface dislocation structure.
-        \item 2025 STEM saw it locally; \alert{large-area EBSD now confirms it} (${\sim}75\%$ higher misorientation).
+        \item 2025 STEM saw it locally; \alert{large-area EBSD now supports it} (${\sim}75\%$ higher misorientation).
         \item Depth and stainless steel test whether the memory survives a change of scale, alloy, and loading.
       \end{enumerate}
     \column{0.42\textwidth}
@@ -594,7 +594,7 @@
     Last year: ``other materials? more samples?'' --- here is the large-area answer.
   \end{beamercolorbox}
   {\footnotesize\color{muted}Copper result: \condref.}
-  \note{Close the loop from the title and from last year. The model predicted a structural memory; the STEM saw it at one spot; the large-area EBSD confirms it across the electrode with a 75 percent effect and a three-tier hierarchy. The stainless-steel and depth programs are the next round of comparative forensics I promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
+  \note{Close the loop from the title and from last year. The model predicted a structural memory; the STEM saw it at one spot; the large-area EBSD supports it across the electrode with a 75 percent effect and a three-tier hierarchy. The stainless-steel and depth programs are the next round of comparative forensics I promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
 \end{frame}
 
 % ══ Backup ═══════════════════════════════════════════════════════════════════
@@ -669,7 +669,7 @@
         \item Unit $=$ one EBSD map; \#3-25 apex vs same-class unexposed apex ($n = 2$--$3$ vs $3$--$4$).
         \item Inside the unexposed range on every quantity (GOS, in-grain $\theta(L)$ slope, interior KAM, histogram indicators), also at matched confidence index.
         \item Where it differs it is \emph{cleaner}, not rougher ($p \ge 0.10$).
-        \item Power: 80\% at 1 SD needs ${\approx}17$ maps per group. Runs stopped at switch-on, zero breakdowns: a pre-conditioning baseline.
+        \item Power: 80\% at 1 SD needs ${\approx}17$ maps per group. Runs stopped at emission switch-on with zero breakdowns.
       \end{itemize}
   \end{columns}
   \source{RFX project record, orientation pass of 29 Sep 2026 (all 26 catalogue maps); EBSD I.~Popov, HUJI.}

@@ -26,19 +26,17 @@ inline; each has a recommended default.
 
 ## Raised by the 2026-09-28 style reviews (judgement calls)
 
-7. **Claim verb.** Slide 13 title says the test "confirms the model's
-   prediction"; slide 18 title says conditioning "appears to leave" a memory.
-   One reviewer read the pair as inconsistent.
-   [ ] keep both (recommended: payoff strong, conclusion hedged)
-   [ ] soften 13 to "matches"  [ ] strengthen 18 to "leaves"
+7. **Claim verb.** Decided 1 Oct per the modifier brief: "confirms" →
+   "supports" on slides 13, 15, 18 and notes (manuscript: "consistent with",
+   "supports"); slide 4 "Confirmed at one spot" → "Seen at one spot". Closed.
 8. **E_S on the conclusion slide.** The July decision says "one line on the
    payoff slide + conclusion", but slide 18 names E_S only through the
    infographic ("candidate physical basis of the conditioning state").
    [ ] accept as is (recommended)  [ ] add one hedged E_S line to slide 18
 9. **Manuscript figure labels.** `mean_vs_radius.pdf` and
    `low_angle_overlay.pdf` label the periphery "~0 MV/m" while the notes say
-   "at most about 2.5 MV/m"; the slide-10 map pair has 200 µm vs 100 µm scale
-   bars under "same LAM color scale".
+   "at most about 2.5 MV/m". The slide-10 scale-bar mismatch is now stated
+   on the slide's source line (1 Oct); only the "~0 MV/m" legend remains.
    [ ] accept, explain aloud (recommended)  [ ] regenerate from cond26
 10. **Infographic on slide 18** at 0.42 text width was judged illegible by
    both reviewers (full size is backup 22).
@@ -49,10 +47,10 @@ inline; each has a recommended default.
 12. **"~8×" tail increase.** 0.14/0.016 ≈ 8.8; the manuscript says
    "eightfold".
    [ ] keep "~8×" (recommended, matches manuscript)  [ ] "~9×"
-13. **Priority claims.** "First direct structural evidence" (slide 4) and
-   "First large-area confirmation" (slide 13).
-   [ ] keep (recommended; matches the manuscript's novelty statement)
-   [ ] prefix "to our knowledge"
+13. **Priority claims.** Slide 13 now reads "To our knowledge, the first
+   large-area observation" (1 Oct, matches manuscript L80/L442). Slide 4
+   "First direct structural evidence" kept unqualified per the brief
+   (notes only). Closed.
 15. **Rhetorical pattern.** Both reviewers counted the "X, not Y" antithesis
    more than ten times and the last-year/this-year callback seven times
    (slides 1, 4, 5, 6, 7, 18 and notes).

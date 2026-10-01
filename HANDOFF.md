@@ -68,7 +68,8 @@ us, N. Pilan (RFX) right after. Programme notes: `knowledge/mevarc26_programme.m
 | `7c1ee35` | 28 Sep | Cleanup of unused files; Indico programme cross-references; RFX wording corrected from `../rfx/HANDOFF.md`; handoff rewritten. |
 | `0d391ec` | 30 Sep | `REVIEW_CONTEXT.md` for external review of slides and derivations. |
 | `53d0f0b` | 30 Sep | 29 Sep RFX record digested (`knowledge/rfx_status_2026-09.md` addendum). |
-| (this) | 30 Sep | RFX edits applied: slide 17 status line and note, backups 19–20 updated to 29 Sep, new backup 21 (apex vs unexposed range, null at low power). |
+| `91b0304` | 30 Sep | RFX edits applied: slide 17 status line and note, backups 19–20 updated to 29 Sep, new backup 21 (apex vs unexposed range, null at low power). |
+| (this) | 1 Oct | Modifier brief (`MEVARC26_MAIN_PRESENTATION_MODIFIER_BRIEF.md`) audited; nine factual and claim-strength edits applied (see §3 item 7). Slide 17 stays in the main path; target stays 30 min. |
 
 The agent workflow on 28 Sep used subagents (`grok-4.7-high-fast` for reading
 and mechanical passes, `claude-opus-5-5-medium` once as second reviewer); the
@@ -96,7 +97,7 @@ page counts and renders.
 | 10 | High-field copper contains more intragrain curvature | |
 | 11 | Three exposure tiers (~75 %) | |
 | 12 | High-misorientation tail (~8×) | KS detail moved to notes |
-| 13 | The large-area test confirms the model's prediction | payoff; the one E_S line; "one mechanism, two starting populations" |
+| 13 | The large-area test supports the model's prediction | payoff; "to our knowledge, the first large-area observation"; the one E_S line; "one mechanism, two starting populations" |
 | 14 | **Elastic screening: dislocations respond like bound charge** | new; ℓ_D ≈ 25 nm, 200 nm ≈ 8 ℓ_D, "not predicted"; no E_S |
 | 15 | Copper establishes the effect, not universality | cooperation call; cross-ref Coman 11:30 |
 | 16 | Next: go deeper, and change the material | thumbnails |
@@ -166,6 +167,20 @@ ready assets for the optional Sigma-3 slide remain.
    distance; if the slide is ever shown, regenerate the figure in `../rfx/`
    with larger type. Slide 18 bullet 3 unchanged — the steel test is ahead,
    not failed.
+7. **Modifier brief, 1 Oct — disposition.** Applied (factual or manuscript
+   alignment): Wuensch → Rev. Mod. Phys. 98, 025004; information depth
+   "~40 nm at 15 kV" with Chen 2011 + Drouin 2007 (manuscript L383);
+   "confirms" → "supports" (slides 13, 15, 18, notes); "to our knowledge, the
+   first large-area observation" (slide 13); slide 10 source notes the
+   200/100 µm scale bars; slide 17 null tag "informative only with enough
+   maps" (no "bounds"); "pre-conditioning baseline" dropped for the plain
+   fact "stopped at emission switch-on, zero breakdowns"; Korsbäck pulse
+   counts nuanced in the slide-4 note. Not applied: move slide 17 to backup
+   and the 22–24 min target (Yinon 1 Oct: 30 min, keep the overload);
+   "credit 16:00 to J. Wang" (wrong — 16:00 is G. Meng); deleting "not
+   sample position", "independent" metrics, and softening "the field, not
+   the arcs" (each would underclaim the manuscript, L405, L441, L66/L415).
+   The brief file is untracked and can be deleted once read.
 
 ---
 
