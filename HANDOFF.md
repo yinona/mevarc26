@@ -180,7 +180,7 @@ ready assets for the optional Sigma-3 slide remain.
    "credit 16:00 to J. Wang" (wrong — 16:00 is G. Meng); deleting "not
    sample position", "independent" metrics, and softening "the field, not
    the arcs" (each would underclaim the manuscript, L405, L441, L66/L415).
-   The brief file is untracked and can be deleted once read.
+   The brief file was deleted on 1 Oct after this disposition was recorded.
 
 ---
 
