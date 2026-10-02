@@ -726,7 +726,7 @@
   \begin{columns}[T]
     \column{0.48\textwidth}
       \tagbox{good}{What is established}
-      \begin{itemize}\setlength\itemsep{0.38em}
+      \begin{itemize}\setlength\itemsep{0.22em}
         \item Large-area structural difference
         \item Three independent metrics
         \item Internal and external controls
@@ -734,7 +734,7 @@
       \end{itemize}
     \column{0.48\textwidth}
       \tagbox{warn}{What remains open}
-      \begin{itemize}\setlength\itemsep{0.38em}
+      \begin{itemize}\setlength\itemsep{0.22em}
         \item \alert{One conditioned cathode, one experiment}
         \item Full depth profile
         \item Grain-orientation dependence
@@ -742,8 +742,17 @@
         \item Cross-material generality
       \end{itemize}
   \end{columns}
-  \vspace{0.25cm}
+  \vspace{0.12cm}
+  % Limits of this dataset (fills the space left when the cooperation box moved
+  % to the closing frame): cond26/main.tex L413-416, as already said in the note.
+  \begin{beamercolorbox}[rounded=true,sep=0.1cm,wd=\linewidth]{block body}
+    \small\color{ink}\textbf{\color{warn}Limits of this dataset:}
+    field level and breakdown density vary together by construction (${\sim}24$, 12, 5 breakdowns per \si{cm^2}, center outward);
+    LAM values are relative, compared only between regions mapped under the same step and protocol.
+  \end{beamercolorbox}
+  \vspace{0.02cm}
   \claim{A stronger test changes both the material and the loading history.}
+  \source{Ashkenazy et al., \condref\ (discussion, limitations).}
   \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. The invitation to replicate and compare across facilities comes on the last slide. Depth matters: STEM depletion in hard copper, EBSD curvature in heat-treated copper, each in top few hundred nanometers at most. Depth profile on one material would show whether two ends of one redistribution. Next experiments add depth and change material and loading mode.}
 \end{frame}
 
