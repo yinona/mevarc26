@@ -81,7 +81,7 @@ Local copies in `mevarc26/sources/` (original filenames preserved).
 | ~~`Engelberg_MDDF_FieldDependent.pdf`~~ (removed 2026-09-28; same paper as the publisher PDF below) | `../sideprojects/plast/papers/Engelberg_MDDF_FieldDependent.pdf` | Engelberg et al. — MDDF field-dependent breakdown model. |
 | `Field_Dependent_Conditioning_Correct_Publisher.pdf` | `../cond26/private/ref_pdfs/Field_Dependent_Conditioning_Correct_Publisher.pdf` | Engelberg et al., PRAB 22, 083501 (2019) — field-dependent conditioning. |
 | `Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | `../sideprojects/plast/papers/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf` | Engelberg et al., PRAB 23, 123501 (2020) — dark-current spikes / MDDF. |
-| `Jacewicz_2024_Surface_Modifications_Cu.pdf` | `../sideprojects/plast/papers/Jacewicz_2024_Surface_Modifications_Cu.pdf` | Jacewicz et al., JAP 137, 193302 (2025) — Cu surface / denuded-zone STEM. |
+| `Jacewicz_2025_JAP_137_193302.pdf` | publisher PDF (added 2 Oct 2026; replaces the misnamed 2022 Elsevier preprint `Jacewicz_2024_Surface_Modifications_Cu.pdf`, which lacked the STEM section) | Jacewicz et al., JAP 137, 193302 (2025) — Cu surface and sub-surface modifications; dislocation walls reduced at 300 K and 30 K, denuded zone shown for the 30 K cathode (Fig. 10) |
 | `main.pdf` | `../cond26/main.pdf` | cond26 PRAB manuscript (compiled PDF). LaTeX source: `../cond26/main.tex`; bibliography: `../cond26/refs.bib`. |
 | `mevarc25_huji_v2.pdf` | `.../Clic_huji_microscopy/Presentations/mevarc25_huji_v2.pdf` | MeVArc 2025 HUJI deck (31 slides; MDDF + STEM microscopy). |
 | `RMP_Review_Wuensch_2026.pdf` | `../sideprojects/plast/papers/RMP_Review_Wuensch_2026.pdf` | Wuensch et al., RMP 98, 025004 (2026) — conditioning review. |

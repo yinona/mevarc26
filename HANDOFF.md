@@ -186,8 +186,9 @@ ready assets for the optional Sigma-3 slide remain.
    dates); slide 4 bullets per the published JAP paper ("fewer dislocation
    walls at 300 K and 30 K; denuded layer clearest at 30 K", source
    `../proj26/own_work/papers/jacewicz2025.md` — the local
-   `sources/Jacewicz_2024_*.pdf` is the 2022 preprint and lacks the STEM
-   section), "First direct" → "Direct"; slide 5 source credits J. Wang as the
+   `sources/Jacewicz_2024_*.pdf` was the 2022 preprint and lacked the STEM
+   section; replaced 2 Oct by the publisher PDF
+   `sources/Jacewicz_2025_JAP_137_193302.pdf`), "First direct" → "Direct"; slide 5 source credits J. Wang as the
    16:00 speaker (Indico speaker field; Meng is first author); slide 8
    itemsep; slide 13 "conditioned regions carry a different near-surface
    dislocation structure" (spatial comparison, not before/after); slide 17
