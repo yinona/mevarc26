@@ -181,6 +181,28 @@ ready assets for the optional Sigma-3 slide remain.
    sample position", "independent" metrics, and softening "the field, not
    the arcs" (each would underclaim the manuscript, L405, L441, L66/L415).
    The brief file was deleted on 1 Oct after this disposition was recorded.
+8. **`../proj26/talk_mevarc26/deck_minimal.diff` (another agent, 1 Oct
+   21:29) — disposition 2 Oct.** Applied: footer "4--9 Oct" (Indico event
+   dates); slide 4 bullets per the published JAP paper ("fewer dislocation
+   walls at 300 K and 30 K; denuded layer clearest at 30 K", source
+   `../proj26/own_work/papers/jacewicz2025.md` — the local
+   `sources/Jacewicz_2024_*.pdf` is the 2022 preprint and lacks the STEM
+   section), "First direct" → "Direct"; slide 5 source credits J. Wang as the
+   16:00 speaker (Indico speaker field; Meng is first author); slide 8
+   itemsep; slide 13 "conditioned regions carry a different near-surface
+   dislocation structure" (spatial comparison, not before/after); slide 17
+   and backup 19 "zero breakdowns (stopped at emission switch-on)"; slide 17
+   claim "Any outcome…"; backup 21 power bullet adds "the data exclude only a
+   uniform apex shift ≳2.5 map-SD" (`../rfx/analysis/field_indication_review_2026-09-29/SYNTHESIS.md:20`),
+   columns rebalanced instead of `shrink=10`. Rejected: slide 14 "bound
+   charge" → "screening charges" and "(no electrostatic counterpart)" — the
+   left panel is a dielectric and bound-charge polarization *is* the
+   electrostatic counterpart of the dipole regime (Livne 2023); the Debye
+   wording stays in the correspondence strip as in the manuscript. Pending
+   Yinon: title-slide author line (drop S. Calatroni, "W. L. Millar", order
+   Bjelland, Millar, Wuensch as in the manuscript) — QUESTIONS 11.
+   Other files in that folder (`PROPOSED_EDITS.md`, `QA_PREP*.md`,
+   `TIMING_PLAN.md`, `deck_proposed.diff`) were not reviewed here.
 
 ---
 

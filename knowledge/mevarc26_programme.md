@@ -27,7 +27,7 @@ contributions; timetable at
 | 12:30 | Conditioning | N. Pilan (RFX) | HV DC discharges in low-pressure gases and regenerative … | slide 17 source: "RFX HV work: N. Pilan, next talk" |
 | 14:30 | Initiation | S. Lebedynskyi | Anode-induced effects in high-gradient vacuum breakdown | — |
 | 15:00 | Initiation | M. Klas | Memory effect in vacuum microdischarges (common vs noble metals) | note only: different "memory" (gas microdischarges) — be ready for the question |
-| 16:00 | Initiation | G. Meng | Electric-field-driven deformation dynamics in metal nanostructures | slide 5 source: field-driven deformation at the nanoscale |
+| 16:00 | Initiation | J. Wang (speaker; Meng et al.) | Electric-field-driven deformation dynamics in metal nanostructures | slide 5 source: field-driven deformation at the nanoscale |
 | 16:30 | Initiation | V. Zadin (Tartu) | In situ observation of field-induced surface protrusion formation in FCC metals | slide 5 source (same line) |
 
 ## Later in the week (possibly relevant for discussions)
