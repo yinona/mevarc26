@@ -60,33 +60,38 @@ Slot: Monday 5 Oct 2026, 12:00–12:30, Conditioning session (K/mevarc26_program
 
 ## 2. Slide-by-slide map with claims and sources
 
-Frame numbers = PDF page numbers. Line = `main.tex` frame start.
+Frame numbers = PDF page numbers (26 pages = 21 core + 5 backup after the design pass of 2 Oct 2026; HANDOFF 'Design pass, 2 Oct'). Line = `main.tex` frame start.
 
 | # | L | Title | Claim(s) on the slide | Strength | Source pointers |
 |---|---|---|---|---|---|
-| 1 | 133 | Title | registered title/subtitle; authors Ashkenazy, Popov, Bjelland, Wuensch, Millar, Calatroni | — | Indico; note: manuscript author list has no Calatroni (QUESTIONS 11) |
-| 2 | 166 | Conditioning works. What does it change? | BD rate ∝ ~E^30; conditioning follows pulse count, not breakdown count; field drives it | Established (literature) | Wuensch et al. Rep. Prog. Phys. 2026; Degiovanni PRAB 2016; cond26:L60–67 |
-| 3 | 191 | Our model: MDDF | field holding FCC→BCC→HCP order; runaway of mobile-dislocation population nucleates BD; one model gives E^30, T-dependence, dark-current spikes | Established (our papers) | Engelberg PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020) — `sources/Field_Dependent_Conditioning_Correct_Publisher.pdf`, `sources/Engelberg_2020_PRAB_DarkCurrentSpikes.pdf`; §3.1 below |
-| 4 | 210 | STEM already saw it | fewer dislocation walls at 300 K and 30 K, denuded top ~200 nm clearest in the 30 K cathode (Fig. 10 of the published JAP paper, `sources/Jacewicz_2025_JAP_137_193302.pdf`); soft Cu conditions slower than hard; FIB artefacts | Established | Jacewicz et al. JAP 137, 193302 (2025) `sources/Jacewicz_2024_*.pdf`; Korsbäck PRAB 23, 033102 (2020); cond26:L64–65 |
-| 5 | 232 | A tiny stress, repeated a billion times | σ_M = ε0E²/2 = 0.028 MPa at 80 MV/m, ~10³ below yield; VHCF rearranges dislocations below yield; pulsed DC → Maxwell stress is the only cyclic load; MDDF threshold-free | Established + Interpretation | §3.2; Mughrabi MMTB 40, 431 (2009); Stanzl-Tschegg; cond26:L69–70, L396–400 |
-| 6 | 266 | Last year we asked… | visual recap, no numbers | — | 2025 deck |
-| 7 | 296 | One cathode… coordinate | heat-treated OFE Cu, 1 µs pulses at 1 kHz, ~80 MV/m peak, nine EBSD regions | Established | cond26 §Methods L84–191; `K/questions_methods_assumptions.md`; §3.3 |
-| 8 | 315 | EBSD maps plastic activity far from craters | 500 µm maps, 3 µm step (lateral only), information depth a few tens of nm, ~24 000 points/ROI, LAM/KAM/LOS, misorientation ∝ GND | Established | cond26:L179–193, L383–384; Chen et al. Ultramicroscopy 111, 1488 (2011) |
-| 9 | 336 | How to read a LAM map | 0–50° vs 0–5° scale | — | cond26 fig `LAM_boundary_vs_intragranular` L235–243 |
-| 10 | 353 | High-field Cu contains more intragrain curvature | visual pair, same scale | Established | cond26 fig `LAM_FE_ref_pair` L265–273; QUESTIONS 9 (scale bars differ) |
-| 11 | 369 | Three exposure tiers | centre/edge ~1.2°, reference ~0.68°, ~75 % higher; grain size does not follow | Established | cond26:L320, L333, Table I (`tab:low_angle_modes` L306), fig `mean_vs_radius` L343; §3.4 |
-| 12 | 387 | High-misorientation tail | P(LAM>2°) ~0.14 vs ~0.016 (~8×); gamma shape k≈2.7 fixed, scale doubles | Established | cond26:L284–330; §3.5 |
-| 13 | 408 | Large-area test supports the prediction | first large-area confirmation; no conflict with denuded zone (one mechanism, two starting populations); ordering tracks E_S → candidate structural basis | Established + Interpretation | cond26:L376–388 (discussion), L443–445 (conclusions); §3.6 |
-| 14 | 430 | Elastic screening: dislocations respond like bound charge | dielectric analogy; ℓ_D = 1/(4.2√ρ) ≈ 25 nm; 200 nm ≈ 8 ℓ_D; thickness not predicted; field screened by surface charge, load enters as stress | Analogy on top of Interpretation | cond26:L374–381; Groma PRL 96, 165503 (2006); Lemaître PRE 104, 024904 (2021); Livne PRE 107, 055004 (2023); §3.7 |
-| 15 | 494 | Copper establishes the effect, not universality | one cathode/one experiment; open: depth, orientation, more cathodes, materials | Established (limitations) | `K/limitations_future.md`; cond26:L446–451 |
-| 16 | 524 | Next: depth and material | FIB lamellae, TEM/STEM+EBSD through ~1 µm; stainless steel, continuous DC, possible γ→α′ | Plan | `../reports/2026_interim/workplan.tex`; RFX project plan |
-| 17 | 553 | Stainless steel: a test chosen to be hard on the model | 304L; three outcomes all informative; status line (90 h / 73 h DC, 59–61 MV/m, no full breakdowns; 3 of 4 samples index) | Preliminary — no field effect claimed | §6; `K/rfx_status_2026-09.md` |
-| 18 | 581 | Conditioning appears to leave a subsurface memory | recap; infographic | — | cond26 fig `infographic` L466–477 |
-| 19–23 | 603– | Backup | RFX first look; RFX status table (29 Sep); RFX apex vs unexposed range (null at low power); 2025 STEM pair; infographic | Preliminary / Established | §6 |
+| 1 | 149 | Title | registered title/subtitle; authors Ashkenazy, Popov, Millar, Bjelland, Wuensch | — | Indico contribution 56 (QUESTIONS 16) |
+| 2 | 182 | Conditioning works. What does it change? | BD rate ∝ ~E^30; conditioning follows pulse count, not breakdown count; field drives it | Established (literature) | Wuensch et al. RMP 98, 025004 (2026); Degiovanni PRAB 2016; cond26:L60–67 |
+| 3 | 207 | Our model: breakdown as collective dislocation dynamics | field holding FCC→BCC→HCP order; runaway of mobile-dislocation population nucleates BD; one model gives E^30, T-dependence, dark-current spikes; claim box unchanged (central prediction) | Established (our papers) | Engelberg PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020); §3.1. Title per design C2; icon captions B15 |
+| 4 | 230 | What the model says the microscope should see (NEW, design C1) | four-box chain model → implication → trace → test; a ~10⁹-pulse memory must sit in stored, EBSD-visible dislocations; look far from craters, order follows local field; predicts where/order, not size/depth/sign; brace: no equation for conditioning yet | Inference from the model (stated as such) | proj26/talk_mevarc26/design/C_motivation/PROPOSALS.md (C1, traceability table); OWN-PRL18/PRAB19 cards; cond26:L66, L78, L383 |
+| 5 | 317 | STEM already saw it | fewer dislocation walls at 300 K and 30 K, denuded top ~200 nm clearest in the 30 K cathode; soft Cu conditions slower than hard; FIB artefacts | Established | Jacewicz et al. JAP 137, 193302 (2025); Korsbäck PRAB 23, 033102 (2020); cond26:L64–65; §3.7b |
+| 6 | 339 | A tiny stress, repeated a billion times | σ_M = ε0E²/2 = 0.028 MPa at 80 MV/m, ~10³ below yield; VHCF; pulsed DC → Maxwell stress only cyclic load; MDDF threshold-free | Established + Interpretation | §3.2; Mughrabi MMTB 40, 431 (2009); Stanzl-Tschegg; cond26:L69–70, L396–400 |
+| 7 | 373 | Last year we asked… | visual recap, no numbers | — | 2025 deck |
+| 8 | 403 | One cathode… coordinate | one figure: cross-section + E(r) + tiers + ROI markers (figures/geometry_efield_tiers.pdf); heat-treated OFE Cu, 1 µs at 1 kHz, ~10⁹ pulses, ~80 MV/m peak, nine EBSD regions; tier colour key | Established | cond26 §Methods L84–191 (geometry L94–101); E(r) digitized from cond26/figures/efield_vs_radius.eps (figures/efield_r_En_digitized.csv); ROI radii results.json; §3.3; design A P3/B6, B1 |
+| 9 | 424 | EBSD maps plastic activity far from craters | SEM callouts (ROI box 500 µm, craters, 0.47 mm gap, 1 mm bar); 500 µm maps, 3 µm step (lateral only), information depth ~40 nm, ~24 000 points/ROI; LAM = local average misorientation (KAM, LOS cross-checks); misorientation ∝ GND | Established | cond26:L179–193, L383–384; Drouin 2007; Chen 2011; SEM pixel calibration design B7 |
+| 10 | 449 | What one EBSD pixel measures (NEW, design A P2) | 15 kV beam, top ~40 nm forms the pattern, 3 µm lateral step; Kikuchi pattern → one orientation per point, ~24 000 points, unfiltered; six-neighbour kernel, LAM = ⟨θᵢ⟩, pairs > 5° dropped; 0–5° scale with reference mean 0.68° and high-field mean ~1.2°; bent lattice needs GND, so LAM is a GND proxy | Established (methods) + textbook EBSD | cond26:L179–193, L277–281; results.json; §3.4, §3.8; no tilt angle, no ρ_GND formula (author decision) |
+| 11 | 535 | How to read a LAM map | 0–50° vs 0–5° scale | — | cond26 fig LAM_boundary_vs_intragranular L235–243 |
+| 12 | 552 | High-field Cu contains more intragrain curvature | pair cropped to the same 485 × 279 µm field at matched magnification, one labelled 0–5° colour bar (figures/lam_pair_matched.png) | Established | cond26 fig LAM_FE_ref_pair L265–273; design B4 (QUESTIONS 9 closed by the crop) |
+| 13 | 562 | Three exposure tiers | redrawn plot (figures/tiers_plot.pdf): centre 1.19/1.24°, edge 1.21/1.18°, periphery 0.78/0.79°, reference 0.68/0.65/0.71°, ~75 % bracket, reference band ±1 s.e.; grain size does not follow | Established | results.json; cond26:L320, L333, Table I; §3.4; design B2 |
+| 14 | 581 | High-misorientation tail | redrawn plot (figures/tail_plot.pdf): P(LAM>2°) ~0.14 vs ~0.016 (~8×); gamma k≈2.7 fixed, θ 0.24°→0.45°; shaded tail | Established | results.json (k 2.59–2.92, θ 0.22–0.46°); cond26:L284–330; §3.5; design B3 |
+| 15 | 603 | Large-area test supports the prediction | 'one mechanism, two starting populations' cartoon labelled as the manuscript's interpretation; to our knowledge first large-area observation, ordered as MDDF predicts; E_S line (candidate) | Established + Interpretation | cond26:L376–389, L443–445; §3.6; design A P4, C4 |
+| 16 | 661 | Elastic screening (unchanged) | dielectric analogy; ℓ_D ≈ 25 nm; 200 nm ≈ 8 ℓ_D; thickness not predicted | Analogy on top of Interpretation | cond26:L374–381; Groma 2006; Lemaître 2021; Livne 2023; §3.7 |
+| 17 | 725 | Copper establishes the effect, not universality | one cathode/one experiment; open: depth, orientation, more cathodes, materials (cooperation call moved to slide 21) | Established (limitations) | K/limitations_future.md; cond26:L446–451 |
+| 18 | 751 | Next: depth and material | FIB lamellae, TEM/STEM+EBSD through ~1 µm; stainless steel, continuous DC, possible γ→α′ | Plan | ../reports/2026_interim/workplan.tex; RFX project plan |
+| 19 | 780 | Stainless steel: a test chosen to be hard on the model | 304L; three outcomes informative; status as four numbers: 90 h / 73 h DC, 59–61 MV/m, 0 breakdowns, 26 maps; apex inside unexposed range, no field indication yet | Preliminary — no field effect claimed | §6; K/rfx_status_2026-09.md; rfx/HANDOFF.md; design B9 |
+| 20 | 815 | Conditioning appears to leave a subsurface memory | recap; four-bar result card 1.21/1.19/0.79/0.68° with ~75 % bracket (figures/result_card.pdf); infographic in backup | — | results.json; design B8 |
+| 21 | 836 | Conclusions, and an invitation (NEW) | three one-line conclusions; arXiv link + QR; invitation (new materials, other electrode configurations, cross-facility comparisons, same-area before/after mapping) | — | arXiv:2606.19192; former slide-15 cooperation call |
+| 22–26 | 862– | Backup | RFX first look; RFX status table (29 Sep); RFX apex vs unexposed range (null at low power); 2025 STEM pair; full infographic | Preliminary / Established | §6 |
 
 ---
 
 ## 3. Every number on the slides, with its derivation
+
+Slide numbers in the §3 headings are the pre-design-pass numbers (23-page deck). After 2 Oct: 3→3, 4→5, 5→6, 7→8, 8→9, 11→13, 12→14, 13→15, 14→16, 17→19, 18→20, backup 22→25.
 
 ### 3.1 MDDF model (slide 3) — what "one model" means
 

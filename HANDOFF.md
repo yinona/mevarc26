@@ -299,3 +299,44 @@ Re-base of `proj26/talk_mevarc26/deck_proposed.diff` (23 hunks, cut against sha1
 - For Yinon: E01 author line (QUESTIONS 16); slide-14 regimes paragraph (QUESTIONS 17).
 
 Slide walk against REVIEW_CONTEXT.md §2–§3 and cond26 (`final_pass/SLIDE_WALK.md`, cheap sub-agent, text-only): no number, citation or verb mismatch found; no "confirms"; priority claim hedged; sentence-case titles. Builds: `make` clean, worst overfull 2.3 pt (unchanged). Q&A: `proj26/talk_mevarc26/QA_PREP.md` has a dated update section (five corrected answers, three new questions).
+
+## Design pass, 2 Oct 2026 (talk agent, evening)
+
+Baseline commit 00689de (23 pages). Result: 26 pages = 21 core + 5 backup; `make` clean,
+worst overfull 2.64 pt (frame 10, tikz picture width); `main-notes.pdf` 26 pages. Author-approved
+design changes from `proj26/talk_mevarc26/design/{A_explainer,B_legibility,C_motivation}/PROPOSALS.md`.
+Binding rules kept: claim verbs, "to our knowledge", ~200 nm, slide 14 (now 16) untouched, title/subtitle/
+template unchanged, RFX ongoing with no field effect, no `\shrink`.
+
+| Commit | Frame (new no.) | Design ID | Change | Source |
+|---|---|---|---|---|
+| b28896a | preamble | B1 | tier colours `tierhigh`=copper (center+edge), `tierlow`=purple (periphery), `tierref`=teal (reference); `\tierkey`; tikz libraries; `qrcode`; `\bignum` | B_legibility §2 B1 |
+| b28896a | 3 | C2, B15 | title → "Our model: breakdown as collective dislocation dynamics"; scriptsize captions under the two MDDF plots; note ends "Next slide: what that sentence means for a measurement." | C_motivation C2; B15 |
+| b28896a | 4 (NEW) | C1 | "What the model says the microscope should see": four-box chain, two bullets, predicts / does-not-predict tags, brace "no equation for conditioning yet"; note (84 words) | C_motivation C1, `code/frame_motivation.tex`; Engelberg 2018/2019/2020 |
+| a02c410 | 8 | A P3 / B6 | one figure `figures/geometry_efield_tiers.pdf`: cross-section (r_i 6.5, r_o 20 mm, gaps 60/70 µm, ×100 exaggerated) over E(r) in MV/m with tier shading, ROI markers, reference note; `\tierkey` under the columns; source line shortened | cond26 L94–101; **E(r) digitized from `cond26/figures/efield_vs_radius.eps`** (the finite-element data file is not in the Drive; `figures/efield_r_En_digitized.csv`, matches `design/B_legibility/efield_r_En.npy`); ROI radii `results.json` |
+| a02c410 | 9 | B7 | SEM callouts `figures/sem_lowmag_callouts.png` (ROI box "EBSD map 500 µm wide", three craters, 0.47 mm arrow, 1 mm bar); bullet "LAM = local average misorientation …"; source line now two rows, fits | B7 pixel calibration (HFW 2.76 mm / 1800 px) |
+| a02c410 | 10 (NEW) | A P2 | "What one EBSD pixel measures": four TikZ panels at true size (no resizebox); panel 1 without the 70° tilt, panel 4 without the ρ_GND formula (wording per author); one-line bold take-home instead of a `\claim` box (height); note 71 words | A_explainer P2, `ebsd_explainer.tikz` (redrawn); results.json means 0.68 / ~1.2° |
+| 95a8bad | 12 | B4 | LAM pair cropped to a matched 485 × 279 µm field, identical 100 µm bars, tier-coloured chips, one labelled 0–5° bar (`figures/lam_pair_matched.png`); source line updated (magnifications matched) | B4 (0.62 / 0.53 µm px from the OIM bars) |
+| 95a8bad | 13 | B2 | `figures/tiers_plot.pdf` at final size: direct labels, tier shading, reference band ±1 s.e., 75 % bracket | results.json |
+| 95a8bad | 14 | B3 | `figures/tail_plot.pdf`: tier colours, faded histograms, gamma fits, dotted 2° line, shaded tails; side-box numbers `\Large` | results.json (center ROI2, edge ROI2, periphery ROI2, REF center ROI1) |
+| 97c75fc | 15 | A P4, C4 | flow diagram → "one mechanism, two starting populations" cartoon labelled "the manuscript's interpretation"; bullet 1 ends "ordered as MDDF predicts"; bullet 2 absorbed by the cartoon; E_S line and claim unchanged | cond26 L376–389; Jacewicz 2025 |
+| ce00357 | 17 | — | "Call for cooperation" box removed (moved to 21) | — |
+| ce00357 | 19 | B9 | status as four large numbers (90 h, 73 h / 59–61 / 0 / 26) with captions; former status sentence kept below; columns 0.42/0.56 | rfx/HANDOFF.md L20–21; REVIEW_CONTEXT §6 |
+| ce00357 + docs commit | 20 | B8 | infographic → `figures/result_card.pdf` (1.21°, 1.19°, 0.79°, 0.68°, ~75 % bracket); footer "Full infographic in backup" (backup 26 unchanged) | results.json |
+| ce00357 | 21 (NEW) | — | "Conclusions, and an invitation": three one-line conclusions; `\qrcode` + `\href` to https://arxiv.org/pdf/2606.19192 (`\Large`); invitation box (author text); M. Coman cross-reference kept in the source line; note 58 words | — |
+
+Figure generator: `figures/make_design_figures.py <figures dir> <results.json> <efield csv>` (matplotlib, env with
+pypdfium2/scipy/PIL); all six new figures are drawn at their on-slide size, fonts ≥ 7.5 pt.
+
+Speaker notes revised in `main.tex` (every frame whose visible content changed): 3 (last sentence → pointer to
+3b), 4 new, 8 (describes the combined figure, the tier colours and the markers), 9 (callouts: ROI box, craters,
+half a millimetre; LAM spelled out), 10 new, 12 (same magnification, cropped field), 13 (tier colours, band),
+14 (dotted 2° line, shaded tails), 15 (cartoon described; C4 sentence "Size, depth and sign were not predicted;
+the sign is set by the starting population"), 17 (invitation deferred to the last slide), 19 (four numbers
+spoken as a strip), 20 (four bars with their values; pointer to the link slide), 21 new. Every fact, number and
+citation of the previous notes is kept.
+
+Not done / for Yinon: C3 (slide 6 "threshold-free" wording) and C5 were not in the approved list and were not
+applied; B5 (annotated STEM pair), B10–B14 (backup legibility) not applied. REVIEW_CONTEXT §3 headings still use
+the old slide numbers (mapping line added at the top of §3). Frame 17 (old 15) now has free space at the bottom
+where the cooperation box was.
