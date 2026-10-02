@@ -340,3 +340,16 @@ Not done / for Yinon: C3 (slide 6 "threshold-free" wording) and C5 were not in t
 applied; B5 (annotated STEM pair), B10–B14 (backup legibility) not applied. REVIEW_CONTEXT §3 headings still use
 the old slide numbers (mapping line added at the top of §3). Frame 17 (old 15) now has free space at the bottom
 where the cooperation box was.
+
+### RFX exposure reduced (author instruction, 2 Oct evening; supersedes B9)
+
+RFX is future work and the RFX group is not part of this presentation. Frame 19 (old 17): the four-number
+status strip and the three outcome tags were removed; the slide now carries the two material boxes, two bullets
+(the four knobs; "a first continuous-DC campaign with Consorzio RFX is under way (first run: 90 h and 73 h DC,
+zero breakdowns); analysis ongoing, no field effect claimed"), the RFX logo and credit line (De Lorenzi, Pilan,
+Spada) and the hand-over line "RFX HV program: N. Pilan, next talk (12:30)" (US spelling "program"). Frame 18
+(old 16): material axis as one bullet, RFX thumbnails dropped, source "Interim work plan (2026)". Frame 21:
+conclusion 3 ends "— a stainless-steel test with Consorzio RFX is under way"; invitation box unchanged. Notes of
+18, 19, 21 rewritten (brief, forward-looking, credit RFX, point to Pilan). Backup frames 22–24 (RFX first look,
+status table, apex-vs-unexposed board) unchanged and remain the only place with status/null/power detail.
+
