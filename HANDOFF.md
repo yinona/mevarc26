@@ -294,7 +294,7 @@ Baseline `main.tex` sha1 156e93f31d (commit 0636a65). Changes:
 
 Re-base of `proj26/talk_mevarc26/deck_proposed.diff` (23 hunks, cut against sha1 5cb00188ff) onto 156e93f31d — disposition (`proj26/talk_mevarc26/final_pass/REBASE_AUDIT.md`):
 - Applied: E13 (above). 
-- Already covered by commits dee2429 / b58b25e / 0636a65: E03, E06, E08, E09, E12, E14, E15, E19, E20, E22, E25, E29–E31, E33, E34, E36–E38, E40, E41, E44, footer dates.
+- Already covered by commits dee2429 / b58b25e / 0636a65: E03, E06, E07 (slide 4 priority bullet hedged, b58b25e hunk 3), E08, E09, E12, E14, E15, E19, E20, E22, E25, E29–E31, E33, E34, E36–E38, E40, E41, E44, footer dates.
 - Dropped as wording preferences without a factual source, or contradicting binding decisions: E02, E04, E05, E10, E11, E16–E18, E21, E23, E24, E26, E27, E32, E35, E39, E42, E43 (slide 14 wording frozen), M01/M02 (frame moves), `shrink=` hunks.
 - For Yinon: E01 author line (QUESTIONS 16); slide-14 regimes paragraph (QUESTIONS 17).
 
