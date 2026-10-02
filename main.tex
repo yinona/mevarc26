@@ -871,21 +871,21 @@
         \item Apex-vs-side contrast reproduces on never-installed \#2-25: forming geography
       \end{itemize}
     \column{0.54\textwidth}
-      \begin{columns}[c,onlytextwidth]
-        \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=1.95cm,keepaspectratio]{sem_page-2.png}\\[-1mm]
-          {\tiny Ref vs field-exposed overview}
-        \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=1.95cm,keepaspectratio]{cut_samples.png}\\[-1mm]
-          {\tiny Sectioned electrode}
-      \end{columns}
-      \vspace{0.08cm}
-      \begin{columns}[c,onlytextwidth]
-        \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=1.85cm,keepaspectratio]{sem_page-4.png}
-        \column{0.48\textwidth}
-          \includegraphics[width=\linewidth,height=1.85cm,keepaspectratio]{sem_page-6.png}
-      \end{columns}
+      % Final pass 2 Oct: four large panels instead of the four multi-image SEM
+      % report pages (labels were illegible). SEM crops = the three panels of
+      % sem_page-6.png without the instrument data bar; HFW read from that bar.
+      \centering
+      \begin{minipage}[t]{0.49\linewidth}\centering
+        \includegraphics[width=\linewidth]{rfx_sem_cavity_ref1.png}\\[-0.5mm]
+        {\scriptsize \#1-25 reference: round, clean (HFW \SI{16.6}{\micro m})\par}
+      \end{minipage}\hfill
+      \begin{minipage}[t]{0.49\linewidth}\centering
+        \includegraphics[width=\linewidth]{rfx_sem_cavity_fe3.png}\\[-0.5mm]
+        {\scriptsize \#3-25 field-exposed: ``exploded'' (HFW \SI{10}{\micro m})\par}
+      \end{minipage}\par\vspace{0.12cm}
+      \includegraphics[width=\linewidth,height=1.55cm,keepaspectratio]{cut_samples.png}\par
+      {\scriptsize Sectioned electrode\par
+       \color{muted}Selected panels; the full SEM set is in the RFX SEM report.\par}
   \end{columns}
   \source{RFX project record through 29 Sep 2026; SEM report, Inna Popov (20 May 2026).}
   \note{Backup for questions on the stainless-steel first look. SEM survey plus EBSD quality: three samples index well; the field-exposed \#4-25 has two maps, one of them an outlier on confidence index, and its position on the electrode was not recorded, so the cause is open. The July apex-versus-side contrast reproduced on a never-installed reference, so it reflects forming geography. No structural field effect is claimed.}
@@ -918,14 +918,18 @@
   \tagbox{warn}{Null so far --- not a field effect, not proof of saturation}
   \vspace{0.05cm}
   \begin{columns}[T]
-    \column{0.55\textwidth}
+    \column{0.565\textwidth}
       \centering
-      \includegraphics[width=\linewidth,height=5.2cm,keepaspectratio]{rfx_board_apex_vs_unexposed.png}
-    \column{0.43\textwidth}
+      % Final pass 2 Oct: two of the four board panels (wide map class) redrawn at
+      % slide size by figures/make_rfx_board_backup.py from the RFX per-map table;
+      % descriptive and quality rows omitted (full board in the RFX record).
+      \includegraphics[width=\linewidth]{rfx_board_wide_2panel.png}\par
+      {\scriptsize\color{muted}Wide map class, 2 of 4 panels (full board: RFX record). Only point above range: map $\theta(L)$ slope ($n=2$ baseline).\par}
+    \column{0.415\textwidth}
       \footnotesize
       \begin{itemize}\setlength\itemsep{0.1em}
         \item Unit $=$ one EBSD map; \#3-25 apex vs same-class unexposed apex ($n = 2$--$3$ vs $3$--$4$).
-        \item Inside the unexposed range on every quantity (GOS, in-grain $\theta(L)$ slope, interior KAM, histogram indicators), also at matched confidence index.
+        \item Inside or below the unexposed range (GOS, in-grain $\theta(L)$ slope, interior KAM, histogram indicators), also at matched confidence index.
         \item Where it differs it is \emph{cleaner}, not rougher ($p \ge 0.10$).
         \item Power: 80\% at 1 SD needs ${\approx}17$ maps per group; the data exclude only a uniform apex shift ${\gtrsim}2.5$ map-SD. Runs stopped at emission switch-on, zero breakdowns.
       \end{itemize}
