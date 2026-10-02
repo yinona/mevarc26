@@ -11,7 +11,8 @@
 \usepackage{array}
 \usepackage{siunitx}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,decorations.pathreplacing,arrows.meta,shapes.geometric}
+\usepackage{qrcode}                % QR code on the closing frame
 \usepackage{appendixnumberbeamer}   % restart page numbers in the backup section
 \usepackage{pgfpages}               % two-screen presenter notes
 
@@ -35,6 +36,12 @@
 \definecolor{warn}{HTML}{B26A00}    % caution tag
 \definecolor{gold}{HTML}{D8A52A}    % flow-diagram accent
 \definecolor{pale}{HTML}{F3F6F8}    % reserved light background
+
+% Exposure-tier colour key (design pass B1): used on every data slide and in
+% every redrawn figure (figures/*.pdf drawn with the same hex values).
+\colorlet{tierhigh}{copper}   % field-exposed, high field (center + edge)
+\colorlet{tierlow}{purple}    % field-exposed periphery, <= 2.5 MV/m
+\colorlet{tierref}{teal}      % unexposed reference cathode
 
 % ═══════════════════════════════════════════════════════════════════════════
 %  Beamer theme: colours, fonts, bullets
@@ -116,6 +123,15 @@
 % Shorthand for the copper-result manuscript reference.
 \newcommand{\condref}{PRAB, under revision; arXiv:2606.19192}
 
+% One-line legend for the exposure-tier colours (shown once, on the geometry slide).
+\newcommand{\tierkey}{{\scriptsize
+   \tikz[baseline=-0.5ex]\fill[tierhigh] (0,0) circle (0.9ex); high field (center, edge)\;\;
+   \tikz[baseline=-0.5ex]\fill[tierlow] (0,0) circle (0.9ex); periphery ($\leq\SI{2.5}{MV/m}$)\;\;
+   \tikz[baseline=-0.5ex]\fill[tierref] (0,0) circle (0.9ex); unexposed reference}}
+
+% Big-number cell for the status strip (slide 17).
+\newcommand{\bignum}[3]{\begin{minipage}[t]{#1}\centering{\Large\bfseries\color{#2}#3}\end{minipage}}
+
 % ═══════════════════════════════════════════════════════════════════════════
 %  Metadata (PDF properties; the title frame is typeset manually below)
 % ═══════════════════════════════════════════════════════════════════════════
@@ -188,7 +204,7 @@
 \end{frame}
 
 % ── 3. MDDF model ───────────────────────────────────────────────────────────
-\begin{frame}{Our model: conditioning as collective dislocation dynamics}
+\begin{frame}{Our model: breakdown as collective dislocation dynamics}
   \begin{columns}[c]
     \column{0.54\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
@@ -198,12 +214,103 @@
       \end{itemize}
     \column{0.44\textwidth}
       \centering
-      \includegraphics[height=2.85cm,keepaspectratio]{mddf_critical_transition.png}\\[0.1cm]
-      \includegraphics[height=2.6cm,keepaspectratio]{mddf_rate_vs_field.png}
+      \includegraphics[height=2.4cm,keepaspectratio]{mddf_critical_transition.png}\\[-1mm]
+      {\scriptsize mobile-dislocation runaway}\\[0.02cm]
+      \includegraphics[height=2.2cm,keepaspectratio]{mddf_rate_vs_field.png}\\[-1mm]
+      {\scriptsize breakdown rate vs field}
   \end{columns}
   \claim{Central prediction: conditioning \emph{evolves the near-surface dislocation structure}.}
   \source{Engelberg et al., PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020).}
-  \note{MDDF model is our own (2018--2020). Cartoon shows birth-death dynamics of the mobile-dislocation population: below critical density it decays, above it a runaway triggers nucleation. The plot reproduces the field dependence of breakdown rate. Key line for this talk: conditioning should leave an evolving dislocation structure just below the surface. Everything after this slide tests that sentence.}
+  \note{MDDF model is our own (2018--2020). Cartoon shows birth-death dynamics of the mobile-dislocation population: below critical density it decays, above it a runaway triggers nucleation. The plot reproduces the field dependence of breakdown rate. Key line for this talk: conditioning should leave an evolving dislocation structure just below the surface. Next slide: what that sentence means for a measurement.}
+\end{frame}
+
+% ── 3b. From the model to a measurable trace (design C1) ────────────────────
+% Colours: steel (model), gold (implication), purple (stored dislocations, as
+% on the slide-13 cartoon), teal (measurement); copper only for breakdown/craters.
+\begin{frame}{What the model says the microscope should see}
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm,
+      box/.style={rounded corners=3pt,line width=0.9pt,minimum width=3.1cm,
+                  minimum height=3.05cm,anchor=north},
+      stepl/.style={font=\footnotesize\bfseries,anchor=south},
+      capl/.style={font=\footnotesize,align=center,text width=3.0cm,anchor=north},
+      flow/.style={->,very thick,ink}]
+    \foreach \x/\c/\t in {1.55/steel/{1\enspace model},
+                          5.15/gold!80!black/{2\enspace implication},
+                          8.75/purple/{3\enspace trace},
+                          12.35/teal/{4\enspace test}}
+      \node[stepl,text=\c] at (\x,0.05) {\t};
+    \node[box,draw=steel,fill=steel!8]          (b1) at (1.55,0) {};
+    \node[box,draw=gold!80!black,fill=gold!12]  (b2) at (5.15,0) {};
+    \node[box,draw=purple,fill=purple!7]        (b3) at (8.75,0) {};
+    \node[box,draw=teal,fill=teal!8]            (b4) at (12.35,0) {};
+    \draw[flow] (b1.east) -- (b2.west);
+    \draw[flow] (b2.east) -- (b3.west);
+    \draw[flow] (b3.east) -- (b4.west);
+    % icon 1: noisy well and hill of the mobile population
+    \begin{scope}[shift={(1.55,-1.30)},yscale=0.82]
+      \draw[->,muted,thin] (-1.3,-0.05) -- (1.35,-0.05) node[below left=-1pt,font=\scriptsize] {$n$};
+      \draw[very thick,steel!80!black] plot[smooth,tension=0.7] coordinates
+        {(-1.25,1.05) (-0.65,0.12) (-0.05,0.55) (0.45,0.92) (0.95,0.45) (1.3,0.05)};
+      \fill[steel!80!black] (-0.65,0.25) circle (0.09);
+      \node[font=\scriptsize,below] at (-0.65,0.08) {$n^*$};
+      \node[font=\scriptsize,above] at (0.45,0.95) {$n_c$};
+      \draw[->,thick,copper] (0.62,1.05) to[bend left=25] (1.15,0.55);
+      \node[font=\scriptsize\bfseries,copper,anchor=west] at (0.92,1.08) {BD};
+    \end{scope}
+    \node[capl] at (1.55,-1.70) {mobile dislocations:\\\textbf{fast}; over the\\hill $=$ breakdown};
+    % icon 2: conditioning raises the hill
+    \begin{scope}[shift={(5.15,-1.30)},yscale=0.82]
+      \draw[->,muted,thin] (-1.3,-0.05) -- (1.35,-0.05) node[below left=-1pt,font=\scriptsize] {$n$};
+      \draw[thick,dashed,muted] plot[smooth,tension=0.7] coordinates
+        {(-1.25,1.05) (-0.65,0.12) (-0.05,0.55) (0.45,0.92) (0.95,0.45) (1.3,0.05)};
+      \draw[very thick,gold!80!black] plot[smooth,tension=0.7] coordinates
+        {(-1.25,1.05) (-0.65,0.12) (-0.05,0.75) (0.45,1.32) (0.95,0.65) (1.3,0.05)};
+      \draw[->,very thick,gold!80!black] (0.45,0.62) -- (0.45,1.18);
+    \end{scope}
+    \node[capl] at (5.15,-1.70) {conditioning \textbf{raises}\\the hill: fewer BDs\\at the same field};
+    % icon 3: stored dislocations bend the lattice
+    \begin{scope}[shift={(8.75,-1.30)},yscale=0.82]
+      \fill[purple!4] (-1.25,-0.05) rectangle (1.25,1.15);
+      \draw[very thick,ink] (-1.25,1.15) -- (1.25,1.15);
+      \foreach \y in {0.15,0.42,0.69,0.96}
+        \draw[purple!70,thick] (-1.2,\y) .. controls (-0.4,\y+0.16) and (0.4,\y+0.16) .. (1.2,\y);
+      \foreach \x/\y in {-0.55/0.30,0.35/0.56,-0.10/0.83,0.80/0.28}
+        \node[purple,font=\footnotesize\bfseries] at (\x,\y) {$\perp$};
+      \node[font=\scriptsize,ink,anchor=south east] at (1.25,1.15) {surface};
+    \end{scope}
+    \node[capl] at (8.75,-1.70) {stored dislocations:\\\textbf{slow}; they bend\\the lattice};
+    % icon 4: the field writes it, ordered by exposure (no axis, no values)
+    \begin{scope}[shift={(12.35,-1.30)},yscale=0.82]
+      \fill[teal!75]  (-1.05,0) rectangle (-0.55,1.05);
+      \fill[teal!45]  (-0.25,0) rectangle ( 0.25,0.60);
+      \fill[teal!20]  ( 0.55,0) rectangle ( 1.05,0.35);
+      \node[font=\footnotesize] at (-0.40,0.80) {$>$};
+      \node[font=\footnotesize] at ( 0.40,0.62) {$\geq$};
+      \draw[muted] (-1.15,0) -- (1.15,0);
+      \node[font=\scriptsize,anchor=north] at (-0.80,0) {high};
+      \node[font=\scriptsize,anchor=north] at ( 0.00,0) {low};
+      \node[font=\scriptsize,anchor=north] at ( 0.80,0) {none};
+      \node[draw=copper,thick,circle,minimum size=0.28cm,inner sep=0pt] (cr) at (0.85,1.0) {};
+      \draw[copper,thick] (0.62,0.77) -- (1.08,1.23);
+      \node[font=\scriptsize,copper,anchor=east] at (0.64,1.0) {crater};
+    \end{scope}
+    \node[capl] at (12.35,-1.70) {the \textbf{field} writes it:\\far from craters,\\ordered by field};
+    \draw[decorate,decoration={brace,mirror,amplitude=4pt},muted,thick]
+      (3.65,-3.12) -- (13.85,-3.12)
+      node[midway,below=4pt,font=\scriptsize,text=muted]
+      {inference from the model: no equation for conditioning yet};
+  \end{tikzpicture}
+  \vspace{-0.1cm}
+  \begin{itemize}\setlength\itemsep{0.15em}
+    \item In the model, a ${\sim}10^9$-pulse memory must sit in stored, EBSD-visible dislocations.
+    \item The field writes it: look far from craters; expect the order to follow the local field.
+  \end{itemize}
+  \vspace{0.05cm}
+  {\small\tagbox{good}{predicts} where, and in which order
+   \qquad\tagbox{warn}{does not predict} size, depth, or sign}
+  \source{Engelberg et al., PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020); Wuensch et al., RMP 98, 025004 (2026).}
+  \note{Slide three was one breakdown; this is what it implies for conditioning. In the model the mobile population is fast: it fluctuates and decays back. Conditioning means fewer breakdowns at the same field, so the hill must rise, and a memory lasting a billion pulses must sit in the stored dislocations that set the hill. Those bend the lattice, which EBSD reads. The field writes it, so look away from craters. The model fixes where and in which order, not size, depth, or sign.}
 \end{frame}
 
 % ── 4. Prior microscopy (2025 STEM) ─────────────────────────────────────────
