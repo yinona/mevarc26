@@ -282,3 +282,20 @@ main-path slides with RFX framed as ongoing work, no field claim; 2025 figure
 reuse; template branding per `ea22740`; slide 14 states the manuscript's
 screening claim (ℓ_D ≈ 25 nm, thickness not predicted) and does not name `E_S`;
 title and subtitle follow the Indico registration.
+
+## Final touches, 2 Oct 2026 (talk agent, afternoon)
+
+Baseline `main.tex` sha1 156e93f31d (commit 0636a65). Changes:
+
+| Commit | Change | Source |
+|---|---|---|
+| b0dbe09 | Slide 8 source line: ~40 nm at 15 kV attributed to CASINO Monte Carlo (Drouin 2007); measured 38–72 nm over 5–30 kV attributed to Chen 2011 | proj26/lit/cards/chen2011.md (Table 2, Fig. 12); cond26/main.tex L383 cites both |
+| e542781 | Speaker notes of the 18 core frames tightened for a fast 30-min delivery: 1754 → 1392 words; every fact, number and citation kept; sentences that repeated the slide removed; slide-17 note now says zero breakdowns | proj26/talk_mevarc26/final_pass/NOTES_REVISED.md; rfx/HANDOFF.md L20–21 |
+
+Re-base of `proj26/talk_mevarc26/deck_proposed.diff` (23 hunks, cut against sha1 5cb00188ff) onto 156e93f31d — disposition (`proj26/talk_mevarc26/final_pass/REBASE_AUDIT.md`):
+- Applied: E13 (above). 
+- Already covered by commits dee2429 / b58b25e / 0636a65: E03, E06, E08, E09, E12, E14, E15, E19, E20, E22, E25, E29–E31, E33, E34, E36–E38, E40, E41, E44, footer dates.
+- Dropped as wording preferences without a factual source, or contradicting binding decisions: E02, E04, E05, E10, E11, E16–E18, E21, E23, E24, E26, E27, E32, E35, E39, E42, E43 (slide 14 wording frozen), M01/M02 (frame moves), `shrink=` hunks.
+- For Yinon: E01 author line (QUESTIONS 16); slide-14 regimes paragraph (QUESTIONS 17).
+
+Slide walk against REVIEW_CONTEXT.md §2–§3 and cond26 (`final_pass/SLIDE_WALK.md`, cheap sub-agent, text-only): no number, citation or verb mismatch found; no "confirms"; priority claim hedged; sentence-case titles. Builds: `make` clean, worst overfull 2.3 pt (unchanged). Q&A: `proj26/talk_mevarc26/QA_PREP.md` has a dated update section (five corrected answers, three new questions).
