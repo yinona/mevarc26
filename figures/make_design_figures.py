@@ -150,7 +150,7 @@ def f12():
     ax.text(1.22,0.86,"periphery",color=PERIPH,fontweight="bold",fontsize=8.5,ha="left",va="bottom")
     ax.text(1.55,0.60,"center (solid)\nedge (dashed)",color=HIGH,fontweight="bold",fontsize=8.5,ha="left",va="bottom",linespacing=1.0)
     ax.text(3.0,0.22,"tail above 2°:\n~14% field-exposed\n~1.6% reference",fontsize=8.5,ha="left",va="bottom",linespacing=1.05)
-    ax.text(4.95,1.22,"same shape k ≈ 2.7\nscale θ: 0.24° $\\rightarrow$ 0.45°",fontsize=8,ha="right",va="top",color=MUTED,linespacing=1.05)
+    ax.text(4.95,1.22,"same shape k ≈ 2.7\nscale θ: 0.24° $\\rightarrow$ 0.46°",fontsize=8,ha="right",va="top",color=MUTED,linespacing=1.05)
     ax.set_xlim(0,5); ax.set_ylim(0,1.3); ax.set_yticks([0,0.5,1.0])
     ax.set_xlabel("local average misorientation, LAM (deg)"); ax.set_ylabel("probability density")
     fig.tight_layout(pad=0.3); save(fig,"tail_plot")
