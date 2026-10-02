@@ -369,7 +369,7 @@ Full report: `../proj26/talk_mevarc26/final_pass/FINAL_REPEAT_PASS.md`.
 | d9729a7 | 14 | tail-plot annotation 0.45° → 0.46° (θ = 0.4577 for FE Center ROI2) | results.json; cond26 L325 |
 | 20f1e8a | 8, 10, 14, 15, all | layout only: `\source` ends with `\par`; frames 8 and 14 figures no longer cover the title rule; frame 10 no hyphenation, lattice lines clear of the panel-4 title; frame 15 labels on fill, arrows off the ~200 nm label; frame 14 gamma line spacing | renders |
 | 5660577 | 5, 7, 21, 23, 24 | "catalogue" → "catalog"; no line-initial dash in conclusion 3; caption line spacing; backup-24 note aligned with bullet | FINDINGS.md L82–84 |
-| (this) | — | rebuilt PDFs, unused `rfx_sem_cavity_fe4.png` removed, this section | — |
+| a503680 | — | rebuilt PDFs (17.8 MB each), this section; the unused crop `rfx_sem_cavity_fe4.png` was removed in d9729a7 | — |
 
 Checks: QR decodes (zxing-cpp 3.1.1) to `https://arxiv.org/pdf/2606.19192` in both PDFs; both link annotations
 carry the same URI; arXiv API returns v4 "Direct large-area observation of subsurface plastic activity in conditioned
