@@ -213,6 +213,26 @@ length (plasma/electrolyte picture) — the manuscript itself uses both words
 ("Debye-like", "dipole regime"); and whether "dislocations respond like bound
 charge" is a fair one-line summary of the dipole regime of Livne et al.
 
+### 3.7b STEM provenance (slides 4 and 22) — checked against the published paper, 2 Oct
+
+The STEM images on both slides are HUJI lamellae (I. Popov) of cathode 007
+conditioned at 300 K, shown at MeVArc 2025; they are not reproductions of the
+JAP figures. What the published paper (`sources/Jacewicz_2025_JAP_137_193302.pdf`)
+states, verbatim: Sec. III E, "Conditioning in both cases significantly reduces
+the number of dislocation walls (Fig. 9). This effect is more pronounced in
+the cold-conditioned sample Cu038@30K", and "a dislocation-denuded zone close
+to the surface is clearly visible (Fig. 10)" — Fig. 10 is the 30 K cathode.
+**The paper gives no thickness anywhere**; the only "100 nm" is etch removal
+on the 300 K reference (Fig. 8 caption). "~200 nm" is read from the images and
+is the number the manuscript uses (cond26 L64, citing Jacewicz and the RMP
+review). Discussion: "This initial observation … needs to be repeated more
+systematically." Not in the paper at all: the FIB-artefact lesson, "protective
+coating" band, the 25 M vs 600 M pulse counts (those are Korsbäck 2020 and our
+own 2025 talk). Deck wording was aligned on 2 Oct: slide 4 caption
+"dislocation-poor zone in the top ~200 nm", bullet "fewer dislocation walls at
+300 K and 30 K; denuded layer clearest at 30 K", backup 22 tags "fewer walls" /
+"walls to surface" at 300 K; notes state the paper's conservative wording.
+
 ### 3.8 Information depth (slide 8)
 
 Backscattered-electron pattern formation depth in Cu at 15 kV: a few tens of

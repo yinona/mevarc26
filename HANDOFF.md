@@ -204,6 +204,14 @@ ready assets for the optional Sigma-3 slide remain.
    Bjelland, Millar, Wuensch as in the manuscript) — QUESTIONS 11.
    Other files in that folder (`PROPOSED_EDITS.md`, `QA_PREP*.md`,
    `TIMING_PLAN.md`, `deck_proposed.diff`) were not reviewed here.
+   **2 Oct 12:30, published PDF checked:** the paper gives no denuded-zone
+   thickness and names the denuded zone only for the 30 K cathode (Fig. 10);
+   at 300 K it says "significantly reduces the number of dislocation walls"
+   (Fig. 9). Deck images are HUJI lamellae of the 300 K cathode. Slide 4
+   caption now "dislocation-poor zone in the top ~200 nm" (200 nm read from
+   images, used by cond26 L64); backup 22 tags "fewer walls" / "walls to
+   surface" at 300 K; both notes state the paper's wording; source lines
+   credit HUJI STEM shown at MeVArc 2025. See `REVIEW_CONTEXT.md` §3.7b.
    Full item-by-item disposition for the other agent:
    `HANDOFF_TO_TALK_AGENT_2026-10-02.md` (copy placed in
    `../proj26/talk_mevarc26/HANDOFF_FROM_DECK_AGENT_2026-10-02.md`).

@@ -124,6 +124,22 @@ Visual check of slides 4, 17, 21 after the edits: no overflow, no overlaps, foot
 
 ---
 
+## 5b. Added 2 Oct 12:30 — STEM slides re-checked against the publisher PDF
+
+The paper states no denuded-zone thickness; "dislocation-denuded zone … clearly
+visible" is said of the 30 K cathode (Fig. 10); at 300 K it says "significantly
+reduces the number of dislocation walls" (Fig. 9). The deck's STEM images are
+HUJI lamellae of the 300 K cathode (007) shown at MeVArc 2025. Applied: slide 4
+caption "dislocation-poor zone in the top ~200 nm" (200 nm read from the
+images; the number cond26 L64 uses); backup 22 tags "Field-exposed, 300 K: fewer
+walls" / "Reference, 300 K: walls to surface"; both notes carry the paper's
+wording; source lines credit "HUJI STEM (I. Popov), MeVArc 2025". Not in the
+paper and therefore attributed to our own work in the notes: the FIB-artefact
+lesson and the "protective coating" band. Q&A: if asked "where does 200 nm come
+from", the answer is "read from the STEM images; the paper itself gives no
+number; the manuscript and the RMP review use ~200 nm". Full detail in
+`mevarc26/REVIEW_CONTEXT.md` §3.7b.
+
 ## 6. What was *not* reviewed on my side
 
 - `deck_proposed.diff` (48 KB) and `main_proposed.tex` — the larger proposal set. Only `deck_minimal.diff` was requested by Yinon. If items in the larger set are still live, re-base them and list them individually with the same evidence discipline (file:line); items already decided in §3–§4 should not reappear.
