@@ -742,13 +742,9 @@
         \item Cross-material generality
       \end{itemize}
   \end{columns}
-  \vspace{0.12cm}
-  \begin{beamercolorbox}[rounded=true,sep=.22cm]{block body}
-    \centering\small\bfseries\color{teal}
-    Call for cooperation: more cathodes, other materials, other facilities, other probes of the conditioned state (cf.\ M.~Coman, 11:30) --- let's compare notes.
-  \end{beamercolorbox}
+  \vspace{0.25cm}
   \claim{A stronger test changes both the material and the loading history.}
-  \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. Invite collaboration on replication and cross-facility comparisons. Depth matters: STEM depletion in hard copper, EBSD curvature in heat-treated copper, each in top few hundred nanometers at most. Depth profile on one material would show whether two ends of one redistribution. Next experiments add depth and change material and loading mode.}
+  \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. The invitation to replicate and compare across facilities comes on the last slide. Depth matters: STEM depletion in hard copper, EBSD curvature in heat-treated copper, each in top few hundred nanometers at most. Depth profile on one material would show whether two ends of one redistribution. Next experiments add depth and change material and loading mode.}
 \end{frame}
 
 % ── 14. Two next coordinates (RFX 1) ─────────────────────────────────────────
@@ -783,7 +779,7 @@
 % ── 15. Stainless steel test (RFX 2) ─────────────────────────────────────────
 \begin{frame}{Stainless steel: a test chosen to be hard on the model}
   \begin{columns}[T]
-    \column{0.44\textwidth}
+    \column{0.42\textwidth}
       \begin{beamercolorbox}[rounded=true,sep=.2cm]{block body}
         \centering\bfseries\color{copper}Copper\\[0.06cm]
         \normalfont\small FCC, higher SFE\\pulsed DC, ${\sim}10^9$ cycles
@@ -795,37 +791,69 @@
       \end{beamercolorbox}
       \vspace{0.15cm}
       {\footnotesize Design: apex-to-periphery gradient; two exposed electrodes, two unexposed controls.}
-    \column{0.54\textwidth}
-      \tagbox{good}{SS tracks field} \;{\small cross-material structural state}\\[0.3em]
-      \tagbox{purple}{SS differs} \;{\small material-specific carriers}\\[0.3em]
-      \tagbox{warn}{no resolved change} \;{\small informative only with enough maps}\\[0.45em]
-      {\footnotesize Status: \SI{90}{h} and \SI{73}{h} DC, peak 59--\SI{61}{MV/m}, zero breakdowns (stopped at emission switch-on); all 26 EBSD maps in hand; the exposed apex sits inside the unexposed range on every quantity tested, so no field indication yet.}\\[0.35em]
+    \column{0.56\textwidth}
+      \tagbox{good}{SS tracks field} \;{\small cross-material structural state}\\[0.2em]
+      \tagbox{purple}{SS differs} \;{\small material-specific carriers}\\[0.2em]
+      \tagbox{warn}{no resolved change} \;{\small informative only with enough maps}\\[0.25em]
+      % status strip (design B9): four large numbers, wording of the former status line kept below
+      \begin{minipage}[t]{0.25\linewidth}\centering{\large\bfseries\color{steel}\SI{90}{h}, \SI{73}{h}}\end{minipage}\bignum{0.24\linewidth}{steel}{59--61}\bignum{0.24\linewidth}{steel}{0}\bignum{0.24\linewidth}{steel}{26}\\
+      {\scriptsize\color{muted}%
+      \begin{minipage}[t]{0.25\linewidth}\centering continuous DC\end{minipage}%
+      \begin{minipage}[t]{0.24\linewidth}\centering MV/m peak\end{minipage}%
+      \begin{minipage}[t]{0.24\linewidth}\centering breakdowns\end{minipage}%
+      \begin{minipage}[t]{0.24\linewidth}\centering EBSD maps\end{minipage}}\\[0.3em]
+      {\footnotesize Runs stopped at emission switch-on; exposed apex inside the unexposed range on every quantity tested: \alert{no field indication yet}.}\\[0.1em]
       \raisebox{-0.34\height}{\includegraphics[height=0.5cm]{logo_rfx.png}}\;
       {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada}
   \end{columns}
   \claim{Any outcome constrains the mechanism; the test is not pass-or-fail.}
   \source{RFX electrode geometry and plan; project record through 29 Sep 2026; first-look data in backup. RFX HV work: N.~Pilan, next talk (12:30).}
-  \note{Stainless steel is hard: changes stacking-fault energy, dislocation mobility, loading mode, and adds possible austenite-to-martensite transformation. That makes it discriminating. Field-correlated response supports broad structural mechanism; qualitatively different response identifies material degrees of freedom storing state; null result is informative only once statistics bound sensitivity---current two to four maps per group cannot. With enough maps it may separate cyclic from continuous loading. Current status: two exposed electrodes ran 90 and 73 hours continuous DC at up to 61 MV/m, zero breakdowns. All 26 EBSD maps in hand; exposed apex sits inside unexposed range on every quantity tested, so no field indication yet. Runs stopped at emission switch-on. Hypothesis to test: as-manufactured 304L already in conditioned dislocation state, so run never engaged conditioning. Early apex-versus-side contrast reproduced on never-installed reference, so it is forming geography. No stainless-steel field effect claimed. First-look SEM and EBSD in backup.}
+  \note{Stainless steel is hard: changes stacking-fault energy, dislocation mobility, loading mode, and adds possible austenite-to-martensite transformation. That makes it discriminating. Field-correlated response supports broad structural mechanism; qualitatively different response identifies material degrees of freedom storing state; null result is informative only once statistics bound sensitivity---current two to four maps per group cannot. With enough maps it may separate cyclic from continuous loading. Current status, the four numbers: two exposed electrodes ran 90 and 73 hours continuous DC at peak fields of 59 to 61 MV/m, zero breakdowns, and all 26 EBSD maps are in hand; the exposed apex sits inside the unexposed range on every quantity tested, so no field indication yet. Runs stopped at emission switch-on. Hypothesis to test: as-manufactured 304L already in conditioned dislocation state, so run never engaged conditioning. Early apex-versus-side contrast reproduced on never-installed reference, so it is forming geography. No stainless-steel field effect claimed. First-look SEM and EBSD in backup.}
 \end{frame}
 
 % ── 16. Conclusion + 2025 bookend ────────────────────────────────────────────
 \begin{frame}{Conditioning appears to leave a subsurface memory}
   \begin{columns}[c]
-    \column{0.56\textwidth}
-      \begin{enumerate}\setlength\itemsep{0.5em}
+    \column{0.59\textwidth}
+      \begin{enumerate}\setlength\itemsep{0.4em}
         \item Our model predicts conditioning evolves the near-surface dislocation structure.
         \item 2025 STEM saw it locally; \alert{large-area EBSD now supports it} (${\sim}75\%$ higher misorientation).
         \item Depth and stainless steel test whether the memory survives a change of scale, alloy, and loading.
       \end{enumerate}
-    \column{0.42\textwidth}
-      \includegraphics[width=\linewidth]{infographic.pdf}
+    \column{0.38\textwidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{result_card.pdf}
   \end{columns}
   \begin{beamercolorbox}[rounded=true,sep=.26cm]{block body}
     \centering\large\bfseries\color{purple}
     Last year: ``other materials? more samples?'' --- here is the large-area answer.
   \end{beamercolorbox}
-  {\footnotesize\color{muted}Copper result: \condref.}
-  \note{Close the loop from title and from last year. Model predicted structural memory; STEM saw it at one spot; large-area EBSD supports it across electrode with 75 percent effect and three-tier hierarchy. Stainless-steel and depth programs are next round of comparative forensics promised in 2025. Invite collaboration on more cathodes and cross-material tests. Cite manuscript as under revision at PRAB, arXiv:2606.19192.}
+  {\footnotesize\color{muted}Copper result: \condref. Full infographic in backup.}
+  \note{Close the loop from the title and from last year. Model predicted a structural memory; STEM saw it at one spot; large-area EBSD supports it across the electrode: the four bars are the tier means, 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery, 0.68 on the reference, about 75 percent higher at high field. Stainless-steel and depth programs are the next round of comparative forensics promised in 2025. The invitation and the paper link are on the next slide. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
+\end{frame}
+
+% ── 19. Conclusions and invitation ──────────────────────────────────────────
+\begin{frame}{Conclusions, and an invitation}
+  \begin{columns}[T]
+    \column{0.54\textwidth}
+      \begin{enumerate}\setlength\itemsep{0.45em}
+        \item The model predicted a structural memory of conditioning.
+        \item STEM saw it locally; large-area EBSD now supports it.
+        \item Open: depth, replication, other materials.
+      \end{enumerate}
+      \vspace{0.35cm}
+      \begin{beamercolorbox}[rounded=true,sep=.28cm,wd=\linewidth]{block body}
+        \bfseries\color{teal}
+        Talk to me: new materials, other electrode configurations, cross-facility comparisons, same-area before/after mapping --- let us test this together.
+      \end{beamercolorbox}
+    \column{0.44\textwidth}
+      \centering
+      \qrcode[height=3.1cm,level=M]{https://arxiv.org/pdf/2606.19192}\\[0.3cm]
+      \href{https://arxiv.org/pdf/2606.19192}{\Large\bfseries\color{purple}arxiv.org/pdf/2606.19192}\\[0.1cm]
+      {\small\color{muted}Ashkenazy et al., \condref}
+  \end{columns}
+  \source{Other probes of the conditioned state: cf.\ M.~Coman, 11:30. Depth and steel programs: interim work plan (2026); RFX project plan.}
+  \note{Three lines: the model predicted a structural memory, STEM saw it locally, and large-area EBSD now supports it. Open: depth, replication on more cathodes, other materials. Then the invitation: new materials, other electrode configurations, cross-facility comparisons, same-area before-and-after mapping. The QR code and link open the paper. Thank you.}
 \end{frame}
 
 % ══ Backup ═══════════════════════════════════════════════════════════════════
