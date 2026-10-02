@@ -100,7 +100,7 @@
 \graphicspath{{figures/}}
 
 % Bottom-of-frame source / attribution line.
-\newcommand{\source}[1]{\vfill{\color{muted}\tiny Source: #1}}
+\newcommand{\source}[1]{\vfill{\color{muted}\tiny Source: #1\par}}
 
 % Emphasised take-home box.
 \newcommand{\claim}[1]{%
@@ -404,7 +404,7 @@
   \begin{columns}[c]
     \column{0.55\textwidth}
       \centering
-      \includegraphics[width=0.93\linewidth]{geometry_efield_tiers.pdf}
+      \includegraphics[width=0.89\linewidth]{geometry_efield_tiers.pdf}
     \column{0.42\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item Heat-treated OFE Cu, pulsed DC
@@ -485,7 +485,7 @@
         \draw[purple,thick,fill=purple!6] (-0.5,0.5) -- (-0.2,0.8) -- (0.8,0.8) -- (0.5,0.5) -- cycle;
         \draw[purple,thick,fill=purple!20] (0.5,-0.5) -- (0.8,-0.2) -- (0.8,0.8) -- (0.5,0.5) -- cycle;
       \end{scope}
-      \node[anchor=west,color=purple,align=left,text width=2.1cm] at (4.15,1.3) {one lattice orientation for this point};
+      \node[anchor=west,color=purple,align=flush left,text width=2.1cm] at (4.15,1.3) {one lattice orientation for this point};
       \node[anchor=north west,color=muted,align=left] at (4.15,0.8) {${\sim}24{,}000$ points\\per region, unfiltered};
     \end{scope}
     % ===== panel 3: six neighbors -> LAM, and the 0-5 degree scale =====
@@ -515,12 +515,14 @@
       \foreach \x in {0.3,0.65,1.0,1.35,1.7} {\draw[muted] (\x,1.05) -- (\x,2.25);}
       \node[anchor=north,color=muted] at (1.0,1.0) {flat: $\theta=0$};
       \begin{scope}[shift={(2.2,0)}]
+        \begin{scope}[yshift=-0.08cm]
         \foreach \y in {1.05,1.35,1.65,1.95,2.25} {\draw[muted] plot[domain=0:1.4,samples=20] (\x,{\y+0.22*(\x/1.4)^2});}
-        \foreach \x in {0,0.35,0.7,1.05,1.4} {\draw[muted] (\x,{1.05+0.22*(\x/1.4)^2}) -- ({\x+0.1*\x/1.4},{2.25+0.22*(\x/1.4)^2+0.25*\x/1.4});}
+        \foreach \x in {0,0.35,0.7,1.05,1.4} {\draw[muted] (\x,{1.05+0.22*(\x/1.4)^2}) -- ({\x+0.1*\x/1.4},{2.25+0.22*((\x+0.1*\x/1.4)/1.4)^2});}
         \foreach \p in {(0.4,1.5),(0.75,1.9),(1.1,1.3),(0.95,2.2)} {\node[color=purple,font=\normalsize] at \p {$\bot$};}
+        \end{scope}
         \node[anchor=north,color=purple] at (0.7,1.0) {curved: $\theta>0$};
       \end{scope}
-      \node[anchor=north west,align=left,text width=2.3cm] at (3.8,2.55)
+      \node[anchor=north west,align=flush left,text width=2.3cm] at (3.8,2.55)
         {Bending a crystal by an angle over a distance needs \textbf{geometrically necessary dislocations}, so \textbf{LAM is a proxy for GND density}.};
       \node[anchor=north,color=ink,align=center,text width=3.5cm] at (1.95,0.65) {a dislocation proxy over \SI{500}{\micro m}, not a dislocation image};
     \end{scope}
@@ -582,7 +584,7 @@
   \begin{columns}[c]
     \column{0.62\textwidth}
       \centering
-      \includegraphics[width=\linewidth]{tail_plot.pdf}
+      \includegraphics[width=0.95\linewidth]{tail_plot.pdf}
     \column{0.35\textwidth}
       \begin{beamercolorbox}[rounded=true,sep=.28cm]{block body}
         \centering
@@ -592,7 +594,7 @@
         \textbf{${\sim}8\times$ increase}
       \end{beamercolorbox}
       \vspace{0.3cm}
-      {\small Gamma shape $k\approx2.7$ fixed; the scale roughly doubles.}
+      \parbox{\linewidth}{\small Gamma shape $k\approx2.7$ fixed; the scale roughly doubles.}
   \end{columns}
   \claim{The whole distribution stretches; a uniform offset cannot do that.}
   \source{Ashkenazy et al., \condref. One ROI per tier (histograms faded, gamma fits solid, edge dashed); shaded: tail above $\ang{2}$.}
@@ -615,7 +617,7 @@
     \node[box] at (0.2,0.6) {};
     \draw[surf] (0.2,2.1) -- (2.6,2.1);
     \foreach \p in {(0.4,1.9),(0.6,1.7),(0.5,1.45),(0.8,1.9),(1.0,1.65),(1.2,1.9),(1.5,1.75),(1.8,1.9),(2.1,1.65),(2.4,1.9),(2.3,1.45),(0.4,1.15),(0.7,1.0),(1.1,1.25),(1.4,1.0),(1.8,1.1),(2.2,0.9),(1.5,1.4),(2.0,1.35)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
-    \node[anchor=south,color=muted,font=\tiny] at (1.4,0.62) {before};
+    \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (1.4,0.64) {before};
     \draw[->,very thick,ink] (2.7,1.35) -- (3.0,1.35);
     % hard Cu: after
     \node[box] at (3.1,0.6) {};
@@ -624,22 +626,22 @@
     \draw[muted,dashed] (3.1,1.7) -- (5.5,1.7);
     \draw[<->,ink] (5.35,1.72) -- (5.35,2.08) node[midway,left,font=\tiny] {${\sim}\SI{200}{nm}$};
     \foreach \p in {(3.3,1.45),(3.7,1.1),(4.1,1.5),(4.4,1.05),(4.8,1.35),(5.2,1.1),(3.5,1.0),(4.2,1.3),(5.0,1.0),(3.9,1.15)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
-    \foreach \x in {3.6,4.3,5.0} {\draw[->,warn,thick] (\x,1.6) -- (\x,2.02);}
-    \node[anchor=south,color=muted,font=\tiny] at (4.3,0.62) {after ${\sim}10^{9}$ cycles};
+    \foreach \x in {3.4,3.85,4.3} {\draw[->,warn,thick] (\x,1.6) -- (\x,2.02);}
+    \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (4.3,0.64) {after ${\sim}10^{9}$ cycles};
     \node[anchor=north,align=center,color=warn,text width=5.4cm] at (2.85,0.5) {dislocations escape to the surface or annihilate $\Rightarrow$ \textbf{depleted layer} (STEM)};
     % heat-treated Cu: before
     \node[box] at (8.1,0.6) {};
     \draw[surf] (8.1,2.1) -- (10.5,2.1);
     \foreach \y in {0.85,1.2,1.55,1.9} {\draw[muted!50] (8.15,\y) -- (10.45,\y);}
     \foreach \p in {(8.6,1.35),(9.7,1.0),(10.2,1.7)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
-    \node[anchor=south,color=muted,font=\tiny] at (9.3,0.62) {before};
+    \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (9.3,0.64) {before};
     \draw[->,very thick,ink] (10.6,1.35) -- (10.9,1.35);
     % heat-treated Cu: after
     \node[box] at (11.0,0.6) {};
     \draw[surf] (11.0,2.1) -- (13.4,2.1);
     \foreach \y in {0.85,1.2,1.55,1.9} {\draw[muted!50] plot[domain=11.05:13.35,samples=25] (\x,{\y+0.08*sin((\x-11.05)*200)});}
     \foreach \p in {(11.3,1.7),(11.7,1.15),(12.1,1.85),(12.4,1.0),(12.8,1.45),(13.2,1.8),(11.8,1.0),(13.15,1.1),(12.5,1.3)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
-    \node[anchor=south,color=muted,font=\tiny] at (12.2,0.62) {after ${\sim}10^{9}$ cycles};
+    \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (12.2,0.64) {after ${\sim}10^{9}$ cycles};
     \node[anchor=north,align=center,color=copper] at (10.75,0.5) {same load generates and rearranges dislocations\\$\Rightarrow$ \textbf{lattice curvature} (EBSD, LAM ${\sim}75\%$ higher)};
     % the common load
     \node[draw=gold!80!black,fill=gold!15,rounded corners,align=center,inner sep=2.5pt] at (6.8,1.4)
