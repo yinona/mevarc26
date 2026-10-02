@@ -602,23 +602,59 @@
 % ── 12. Supports the MDDF prediction ─────────────────────────────────────────
 \begin{frame}{The large-area test supports the model's prediction}
   \centering
-  \begin{tikzpicture}[node distance=0.42cm]
-    \node[draw=copper,fill=copper!12,rounded corners,minimum width=2.6cm,minimum height=1.3cm,align=center] (a) {Pulsed field\\$E(r,t)$};
-    \node[draw=gold!80!black,fill=gold!15,rounded corners,minimum width=2.6cm,minimum height=1.3cm,align=center,right=of a] (b) {Maxwell stress\\${\sim}10^9$ cycles};
-    \node[draw=purple,fill=purple!10,rounded corners,minimum width=2.8cm,minimum height=1.3cm,align=center,right=of b] (c) {Dislocation\\rearrangement};
-    \node[draw=teal,fill=teal!10,rounded corners,minimum width=2.8cm,minimum height=1.3cm,align=center,right=of c] (d) {Measured LAM\\hierarchy};
-    \draw[->,very thick,ink] (a)--(b); \draw[->,very thick,ink] (b)--(c); \draw[->,very thick,ink] (c)--(d);
+  % One mechanism, two starting populations (design A P4): the manuscript's
+  % interpretation of the 2025 STEM depletion vs the 2026 EBSD curvature.
+  \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize,>=Stealth,
+      box/.style={draw=ink!60,fill=copper!8,minimum width=2.4cm,minimum height=1.5cm,inner sep=0pt,anchor=south west},
+      surf/.style={teal,line width=1.5pt},
+      hdr/.style={anchor=south,font=\footnotesize\bfseries,color=purple}]
+    % headers
+    \node[hdr,align=center] at (2.85,2.16) {Hard, as-machined Cu\\[-1pt]{\normalfont\tiny\color{muted}dense starting population (2025 STEM cathodes)}};
+    \node[hdr,align=center] at (10.75,2.16) {Heat-treated OFE Cu\\[-1pt]{\normalfont\tiny\color{muted}sparse starting population (this cathode)}};
+    % hard Cu: before
+    \node[box] at (0.2,0.6) {};
+    \draw[surf] (0.2,2.1) -- (2.6,2.1);
+    \foreach \p in {(0.4,1.9),(0.6,1.7),(0.5,1.45),(0.8,1.9),(1.0,1.65),(1.2,1.9),(1.5,1.75),(1.8,1.9),(2.1,1.65),(2.4,1.9),(2.3,1.45),(0.4,1.15),(0.7,1.0),(1.1,1.25),(1.4,1.0),(1.8,1.1),(2.2,0.9),(1.5,1.4),(2.0,1.35)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
+    \node[anchor=south,color=muted,font=\tiny] at (1.4,0.62) {before};
+    \draw[->,very thick,ink] (2.7,1.35) -- (3.0,1.35);
+    % hard Cu: after
+    \node[box] at (3.1,0.6) {};
+    \fill[pale] (3.1,1.7) rectangle (5.5,2.1);
+    \draw[surf] (3.1,2.1) -- (5.5,2.1);
+    \draw[muted,dashed] (3.1,1.7) -- (5.5,1.7);
+    \draw[<->,ink] (5.35,1.72) -- (5.35,2.08) node[midway,left,font=\tiny] {${\sim}\SI{200}{nm}$};
+    \foreach \p in {(3.3,1.45),(3.7,1.1),(4.1,1.5),(4.4,1.05),(4.8,1.35),(5.2,1.1),(3.5,1.0),(4.2,1.3),(5.0,1.0),(3.9,1.15)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
+    \foreach \x in {3.6,4.3,5.0} {\draw[->,warn,thick] (\x,1.6) -- (\x,2.02);}
+    \node[anchor=south,color=muted,font=\tiny] at (4.3,0.62) {after ${\sim}10^{9}$ cycles};
+    \node[anchor=north,align=center,color=warn,text width=5.4cm] at (2.85,0.5) {dislocations escape to the surface or annihilate $\Rightarrow$ \textbf{depleted layer} (STEM)};
+    % heat-treated Cu: before
+    \node[box] at (8.1,0.6) {};
+    \draw[surf] (8.1,2.1) -- (10.5,2.1);
+    \foreach \y in {0.85,1.2,1.55,1.9} {\draw[muted!50] (8.15,\y) -- (10.45,\y);}
+    \foreach \p in {(8.6,1.35),(9.7,1.0),(10.2,1.7)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
+    \node[anchor=south,color=muted,font=\tiny] at (9.3,0.62) {before};
+    \draw[->,very thick,ink] (10.6,1.35) -- (10.9,1.35);
+    % heat-treated Cu: after
+    \node[box] at (11.0,0.6) {};
+    \draw[surf] (11.0,2.1) -- (13.4,2.1);
+    \foreach \y in {0.85,1.2,1.55,1.9} {\draw[muted!50] plot[domain=11.05:13.35,samples=25] (\x,{\y+0.08*sin((\x-11.05)*200)});}
+    \foreach \p in {(11.3,1.7),(11.7,1.15),(12.1,1.85),(12.4,1.0),(12.8,1.45),(13.2,1.8),(11.8,1.0),(13.15,1.1),(12.5,1.3)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
+    \node[anchor=south,color=muted,font=\tiny] at (12.2,0.62) {after ${\sim}10^{9}$ cycles};
+    \node[anchor=north,align=center,color=copper] at (10.75,0.5) {same load generates and rearranges dislocations\\$\Rightarrow$ \textbf{lattice curvature} (EBSD, LAM ${\sim}75\%$ higher)};
+    % the common load
+    \node[draw=gold!80!black,fill=gold!15,rounded corners,align=center,inner sep=2.5pt] at (6.8,1.4)
+      {\textbf{one load}\\ $\sigma_M=\tfrac12\varepsilon_0E^2$\\ ${\sim}10^{9}$ cycles\\ {\tiny $10^{-3}$ of yield}};
+    \node[anchor=north,color=muted,align=center,font=\tiny] at (6.8,0.5) {the manuscript's\\interpretation};
   \end{tikzpicture}
-  \vspace{0.4cm}
-  \begin{itemize}\setlength\itemsep{0.35em}
-    \item To our knowledge, the first \alert{large-area} observation that conditioned regions carry a different near-surface dislocation structure, as MDDF predicted.
-    \item No conflict with the 2025 denuded zone: one mechanism, two starting populations (hard Cu depletes; heat-treated Cu builds curvature).
+  \vspace{-0.3cm}
+  \small
+  \begin{itemize}\setlength\itemsep{0.1em}
+    \item To our knowledge, the first \alert{large-area} observation that conditioned regions carry a different near-surface dislocation structure, ordered as MDDF predicts.
     \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.
   \end{itemize}
-  \vspace{0.1cm}
   \claim{Before, dislocations were plausible. Now, a dislocation-sensitive state maps the conditioning history.}
-  \source{Ashkenazy et al., \condref.}
-  \note{The measured hierarchy is the large-area structural signature the model predicted and STEM saw locally. Surface denuded zone and EBSD curvature are not in conflict: one mechanism acting on two very different starting populations. In dense as-machined copper, cyclic stress lets near-surface dislocations escape or annihilate---the depleted layer TEM saw. In heat-treated copper measured here, little to deplete, so same load generates and rearranges dislocations---the curvature EBSD records. Next slide gives length scale; depth connection still open. Only now, only in one line, connect to $E_S$: spatial ordering matches simulated $E_S$ profile, so dislocation population is a candidate structural basis. Never say we measured $E_S$.}
+  \source{Ashkenazy et al., \condref\ (discussion); Jacewicz et al., JAP 137, 193302 (2025).}
+  \note{The measured hierarchy is the large-area structural signature the model predicted and STEM saw locally. The cartoon is the manuscript's interpretation of why the surface denuded zone and the EBSD curvature are not in conflict: one mechanism acting on two very different starting populations. Left, dense as-machined copper: cyclic stress lets near-surface dislocations escape or annihilate---the depleted layer TEM saw, about 200 nanometers. Right, heat-treated copper measured here: little to deplete, so the same load generates and rearranges dislocations---the curvature EBSD records. Size, depth and sign were not predicted; the sign is set by the starting population. Next slide gives the length scale; the depth connection is still open. Only now, only in one line, connect to $E_S$: the spatial ordering matches the simulated $E_S$ profile, so the dislocation population is a candidate structural basis. Never say we measured $E_S$.}
 \end{frame}
 
 % ── 12b. Elastic screening analogy ──────────────────────────────────────────
