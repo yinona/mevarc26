@@ -353,3 +353,28 @@ conclusion 3 ends "— a stainless-steel test with Consorzio RFX is under way"; 
 18, 19, 21 rewritten (brief, forward-looking, credit RFX, point to Pilan). Backup frames 22–24 (RFX first look,
 status table, apex-vs-unexposed board) unchanged and remain the only place with status/null/power detail.
 
+
+## Final repeat pass, 2 Oct 2026 (evening)
+
+Baseline 6cbdb4e (26 pages). Result: `main.pdf` and `main-notes.pdf` 26 pages each (21 core + 5 backup),
+`make` clean, worst overfull 1.61 pt (frame 4 line 314; was 2.64 pt), no undefined references, no missing
+figures; the only log warning is the pre-existing hyperref `\translate` token on `\appendix`.
+Full report: `../proj26/talk_mevarc26/final_pass/FINAL_REPEAT_PASS.md`.
+
+| Commit | Frame | Change | Source |
+|---|---|---|---|
+| e868c65 | 17 | empty lower half filled with a "Limits of this dataset" line (field and breakdown density covary, ~24/12/5 per cm² center outward; LAM relative, internal comparisons) + missing source line | cond26 L107, L413–416; the frame's own note |
+| 1cee8b2 | 10 | panels 2/4 shifted 1 mm left; overfull 2.64 pt → 0 | tikz bbox 400.98 vs 398.34 pt |
+| b2ef4dc | 22, 24 | backup legibility, one page each: 22 = two large SEM crops (#1-25, #3-25) + electrode photo; 24 = 2 of 4 board panels (wide class) redrawn at slide size by `figures/make_rfx_board_backup.py` (reads `../rfx/analysis/ebsd_orientations_all_2026-09-29/per_map_table.csv`; rfx untouched), tier colors; bullet "inside or below"; caption names the one point above range | VISUAL_QA.md; rfx FINDINGS.md L82–84 |
+| d9729a7 | 14 | tail-plot annotation 0.45° → 0.46° (θ = 0.4577 for FE Center ROI2) | results.json; cond26 L325 |
+| 20f1e8a | 8, 10, 14, 15, all | layout only: `\source` ends with `\par`; frames 8 and 14 figures no longer cover the title rule; frame 10 no hyphenation, lattice lines clear of the panel-4 title; frame 15 labels on fill, arrows off the ~200 nm label; frame 14 gamma line spacing | renders |
+| 5660577 | 5, 7, 21, 23, 24 | "catalogue" → "catalog"; no line-initial dash in conclusion 3; caption line spacing; backup-24 note aligned with bullet | FINDINGS.md L82–84 |
+| (this) | — | rebuilt PDFs, unused `rfx_sem_cavity_fe4.png` removed, this section | — |
+
+Checks: QR decodes (zxing-cpp 3.1.1) to `https://arxiv.org/pdf/2606.19192` in both PDFs; both link annotations
+carry the same URI; arXiv API returns v4 "Direct large-area observation of subsurface plastic activity in conditioned
+copper electrodes". Notes present on all 21 core frames; 1688 note words = 13.0 min at 130 wpm. Colors follow the
+tier key on every copper data slide; backup 26 (manuscript infographic) keeps the paper's palette and its
+"0.24° → 0.45°" label. Not touched (binding): frame 16 (old 14) wording and layout; title/subtitle.
+`figures/rfx_board_apex_vs_unexposed.png` and `sem_page-2/4.png` are no longer shown but kept (full-board and
+crop sources). Open items for Yinon: report §"Questions for the author".
