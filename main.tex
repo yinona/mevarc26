@@ -550,25 +550,20 @@
 
 % ── 9. Visual comparison ─────────────────────────────────────────────────────
 \begin{frame}{High-field copper contains more intragrain curvature}
-  \begin{columns}[T]
-    \column{0.49\textwidth}
-      \centering
-      \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{lam_fe_center.png}\\[-1mm]
-      \tagbox{copper}{Field-exposed center}
-    \column{0.49\textwidth}
-      \centering
-      \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{lam_ref_edge.png}\\[-1mm]
-      \tagbox{teal}{Unexposed reference}
-  \end{columns}
-  \source{Ashkenazy et al., \condref. Same LAM color scale; magnifications differ (scale bars \SI{200}{\micro m} and \SI{100}{\micro m}).}
-  \note{Look at the spatial texture, not just average color. Field-exposed region carries far more high-misorientation structure inside the grains. Pair shown is representative; quantitative conclusion uses all nine ROIs.}
+  \centering
+  \includegraphics[width=0.88\linewidth]{lam_pair_matched.png}
+  \vspace{0.05cm}
+  \claim{Same scale, same magnification: field-exposed grains carry more curvature.}
+  \source{Ashkenazy et al., \condref. Both maps cropped to the same $485\times\SI{279}{\micro m}$ field; LAM $0$--$\ang{5}$.}
+  \note{Same color scale and now the same magnification, both maps cropped to the same field of view with identical hundred-micron bars. Look at the spatial texture, not just the average color: the field-exposed region carries far more green and yellow, high-misorientation structure inside the grains, where the reference stays blue. Pair shown is representative; the quantitative conclusion uses all nine ROIs.}
 \end{frame}
 
 % ── 10. Three-tier hierarchy ─────────────────────────────────────────────────
 \begin{frame}{The signal separates into three exposure tiers}
   \begin{columns}[c]
-    \column{0.62\textwidth}
-      \includegraphics[width=0.96\linewidth]{mean_vs_radius.pdf}
+    \column{0.63\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{tiers_plot.pdf}
     \column{0.34\textwidth}
       \begin{itemize}\setlength\itemsep{0.55em}
         \item Center and edge: ${\sim}\ang{1.2}$
@@ -578,29 +573,30 @@
       \end{itemize}
   \end{columns}
   \claim{The ordering follows field history, not sample position or grain size.}
-  \source{Ashkenazy et al., \condref.}
-  \note{Three tiers: high-field center and edge highest and similar; field-exposed periphery intermediate; unexposed references lowest. Periphery is powerful: it shared machining, heat treatment, mounting, vacuum, and handling with high-field regions but saw at most 2.5 MV/m---a low-field control, not zero-field. Intermediate value consistent with residual fringe-field exposure. The 75 percent figure characterizes this cathode and history, not a universal constant.}
+  \source{Ashkenazy et al., \condref. Error bars: grain-corrected standard errors; band: unexposed reference $\pm1$ s.e.}
+  \note{Same colors as the geometry slide: copper is high field, purple the periphery, teal the reference band. Three tiers: high-field center and edge highest and similar; field-exposed periphery intermediate; unexposed references lowest. Periphery is powerful: it shared machining, heat treatment, mounting, vacuum, and handling with high-field regions but saw at most 2.5 MV/m---a low-field control, not zero-field. Intermediate value consistent with residual fringe-field exposure. The 75 percent figure characterizes this cathode and history, not a universal constant.}
 \end{frame}
 
 % ── 11. Distribution tail ────────────────────────────────────────────────────
 \begin{frame}{Field exposure builds a high-misorientation tail}
   \begin{columns}[c]
-    \column{0.60\textwidth}
-      \figorbox{low_angle_overlay.pdf}{width=\linewidth,height=4.9cm,keepaspectratio}{low-angle LAM distributions with gamma fits: field-exposed curves shift right and broaden}
-    \column{0.36\textwidth}
+    \column{0.62\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{tail_plot.pdf}
+    \column{0.35\textwidth}
       \begin{beamercolorbox}[rounded=true,sep=.28cm]{block body}
         \centering
         \textbf{LAM tail above $\ang{2}$}\\[0.2cm]
-        \alert{${\sim}0.14$} field-exposed\\
-        ${\sim}0.016$ reference\\[0.15cm]
+        {\Large\alert{${\sim}0.14$}} field-exposed\\
+        {\Large ${\sim}0.016$} reference\\[0.15cm]
         \textbf{${\sim}8\times$ increase}
       \end{beamercolorbox}
       \vspace{0.3cm}
       {\small Gamma shape $k\approx2.7$ fixed; the scale roughly doubles.}
   \end{columns}
   \claim{The whole distribution stretches; a uniform offset cannot do that.}
-  \source{Ashkenazy et al., \condref.}
-  \note{Low-angle distribution broadens and grows a long tail: fraction above two degrees rises roughly eightfold. Gamma shape parameter stays near 2.7 while scale roughly doubles---a fixed-shape stretch, signature of progressive deformation. LAM, KAM, and LOS agree. KS, chi-squared, and Anderson-Darling separate the distributions; every center or edge ROI differs from unexposed ones with KS distance above 0.25. Quote effect sizes and grain-corrected errors rather than extreme pixel-pair p-values.}
+  \source{Ashkenazy et al., \condref. One ROI per tier (histograms faded, gamma fits solid, edge dashed); shaded: tail above $\ang{2}$.}
+  \note{Tier colors again; the dotted line is two degrees and the shaded areas are the tails beyond it. Low-angle distribution broadens and grows a long tail: fraction above two degrees rises roughly eightfold. Gamma shape parameter stays near 2.7 while scale roughly doubles---a fixed-shape stretch, signature of progressive deformation. LAM, KAM, and LOS agree. KS, chi-squared, and Anderson-Darling separate the distributions; every center or edge ROI differs from unexposed ones with KS distance above 0.25. Quote effect sizes and grain-corrected errors rather than extreme pixel-pair p-values.}
 \end{frame}
 
 % ── 12. Supports the MDDF prediction ─────────────────────────────────────────
