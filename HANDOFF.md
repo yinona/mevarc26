@@ -322,7 +322,7 @@ template unchanged, RFX ongoing with no field effect, no `\shrink`.
 | 97c75fc | 15 | A P4, C4 | flow diagram → "one mechanism, two starting populations" cartoon labelled "the manuscript's interpretation"; bullet 1 ends "ordered as MDDF predicts"; bullet 2 absorbed by the cartoon; E_S line and claim unchanged | cond26 L376–389; Jacewicz 2025 |
 | ce00357 | 17 | — | "Call for cooperation" box removed (moved to 21) | — |
 | ce00357 | 19 | B9 | status as four large numbers (90 h, 73 h / 59–61 / 0 / 26) with captions; former status sentence kept below; columns 0.42/0.56 | rfx/HANDOFF.md L20–21; REVIEW_CONTEXT §6 |
-| ce00357 + docs commit | 20 | B8 | infographic → `figures/result_card.pdf` (1.21°, 1.19°, 0.79°, 0.68°, ~75 % bracket); footer "Full infographic in backup" (backup 26 unchanged) | results.json |
+| ce00357, 48b8e21 | 20 | B8 | infographic → `figures/result_card.pdf` (1.21°, 1.19°, 0.79°, 0.68°, ~75 % bracket); footer "Full infographic in backup" (backup 26 unchanged) | results.json |
 | ce00357 | 21 (NEW) | — | "Conclusions, and an invitation": three one-line conclusions; `\qrcode` + `\href` to https://arxiv.org/pdf/2606.19192 (`\Large`); invitation box (author text); M. Coman cross-reference kept in the source line; note 58 words | — |
 
 Figure generator: `figures/make_design_figures.py <figures dir> <results.json> <efield csv>` (matplotlib, env with
