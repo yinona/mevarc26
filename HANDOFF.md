@@ -378,3 +378,40 @@ tier key on every copper data slide; backup 26 (manuscript infographic) keeps th
 "0.24° → 0.45°" label. Not touched (binding): frame 16 (old 14) wording and layout; title/subtitle.
 `figures/rfx_board_apex_vs_unexposed.png` and `sem_page-2/4.png` are no longer shown but kept (full-board and
 crop sources). Open items for Yinon: report §"Questions for the author".
+
+## Frames 18-19 restructure, 2 Oct 2026 (late)
+
+Baseline 66843a8 (26 pages). Author instruction (2 Oct late evening): frame 18 thumbnails out of place, use a
+different figure and rethink the structure; frame 19 without the two-phase story, without "pass-or-fail",
+not apologetic; message = different material, different structural evolution, building toward the next
+campaign. Later the same evening: other speakers' talks must not appear as `\source` entries.
+Result: `main.pdf` and `main-notes.pdf` 26 pages each (21 core + 5 backup), `make` clean, worst overfull
+1.61 pt (frame 4 L314, unchanged), no undefined references. The only vbox overfull (0.55 pt) is backup 22,
+pre-existing. Grep of the main path (lines before `\appendix`) for
+`metastable|ferrite|alpha|pass-or-fail|martensit|austenit|phase transf`: no hits; backup 23 keeps the XRD
+δ-ferrite fact.
+
+| Commit | Frame (main.tex lines) | Change | Source |
+|---|---|---|---|
+| b512f3c | 18 (L767-812) | Two thumbnails (STEM, LAM) replaced by one TikZ "two coordinates" diagram: logarithmic depth axis (~40 nm EBSD, ~200 nm STEM, ~1 µm lamellae), material axis (copper, pulsed DC → AISI 304L, continuous DC); this work = filled `tierhigh` point at (Cu, 40 nm), labelled heat-treated Cu; 2025 STEM muted at (Cu, 200 nm), labelled hard Cu; purple "go deeper" arrow to a dashed target "matched lamellae, high field and reference"; `steel` "change the material" arrow to an open marker "first run 2026". Four bullets keep the depth content (matched lamellae, TEM/STEM + EBSD through ~1 µm, 2025 artifact controls, one depth profile) plus the steel pointer. `\claim` unchanged; note rewritten (79 words). | EBSD depth L440 (CASINO, Drouin 2007); ~200 nm in hard Cu L322 and §5; hard vs heat-treated L758 (frame 17 note); interim work plan (2026) |
+| 1a08502 | 19 (L823-854) | Title "Steel: different material, different structural evolution" (the full "Stainless steel: …" version is 416 pt, the title box holds ~398 pt and it wrapped). Left: "What differs from copper" (lower SFE and planar slip; dislocation mobility; continuous DC = steady ~16 kPa traction, not ~10⁹ pulses) and one sentence on the test (does any field-correlated change appear at all?). Right: "First run with Consorzio RFX" as facts (304L at HVPTF, 90 h and 73 h at 59-61 MV/m, zero breakdowns, stopped at emission switch-on; 26 EBSD maps, HUJI, I. Popov, exposed apex inside or below the unexposed range; nothing mapped before exposure, so this design cannot establish a field effect), RFX logo and credit. Below: "Next campaign: one electrode mapped before and after being driven into breakdowns", Pilan hand-over line, claim "Copper supports the memory; steel asks whether it is universal." Removed: metastable austenite, γ→α′, the four-knobs bullet, the pass-or-fail claim. No figure: `rfx_board_wide_2panel.png` would have ~6 pt labels at column width. Note rewritten (108 words; the commit message says 106). | QA_PREP.md L92 (SFE, planar slip), L101 and L141 (16 kPa = ε₀E²/2 at 60 MV/m), L112, L131; ../rfx/HANDOFF.md L20-23, L291; ../rfx/NEEDED.md L341; ../rfx/analysis/ebsd_orientations_all_2026-09-29/FINDINGS.md L82-84 |
+| 694a44c | 2, 6, 8, 18, 21 | Talks removed from `\source` lines: frame 21 L897 (M. Coman; source now interim work plan + RFX project record), frame 2 L202 (W. Wuensch 09:15), frame 6 L368 (J. Wang, V. Zadin 16:00/16:30), frame 8 L419 (V. Bjelland 10:00; "geometry from Bjelland et al." kept). Each pointer moved into the frame's note as one "(Optional aside: …)". Coman is Monday 11:30, the talk before ours, not Thursday. Frame 18 STEM source reads "HUJI, I. Popov 2025". Pilan hand-over stays as a line on frame 19. | proj26/talk_mevarc26/PROGRAMME.md L12-22, L34-37, L99-109; MORNING_POINTS.md L52 |
+
+Consistency read: frame 17 (claim "A stronger test changes both the material and the loading history"),
+frame 20 (item 3 "Depth and stainless steel test whether the memory survives a change of scale, alloy, and
+loading") and frame 21 (item 3 "a stainless-steel test with Consorzio RFX is under way") fit the new wording
+unchanged. Backups 22-24 unchanged.
+
+Residual questions for Yinon:
+- Frame 19 says "inside or below the unexposed range" (FINDINGS L82-84, as backup 24), not "inside the range on
+  every indicator": one map-level θ(L) slope sits above a two-map baseline (p = 0.2).
+- Frame 19 says the design "cannot establish a field effect", not "cannot bound": backup 24 does give a bound
+  (a uniform apex shift ≳ 2.5 map-SD is excluded).
+- Forward line names a before-and-after electrode; backup 24 note names the annealed vs as-received design with
+  sham electrodes. Both are in ../rfx/NEEDED.md L341; say both if asked.
+- Title drops "Stainless" for length; alternative "Stainless steel: different material, different evolution"
+  (348 pt) fits if "structural" can go.
+- Frame 21 invitation box (author text) still has "before/after" (slash in prose); left as author text.
+- Optional asides were added to the notes of frames 2, 6, 8 and 21; delete any you will not say.
+
+Renders of the new pages 18 and 19 at scale 2: `renders_tmp/p18.png`, `renders_tmp/p19.png` (not committed).
