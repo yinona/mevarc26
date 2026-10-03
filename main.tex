@@ -127,7 +127,9 @@
     \end{beamercolorbox}}}
 
 % Shorthand for the copper-result manuscript reference.
-\newcommand{\condref}{PRAB, under revision; arXiv:2606.19192}
+% Author instruction 3 Oct evening: slides cite the arXiv record only (the
+% PRAB status stays in the notes).
+\newcommand{\condref}{arXiv:2606.19192 (2026)}
 
 % One-line legend for the exposure-tier colours (shown once, on the geometry slide).
 \newcommand{\tierkey}{{\scriptsize
@@ -452,7 +454,7 @@
   \vspace{0.1cm}
   \centering\tierkey\par
   \claim{The field gradient gives us internal controls on a single specimen.}
-  \sources{\srcl{a}geometry from Bjelland et al.; Ashkenazy et al., \condref\ ($E(r)$: Fig.~3).}
+  \sources{\srcl{a}geometry from Bjelland et al.; Ashkenazy et al., \condref, $E(r)$: Fig.~3.}
   \note{One figure: cross-section on top, surface field below, same radius axis. The sloped anode maps radius onto local field: about 80 MV/m under the flat center, 73 to 74 at the edge regions under the sloped gap, below about 2.5 MV/m beyond the anode radius at 20 mm. Markers are the EBSD regions; the colors---copper for high field, purple for the low-field periphery, teal for the unexposed reference---stay the same on every data slide. Comparing positions on one cathode removes cathode-to-cathode preparation differences; the identically treated, never-installed cathode is the external reference. That geometry is the "more comparative forensics" design from last year's outlook. (Optional aside: this is CERN's vacuum breakdown lab; Victoria gave its update this morning.)}
 \end{frame}
 
@@ -691,7 +693,7 @@
     \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.\src{a}
   \end{itemize}
   \claim{Before, dislocations were plausible. Now, a dislocation-sensitive state maps the conditioning history.}
-  \sources{\srcl{a}Ashkenazy et al., \condref\ (discussion); \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
+  \sources{\srcl{a}Ashkenazy et al., \condref, discussion; \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
   \note{The measured hierarchy is the large-area structural signature the model predicted and STEM saw locally. The cartoon is the manuscript's interpretation of why the surface denuded zone and the EBSD curvature are not in conflict: one mechanism acting on two very different starting populations. Left, dense as-machined copper: cyclic stress lets near-surface dislocations escape or annihilate---the depleted layer TEM saw, about 200 nanometers. Right, heat-treated copper measured here: little to deplete, so the same load generates and rearranges dislocations---the curvature EBSD records. Size, depth and sign were not predicted; the sign is set by the starting population. Next slide gives the length scale; the depth connection is still open. Only now, only in one line, connect to $E_S$: the spatial ordering matches the simulated $E_S$ profile, so the dislocation population is a candidate structural basis. Never say we measured $E_S$.}
 \end{frame}
 
@@ -753,7 +755,7 @@
    \color{muted}2D single-slip theory\src{a} at $\rho\sim\SI{e14}{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted.\src{d}}
   \vspace{0.08cm}
   \claim{Charge screens the field at the surface. Dislocations screen the internal stress of a depleted layer, over ${\sim}\SI{25}{nm}$.\src{a}}
-  \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}\condref.}
+  \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}Ashkenazy et al., \condref.}
   \note{Picture dislocation population as bound charge of a dielectric: Maxwell traction is applied field, dislocations rearrange in response. In Groma's Debye-like theory, internal stress of any depleted or enriched layer is screened by surrounding ensemble over about 25 nanometers for as-machined copper. Contrast on the right: electric field itself screened by surface charge within a nanometer, never enters the metal; load enters as elastic stress, so electrostatic screening length says nothing about depth. STEM denuded zone in hard copper is about eight screening lengths thick; no theory yet treats cyclically loaded free surface, so thickness is observation, not prediction.}
 \end{frame}
 
@@ -790,7 +792,7 @@
   \end{beamercolorbox}
   \vspace{0.02cm}
   \claim{A stronger test changes both the material and the loading history.}
-  \source{Ashkenazy et al., \condref\ (discussion, limitations).}
+  \source{Ashkenazy et al., \condref, discussion and limitations.}
   \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. The invitation to replicate and compare across facilities comes on the last slide. Depth matters: STEM depletion in hard copper, EBSD curvature in heat-treated copper, each in top few hundred nanometers at most. Depth profile on one material would show whether two ends of one redistribution. Next experiments add depth and change material and loading mode.}
 \end{frame}
 
@@ -915,7 +917,7 @@
     \centering\large\bfseries\color{purple}
     Last year: ``other materials? more samples?'' --- here is the large-area answer.
   \end{beamercolorbox}
-  {\footnotesize\color{muted}Copper result: \condref.}
+  {\footnotesize\color{muted}Copper result: Ashkenazy et al., \condref.}
   \note{Close the loop from the title and from last year. Model predicted a structural memory; STEM saw it at a few specific locations; large-area EBSD supports it across the electrode: the four bars are the tier means, 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery, 0.68 on the reference, about 75 percent higher at high field. Stainless-steel and depth programs are the next round of comparative forensics promised in 2025. The invitation and the paper link are on the next slide. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
 \end{frame}
 
@@ -944,7 +946,7 @@
       \includegraphics[width=\linewidth]{result_card_small.pdf}\\[0.25cm]
       \qrcode[height=2.0cm,level=M]{https://arxiv.org/pdf/2606.19192}\\[0.15cm]
       \href{https://arxiv.org/pdf/2606.19192}{\footnotesize\bfseries\color{purple}arxiv.org/pdf/2606.19192}\\[0.05cm]
-      {\tiny\color{muted}Ashkenazy et al., \condref\par}
+      {\tiny\color{muted}Ashkenazy et al., arXiv:2606.19192\par}
   \end{columns}
   \sources{\srcl{a}Depth program: interim work plan (2026); \srcl{b}stainless-steel test: RFX project record (29 Sep 2026).}
   \note{Three lines: the model predicted a structural memory, STEM saw it locally, and large-area EBSD now supports it. Open: depth, replication on more cathodes, other materials---and the stainless-steel test with Consorzio RFX is under way. Then the invitation: new materials, other electrode configurations, cross-facility comparisons, same-area before-and-after mapping. The QR code and link open the paper. (Optional aside: Mircea's resistivity measurements, just before this talk, probe the same state.) Thank you.}
