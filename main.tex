@@ -812,32 +812,45 @@
 \end{frame}
 
 % ── 15. Stainless steel test (RFX 2) ─────────────────────────────────────────
-\begin{frame}{Stainless steel: a test chosen to be hard on the model}
+% Restructured 2 Oct late (author instruction): different material, different
+% structural evolution; no phase-transformation story in the main path (the XRD
+% fact stays in backup 23). Sources: SFE and planar slip QA_PREP.md L92; 16 kPa
+% QA_PREP.md L101, L141 (= eps0 E^2/2 at 60 MV/m); run facts ../rfx/HANDOFF.md
+% L20-23; apex inside or below the unexposed range ../rfx/analysis/
+% ebsd_orientations_all_2026-09-29/FINDINGS.md L82-84 (as backup 24); nothing
+% mapped before exposure QA_PREP.md L101, L131; before-and-after campaign
+% ../rfx/HANDOFF.md L291, ../rfx/NEEDED.md L341, QA_PREP.md L112.
+\begin{frame}{Steel: different material, different structural evolution}
   \begin{columns}[T]
-    \column{0.44\textwidth}
-      \begin{beamercolorbox}[rounded=true,sep=.2cm]{block body}
-        \centering\bfseries\color{copper}Copper\\[0.06cm]
-        \normalfont\small FCC, higher SFE\\pulsed DC, ${\sim}10^9$ cycles
-      \end{beamercolorbox}
-      \vspace{0.08cm}
-      \begin{beamercolorbox}[rounded=true,sep=.2cm]{block body}
-        \centering\bfseries\color{steel}AISI 304L SS\\[0.06cm]
-        \normalfont\small metastable austenite, lower SFE\\continuous DC, possible $\gamma\!\to\!\alpha'$
-      \end{beamercolorbox}
-    \column{0.52\textwidth}
-      \begin{itemize}\setlength\itemsep{0.35em}
-        \item Four knobs at once: stacking-fault energy, dislocation mobility and slip, loading mode, a possible phase transformation
-        \item A first continuous-DC campaign with Consorzio RFX is under way (first run: \SI{90}{h} and \SI{73}{h} DC, zero breakdowns); analysis ongoing, no field effect claimed
+    \column{0.42\textwidth}
+      \tagbox{steel}{What differs from copper}
+      \small
+      \begin{itemize}\setlength\itemsep{0.2em}
+        \item Lower stacking-fault energy, planar slip
+        \item Different dislocation mobility
+        \item Continuous DC: a steady traction of ${\sim}\SI{16}{kPa}$, not ${\sim}10^9$ pulses
       \end{itemize}
-      \vspace{0.15cm}
-      \raisebox{-0.34\height}{\includegraphics[height=0.5cm]{logo_rfx.png}}\;
-      {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada}
+      \vspace{0.12cm}
+      {\footnotesize The dislocation picture expects a different near-surface evolution. The test: does any field-correlated change appear at all?\par}
+    \column{0.55\textwidth}
+      \tagbox{steel}{First run with Consorzio RFX}
+      \small
+      \begin{itemize}\setlength\itemsep{0.2em}
+        \item AISI 304L at the RFX HVPTF: continuous DC, \SI{90}{h} and \SI{73}{h} at 59--\SI{61}{MV/m}; zero breakdowns, stopped at emission switch-on
+        \item 26 EBSD maps (HUJI, I.~Popov): the exposed apex lies inside or below the unexposed range
+        \item Nothing was mapped before exposure, so this design cannot establish a field effect
+      \end{itemize}
+      \vspace{0.06cm}
+      \raisebox{-0.34\height}{\includegraphics[height=0.45cm]{logo_rfx.png}}\;
+      {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada\par}
   \end{columns}
-  \vspace{0.15cm}
+  \vspace{0.14cm}
+  {\small\bfseries\color{steel}Next campaign: one electrode mapped before and after being driven into breakdowns.\par}
+  \vspace{0.06cm}
   {\centering\small\bfseries\color{teal}RFX HV program: N.~Pilan, next talk (12:30).\par}
-  \claim{Any outcome constrains the mechanism; the test is not pass-or-fail.}
-  \source{RFX electrode geometry and plan; first-look data in backup.}
-  \note{Stainless steel is hard on the model: it changes stacking-fault energy, dislocation mobility, the loading mode, and adds a possible austenite-to-martensite transformation; that makes it discriminating, and any outcome constrains the mechanism. A first continuous-DC campaign with Consorzio RFX---De Lorenzi, Pilan, Spada---is under way: two electrodes ran 90 and 73 hours with zero breakdowns, and the EBSD analysis is ongoing. No field effect is claimed. The RFX high-voltage program itself is Nicola Pilan's talk next, at 12:30. Details are in the backup.}
+  \claim{Copper supports the memory; steel asks whether it is universal.}
+  \source{RFX project record and EBSD orientation pass, 29 Sep 2026 (all 26 catalog maps); ${\sim}\SI{16}{kPa} = \varepsilon_0 E^2/2$ at \SI{60}{MV/m}. Details in backup.}
+  \note{Steel is a different material, so the dislocation picture expects a different structural evolution: lower stacking-fault energy and planar slip, different dislocation mobility, and continuous DC, a steady traction of about 16 kilopascals instead of about a billion pulses. The question is whether any field-correlated change appears at all. With Consorzio RFX---De Lorenzi, Pilan, Spada---two 304L electrodes ran 90 and 73 hours at 59 to 61 MV/m, with zero breakdowns. In 26 EBSD maps the exposed apex lies inside or below the unexposed range; nothing was mapped before exposure, so no field effect can be established. Next: one electrode mapped before and after breakdowns. Nicola Pilan's talk follows.}
 \end{frame}
 
 % ── 16. Conclusion + 2025 bookend ────────────────────────────────────────────
