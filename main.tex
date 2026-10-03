@@ -388,14 +388,27 @@
       \begin{columns}[c,onlytextwidth]
         \column{0.48\textwidth}
           \centering
-          \includegraphics[width=\linewidth,height=2.0cm,keepaspectratio]{mddf_rate_vs_field.png}\\[-1mm]
+          \includegraphics[width=\linewidth,height=1.55cm,keepaspectratio]{mddf_rate_vs_field.png}\\[-1mm]
           {\scriptsize MDDF model}
         \column{0.48\textwidth}
           \centering
-          \includegraphics[width=\linewidth,height=2.0cm,keepaspectratio]{stem_denuded_zone.png}\\[-1mm]
-          {\scriptsize local STEM denuded zone\par}
+          \includegraphics[width=\linewidth,height=1.55cm,keepaspectratio]{stem_denuded_zone.png}\\[-1mm]
+          {\scriptsize local STEM denuded zone\rlap{\src{a,b}}\par}
       \end{columns}
-      \vspace{0.15cm}
+      \vspace{0.12cm}
+      % Author instruction 3 Oct evening: two STEM images selected from the MeVArc
+      % 2025 talk. HAADF overview keeps its instrument data bar: the 2 um bar runs
+      % into the right image edge (x = 843-1011 of 1012 px), so it cannot be
+      % measured and no bar is drawn. The surface detail carries no scale bar.
+      \begin{minipage}[c]{0.36\linewidth}\centering
+        \includegraphics[height=1.95cm,keepaspectratio]{stem_lamella_overview_haadf.png}\\[-0.5mm]
+        {\scriptsize FIB lamella,\\HAADF overview\src{a}\par}
+      \end{minipage}\hfill
+      \begin{minipage}[c]{0.62\linewidth}\centering
+        \includegraphics[width=\linewidth,keepaspectratio]{stem_surface_detail_2025.png}\\[-0.5mm]
+        {\scriptsize cross-section STEM\\at the surface\src{a}\par}
+      \end{minipage}\par
+      \vspace{0.2cm}
       {\small Closed with: \alert{other materials? more samples?}}
     \column{0.48\textwidth}
       \tagbox{teal}{MeVArc 2026}
@@ -404,6 +417,7 @@
       \includegraphics[width=0.92\linewidth,height=4.2cm,keepaspectratio]{sem_lowmag.png}\\[-1mm]
       {\scriptsize Large-area EBSD across one cathode}
   \end{columns}
+  \sources{\srcl{a}HUJI STEM (I.~Popov), MeVArc 2025; \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
   \note{Light visual bridge: 2025 showed the model and local cross-section; 2026 delivers the large-area structural comparison on one electrode. Do not quote the 75 percent effect here.}
 \end{frame}
 
