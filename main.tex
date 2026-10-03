@@ -162,10 +162,10 @@
     \vspace{0.22cm}
     {\usebeamerfont{subtitle}\color{teal}\insertsubtitle\par}
     \vspace{0.55cm}
-    {\large\bfseries\color{ink}Yinon Ashkenazy}\\[0.12cm]
+    {\footnotesize\bfseries\color{ink}Yinon Ashkenazy}\\[0.12cm]
     {\small\color{muted}Racah Institute of Physics, The Hebrew University of Jerusalem}\\[0.34cm]
     {\footnotesize\color{ink}
-      I.~Popov \textcolor{muted}{(HUJI Nano)} \(\cdot\)
+      I.~Popov \textcolor{muted}{(HUJI)} \(\cdot\)
       W.~L.~Millar, V.~M.~Bjelland, W.~Wuensch \textcolor{muted}{(CERN)}}\\[0.22cm]
     % Venue and date (author decision 6, 3 Oct): Indico event 1637675 export
     % gives address 'Hotel Royal Plaza, Montreux, Switzerland'; date from
@@ -214,7 +214,7 @@
       \begin{itemize}\setlength\itemsep{0.5em}
         \item Field holding rises FCC$\to$BCC$\to$HCP --- the order of barriers to dislocation motion.
         \item The \alert{MDDF} model: breakdown nucleates when the mobile-dislocation population, driven by Maxwell stress, runs away.
-        \item One model gets the ${\sim}E^{30}$ rate, its temperature dependence, and the dark-current spikes.
+        \item One model gets the ${\sim}E^{30}$ rate and its temperature dependence, and was shown to reproduce the histogram of dark-current spikes.
       \end{itemize}
     \column{0.44\textwidth}
       \centering
@@ -262,7 +262,7 @@
       \draw[->,thick,copper] (0.62,1.05) to[bend left=25] (1.15,0.55);
       \node[font=\scriptsize\bfseries,copper,anchor=west] at (0.92,1.08) {BD};
     \end{scope}
-    \node[capl] at (1.55,-1.70) {mobile dislocations:\\\textbf{fast}; over the\\hill $=$ breakdown};
+    \node[capl] at (1.55,-1.70) {mobile dislocations\\\textbf{fluctuate}; enough\\together $=$ avalanche};
     % icon 2: conditioning raises the hill
     \begin{scope}[shift={(5.15,-1.30)},yscale=0.82]
       \draw[->,muted,thin] (-1.3,-0.05) -- (1.35,-0.05) node[below left=-1pt,font=\scriptsize] {$n$};
@@ -318,7 +318,7 @@
 \end{frame}
 
 % ── 4. Prior microscopy (2025 STEM) ─────────────────────────────────────────
-\begin{frame}{STEM already saw it, at single spots}
+\begin{frame}{STEM already saw it, at specific locations}
   \begin{columns}[c]
     \column{0.52\textwidth}
       \centering
@@ -334,7 +334,7 @@
         \item One cross-section cannot speak for the whole electrode.
       \end{itemize}
   \end{columns}
-  \claim{Seen at one spot. The large-area comparison was still missing.}
+  \claim{Seen at a few specific locations. The large-area view was missing.}
   \source{Jacewicz et al., JAP 137, 193302 (2025); HUJI STEM (I.~Popov), MeVArc 2025; Korsb\"ack et al., PRAB 23, 033102 (2020).}
   \note{2025 STEM images. Dark band is the protective coating; just beneath it the field-exposed region is nearly free of dislocation walls while the reference keeps walls continuous to the surface. Published wording is conservative: 300 K shows significant reduction of walls; the denuded zone is clearly visible at 30 K. The paper gives no thickness; 200 nanometers is read from images, the number the manuscript uses. Hard-versus-soft copper contrast (Korsb\"ack 2020) is an independent macroscopic clue: hard copper conditioned within about 25 million pulses; soft samples began saturating near 600 million or stayed unsaturated longer, consistent with different starting dislocation populations. Two lessons: FIB preparation generates dislocations and loops, so only larger-scale structure is trustworthy; TEM and STEM is intrinsically local. Last year I asked for more comparative forensics: other materials, more samples. That is exactly the gap next slides fill.}
 \end{frame}
@@ -884,7 +884,7 @@
     Last year: ``other materials? more samples?'' --- here is the large-area answer.
   \end{beamercolorbox}
   {\footnotesize\color{muted}Copper result: \condref.}
-  \note{Close the loop from the title and from last year. Model predicted a structural memory; STEM saw it at one spot; large-area EBSD supports it across the electrode: the four bars are the tier means, 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery, 0.68 on the reference, about 75 percent higher at high field. Stainless-steel and depth programs are the next round of comparative forensics promised in 2025. The invitation and the paper link are on the next slide. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
+  \note{Close the loop from the title and from last year. Model predicted a structural memory; STEM saw it at a few specific locations; large-area EBSD supports it across the electrode: the four bars are the tier means, 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery, 0.68 on the reference, about 75 percent higher at high field. Stainless-steel and depth programs are the next round of comparative forensics promised in 2025. The invitation and the paper link are on the next slide. Cite the manuscript as under revision at PRAB, arXiv:2606.19192.}
 \end{frame}
 
 % ── 19. Conclusions and invitation ──────────────────────────────────────────
