@@ -512,3 +512,27 @@ Further author instructions applied the same evening (each its own commit):
 
 Renders at scale 2 (not committed): `renders_tmp/p02.png` ... `p25.png` for every changed page (2-10, 13,
 15, 16, 18, 19, 21, 22, 25).
+
+## Whole-deck review, 3 Oct 2026 (night)
+
+Baseline 4529168 (25 pages). Every page of main.pdf and main-notes.pdf rendered at scale 2 and viewed; PDF
+text searched for the checklist wording, slashes, doubled words, UK spellings and the deck's numbers. Full
+report: `../proj26/talk_mevarc26/final_pass/WHOLE_DECK_REVIEW_2026-10-03.md`.
+Result: clean `make`, **25 pages** in both PDFs, worst overfull **1.97 pt** (frame 18, unchanged), no undefined
+references, QR on frame 21 decodes to `https://arxiv.org/pdf/2606.19192` in both PDFs (zxing-cpp).
+md5 main.pdf e295df5b (at 5c54b28). Not pushed.
+
+| Commit | Where (main.tex) | Change |
+|---|---|---|
+| 246deb0 | L1006, backup 22 | source "Inna Popov" → "I. Popov" (initials on slides) |
+| 580c4e0 | L1028, backup 23 | "#3/#4" → "#3-25 and #4-25" (no slashes in prose) |
+| ae93f69 | L358, frame 5 note | "TEM and STEM is" → "are" |
+| 3c63696 | L697, frame 15 note | "depleted layer TEM saw" → "STEM saw" (slide says STEM) |
+| 8fdc267 | L814, frame 17 note | missing "the" and "they are" restored |
+| c1c8f34 | L937, frame 20 claim | tie "large-area~answer" (orphan word) |
+| 9a42ead | L448, frame 8 bullet 1 | tie "pulsed~DC" (orphan word) |
+| 5c54b28 | PDFs | rebuilt |
+
+Checklist (b) and numbers (c): all pass; details in the report. Left for the author: frame 20 note's
+"under revision at PRAB" clause; frame 16 copper labels read 1, 3, 2; short source-line tails on frames 3, 4,
+10, 16; frame 7 caption "zone" alone; backup 22 bullet tight on the Sources line; two note wordings (frames 6, 9).
