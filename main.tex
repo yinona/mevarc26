@@ -635,11 +635,11 @@
     \fill[pale] (3.1,1.7) rectangle (5.5,2.1);
     \draw[surf] (3.1,2.1) -- (5.5,2.1);
     \draw[muted,dashed] (3.1,1.7) -- (5.5,1.7);
-    \draw[<->,ink] (5.35,1.72) -- (5.35,2.08) node[midway,left,font=\tiny] {${\sim}\SI{200}{nm}$};
+    \draw[<->,ink] (5.35,1.72) -- (5.35,2.08) node[midway,left,font=\tiny] {${\sim}\SI{200}{nm}$\src{b}};
     \foreach \p in {(3.3,1.45),(3.7,1.1),(4.1,1.5),(4.4,1.05),(4.8,1.35),(5.2,1.1),(3.5,1.0),(4.2,1.3),(5.0,1.0),(3.9,1.15)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
     \foreach \x in {3.4,3.85,4.3} {\draw[->,warn,thick] (\x,1.6) -- (\x,2.02);}
     \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (4.3,0.64) {after ${\sim}10^{9}$ cycles};
-    \node[anchor=north,align=center,color=warn,text width=5.4cm] at (2.85,0.5) {dislocations escape to the surface or annihilate $\Rightarrow$ \textbf{depleted layer} (STEM)};
+    \node[anchor=north,align=center,color=warn,text width=5.4cm] at (2.85,0.5) {dislocations escape to the surface or annihilate $\Rightarrow$ \textbf{depleted layer} (STEM)\src{b}};
     % heat-treated Cu: before
     \node[box] at (8.1,0.6) {};
     \draw[surf] (8.1,2.1) -- (10.5,2.1);
@@ -653,20 +653,20 @@
     \foreach \y in {0.85,1.2,1.55,1.9} {\draw[muted!50] plot[domain=11.05:13.35,samples=25] (\x,{\y+0.08*sin((\x-11.05)*200)});}
     \foreach \p in {(11.3,1.7),(11.7,1.15),(12.1,1.85),(12.4,1.0),(12.8,1.45),(13.2,1.8),(11.8,1.0),(13.15,1.1),(12.5,1.3)} {\node[color=purple,font=\footnotesize] at \p {$\bot$};}
     \node[anchor=south,color=muted,font=\tiny,fill=copper!8,inner sep=1pt] at (12.2,0.64) {after ${\sim}10^{9}$ cycles};
-    \node[anchor=north,align=center,color=copper] at (10.75,0.5) {same load generates and rearranges dislocations\\$\Rightarrow$ \textbf{lattice curvature} (EBSD, LAM ${\sim}75\%$ higher)};
+    \node[anchor=north,align=center,color=copper] at (10.75,0.5) {same load generates and rearranges dislocations\\$\Rightarrow$ \textbf{lattice curvature} (EBSD, LAM ${\sim}75\%$ higher)\src{a}};
     % the common load
     \node[draw=gold!80!black,fill=gold!15,rounded corners,align=center,inner sep=2.5pt] at (6.8,1.4)
       {\textbf{one load}\\ $\sigma_M=\tfrac12\varepsilon_0E^2$\\ ${\sim}10^{9}$ cycles\\ {\tiny $10^{-3}$ of yield}};
-    \node[anchor=north,color=muted,align=center,font=\tiny] at (6.8,0.5) {the manuscript's\\interpretation};
+    \node[anchor=north,color=muted,align=center,font=\tiny] at (6.8,0.5) {the manuscript's\\interpretation\src{a}};
   \end{tikzpicture}
   \vspace{-0.3cm}
   \small
   \begin{itemize}\setlength\itemsep{0.1em}
-    \item To our knowledge, the first \alert{large-area} observation that conditioned regions carry a different near-surface dislocation structure, ordered as MDDF predicts.
-    \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.
+    \item To our knowledge, the first \alert{large-area} observation that conditioned regions carry a different near-surface dislocation structure, ordered as MDDF predicts.\src{a}
+    \item The three-tier ordering also tracks the conditioning variable $E_S$: a \emph{candidate} structural basis for it.\src{a}
   \end{itemize}
   \claim{Before, dislocations were plausible. Now, a dislocation-sensitive state maps the conditioning history.}
-  \source{Ashkenazy et al., \condref\ (discussion); Jacewicz et al., JAP 137, 193302 (2025).}
+  \sources{\srcl{a}Ashkenazy et al., \condref\ (discussion); \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
   \note{The measured hierarchy is the large-area structural signature the model predicted and STEM saw locally. The cartoon is the manuscript's interpretation of why the surface denuded zone and the EBSD curvature are not in conflict: one mechanism acting on two very different starting populations. Left, dense as-machined copper: cyclic stress lets near-surface dislocations escape or annihilate---the depleted layer TEM saw, about 200 nanometers. Right, heat-treated copper measured here: little to deplete, so the same load generates and rearranges dislocations---the curvature EBSD records. Size, depth and sign were not predicted; the sign is set by the starting population. Next slide gives the length scale; the depth connection is still open. Only now, only in one line, connect to $E_S$: the spatial ordering matches the simulated $E_S$ profile, so the dislocation population is a candidate structural basis. Never say we measured $E_S$.}
 \end{frame}
 
@@ -716,19 +716,19 @@
         }
         \node[anchor=west,color=teal,align=left,text width=3.3cm] at (4.15,3.05) {field $E$ stops at the\\surface charge layer};
         \node[anchor=west,color=copper,align=left,text width=3.3cm] at (4.15,2.3) {$\sigma_M=\varepsilon_0E^2/2$ enters\\as elastic stress};
-        \node[anchor=west,color=ink,align=left,text width=3.3cm] at (4.15,1.55) {denuded ${\sim}\SI{200}{nm}$\\$\approx 8\,\ell_D$ (hard Cu)};
-        \node[anchor=west,color=purple,align=left,text width=3.3cm] at (4.15,0.35) {ensemble screens internal stress\\over $\ell_D=1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$};
+        \node[anchor=west,color=ink,align=left,text width=3.3cm] at (4.15,1.55) {denuded ${\sim}\SI{200}{nm}$\\$\approx 8\,\ell_D$ (hard Cu)\src{d}};
+        \node[anchor=west,color=purple,align=left,text width=3.3cm] at (4.15,0.35) {ensemble screens internal stress\\over $\ell_D=1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$\src{a}};
       \end{tikzpicture}}
   \end{columns}
   {\scriptsize
    applied field $\leftrightarrow$ Maxwell traction \;$\cdot$\;
-   bound charge $\leftrightarrow$ dislocations (dipole regime) \;$\cdot$\;
+   bound charge $\leftrightarrow$ dislocations (dipole regime)\src{b,c} \;$\cdot$\;
    Debye length $\leftrightarrow$ $\ell_D$ \;$\cdot$\;
    screened interior field $\leftrightarrow$ screened internal stress of the depleted layer\\[0.05em]
-   \color{muted}2D single-slip theory at $\rho\sim\SI{e14}{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted.}
+   \color{muted}2D single-slip theory\src{a} at $\rho\sim\SI{e14}{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted.\src{d}}
   \vspace{0.08cm}
-  \claim{Charge screens the field at the surface. Dislocations screen the internal stress of a depleted layer, over ${\sim}\SI{25}{nm}$.}
-  \source{Groma et al., PRL 96, 165503 (2006); Lema\^{\i}tre et al., PRE 104, 024904 (2021); Livne et al., PRE 107, 055004 (2023); \condref.}
+  \claim{Charge screens the field at the surface. Dislocations screen the internal stress of a depleted layer, over ${\sim}\SI{25}{nm}$.\src{a}}
+  \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}\condref.}
   \note{Picture dislocation population as bound charge of a dielectric: Maxwell traction is applied field, dislocations rearrange in response. In Groma's Debye-like theory, internal stress of any depleted or enriched layer is screened by surrounding ensemble over about 25 nanometers for as-machined copper. Contrast on the right: electric field itself screened by surface charge within a nanometer, never enters the metal; load enters as elastic stress, so electrostatic screening length says nothing about depth. STEM denuded zone in hard copper is about eight screening lengths thick; no theory yet treats cyclically loaded free surface, so thickness is observation, not prediction.}
 \end{frame}
 
@@ -784,7 +784,7 @@
         \draw[->,muted,thick] (1.9,0) -- (1.9,3.85) node[above,font=\footnotesize\bfseries,ink] {probed depth};
         \draw[->,muted,thick] (1.9,0) -- (7.4,0) node[anchor=south east,inner sep=1pt,muted] at (7.45,0.04) {material};
         % depth ticks (log scale)
-        \foreach \y/\lab in {0.9/{${\sim}\SI{40}{nm}$, EBSD}, 2.1/{${\sim}\SI{200}{nm}$, STEM}, 3.3/{${\sim}\SI{1}{\micro m}$, lamellae}}
+        \foreach \y/\lab in {0.9/{${\sim}\SI{40}{nm}$, EBSD\src{a}}, 2.1/{${\sim}\SI{200}{nm}$, STEM\src{b}}, 3.3/{${\sim}\SI{1}{\micro m}$, lamellae}}
           {\draw[muted,thick] (1.82,\y) -- (1.98,\y);
            \node[anchor=east,ink] at (1.78,\y) {\lab};}
         % material categories
@@ -818,7 +818,7 @@
   \end{columns}
   \vspace{0.1cm}
   \claim{Depth continues the Uppsala STEM line; material tests the mechanism itself.}
-  \source{Interim work plan (2026). Depths: EBSD ${\sim}40$~nm at \SI{15}{kV} (CASINO, Drouin 2007); hard-Cu STEM zone ${\sim}200$~nm (HUJI, I.~Popov 2025).}
+  \sources{\srcl{a}EBSD ${\sim}40$~nm at \SI{15}{kV}: CASINO, Drouin 2007; \srcl{b}hard-Cu STEM zone ${\sim}200$~nm: HUJI, I.~Popov 2025; interim work plan (2026).}
   \note{Two coordinates on one picture. Today's result sits at about 40 nanometers, EBSD in heat-treated copper; the 2025 STEM depletion was about 200 nanometers deep, in hard copper. Going deeper means matched high-field and reference FIB lamellae, TEM, STEM and EBSD through the top micron, with the artifact controls learned in 2025, aiming at one depth profile from STEM depletion to EBSD curvature. Along the material axis: AISI 304L under continuous DC, a first campaign with Consorzio RFX. Next slide.}
 \end{frame}
 
@@ -846,11 +846,11 @@
       \small
       \begin{itemize}\setlength\itemsep{0.2em}
         \item Lower stacking-fault energy: planar slip, different dislocation mobility
-        \item Continuous DC: a steady traction of ${\sim}\SI{16}{kPa}$, not ${\sim}10^9$ pulses
-        \item Metastable austenite is a built-in strain gauge: $\varepsilon$ and $\alpha'$ martensite mark plastic strain above a~few~\SI{0.1}{\%}
+        \item Continuous DC: a steady traction of ${\sim}\SI{16}{kPa}$\src{a}, not ${\sim}10^9$ pulses
+        \item Metastable austenite is a built-in strain gauge: $\varepsilon$ and $\alpha'$ martensite mark plastic strain above a~few~\SI{0.1}{\%}\src{b}
       \end{itemize}
     \column{0.51\textwidth}
-      \tagbox{steel}{First run with Consorzio RFX}
+      \tagbox{steel}{First run with Consorzio RFX\src{c}}
       \small
       \begin{itemize}\setlength\itemsep{0.2em}
         \item AISI 304L at the RFX HVPTF: continuous DC, \SI{90}{h} and \SI{73}{h} at 59--\SI{61}{MV/m}; zero breakdowns, stopped at emission switch-on
@@ -865,7 +865,7 @@
   \vspace{0.08cm}
   {\small\bfseries\color{steel}Next campaign: one electrode mapped before and after being driven into breakdowns, with $\varepsilon$ and $\alpha'$ in the phase list so that absent martensite becomes a strain bound.\par}
   \claim{Copper supports the memory; steel asks whether it is universal.}
-  \source{RFX project record, EBSD pass of 29 Sep 2026; ${\sim}\SI{16}{kPa} = \varepsilon_0 E^2/2$ at \SI{60}{MV/m}; strain gauge: Bayerlein et al., MSEA 114, L11 (1989).}
+  \sources{\srcl{a}${\sim}\SI{16}{kPa} = \varepsilon_0 E^2/2$ at \SI{60}{MV/m}; \srcl{b}Bayerlein et al., MSEA 114, L11 (1989); \srcl{c}RFX project record, EBSD pass of 29 Sep 2026.}
   \note{Steel is a different material, so the dislocation picture expects a different structural evolution: lower stacking-fault energy and planar slip, and a steady traction of about 16 kilopascals instead of about a billion pulses. Its metastable austenite is a built-in strain gauge: epsilon and alpha-prime martensite appear above a few tenths of a percent of plastic strain. With Consorzio RFX---Antonio De Lorenzi, Nicola Pilan and Emanuele Spada---two 304L electrodes ran 90 and 73 hours at 59 to 61 MV/m, zero breakdowns. The exposed apex lies inside or below the unexposed range; nothing was mapped before exposure, so no field effect can be established. Next: before and after on one electrode, martensite in the phase list. For Q\&A: we have not yet looked for martensite on an exposed surface; the plan is to use its absence as a strain gauge. The copper signal itself is a low-strain rearrangement (a 0.5 deg LAM rise over a 3~$\mu$m step is of order $10^{13}$~m$^{-2}$ GND), so steel and copper would then say the same thing from two sides. Nicola's talk follows.}
 \end{frame}
 
@@ -905,7 +905,7 @@
       \begin{enumerate}\setlength\itemsep{0.4em}
         \item The model predicted a structural memory of conditioning.
         \item STEM saw it locally; large-area EBSD now supports~it.
-        \item Open: depth, replication, other materials~--- a stainless-steel test with Consorzio RFX is under way.
+        \item Open: depth\src{a}, replication, other materials~--- a stainless-steel test with Consorzio RFX is under way.\src{b}
       \end{enumerate}
       \vspace{0.3cm}
       \begin{beamercolorbox}[rounded=true,sep=.28cm,wd=\linewidth]{block body}
@@ -921,7 +921,7 @@
       \href{https://arxiv.org/pdf/2606.19192}{\footnotesize\bfseries\color{purple}arxiv.org/pdf/2606.19192}\\[0.05cm]
       {\tiny\color{muted}Ashkenazy et al., \condref\par}
   \end{columns}
-  \source{Depth program: interim work plan (2026). Stainless-steel test: RFX project record (29 Sep 2026).}
+  \sources{\srcl{a}Depth program: interim work plan (2026); \srcl{b}stainless-steel test: RFX project record (29 Sep 2026).}
   \note{Three lines: the model predicted a structural memory, STEM saw it locally, and large-area EBSD now supports it. Open: depth, replication on more cathodes, other materials---and the stainless-steel test with Consorzio RFX is under way. Then the invitation: new materials, other electrode configurations, cross-facility comparisons, same-area before-and-after mapping. The QR code and link open the paper. (Optional aside: Mircea's resistivity measurements, just before this talk, probe the same state.) Thank you.}
 \end{frame}
 
