@@ -428,3 +428,27 @@ Renders of the new pages 18 and 19 at scale 2: `renders_tmp/p18.png`, `renders_t
 Checks: 26 pages in both PDFs, worst overfull 1.61 pt, no undefined references; the 2 cm QR decodes
 (zxing-cpp, page 21 rendered at scale 1 and 3, both PDFs) to `https://arxiv.org/pdf/2606.19192`.
 Render: `renders_tmp/p21.png` (not committed).
+
+## Author decisions, 3 Oct 2026 (morning)
+
+Baseline 566e1ba (26 pages). Result: `main.pdf` and `main-notes.pdf` **25 pages each (21 core + 4 backup)**;
+page counts quoted in earlier sections (26) are superseded. `make` clean, worst overfull 1.61 pt (frame 4,
+unchanged), no undefined references, no missing figures; the 2 cm QR on frame 21 decodes to
+`https://arxiv.org/pdf/2606.19192` in both PDFs (zxing-cpp). Notes grep: no surname-form aside to another
+speaker remains (W. Wuensch, V. Bjelland, M. Coman, J. Wang, V. Zadin, Nicola Pilan, I. Popov, Millar,
+Jacewicz, Profatilova, Calatroni: no hits in any `\note`).
+
+| # | Decision | Commit | Where |
+|---|---|---|---|
+| 1 | Frame 19 "inside or below the unexposed range" and "cannot establish a field effect": kept | — | — |
+| 2 | Next-campaign line stays the single before-and-after sentence: kept | — | — |
+| 3 | Title "Steel: different material, different structural evolution": kept | — | — |
+| 4 | No slash-joined pairs in prose: frame 21 "before-and-after mapping"; frame 18 bullet and note "TEM, STEM and EBSD" (no other case in the main path) | 6d5f63d | main.tex L802, L811, L898 (at that commit) |
+| 5 | Note asides in first names: Walter (frame 2), Jianyu with Guodong Meng and Veronika (frame 6), Victoria (frame 8), Nicola (frame 19), Mircea (frame 21); slides and sources keep surnames; the frame 19 RFX credit list (De Lorenzi, Pilan, Spada) left as a formal credit | 9db6579 | notes L203, L369, L420, L858, L910 (at that commit); PROGRAMME.md L19-22, L34-37 |
+| 6 | Title slide: muted line "Montreux, Switzerland · Monday 5 October 2026", no session name. PROGRAMME.md names no venue; the Indico event 1637675 export gives "Hotel Royal Plaza, Montreux, Switzerland" | 9f0a661 | main.tex L173 |
+| 7 | Frame 20 result card at its drawn size (7.0 cm wide, was 4.8 cm), labels ≥ 8 pt as placed; columns 0.48/0.50, top-aligned; tighter list and box spacing | 5c7c1d3 | frame 20, main.tex L866 ff. |
+| 8 | Backup 26 (manuscript infographic) commented out with a dated note (restorable); frame 20 footer no longer says "Full infographic in backup"; REVIEW_CONTEXT.md §2 page map updated (rows 1, 18-21, backups 22-25) | 8f38eb4 | main.tex L1019 ff., L886 |
+| 9 | Slot length: **slot confirmed by the author, 3 Oct** (no other change) | this section | — |
+
+Renders (not committed): `renders_tmp/p01.png`, `p18.png`, `p19.png`, `p20.png`, `p21.png`.
+Not changed: sub-8 pt labels on frames 6, 8, 10, 15 (accepted by the author).
