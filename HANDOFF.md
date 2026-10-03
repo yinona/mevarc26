@@ -415,3 +415,14 @@ Residual questions for Yinon:
 - Optional asides were added to the notes of frames 2, 6, 8 and 21; delete any you will not say.
 
 Renders of the new pages 18 and 19 at scale 2: `renders_tmp/p18.png`, `renders_tmp/p19.png` (not committed).
+
+### Frame 21 rebalanced for question time (same evening, two follow-ups)
+
+| Commit | Frame (main.tex lines) | Change | Source |
+|---|---|---|---|
+| fbc44fe | 21 (L878-903 at that commit) | Text column 0.54 → 0.71 textwidth; the three conclusions and the teal invitation box one size up (`\large`); columns bottom-aligned; QR 3.1 → 2.0 cm with the URL beneath it (`\footnotesize`) and the reference line (`\tiny`) as a compact lower-right block; tie so "it." in conclusion 2 does not stand alone. Wording, link and `\source` unchanged. | author instruction |
+| cb1e473 | 21 (L878-906) | Small result chart above the QR block: `figures/result_card_small.pdf`, drawn at slide size (3.7 × 2.9 cm, fonts ≥ 7 pt) by the new `figures/make_result_card_small.py`; same four tier means and colors as `result_card.pdf` on frame 20 (1.21°, 1.19°, 0.79°, 0.68°). No new number. | cond26/data/zenodo/package_v2/results.json (as make_design_figures.py f18) |
+
+Checks: 26 pages in both PDFs, worst overfull 1.61 pt, no undefined references; the 2 cm QR decodes
+(zxing-cpp, page 21 rendered at scale 1 and 3, both PDFs) to `https://arxiv.org/pdf/2606.19192`.
+Render: `renders_tmp/p21.png` (not committed).
