@@ -58,7 +58,7 @@ def f07():
         ax.plot([r,r],[0,16.5],color=MUTED,lw=0.7,ls="--")
     ax.text(0.5,15.3,"gap drawn ×100",fontsize=7,color=MUTED,va="center")
     ax.text(25,15.3,"beyond the anode",fontsize=7.5,color=PERIPH,ha="center",va="center")
-    ax.text(25,6.0,"reference\ncathode:\nnever installed,\nE = 0",fontsize=7.5,color=REF,fontweight="bold",ha="center",va="center",linespacing=1.0)
+    ax.text(25,6.0,"reference:\nE = 0",fontsize=7.5,color=REF,fontweight="bold",ha="center",va="center",linespacing=1.0)
     ax.set_xlim(0,30); ax.set_ylim(-4,17); ax.set_axis_off()
     # E(r)
     ax2 = fig.add_subplot(gs[1]); tier_shade(ax2)
@@ -172,5 +172,9 @@ def f18():
     ax.set_title("One cathode, nine EBSD regions",fontsize=9.5,loc="left",pad=4)
     fig.tight_layout(pad=0.3); save(fig,"result_card")
 
-for f in (f07,f08,f10,f11,f12,f18): f()
-print("figures written:", ", ".join(["geometry_efield_tiers.pdf","sem_lowmag_callouts.png","lam_pair_matched.png","tiers_plot.pdf","tail_plot.pdf","result_card.pdf"]))
+# optional 4th argument: comma-separated subset, e.g. f07 (3 Oct: regenerate one figure)
+SEL = sys.argv[4].split(",") if len(sys.argv) > 4 else None
+for f in (f07,f08,f10,f11,f12,f18):
+    if SEL is None or f.__name__ in SEL: f()
+OUT = {"f07":"geometry_efield_tiers.pdf","f08":"sem_lowmag_callouts.png","f10":"lam_pair_matched.png","f11":"tiers_plot.pdf","f12":"tail_plot.pdf","f18":"result_card.pdf"}
+print("figures written:", ", ".join(v for k, v in OUT.items() if SEL is None or k in SEL))
