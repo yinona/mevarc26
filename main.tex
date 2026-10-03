@@ -699,21 +699,28 @@
 
 % ── 12b. Elastic screening analogy ──────────────────────────────────────────
 \begin{frame}{Elastic screening: dislocations respond like bound charge}
+  % Restructured 3 Oct evening (author instruction): three length scales and
+  % "screening reduces, it does not nullify". Drawings kept (charges not renamed),
+  % redrawn at compressed coordinates so their 8 pt labels need no resizebox.
+  % Sources: Thomas-Fermi length in Cu ~0.05 nm (textbook, no reference by
+  % author decision); l_D = 1/(4.2 sqrt rho) in 2D single slip, Groma 2006 (cond26
+  % L379-381); dipole regime Lemaitre 2021, Livne 2023 (cond26 L382); load not
+  % screened, carried as elastic stress (cond26 L69, L374-375); 200 nm = 8 l_D,
+  % thickness not predicted (cond26 L381-383; binding decision, HANDOFF section 5).
   \begin{columns}[T,onlytextwidth]
-    \column{0.49\textwidth}
+    \column{0.45\textwidth}
       \centering
-      \resizebox{0.80\linewidth}{!}{%
-      \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize]
-        \node[anchor=south,font=\small\bfseries,color=teal] at (2.15,3.5) {Dielectric in an applied field};
+      \begin{tikzpicture}[x=0.70cm,y=0.45cm,font=\scriptsize]
+        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=teal] at (0.3,3.1) {Dielectric in an applied field};
         \foreach \x in {0.7,1.5,2.3,3.1} {
-          \draw[->,thick,teal] (\x,3.4) -- (\x,2.6);
-          \draw[->,thick,teal] (\x,0.7) -- (\x,-0.1);
+          \draw[->,thick,teal] (\x,3.05) -- (\x,2.55);
+          \draw[->,thick,teal] (\x,0.75) -- (\x,0.25);
         }
         \fill[pale] (0.3,0.85) rectangle (4.0,2.45);
         \draw[ink,thick] (0.3,0.85) rectangle (4.0,2.45);
         \foreach \x in {0.7,1.5,2.3,3.1} {
-          \node[color=purple] at (\x,2.3) {$-$};
-          \node[color=copper] at (\x,1.0) {$+$};
+          \node[color=purple,inner sep=0pt] at (\x,2.3) {$-$};
+          \node[color=copper,inner sep=0pt] at (\x,1.0) {$+$};
         }
         \foreach \x in {1.1,2.15,3.2} {
           \draw[purple!70,thick] (\x,1.3) -- (\x,2.0);
@@ -721,42 +728,53 @@
           \node[color=copper,inner sep=0pt] at (\x,1.25) {$+$};
         }
         \foreach \x in {1.62,2.68} {\draw[->,teal!75] (\x,1.9) -- (\x,1.4);}
-        \node[anchor=west,color=teal] at (4.1,3.0) {applied field $E_0$};
-        \node[anchor=west,color=purple,align=left,text width=2.6cm] at (4.1,2.25) {bound charge\\polarizes};
-        \node[anchor=west,color=teal,align=left,text width=2.6cm] at (4.1,1.45) {interior field\\reduced to $E_0/\varepsilon_r$};
-      \end{tikzpicture}}
-    \column{0.49\textwidth}
+        \node[anchor=west,color=teal] at (4.1,2.8) {applied field $E_0$};
+        \node[anchor=west,color=purple] at (4.1,1.95) {bound charge polarizes};
+        \node[anchor=west,color=teal,align=left] at (4.1,0.85) {interior field\\reduced to $E_0/\varepsilon_r$};
+      \end{tikzpicture}
+    \column{0.55\textwidth}
       \centering
-      \resizebox{0.80\linewidth}{!}{%
-      \begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize]
-        \node[anchor=south,font=\small\bfseries,color=copper] at (2.15,3.5) {Copper under the Maxwell traction};
-        \foreach \x in {0.7,1.5,2.3,3.1} {\draw[->,thick,teal] (\x,3.4) -- (\x,2.6);}
-        \fill[copper!8] (0.3,-0.1) rectangle (4.0,2.45);
-        \fill[pale] (0.3,1.85) rectangle (4.0,2.45);
-        \draw[ink,thick] (0.3,-0.1) rectangle (4.0,2.45);
-        \draw[muted,dashed] (0.3,1.85) -- (4.0,1.85);
+      \begin{tikzpicture}[x=0.70cm,y=0.45cm,font=\scriptsize]
+        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=copper] at (0.3,3.1) {Copper under the Maxwell traction};
+        \foreach \x in {0.7,1.5,2.3,3.1} {\draw[->,thick,teal] (\x,3.05) -- (\x,2.55);}
+        \fill[copper!8] (0.3,0.25) rectangle (4.0,2.45);
+        \fill[pale] (0.3,1.9) rectangle (4.0,2.45);
+        \draw[ink,thick] (0.3,0.25) rectangle (4.0,2.45);
+        \draw[muted,dashed] (0.3,1.9) -- (4.0,1.9);
         \draw[teal,line width=1.6pt] (0.3,2.45) -- (4.0,2.45);
         \foreach \x in {1.1,1.9,2.7} {\draw[->,very thick,copper] (\x,2.0) -- (\x,2.38);}
-        \node[color=purple] at (3.4,2.12) {$\bot$};
-        \foreach \p in {(0.6,1.55),(1.15,0.85),(1.7,1.6),(2.1,0.35),(2.55,1.25),(3.05,0.7),(3.6,1.5),(0.75,0.25),(3.45,0.15),(1.95,1.1),(2.9,1.65),(0.55,0.95),(3.75,0.85),(1.4,0.2)} {
-          \node[color=purple] at \p {$\bot$};
+        \node[color=purple,inner sep=0pt] at (3.4,2.15) {$\bot$};
+        \foreach \p in {(0.6,1.6),(1.15,0.95),(1.7,1.65),(2.1,0.5),(2.55,1.3),(3.05,0.85),(3.6,1.55),(0.75,0.5),(3.5,0.45),(1.95,1.15),(2.9,1.7),(0.55,1.1),(3.75,1.05),(1.45,0.45)} {
+          \node[color=purple,inner sep=0pt] at \p {$\bot$};
         }
-        \node[anchor=west,color=teal,align=left,text width=3.3cm] at (4.15,3.05) {field $E$ stops at the\\surface charge layer};
-        \node[anchor=west,color=copper,align=left,text width=3.3cm] at (4.15,2.3) {$\sigma_M=\varepsilon_0E^2/2$ enters\\as elastic stress};
-        \node[anchor=west,color=ink,align=left,text width=3.3cm] at (4.15,1.55) {denuded ${\sim}\SI{200}{nm}$\\$\approx 8\,\ell_D$ (hard Cu)\src{d}};
-        \node[anchor=west,color=purple,align=left,text width=3.3cm] at (4.15,0.35) {ensemble screens\\internal stress with a\\characteristic distance\\$\ell_D\approx1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$\src{a}};
-      \end{tikzpicture}}
+        \node[anchor=west,color=teal] at (4.1,2.8) {\textbf{1}\enspace field stops at the surface};
+        \node[anchor=west,color=copper] at (4.1,1.95) {\textbf{3}\enspace $\sigma_M$ enters as stress};
+        \node[anchor=west,color=purple,align=left] at (4.1,0.85) {\textbf{2}\enspace dislocations as bound\\\phantom{\textbf{2}\enspace}charge (dipole regime)\src{b,c}};
+      \end{tikzpicture}
   \end{columns}
-  {\scriptsize
-   applied field $\leftrightarrow$ Maxwell traction \;$\cdot$\;
-   bound charge $\leftrightarrow$ dislocations (dipole regime)\src{b,c} \;$\cdot$\;
-   Debye length $\leftrightarrow$ $\ell_D$ \;$\cdot$\;
-   screened interior field $\leftrightarrow$ screened internal stress of the depleted layer\\[0.05em]
-   \color{muted}2D single-slip theory\src{a} at $\rho\sim\SI{e14}{m^{-2}}$; no theory yet treats cyclic loading with a free surface, so the ${\sim}\SI{200}{nm}$ thickness is observed, not predicted.\src{d}\par}
-  \vspace{0.08cm}
-  \claim{Charge screens the field at the surface.\\Dislocations screen the internal stress of a depleted layer,\\with a characteristic distance ${\sim}\SI{25}{nm}$.\src{a}}
+  \centering
+  \begin{tikzpicture}[font={\scriptsize\hyphenpenalty=10000\exhyphenpenalty=10000},
+      sbox/.style={rounded corners=2pt,line width=0.8pt,align=left,inner sep=3pt,anchor=north}]
+    \node[sbox,draw=teal,fill=teal!6,text width=2.9cm] (s1) at (0,0)
+      {{\color{teal}\footnotesize\bfseries 1\enspace$\lesssim\SI{0.1}{nm}$}\\
+       \textbf{Field penetration}\\
+       Thomas--Fermi: the field stops at the surface.};
+    \node[sbox,draw=purple,fill=purple!5,text width=5.7cm] (s2) at (4.91,0)
+      {{\color{purple}\footnotesize\bfseries 2\enspace$\ell_D\approx1/(4.2\sqrt{\rho})\approx\SI{25}{nm}$}\src{a}\\
+       \textbf{Elastic screening, weak internal fields only}\\
+       $\rho\sim\SI{e14}{m^{-2}}$, very low strain, linear response; yet the observable: LAM, denuded ${\sim}\SI{200}{nm}\approx8\,\ell_D$ in hard Cu (not predicted).\src{d}};
+    \node[sbox,draw=copper,fill=copper!6,text width=3.75cm] (s3) at (10.41,0)
+      {{\color{copper}\footnotesize\bfseries 3\enspace${\sim}$mm}\\
+       \textbf{Applied load: not screened}\\
+       Propagates as ordinary elasticity over the loading geometry (Saint-Venant).\src{d}};
+    \node[font=\large,color=muted,anchor=north] at (1.78,-0.2) {$\ll$};
+    \node[font=\large,color=muted,anchor=north] at (7.99,-0.2) {$\ll$};
+  \end{tikzpicture}\par
+  {\footnotesize\bfseries\color{teal}Screening reduces, it does not nullify: like a dielectric, the ensemble lowers the elastic field beyond $\ell_D$ without canceling it.\par}
+  \raggedright
+  \claim{Weak, screened internal stresses control the sources and the stored structure; the strong external load drives the existing mobile dislocations through that structure.}
   \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}Ashkenazy et al., \condref.}
-  \note{Picture dislocation population as bound charge of a dielectric: Maxwell traction is applied field, dislocations rearrange in response. In Groma's Debye-like theory, internal stress of any depleted or enriched layer is screened by surrounding ensemble with a characteristic distance of about 25 nanometers for as-machined copper. Contrast on the right: electric field itself screened by surface charge within a nanometer, never enters the metal; load enters as elastic stress, so electrostatic screening length says nothing about depth. STEM denuded zone in hard copper is about eight screening lengths thick; no theory yet treats cyclically loaded free surface, so thickness is observation, not prediction.}
+  \note{Three different scales. Electric field penetration is small: Thomas--Fermi screening, below a tenth of a nanometer; the field stops at the surface. Elastic screening by the mobile dislocation ensemble, characteristic distance about 25 nanometers (Groma), acts only on low elastic fields, very low strains, but leads to an observable response: LAM, and the 200-nanometer denuded zone in hard copper, not predicted. High elastic fields, like the Maxwell traction, are not screened; they propagate over the millimeter loading geometry. Screening does not mean full decay of the elastic field, just as a dielectric does not nullify the electric field. Roles: weak, screened internal stresses control the sources and the stored structure; the strong external load drives the existing mobile dislocations through it.}
 \end{frame}
 
 % ══ PART III — Limits and the future ═════════════════════════════════════════
