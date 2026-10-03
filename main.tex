@@ -820,19 +820,25 @@
 % ebsd_orientations_all_2026-09-29/FINDINGS.md L82-84 (as backup 24); nothing
 % mapped before exposure QA_PREP.md L101, L131; before-and-after campaign
 % ../rfx/HANDOFF.md L291, ../rfx/NEEDED.md L341, QA_PREP.md L112.
+% 3 Oct (author-approved): metastable austenite as a strain gauge. 304L at
+% plastic strain amplitude 0.02 % planar arrays, no martensite; at 0.5 % cells plus
+% epsilon and alpha' (Bayerlein, Christ, Mughrabi, MSEA 114, L11, 1989,
+% doi:10.1016/0921-5093(89)90871-x); VHCF Cr-Ni austenitic steels form alpha'
+% (Grigorescu et al., IJF 93, 250, 2016, doi:10.1016/j.ijfatigue.2016.05.005).
+% No martensite claim at the exposed apex: XRD sampled unexposed stub backs
+% (../rfx/STATUS.md section 2.5, L118); EBSD phase fractions never quoted
+% (../rfx/HANDOFF.md L179).
 \begin{frame}{Steel: different material, different structural evolution}
   \begin{columns}[T]
-    \column{0.42\textwidth}
+    \column{0.46\textwidth}
       \tagbox{steel}{What differs from copper}
       \small
       \begin{itemize}\setlength\itemsep{0.2em}
-        \item Lower stacking-fault energy, planar slip
-        \item Different dislocation mobility
+        \item Lower stacking-fault energy: planar slip, different dislocation mobility
         \item Continuous DC: a steady traction of ${\sim}\SI{16}{kPa}$, not ${\sim}10^9$ pulses
+        \item Metastable austenite is a built-in strain gauge: $\varepsilon$ and $\alpha'$ martensite mark plastic strain above a~few~\SI{0.1}{\%}
       \end{itemize}
-      \vspace{0.12cm}
-      {\footnotesize The dislocation picture expects a different near-surface evolution. The test: does any field-correlated change appear at all?\par}
-    \column{0.55\textwidth}
+    \column{0.51\textwidth}
       \tagbox{steel}{First run with Consorzio RFX}
       \small
       \begin{itemize}\setlength\itemsep{0.2em}
@@ -840,17 +846,16 @@
         \item 26 EBSD maps (HUJI, I.~Popov): the exposed apex lies inside or below the unexposed range
         \item Nothing was mapped before exposure, so this design cannot establish a field effect
       \end{itemize}
-      \vspace{0.06cm}
-      \raisebox{-0.34\height}{\includegraphics[height=0.45cm]{logo_rfx.png}}\;
-      {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada\par}
   \end{columns}
-  \vspace{0.14cm}
-  {\small\bfseries\color{steel}Next campaign: one electrode mapped before and after being driven into breakdowns.\par}
-  \vspace{0.06cm}
-  {\centering\small\bfseries\color{teal}RFX HV program: N.~Pilan, next talk (12:30).\par}
+  \vspace{0.1cm}
+  \raisebox{-0.34\height}{\includegraphics[height=0.45cm]{logo_rfx.png}}\;
+  {\scriptsize\color{muted}Consorzio RFX --- De~Lorenzi, Pilan, Spada}\hfill
+  \quad{\footnotesize\bfseries\color{teal}RFX HV program: N.~Pilan, next talk (12:30).}\par
+  \vspace{0.08cm}
+  {\small\bfseries\color{steel}Next campaign: one electrode mapped before and after being driven into breakdowns, with $\varepsilon$ and $\alpha'$ in the phase list so that absent martensite becomes a strain bound.\par}
   \claim{Copper supports the memory; steel asks whether it is universal.}
-  \source{RFX project record and EBSD orientation pass, 29 Sep 2026 (all 26 catalog maps); ${\sim}\SI{16}{kPa} = \varepsilon_0 E^2/2$ at \SI{60}{MV/m}. Details in backup.}
-  \note{Steel is a different material, so the dislocation picture expects a different structural evolution: lower stacking-fault energy and planar slip, different dislocation mobility, and continuous DC, a steady traction of about 16 kilopascals instead of about a billion pulses. The question is whether any field-correlated change appears at all. With Consorzio RFX---De Lorenzi, Pilan, Spada---two 304L electrodes ran 90 and 73 hours at 59 to 61 MV/m, with zero breakdowns. In 26 EBSD maps the exposed apex lies inside or below the unexposed range; nothing was mapped before exposure, so no field effect can be established. Next: one electrode mapped before and after breakdowns. Nicola Pilan's talk follows.}
+  \source{RFX project record, EBSD pass of 29 Sep 2026; ${\sim}\SI{16}{kPa} = \varepsilon_0 E^2/2$ at \SI{60}{MV/m}; strain gauge: Bayerlein et al., MSEA 114, L11 (1989).}
+  \note{Steel is a different material, so the dislocation picture expects a different structural evolution: lower stacking-fault energy and planar slip, and a steady traction of about 16 kilopascals instead of about a billion pulses. Its metastable austenite is a built-in strain gauge: epsilon and alpha-prime martensite appear above a few tenths of a percent of plastic strain. With Consorzio RFX---De Lorenzi, Pilan, Spada---two 304L electrodes ran 90 and 73 hours at 59 to 61 MV/m, zero breakdowns. The exposed apex lies inside or below the unexposed range; nothing was mapped before exposure, so no field effect can be established. Next: before and after on one electrode, martensite in the phase list. For Q\&A: we have not yet looked for martensite on an exposed surface; the plan is to use its absence as a strain gauge. The copper signal itself is a low-strain rearrangement (a 0.5 deg LAM rise over a 3~$\mu$m step is of order $10^{13}$~m$^{-2}$ GND), so steel and copper would then say the same thing from two sides. Nicola Pilan's talk follows.}
 \end{frame}
 
 % ── 16. Conclusion + 2025 bookend ────────────────────────────────────────────

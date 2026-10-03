@@ -416,6 +416,8 @@ Residual questions for Yinon:
 
 Renders of the new pages 18 and 19 at scale 2: `renders_tmp/p18.png`, `renders_tmp/p19.png` (not committed).
 
+- 3 Oct 2026 (morning, author-approved): frame 19 (main.tex L831-859) gets a fourth left bullet, metastable austenite as a built-in strain gauge (ε and α′ martensite above a few 0.1 % plastic strain; Bayerlein, Christ, Mughrabi, MSEA 114, L11 (1989), doi 10.1016/0921-5093(89)90871-x, in the source line; Grigorescu et al., IJF 93, 250 (2016), doi 10.1016/j.ijfatigue.2016.05.005, in the frame comment; both checked on CrossRef). Planar slip and mobility merged into one bullet. The next-campaign line adds ε and α′ to the phase list so that absent martensite becomes a strain bound. The note carries the author's Q&A sentence: no martensite has been looked for on an exposed surface (XRD sampled unexposed stub backs, ../rfx/STATUS.md §2.5 L118; EBSD phase fractions never quoted, ../rfx/HANDOFF.md L179). To fit: the left 'the test' sentence is now only in the note, and the RFX credit and the Pilan hand-over share one row. Note 174 words, of which about 60 are the Q&A sentence.
+
 ### Frame 21 rebalanced for question time (same evening, two follow-ups)
 
 | Commit | Frame (main.tex lines) | Change | Source |
