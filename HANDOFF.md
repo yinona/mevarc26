@@ -89,7 +89,7 @@ page counts and renders.
 | 2 | Conditioning works. What does it change? | cross-ref Wuensch 09:15 |
 | 3 | Our model: collective dislocation dynamics (MDDF) | |
 | 4 | STEM already saw it, at single spots | now says *hard (as-machined)* Cu |
-| 5 | A tiny stress, repeated a billion times | pulse-train sketch; cross-ref Meng/Zadin |
+| 5 | A sub-yield stress, repeated a billion times | pulse-train sketch; cross-ref Meng/Zadin |
 | 6 | Last year we asked for more forensics | recap bridge; first to cut |
 | 7 | One cathode turns field exposure into a coordinate | *heat-treated* OFE Cu; cross-ref Bjelland 10:00 |
 | 8 | EBSD maps plastic activity far from craters | information depth a few tens of nm (Chen 2011) |
