@@ -414,7 +414,8 @@
   \begin{columns}[c]
     \column{0.55\textwidth}
       \centering
-      \includegraphics[width=0.89\linewidth]{geometry_efield_tiers.pdf}
+      \begin{tikzpicture}\node[inner sep=0pt](g){\includegraphics[width=0.89\linewidth]{geometry_efield_tiers.pdf}};
+        \node[anchor=north west,inner sep=1pt] at (g.north east) {\src{a}};\end{tikzpicture}
     \column{0.42\textwidth}
       \begin{itemize}\setlength\itemsep{0.45em}
         \item Heat-treated OFE Cu, pulsed DC
@@ -426,7 +427,7 @@
   \vspace{0.1cm}
   \centering\tierkey\par
   \claim{The field gradient gives us internal controls on a single specimen.}
-  \source{Ashkenazy et al., \condref\ ($E(r)$: Fig.~3); geometry from Bjelland et al.}
+  \sources{\srcl{a}geometry from Bjelland et al.; Ashkenazy et al., \condref\ ($E(r)$: Fig.~3).}
   \note{One figure: cross-section on top, surface field below, same radius axis. The sloped anode maps radius onto local field: about 80 MV/m under the flat center, 73 to 74 at the edge regions under the sloped gap, below about 2.5 MV/m beyond the anode radius at 20 mm. Markers are the EBSD regions; the colors---copper for high field, purple for the low-field periphery, teal for the unexposed reference---stay the same on every data slide. Comparing positions on one cathode removes cathode-to-cathode preparation differences; the identically treated, never-installed cathode is the external reference. That geometry is the "more comparative forensics" design from last year's outlook. (Optional aside: this is CERN's vacuum breakdown lab; Victoria gave its update this morning.)}
 \end{frame}
 
@@ -440,14 +441,14 @@
       \small
       \begin{itemize}\setlength\itemsep{0.3em}
         \item Large area where TEM could only sample a point
-        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step (lateral only); information depth ${\sim}\SI{40}{nm}$ at \SI{15}{kV}
-        \item ${\sim}24{,}000$ indexed points per ROI
-        \item \alert{LAM} $=$ local average misorientation: lattice tilt between a point and its neighbors (KAM, LOS: cross-checks)
-        \item Misorientation is a proxy for GND density
+        \item $\SI{500}{\micro m}$-wide maps; $\SI{3}{\micro m}$ step (lateral only)\src{a}; information depth ${\sim}\SI{40}{nm}$ at \SI{15}{kV}\rlap{\src{b,c}}
+        \item ${\sim}24{,}000$ indexed points per ROI\src{a}
+        \item \alert{LAM} $=$ local average misorientation: lattice tilt between a point and its neighbors (KAM, LOS: cross-checks)\src{a}
+        \item Misorientation is a proxy for GND density\src{d}
       \end{itemize}
   \end{columns}
-  \claim{We measure the cumulative response to the field, not crater damage.}
-  \source{Ashkenazy et al., \condref; information depth ${\sim}40$~nm at \SI{15}{kV}: CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); measured 38--72~nm over 5--30~kV, Chen et al., Ultramicroscopy 111, 1488 (2011).}
+  \claim{We measure the cumulative response to the field, not crater damage.\src{a}}
+  \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}${\sim}40$~nm at \SI{15}{kV}: CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{c}measured 38--72~nm over 5--30~kV, Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{d}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
   \note{EBSD chosen for large-area where TEM is local. On the SEM overview: the copper box is one 500-micron EBSD map after a shallow FIB clean that removes the oxide (under 10 nm by AFM); the dashed teal circles are breakdown craters, the nearest about half a millimeter away. The 3 micron step and kernel fix only lateral resolution; backscattered electrons come from the top 40 nanometers of copper at 15 kV, so this is a near-surface measurement. All ROIs deliberately far from craters, measuring the cumulative material response to the field, not arc damage. LAM, local average misorientation, is the primary metric; KAM and LOS check the result does not depend on one analysis choice.}
 \end{frame}
 
@@ -471,13 +472,13 @@
     \draw[->,thick,purple] (1.1,1.1) -- (2.0,1.62);
     \node[anchor=west,color=purple] at (2.05,1.64) {backscattered $\to$ detector};
     \draw[ink] (1.6,0.3) -- (1.6,1.07);
-    \draw[<->,ink] (1.0,0.2) -- (1.6,0.2) node[midway,below=-1pt] {\SI{3}{\micro m} step};
+    \draw[<->,ink] (1.0,0.2) -- (1.6,0.2) node[midway,below=-1pt] {\SI{3}{\micro m} step\src{a}};
     \draw[ink] (3.0,0.95) -- (3.0,1.07); \draw[ink] (2.93,0.95) -- (3.07,0.95); \draw[ink] (2.93,1.07) -- (3.07,1.07);
-    \node[anchor=west,color=ink,align=left] at (3.1,1.01) {top ${\sim}\SI{40}{nm}$\\makes the pattern};
+    \node[anchor=west,color=ink,align=left] at (3.1,1.01) {top ${\sim}\SI{40}{nm}$\src{b}\\makes the pattern};
     \node[anchor=north west,color=muted,align=left] at (3.1,0.62) {depth: beam physics\\lateral: scan step};
     % ===== panel 2: Kikuchi pattern -> orientation =====
-    \begin{scope}[shift={(6.65,0)}]
-      \node[ptitle] at (0,2.45) {2\; Pattern $\to$ lattice orientation};
+    \begin{scope}[shift={(6.53,0)}]
+      \node[ptitle] at (0.12,2.45) {2\; Pattern $\to$ lattice orientation};
       \begin{scope}
         \clip (0.3,0.35) rectangle (2.1,1.95);
         \fill[black!85] (0.3,0.35) rectangle (2.1,1.95);
@@ -496,7 +497,7 @@
         \draw[purple,thick,fill=purple!20] (0.5,-0.5) -- (0.8,-0.2) -- (0.8,0.8) -- (0.5,0.5) -- cycle;
       \end{scope}
       \node[anchor=west,color=purple,align=flush left,text width=2.1cm] at (4.15,1.3) {one lattice orientation for this point};
-      \node[anchor=north west,color=muted,align=left] at (4.15,0.8) {${\sim}24{,}000$ points\\per region, unfiltered};
+      \node[anchor=north west,color=muted,align=left] at (4.15,0.8) {${\sim}24{,}000$ points\src{a}\\per region, unfiltered};
     \end{scope}
     % ===== panel 3: six neighbors -> LAM, and the 0-5 degree scale =====
     \begin{scope}[shift={(0,-3.05)}]
@@ -507,16 +508,16 @@
       \node[regular polygon,regular polygon sides=6,draw=ink,fill=copper!35,minimum size=0.46cm,inner sep=0pt] at (0.95,1.95) {};
       \node[anchor=west,align=left] at (1.85,1.95)
         {$\theta_i$: rotation to neighbor $i$.\\
-         \textbf{LAM} $=\langle\theta_i\rangle$ over the six;\\
+         \textbf{LAM} $=\langle\theta_i\rangle$ over the six;\src{a}\\
          pairs $>\ang{5}$ dropped (grain boundaries).};
       \shade[left color=blue!80!black,right color=green!70!black,middle color=cyan!80!black] (1.3,0.75) rectangle (3.95,0.98);
       \shade[left color=green!70!black,right color=red!85!black,middle color=yellow!90!black] (3.95,0.75) rectangle (6.6,0.98);
       \draw[ink] (1.3,0.75) rectangle (6.6,0.98);
       \foreach \v in {0,1,2,3,4,5} {\draw[ink] ({1.3+1.06*\v},0.75) -- ({1.3+1.06*\v},0.68) node[below=-1pt] {$\v^\circ$};}
       \draw[tierref,very thick] ({1.3+1.06*0.68},0.70) -- ({1.3+1.06*0.68},1.05);
-      \node[anchor=south east,color=tierref,font=\tiny] at ({1.3+1.06*0.68-0.03},1.02) {reference mean \ang{0.68}};
+      \node[anchor=south east,color=tierref,font=\tiny] at ({1.3+1.06*0.68-0.03},1.02) {reference mean \ang{0.68}\src{a}};
       \draw[tierhigh,very thick] ({1.3+1.06*1.2},0.70) -- ({1.3+1.06*1.2},1.05);
-      \node[anchor=south west,color=tierhigh,font=\tiny] at ({1.3+1.06*1.2+0.03},1.02) {high-field mean ${\sim}\ang{1.2}$};
+      \node[anchor=south west,color=tierhigh,font=\tiny] at ({1.3+1.06*1.2+0.03},1.02) {high-field mean ${\sim}\ang{1.2}$\src{a}};
     \end{scope}
     % ===== panel 4: why an angle is a dislocation proxy =====
     \begin{scope}[shift={(6.65,-3.05)}]
@@ -533,13 +534,13 @@
         \node[anchor=north,color=purple] at (0.7,1.0) {curved: $\theta>0$};
       \end{scope}
       \node[anchor=north west,align=flush left,text width=2.3cm] at (3.8,2.55)
-        {Bending a crystal by an angle over a distance needs \textbf{geometrically necessary dislocations}, so \textbf{LAM is a proxy for GND density}.};
+        {Bending a crystal by an angle over a distance needs \textbf{geometrically necessary dislocations}, so \textbf{LAM is a proxy for GND density}.\src{c}};
       \node[anchor=north,color=ink,align=center,text width=3.5cm] at (1.95,0.65) {a dislocation proxy over \SI{500}{\micro m}, not a dislocation image};
     \end{scope}
   \end{tikzpicture}
   \vspace{0.1cm}
-  {\bfseries Each \SI{3}{\micro m} point yields one angle, read from the top ${\sim}\SI{40}{nm}$ of copper.}
-  \source{Ashkenazy et al., \condref; information depth: Chen et al., Ultramicroscopy 111, 1488 (2011).}
+  {\bfseries Each \SI{3}{\micro m} point yields one angle, read from the top ${\sim}\SI{40}{nm}$ of copper.\src{b}}
+  \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}information depth: Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{c}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
   \note{Every colored pixel on the next slides is this one angle. The beam reads the top forty nanometers of copper at each point of a three-micron grid; the Kikuchi pattern gives one lattice orientation per point. LAM averages the rotation to the six neighbors, dropping pairs above five degrees, so grain boundaries are excluded. A bent lattice needs geometrically necessary dislocations, so LAM is a dislocation proxy over half a millimeter, not a dislocation image.}
 \end{frame}
 
