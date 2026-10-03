@@ -878,7 +878,7 @@
 \begin{frame}{Conclusions, and an invitation}
   % Rebalanced 2 Oct late (author instruction: frame stays up during questions):
   % text column widened and one size up; QR 3.1 -> 2.0 cm as a compact
-  % lower-right block with the URL beneath it.
+  % lower-right block with the URL beneath it; small result chart above it.
   \begin{columns}[b]
     \column{0.71\textwidth}
       \large
@@ -894,6 +894,9 @@
       \end{beamercolorbox}
     \column{0.27\textwidth}
       \centering
+      % Compact result chart (author follow-up): same tier means and colours as
+      % frame 20, redrawn at slide size by figures/make_result_card_small.py.
+      \includegraphics[width=\linewidth]{result_card_small.pdf}\\[0.25cm]
       \qrcode[height=2.0cm,level=M]{https://arxiv.org/pdf/2606.19192}\\[0.15cm]
       \href{https://arxiv.org/pdf/2606.19192}{\footnotesize\bfseries\color{purple}arxiv.org/pdf/2606.19192}\\[0.05cm]
       {\tiny\color{muted}Ashkenazy et al., \condref\par}
