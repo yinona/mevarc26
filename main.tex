@@ -101,6 +101,12 @@
 
 % Bottom-of-frame source / attribution line.
 \newcommand{\source}[1]{\vfill{\color{muted}\tiny Source: #1\par}}
+% Keyed sources (author instruction 3 Oct): \src{a} after a supported line or
+% number; \sources{\srcl{a}Ref A; \srcl{b}Ref B; whole-frame ref} lists them.
+% Keys restart at a on every frame; refs supporting the whole frame carry no letter.
+\newcommand{\src}[1]{\textsuperscript{\normalfont\tiny\color{muted}#1}}
+\newcommand{\srcl}[1]{\textsuperscript{#1}}
+\newcommand{\sources}[1]{\vfill{\raggedright\color{muted}\tiny Sources: #1\par}}
 
 % Emphasised take-home box.
 \newcommand{\claim}[1]{%
@@ -187,10 +193,10 @@
   \begin{columns}[c]
     \column{0.54\textwidth}
       \begin{itemize}\setlength\itemsep{0.6em}
-        \item Conditioning is how every high-gradient device reaches its usable field.
-        \item Breakdown rate has an extreme field dependence, ${\sim}E^{30}$.
-        \item It tracks the number of \alert{high-field pulses}, not the number of breakdowns.
-        \item The field itself drives conditioning, not the arcs.
+        \item Conditioning is how every high-gradient device reaches its usable field.\src{a}
+        \item Breakdown rate has an extreme field dependence, ${\sim}E^{30}$.\src{a}
+        \item It tracks the number of \alert{high-field pulses}, not the number of breakdowns.\src{a,b}
+        \item The field itself drives conditioning, not the arcs.\src{a,b}
       \end{itemize}
     \column{0.44\textwidth}
       \begin{tikzpicture}[x=1cm,y=1cm]
@@ -202,8 +208,8 @@
           {which material\\variable is\\changing? {\color{copper}\bfseries ?}};
       \end{tikzpicture}
   \end{columns}
-  \claim{Something in the metal stores the improvement. We do not know what.}
-  \source{Wuensch et al., Rev. Mod. Phys. 98, 025004 (2026); Degiovanni et al., PRAB (2016).}
+  \claim{Something in the metal stores the improvement. We do not know what.\src{a}}
+  \sources{\srcl{a}Wuensch et al., Rev. Mod. Phys. 98, 025004 (2026); \srcl{b}Degiovanni et al., PRAB 19, 032001 (2016).}
   \note{Two macroscopic clues constrain the answer: the near-thirtieth-power field dependence, and conditioning following pulse count not breakdown count. Both say the applied field, not the arc, drives the work. Look for a field-driven change in the metal itself. (Optional aside: Walter covered this in his invited talk this morning.)}
 \end{frame}
 
@@ -212,9 +218,9 @@
   \begin{columns}[c]
     \column{0.54\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
-        \item Field holding rises FCC$\to$BCC$\to$HCP --- the order of barriers to dislocation motion.
-        \item The \alert{MDDF} model: breakdown nucleates when the mobile-dislocation population, driven by Maxwell stress, runs away.
-        \item One model gets the ${\sim}E^{30}$ rate and its temperature dependence, and was shown to reproduce the histogram of dark-current spikes.
+        \item Field holding rises FCC$\to$BCC$\to$HCP\src{d} --- the order of barriers to dislocation motion.
+        \item The \alert{MDDF} model: breakdown nucleates when the mobile-dislocation population, driven by Maxwell stress, runs away.\src{a,b}
+        \item One model gets the ${\sim}E^{30}$ rate and its temperature dependence,\src{d} and was shown to reproduce the histogram of dark-current spikes.\src{c}
       \end{itemize}
     \column{0.44\textwidth}
       \centering
@@ -223,8 +229,8 @@
       \includegraphics[height=2.2cm,keepaspectratio]{mddf_rate_vs_field.png}\\[-1mm]
       {\scriptsize breakdown rate vs field}
   \end{columns}
-  \claim{Central prediction: conditioning \emph{evolves the near-surface dislocation structure}.}
-  \source{Engelberg et al., PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020).}
+  \claim{Central prediction: conditioning \emph{evolves the near-surface dislocation structure}.\src{d}}
+  \sources{\srcl{a}Engelberg et al., PRL 120, 124801 (2018); \srcl{b}PRAB 22, 083501 (2019); \srcl{c}PRAB 23, 123501 (2020); \srcl{d}Wuensch et al., RMP 98, 025004 (2026).}
   \note{MDDF model is our own (2018--2020). Cartoon shows birth-death dynamics of the mobile-dislocation population: below critical density it decays, above it a runaway triggers nucleation. The plot reproduces the field dependence of breakdown rate. Key line for this talk: conditioning should leave an evolving dislocation structure just below the surface. Next slide: what that sentence means for a measurement.}
 \end{frame}
 
@@ -239,7 +245,7 @@
       stepl/.style={font=\footnotesize\bfseries,anchor=south},
       capl/.style={font=\footnotesize,align=center,text width=3.0cm,anchor=north},
       flow/.style={->,very thick,ink}]
-    \foreach \x/\c/\t in {1.55/steel/{1\enspace model},
+    \foreach \x/\c/\t in {1.55/steel/{1\enspace model\src{a--c}},
                           5.15/gold!80!black/{2\enspace implication},
                           8.75/purple/{3\enspace trace},
                           12.35/teal/{4\enspace test}}
@@ -313,7 +319,7 @@
   \vspace{0.05cm}
   {\small\tagbox{good}{predicts} where, and in which order
    \qquad\tagbox{warn}{does not predict} size, depth, or sign}
-  \source{Engelberg et al., PRL 120, 124801 (2018); PRAB 22, 083501 (2019); PRAB 23, 123501 (2020); Wuensch et al., RMP 98, 025004 (2026).}
+  \sources{\srcl{a}Engelberg et al., PRL 120, 124801 (2018); \srcl{b}PRAB 22, 083501 (2019); \srcl{c}PRAB 23, 123501 (2020); Wuensch et al., RMP 98, 025004 (2026).}
   \note{Slide three was one breakdown; this is what it implies for conditioning. In the model the mobile population is fast: it fluctuates and decays back. Conditioning means fewer breakdowns at the same field, so the hill must rise, and a memory lasting a billion pulses must sit in the stored dislocations that set the hill. Those bend the lattice, which EBSD reads. The field writes it, so look away from craters. The model fixes where and in which order, not size, depth, or sign.}
 \end{frame}
 
@@ -323,19 +329,19 @@
     \column{0.52\textwidth}
       \centering
       \includegraphics[width=\linewidth,height=4.1cm,keepaspectratio]{stem_denuded_zone.png}\\[-1mm]
-      {\scriptsize Cross-sectional STEM of conditioned hard (as-machined) Cu: dislocation-poor zone in the top ${\sim}\SI{200}{nm}$.\par}
+      {\scriptsize Cross-sectional STEM of conditioned hard (as-machined) Cu: dislocation-poor zone in the top ${\sim}\SI{200}{nm}$.\src{a,b}\par}
     \column{0.46\textwidth}
       \small
       \begin{itemize}\setlength\itemsep{0.05em}
-        \item \alert{Direct} evidence of near-surface plasticity in conditioned regions.
-        \item Fewer dislocation walls at \SI{300}{K} and \SI{30}{K}; denuded layer clearest at \SI{30}{K}.
-        \item Fits the clue that soft Cu conditions far more slowly than hard Cu: the starting population matters.
-        \item FIB preparation plants its own dislocations; trust only large-scale structure.
+        \item \alert{Direct} evidence of near-surface plasticity in conditioned regions.\src{a}
+        \item Fewer dislocation walls at \SI{300}{K} and \SI{30}{K}; denuded layer clearest at \SI{30}{K}.\src{a}
+        \item Fits the clue that soft Cu conditions far more slowly than hard Cu: the starting population matters.\src{c}
+        \item FIB preparation plants its own dislocations; trust only large-scale structure.\src{b}
         \item One cross-section cannot speak for the whole electrode.
       \end{itemize}
   \end{columns}
   \claim{Seen at specific locations. The large-area view was missing.}
-  \source{Jacewicz et al., JAP 137, 193302 (2025); HUJI STEM (I.~Popov), MeVArc 2025; Korsb\"ack et al., PRAB 23, 033102 (2020).}
+  \sources{\srcl{a}Jacewicz et al., JAP 137, 193302 (2025); \srcl{b}HUJI STEM (I.~Popov), MeVArc 2025; \srcl{c}Korsb\"ack et al., PRAB 23, 033102 (2020).}
   \note{2025 STEM images. Dark band is the protective coating; just beneath it the field-exposed region is nearly free of dislocation walls while the reference keeps walls continuous to the surface. Published wording is conservative: 300 K shows significant reduction of walls; the denuded zone is clearly visible at 30 K. The paper gives no thickness; 200 nanometers is read from images, the number the manuscript uses. Hard-versus-soft copper contrast (Korsb\"ack 2020) is an independent macroscopic clue: hard copper conditioned within about 25 million pulses; soft samples began saturating near 600 million or stayed unsaturated longer, consistent with different starting dislocation populations. Two lessons: FIB preparation generates dislocations and loops, so only larger-scale structure is trustworthy; TEM and STEM is intrinsically local. Last year I asked for more comparative forensics: other materials, more samples. That is exactly the gap next slides fill.}
 \end{frame}
 
@@ -347,8 +353,8 @@
         \centering
         \textbf{Maxwell stress}\\[0.15cm]
         $\displaystyle \sigma_M=\frac{\varepsilon_0 E^2}{2}$\\[0.28cm]
-        at $\SI{80}{MV/m}$: \alert{$\SI{0.028}{MPa}$}\\[0.2cm]
-        \scriptsize ${\sim}10^3\times$ below the yield of annealed Cu
+        at $\SI{80}{MV/m}$: \alert{$\SI{0.028}{MPa}$}\src{c}\\[0.2cm]
+        \scriptsize ${\sim}10^3\times$ below the yield of annealed Cu\src{c}
       \end{beamercolorbox}
       \vspace{0.2cm}
       \centering
@@ -362,14 +368,14 @@
       \end{tikzpicture}
     \column{0.55\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
-        \item Fatigue at $10^{8}$--$10^{10}$ cycles rearranges dislocations irreversibly, well below yield.
-        \item Here: ${\sim}10^{9}$ conditioning pulses.
-        \item Pulsed DC means \alert{no RF pulsed heating} and no bulk currents. Maxwell stress is the only cyclic load.
+        \item Fatigue at $10^{8}$--$10^{10}$ cycles rearranges dislocations irreversibly, well below yield.\src{a,b}
+        \item Here: ${\sim}10^{9}$ conditioning pulses.\src{c}
+        \item Pulsed DC means \alert{no RF pulsed heating} and no bulk currents. Maxwell stress is the only cyclic load.\src{c}
         \item MDDF needs only the stress that moves \alert{mobile dislocations in a frustrated crystal}: far below yield.
       \end{itemize}
   \end{columns}
   \claim{The model predicts a large-area signature.\\Last year we asked for it; this year we looked.}
-  \source{Mughrabi, MMTB 40, 431 (2009); Stanzl-Tschegg et al., Int.\ J.\ Fatigue 29, 2050 (2007).}
+  \sources{\srcl{a}Mughrabi, MMTB 40, 431 (2009); \srcl{b}Stanzl-Tschegg et al., Int.\ J.\ Fatigue 29, 2050 (2007); \srcl{c}Ashkenazy et al., \condref.}
   \note{Maxwell stress is three orders of magnitude below yield. The point is not amplitude but accumulation. VHCF shows oscillatory loading well below yield still rearranges dislocations irreversibly for a billion cycles---our regime. Pulsed-DC is cleaner than RF structures: no RF magnetic field, no pulsed surface heating, no bulk Ohmic current. Maxwell stress is the only cyclic mechanical load. Earlier RF-based studies could never fully separate thermal fatigue from field effects. MDDF has no threshold at the yield stress; the relevant stress is what moves mobile dislocations in a frustrated crystal, far below yield. That argument bridges the 2025 model-and-microscopy story to this year's large-area measurement. (Optional aside: Jianyu, with Guodong Meng, and Veronika show field-driven deformation at the nanoscale this afternoon, 16:00 and 16:30.)}
 \end{frame}
 
