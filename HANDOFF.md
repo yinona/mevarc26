@@ -452,3 +452,58 @@ Jacewicz, Profatilova, Calatroni: no hits in any `\note`).
 
 Renders (not committed): `renders_tmp/p01.png`, `p18.png`, `p19.png`, `p20.png`, `p21.png`.
 Not changed: sub-8 pt labels on frames 6, 8, 10, 15 (accepted by the author).
+
+## Keyed source markers, 3 Oct 2026
+
+Baseline 28b23f4 (25 pages). Author instruction (3 Oct): every source on a frame's source line is tied
+to the line, number or figure it supports. Macros next to `\source` (main.tex L103-109): `\src{a}`
+(muted `\tiny` superscript, `\normalfont`, so it stays light inside `\claim`, tagboxes and TikZ nodes),
+`\srcl{a}` (letter on the source line) and `\sources{...}` ("Sources:", `\raggedright`). Keys restart at
+a on every frame; a reference that supports the whole frame is listed without a letter after the
+lettered ones. Frames whose sources all support the whole frame (11, 12, 13, 14, 17 with one source;
+24 with two) keep their unkeyed `\source` line. Notes untouched except where the author asked (frame 6 threshold note).
+Result: `make` clean, **25 pages** in main.pdf and main-notes.pdf, worst overfull **1.97 pt** (frame 18
+TikZ, depth-tick markers; was 1.61), no undefined references, QR on frame 21 decodes to
+`https://arxiv.org/pdf/2606.19192` in both PDFs (zxing-cpp, scale 3).
+
+Per frame (page numbers; main.tex lines at the HANDOFF commit):
+
+| Frame | Markers (lines) | What each supports | Added reference | Unsourced lines |
+|---|---|---|---|---|
+| 2 | a L196, L197, L222; a,b L198, L199 (source L223) | a Wuensch RMP 2026: conditioning as the route to usable field, ~E^30, open mechanism (cond26 L52-53, L60); a,b with Degiovanni 2016: pulses not breakdowns, field not arcs (cond26 L66) | Degiovanni completed to PRAB 19, 032001 (lit/cards/degiovanni2016.md) | — |
+| 3 | d L232, L234, L243; a,b L233; c L234 (L244) | a,b Engelberg 2018, 2019: MDDF runaway (cond26 L58); c 2020: dark-current spikes (cond26 L60); d: FCC-BCC-HCP, E^30 with temperature, central prediction (cond26 L56, L60-61; own_work/papers/wuensch2026.md L27-33) | **Wuensch et al., RMP 98, 025004 (2026)** | the two MDDF plots: REVIEW_CONTEXT.md L113 says "from these papers" without naming which; no marker |
+| 4 | a-c L259 on the "1 model" header (L333) | MDDF papers: fluctuating mobile population and avalanche; Wuensch RMP unlettered (the frame's premise that the model predicts an evolving structure) | — | boxes 2-4 and both bullets are the slide's own "inference from the model"; no marker |
+| 5 | a,b L343 caption; a L347, L348; c L349; b L350 (L355) | a Jacewicz 2025 (direct evidence; walls at 300 K and 30 K); b HUJI STEM MeVArc 2025 (image, ~200 nm read from images, FIB lesson: knowledge/mevarc25_assets.md L27); c Korsback 2020 | — | — |
+| 6 | c L367, L368, L383, L384; a,b L382 (L389) | a,b Mughrabi 2009, Stanzl-Tschegg 2007: VHCF below yield; c cond26: 0.028 MPa, ~10^3 below annealed-Cu yield, ~10^9 pulses, pulsed DC load (cond26 L69-70, L398-403) | **Ashkenazy et al., \condref** | MDDF bullet (author wording 3 Oct, "stress that moves mobile dislocations in a frustrated crystal"): no published source on the line |
+| 7 | a,b L407; a L416, L420 (L431) | a HUJI STEM MeVArc 2025 (both new images, denuded-zone thumbnail); b Jacewicz 2025 (thumbnail) | new source line per author instruction | "MDDF model" thumbnail and the MeVArc 2026 SEM: no source on this frame |
+| 8 | a L443, top-right corner of the figure (L455) | a Bjelland et al.: electrode geometry (cross-section panel); Ashkenazy et al. unlettered (bullets, E(r) Fig. 3) | — | — |
+| 9 | a L469, L470, L471, L475; b,c L469; d L472 (L476) | a cond26 (map width, step, 24,000 points, LAM, claim; cond26 L74-75); b Drouin (CASINO ~40 nm at 15 kV); c Chen (38-72 nm); d Pantleon: GND proxy (cond26 L83 cites it) | **Pantleon, Scr. Mater. 58, 994 (2008)** (proj26/lit/bibliography.bib L149) | "Large area where TEM could only sample a point" (ours) |
+| 10 | a L500, L525, L536, L543, L545; b L502, L567; c L562 (L568) | a cond26 (3 um step, 24,000 points, six-neighbor LAM, 0.68 and ~1.2 deg); b Chen (~40 nm, twice); c Pantleon (panel 4) | **Pantleon 2008** | — |
+| 15 | b L663, L667; a L681, L685, L690, L691 (L694) | a cond26 discussion (curvature, ~75 %, interpretation, both bullets; cond26 L376-389, L421-423); b Jacewicz 2025 (~200 nm, depleted layer) | — | — |
+| 16 | d L744, L753; a L745, L753, L755; b,c L750 (L756) | a Groma (2D single slip, l_D ~ 25 nm); b,c Lemaitre, Livne (dipole regime); d cond26 (200 nm = 8 l_D; thickness not predicted; cond26 L379-381). Wording unchanged | — | — |
+| 18 | a, b L812 depth ticks (L846) | a Drouin (~40 nm); b HUJI, Popov 2025 (~200 nm); interim work plan unlettered | — | "Artifact controls from the 2025 'red herrings'": MeVArc 2025 deck, not on the line |
+| 19 | a L874; b L875; c L878 column header (L893) | a 16 kPa = eps0 E^2/2 at 60 MV/m; b Bayerlein 1989; c RFX project record (whole right column) | — | "Lower stacking-fault energy: planar slip, different dislocation mobility" (QA_PREP Q18 cites an internal memo only) |
+| 21 | a, b L933 (L949) | a interim work plan (depth); b RFX project record (steel test) | — | — |
+| 22 | a L964, L975, L979 (L985) | a SEM report, I. Popov (SEM bullet, both SEM captions); RFX project record unlettered | — | "Sectioned electrode" photo: origin not recorded |
+| 25 | a,b L1041, L1045 (L1047) | a HUJI STEM (images); b Jacewicz 2025 Figs. 8-9 (reading) | — | — |
+
+Frame 20 has no `\source` (its footer "Copper result: \condref." already names the one source); frame 23 has
+no source line; frame 1 has none.
+
+Layout adjustments made for the markers: frame 3 bullet 1 marker after "HCP" (the end-of-line marker
+wrapped the bullet to three lines); frame 9 bullet 2 end marker as zero-width `\rlap`; frame 10 panel 2
+content 1.2 mm left with its title kept in place (tikz box within the text width); frame 7 caption
+"local STEM denuded zone" marker as `\rlap`.
+
+Further author instructions applied the same evening (each its own commit):
+
+| Commit | Frame (main.tex lines) | Change |
+|---|---|---|
+| d98e513 | 6 (L385 bullet, L390 note), REVIEW_CONTEXT.md L72 | "MDDF needs only the stress that moves mobile dislocations in a frustrated crystal: far below yield"; note "MDDF has no threshold at the yield stress; the relevant stress is what moves mobile dislocations in a frustrated crystal, far below yield"; no 'threshold-free', 'threshold free' or 'no minimum stress' left in main.tex |
+| a20efa9 | 6 title (L360); REVIEW_CONTEXT.md L72, HANDOFF.md L92, knowledge/cond26_changes_2026-09.md L17, L23, L33 | "A sub-yield stress, repeated a billion times"; fits on one line |
+| 56bf627 | 7 (L394-431) | left column: thumbnails 1.55 cm, then `stem_lamella_overview_haadf.png` (instrument data bar kept, no bar drawn: the 2 um bar runs into the right image edge) and `stem_surface_detail_2025.png` (no scale); source line HUJI STEM + Jacewicz 2025 |
+| 3c8ebc5 | 2 (L195-221) | schematic conditioning curve on a log pulse axis (concave, saturating) with five copper breakdown dips; "~10^9" the only tick; "schematic" tag; question box under the plateau |
+| 22191d1 | 8 figure; figures/make_design_figures.py L61, L175-180 | "reference: E = 0" (was "never installed"); script takes an optional figure subset, only f07 regenerated |
+
+Renders at scale 2 (not committed): `renders_tmp/p02.png` ... `p25.png` for every changed page (2-10, 13,
+15, 16, 18, 19, 21, 22, 25).
