@@ -504,6 +504,7 @@ Further author instructions applied the same evening (each its own commit):
 | 56bf627 | 7 (L394-431) | left column: thumbnails 1.55 cm, then `stem_lamella_overview_haadf.png` (instrument data bar kept, no bar drawn: the 2 um bar runs into the right image edge) and `stem_surface_detail_2025.png` (no scale); source line HUJI STEM + Jacewicz 2025 |
 | 3c8ebc5 | 2 (L195-221) | schematic conditioning curve on a log pulse axis (concave, saturating) with five copper breakdown dips; "~10^9" the only tick; "schematic" tag; question box under the plateau |
 | 22191d1 | 8 figure; figures/make_design_figures.py L61, L175-180 | "reference: E = 0" (was "never installed"); script takes an optional figure subset, only f07 regenerated |
+| 32cb51a | `\condref` (L132), frames 6, 8-17, 20 footer (L920), 21 under the QR (L949) | copper paper cited as arXiv only: "Ashkenazy et al., arXiv:2606.19192 (2026)" in source lines, "Ashkenazy et al., arXiv:2606.19192" under the QR; 'under revision' survives only in the frame 20 note. **main.pdf and main-notes.pdf in the repo were NOT rebuilt after this commit** (author: no final rebuild until he says so; scratch build checked: 25 pages, worst overfull 1.97 pt, QR decodes) |
 
 Renders at scale 2 (not committed): `renders_tmp/p02.png` ... `p25.png` for every changed page (2-10, 13,
 15, 16, 18, 19, 21, 22, 25).
