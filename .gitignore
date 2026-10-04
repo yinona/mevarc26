@@ -10,3 +10,4 @@
 *.vrb
 .DS_Store
 speaker_text.tex
+speaker_text_measure.*
