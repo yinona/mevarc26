@@ -710,31 +710,34 @@
   % L379-381); dipole regime Lemaitre 2021, Livne 2023 (cond26 L382); load not
   % screened, carried as elastic stress (cond26 L69, L374-375); 200 nm = 8 l_D,
   % thickness not predicted (cond26 L381-383; binding decision, HANDOFF section 5).
+  % 4 Oct night (author): de-loaded; the two teal sentences ('A plasma of
+  % dipoles ...', 'The surface is an absorbing wall ...') and the box detail
+  % moved into the speaker text; labels shortened; one claim; body >= 10 pt.
   \begin{columns}[T,onlytextwidth]
     \column{0.47\textwidth}
       \centering
       % Author decision 4 Oct: plasma at an absorbing wall replaces the dielectric drawing.
-      \begin{tikzpicture}[x=0.70cm,y=0.42cm,font=\scriptsize]
-        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=teal] (t1) at (0.3,3.1) {Plasma at an absorbing wall};
+      \begin{tikzpicture}[x=0.76cm,y=0.60cm,font=\small]
+        \node[anchor=south west,inner xsep=0pt,font=\small\bfseries,color=teal] (t1) at (0.3,3.1) {Plasma at an absorbing wall};
         \node[anchor=base west,font=\tiny,text=muted,inner sep=1pt] at ([xshift=4pt]t1.base east) {schematic};
         \fill[steel!55] (0.3,2.45) rectangle (4.0,2.95);
-        \node[color=white,font=\scriptsize\bfseries] at (2.15,2.7) {wall};
         \fill[teal!14] (0.3,1.75) rectangle (4.0,2.45);
         \fill[pale] (0.3,0.2) rectangle (4.0,1.75);
         \draw[muted,dashed] (0.3,1.75) -- (4.0,1.75);
         \draw[ink,thick] (0.3,0.2) rectangle (4.0,2.95);
         \foreach \x in {0.9,1.9,2.9} {
-          \node[color=copper,inner sep=0pt] at (\x,1.95) {$+$};
+          \node[color=copper,inner sep=0pt,font=\scriptsize] at (\x,1.95) {$+$};
           \draw[->,copper,thick] (\x,2.08) -- (\x,2.4);}
-        \foreach \p in {(0.6,1.45),(1.4,0.55),(2.2,1.3),(3.0,0.45),(3.7,1.4),(1.0,0.95),(2.6,0.85)} {\node[color=copper,inner sep=0pt] at \p {$+$};}
-        \foreach \p in {(0.85,0.45),(1.7,1.45),(2.4,0.4),(3.3,0.95),(0.5,0.85),(1.9,0.9),(3.4,1.5)} {\node[color=purple,inner sep=0pt] at \p {$-$};}
-        \node[anchor=west,color=teal,align=left] at (4.1,2.2) {sheath ${\sim}\lambda_D$: only these\\particles reach the wall};
-        \node[anchor=west,color=ink] at (4.1,0.8) {bulk: screened, quasi-neutral};
+        \foreach \p in {(0.6,1.45),(1.4,0.55),(2.2,1.3),(3.0,0.45),(3.7,1.4),(1.0,0.95),(2.6,0.85)} {\node[color=copper,inner sep=0pt,font=\scriptsize] at \p {$+$};}
+        \foreach \p in {(0.85,0.45),(1.7,1.45),(2.4,0.4),(3.3,0.95),(0.5,0.85),(1.9,0.9),(3.4,1.5)} {\node[color=purple,inner sep=0pt,font=\scriptsize] at \p {$-$};}
+        \node[anchor=west,color=steel!80!black] at (4.1,2.7) {wall};
+        \node[anchor=west,color=teal] at (4.1,2.1) {sheath ${\sim}\lambda_D$};
+        \node[anchor=west,color=ink] at (4.1,0.95) {bulk};
       \end{tikzpicture}
     \column{0.53\textwidth}
       \centering
-      \begin{tikzpicture}[x=0.70cm,y=0.42cm,font=\scriptsize]
-        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=copper] (t2) at (0.3,3.1) {Copper under the Maxwell traction};
+      \begin{tikzpicture}[x=0.76cm,y=0.60cm,font=\small]
+        \node[anchor=south west,inner xsep=0pt,font=\small\bfseries,color=copper] (t2) at (0.3,3.1) {Copper under the Maxwell traction};
         \node[anchor=base west,font=\tiny,text=muted,inner sep=1pt] at ([xshift=4pt]t2.base east) {schematic};
         \foreach \x in {0.7,1.5,2.3,3.1} {\draw[->,thick,teal] (\x,3.05) -- (\x,2.55);}
         \fill[purple!10] (0.3,1.75) rectangle (4.0,2.45);
@@ -743,37 +746,32 @@
         \draw[ink,thick] (0.3,0.2) rectangle (4.0,2.45);
         \draw[teal,line width=1.6pt] (0.3,2.45) -- (4.0,2.45);
         \foreach \x in {0.55,3.75} {\draw[<->,copper,thick] (\x,0.3) -- (\x,2.35);}
-        \foreach \p in {(1.0,2.1),(1.8,1.95),(2.6,2.15),(3.3,1.95)} {\node[color=purple,inner sep=0pt] at \p {$\bot$};}
-        \foreach \p in {(1.0,1.35),(1.6,0.55),(2.2,1.2),(2.8,0.5),(3.25,1.35),(1.3,0.95),(2.55,0.9),(3.1,0.75),(1.9,1.5)} {\node[color=purple!70,inner sep=0pt] at \p {$\bot$};}
-        \node[anchor=west,color=teal] at (4.1,2.95) {\textbf{1}\enspace field stops at the surface};
-        \node[anchor=west,color=purple,align=left] at (4.1,1.85) {\textbf{2}\enspace sheath ${\sim}\ell_D$: these dislocations\\\phantom{\textbf{2}\enspace}talk to the surface};
-        \node[anchor=west,color=copper] at (4.1,0.5) {\textbf{3}\enspace $\sigma_M$ enters as stress, unscreened};
+        \foreach \p in {(1.0,2.1),(1.8,1.95),(2.6,2.15),(3.3,1.95)} {\node[color=purple,inner sep=0pt,font=\scriptsize] at \p {$\bot$};}
+        \foreach \p in {(1.0,1.35),(1.6,0.55),(2.2,1.2),(2.8,0.5),(3.25,1.35),(1.3,0.95),(2.55,0.9),(3.1,0.75),(1.9,1.5)} {\node[color=purple!70,inner sep=0pt,font=\scriptsize] at \p {$\bot$};}
+        \node[anchor=west,color=teal] at (4.1,2.85) {\textbf{1}\enspace field stops};
+        \node[anchor=west,color=purple] at (4.1,2.05) {\textbf{2}\enspace sheath ${\sim}\ell_D$};
+        \node[anchor=west,color=copper] at (4.1,0.95) {\textbf{3}\enspace $\sigma_M$ unscreened};
       \end{tikzpicture}
   \end{columns}
+  \vspace{0.35cm}
   \centering
-  \begin{tikzpicture}[font={\scriptsize\hyphenpenalty=10000\exhyphenpenalty=10000},
+  \begin{tikzpicture}[font={\small\hyphenpenalty=10000\exhyphenpenalty=10000},
       sbox/.style={rounded corners=2pt,line width=0.8pt,align=left,inner sep=3pt,anchor=north}]
-    \node[sbox,draw=teal,fill=teal!6,text width=3.5cm] (s1) at (0,0)
-      {{\color{teal}\footnotesize\bfseries 1\enspace$\lesssim\SI{0.1}{nm}$}\\
-       \textbf{Field penetration}\\
-       Thomas--Fermi: the field stops at the surface.};
-    \node[sbox,draw=purple,fill=purple!5,text width=5.4cm] (s2) at (5.01,0)
-      {{\color{purple}\footnotesize\bfseries 2\enspace$\ell_D\propto1/\sqrt{\rho}\approx\SI{25}{nm}$}\src{a}\\
-       \textbf{Debye-like screening of fluctuations}\src{b,c}\\
-       Order of magnitude. Only dislocations within ${\sim}\ell_D$ (the EBSD layer) talk to the surface; deeper ones are driven but silent.\\
-       \mbox{Observable: LAM; denuded zone $\approx8\,\ell_D$.\src{d}}};
-    \node[sbox,draw=copper,fill=copper!6,text width=3.5cm] (s3) at (10.02,0)
-      {{\color{copper}\footnotesize\bfseries 3\enspace${\sim}$mm}\\
-       \textbf{Applied load: not screened}\\
-       Dislocation stress is self-equilibrated; ordinary elasticity over the loading geometry.\src{d}};
-    \node[color=muted,anchor=north] at (2.03,-0.25) {$\ll$};
-    \node[color=muted,anchor=north] at (7.99,-0.25) {$\ll$};
+    \node[sbox,draw=teal,fill=teal!6,text width=3.2cm] (s1) at (0,0)
+      {{\color{teal}\bfseries\boldmath 1\enspace$\lesssim\SI{0.1}{nm}$}\\
+       field penetration (Thomas--Fermi)};
+    \node[sbox,draw=purple,fill=purple!5,text width=5.0cm] (s2) at (4.71,0)
+      {{\color{purple}\bfseries\boldmath 2\enspace$\ell_D\sim\SI{25}{nm}$}\src{a}\\
+       screening of weak internal fluctuations;\src{b,c} only this layer talks to the surface};
+    \node[sbox,draw=copper,fill=copper!6,text width=4.0cm] (s3) at (9.82,0)
+      {{\color{copper}\bfseries\boldmath 3\enspace${\sim}$mm}\\
+       applied load, not screened (dislocation stress is self-equilibrated)\src{d}};
+    \node[color=muted,anchor=north,font=\footnotesize,inner sep=0pt] at (1.905,-0.3) {$\ll$};
+    \node[color=muted,anchor=north,font=\footnotesize,inner sep=0pt] at (7.515,-0.3) {$\ll$};
   \end{tikzpicture}\par
-  {\scriptsize\color{teal}\textbf{A plasma of dipoles:} Debye-like for fluctuations, dielectric-like for the mean load; it reduces, it does not nullify.\\
-   \textbf{The surface is an absorbing wall:} a sheath of ${\sim}\ell_D$ sets what the surface sees, hence emission and breakdown.\par}
-  \vspace{-2pt}
+  \vspace{0.25cm}
   \raggedright
-  \claim{In this picture, weak, screened internal stresses set sources and structure inside the sheath; the strong external load drives mobile dislocations through it.}
+  \claim{In this picture, weak screened internal stresses set the structure; the strong unscreened load drives the mobile dislocations through it.}
   \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}Ashkenazy et al., \condref.}
   \note{Three length scales decide what the surface sees. Left: a plasma at an absorbing wall, where only particles in a sheath one Debye length thick reach the wall, and copper mirrors it. First, the field stops at the surface, within 0.1 nanometers. Second, fluctuating internal stresses are screened within a characteristic distance of about 25 nanometers, an order-of-magnitude estimate; only dislocations in that sheath talk to the surface, and EBSD samples that layer. Third, the applied load is not screened and reaches millimeter depths. Screening reduces, it does not nullify: in our picture, weak screened stresses set sources and structure inside the sheath, and the strong load drives mobile dislocations through it. Next, what copper does and does not show. [if asked: the estimate is Debye-like screening in a two-dimensional single-slip dislocation gas (Groma 2006); parallels are the semiconductor depletion layer and a dielectric.]}
 \end{frame}
