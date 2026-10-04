@@ -751,21 +751,21 @@
   \centering
   \begin{tikzpicture}[font={\scriptsize\hyphenpenalty=10000\exhyphenpenalty=10000},
       sbox/.style={rounded corners=2pt,line width=0.8pt,align=left,inner sep=3pt,anchor=north}]
-    \node[sbox,draw=teal,fill=teal!6,text width=2.3cm] (s1) at (0,0)
+    \node[sbox,draw=teal,fill=teal!6,text width=3.5cm] (s1) at (0,0)
       {{\color{teal}\footnotesize\bfseries 1\enspace$\lesssim\SI{0.1}{nm}$}\\
        \textbf{Field penetration}\\
        Thomas--Fermi: the field stops at the surface.};
-    \node[sbox,draw=purple,fill=purple!5,text width=6.6cm] (s2) at (5.01,0)
-      {{\color{purple}\footnotesize\bfseries 2\enspace$\ell_D\propto1/\sqrt{\rho}\approx\SI{25}{nm}$}\src{a} (order of magnitude)\\
+    \node[sbox,draw=purple,fill=purple!5,text width=5.4cm] (s2) at (5.01,0)
+      {{\color{purple}\footnotesize\bfseries 2\enspace$\ell_D\propto1/\sqrt{\rho}\approx\SI{25}{nm}$}\src{a}\\
        \textbf{Debye-like screening of fluctuations}\src{b,c}\\
-       Only dislocations within ${\sim}\ell_D$ (the layer EBSD samples) exchange fluctuating stress with the surface; deeper ones are driven by the load but silent at the surface.\\
-       Observable: LAM; denuded ${\sim}\SI{200}{nm}\approx8\,\ell_D$.\src{d}};
-    \node[sbox,draw=copper,fill=copper!6,text width=3.6cm] (s3) at (10.67,0)
+       Order of magnitude. Only dislocations within ${\sim}\ell_D$ (the EBSD layer) talk to the surface; deeper ones are driven but silent.\\
+       \mbox{Observable: LAM; denuded zone $\approx8\,\ell_D$.\src{d}}};
+    \node[sbox,draw=copper,fill=copper!6,text width=3.5cm] (s3) at (10.02,0)
       {{\color{copper}\footnotesize\bfseries 3\enspace${\sim}$mm}\\
        \textbf{Applied load: not screened}\\
        Dislocation stress is self-equilibrated; ordinary elasticity over the loading geometry.\src{d}};
-    \node[color=muted,anchor=north] at (1.43,-0.25) {$\ll$};
-    \node[color=muted,anchor=north] at (8.59,-0.25) {$\ll$};
+    \node[color=muted,anchor=north] at (2.03,-0.25) {$\ll$};
+    \node[color=muted,anchor=north] at (7.99,-0.25) {$\ll$};
   \end{tikzpicture}\par
   {\scriptsize\color{teal}\textbf{A plasma of dipoles:} Debye-like for fluctuations, dielectric-like for the mean load; it reduces, it does not nullify.\\
    \textbf{The surface is an absorbing wall:} a sheath of ${\sim}\ell_D$ sets what the surface sees, hence emission and breakdown.\par}
