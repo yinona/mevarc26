@@ -198,7 +198,7 @@
         \item Conditioning is how every high-gradient device reaches its usable field.\src{a}
         \item Breakdown rate has an extreme field dependence, ${\sim}E^{30}$.\src{a}
         \item It tracks the number of \alert{high-field pulses}, not the number of breakdowns.\src{a,b}
-        \item The field itself drives conditioning, not the arcs.\src{a,b}
+        \item The field, more than the arcs, drives conditioning.\src{a,b}
       \end{itemize}
     \column{0.44\textwidth}
       % Author instruction 3 Oct evening: schematic conditioning curve on a log
@@ -221,7 +221,7 @@
           {which material\\variable is\\changing? {\color{copper}\bfseries ?}};
       \end{tikzpicture}
   \end{columns}
-  \claim{Something in the metal stores the improvement. We do not know what.\src{a}}
+  \claim{Something in the metal stores the improvement. We do not know~what.\src{a}}
   \sources{\srcl{a}Wuensch et al., Rev. Mod. Phys. 98, 025004 (2026); \srcl{b}Degiovanni et al., PRAB 19, 032001 (2016).}
   \note{Two macroscopic clues constrain the answer: the near-thirtieth-power field dependence, and conditioning following pulse count not breakdown count. Both say the applied field, not the arc, drives the work. Look for a field-driven change in the metal itself. (Optional aside: Walter covered this in his invited talk this morning.)}
 \end{frame}
@@ -231,7 +231,7 @@
   \begin{columns}[c]
     \column{0.54\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
-        \item Field holding rises FCC$\to$BCC$\to$HCP\src{d} --- the order of barriers to dislocation motion.
+        \item Field holding rises FCC$\to$BCC$\to$HCP\src{d} --- matching the order of barriers to dislocation motion.
         \item The \alert{MDDF} model: breakdown nucleates when the mobile-dislocation population, driven by Maxwell stress, runs away.\src{a,b}
         \item The same model, fitted to the ${\sim}E^{30}$ rate and its temperature dependence,\src{d} then reproduced the histogram of dark-current spikes.\src{c}
       \end{itemize}
@@ -346,7 +346,7 @@
     \column{0.46\textwidth}
       \small
       \begin{itemize}\setlength\itemsep{0.05em}
-        \item \alert{Direct} evidence of near-surface plasticity in conditioned regions.\src{a}
+        \item \alert{Direct} imaging of an altered near-surface dislocation structure in conditioned regions.\src{a}
         \item Fewer dislocation walls at \SI{300}{K} and \SI{30}{K}; denuded layer clearest at \SI{30}{K}.\src{a}
         \item Fits the clue that soft Cu conditions far more slowly than hard Cu: the starting population matters.\src{b}
         \item FIB preparation plants its own dislocations; trust only large-scale structure.
@@ -377,13 +377,13 @@
         \node[color=copper] at (3.6,0.3) {$\cdots\times10^{9}$};
         \draw[<->,muted] (0.5,0.68) -- (1.4,0.68) node[midway,above=-1pt,font=\tiny] {$\SI{1}{ms}$};
         \node[color=muted,font=\tiny,anchor=south] at (0.45,0.57) {$\SI{1}{\micro s}$};
-        \node[anchor=west,color=muted,font=\tiny] at (0,-0.35) {$\sigma_M(t)$: the only cyclic load};
+        \node[anchor=west,color=muted,font=\tiny] at (0,-0.35) {$\sigma_M(t)$: the dominant cyclic load};
       \end{tikzpicture}
     \column{0.55\textwidth}
       \begin{itemize}\setlength\itemsep{0.5em}
         \item Fatigue at $10^{8}$--$10^{10}$ cycles rearranges dislocations irreversibly, well below yield.\src{a,b}
         \item Here: ${\sim}10^{9}$ conditioning pulses.\src{c}
-        \item Pulsed DC means \alert{no RF pulsed heating} and no bulk currents. Maxwell stress is the only cyclic load.\src{c}
+        \item Pulsed DC means \alert{no RF pulsed heating} and no bulk currents. Maxwell stress is the dominant cyclic load.\src{c}
         \item MDDF needs only the stress that moves \alert{mobile dislocations in a frustrated crystal}: far below yield.
       \end{itemize}
   \end{columns}
@@ -475,7 +475,7 @@
         \item Misorientation is a proxy for GND density\src{d}
       \end{itemize}
   \end{columns}
-  \claim{We measure the cumulative response to the field, not crater damage.\src{a}}
+  \claim{Target: the cumulative response to the field, measured far from~craters.\src{a}}
   \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}${\sim}40$~nm at \SI{15}{kV}: CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{c}measured 38--72~nm over 5--30~kV, Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{d}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
   \note{EBSD chosen for large-area where TEM is local. On the SEM overview: the copper box is one 500-micron EBSD map after a shallow FIB clean that removes the oxide (under 10 nm by AFM); the dashed teal circles are breakdown craters, the nearest about half a millimeter away. The 3 micron step and kernel fix only lateral resolution; backscattered electrons come from the top 40 nanometers of copper at 15 kV, so this is a near-surface measurement. All ROIs deliberately far from craters, measuring the cumulative material response to the field, not arc damage. LAM, local average misorientation, is the primary metric; KAM and LOS check the result does not depend on one analysis choice. The ${\sim}40$~nm information depth is about one to two screening lengths, so EBSD reads exactly the layer that talks to the surface.}
 \end{frame}
@@ -613,7 +613,7 @@
         \item Grain size does not follow this hierarchy
       \end{itemize}
   \end{columns}
-  \claim{The ordering follows field history, not sample position or grain size.}
+  \claim{The ordering follows field history; grain size does not track it.}
   \source{Ashkenazy et al., \condref. Error bars: grain-corrected standard errors; band: unexposed reference $\pm1$ s.e.}
   \note{Same colors as the geometry slide: copper is high field, purple the periphery, teal the reference band. Three tiers: high-field center and edge highest and similar; field-exposed periphery intermediate; unexposed references lowest. Periphery is powerful: it shared machining, heat treatment, mounting, vacuum, and handling with high-field regions but saw at most 2.5 MV/m---a low-field control, not zero-field. Intermediate value consistent with residual fringe-field exposure. The 75 percent figure characterizes this cathode and history, not a universal constant.}
 \end{frame}
@@ -693,7 +693,7 @@
     \item To our knowledge, the first \alert{large-area} observation that conditioned regions carry a different near-surface dislocation structure, ordered as MDDF predicts.\src{a}
     \item The measured order follows the simulated local field:\\ center $\approx$ edge $>$ periphery $>$ reference.\src{a}
   \end{itemize}
-  \claim{Before, dislocations were plausible.\\Now, a dislocation-sensitive state maps the conditioning history.}
+  \claim{Before, dislocations were plausible.\\Now a dislocation-sensitive state tracks field exposure.}
   \sources{\srcl{a}Ashkenazy et al., \condref, discussion; \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
   \note{The measured hierarchy is the large-area signature the model predicted and STEM saw locally. The cartoon is the manuscript's interpretation: one mechanism, two starting populations. Dense as-machined copper depletes, the layer STEM saw, about 200 nanometers; heat-treated copper, with little to deplete, builds curvature that EBSD records. Size, depth and sign were not predicted; the sign is set by the starting population. Which of the stored dislocations matter? Only those near enough to the surface to exchange stress with it---next slide. If asked about $E_S$: the ordering matches its simulated profile, a candidate basis; we never measured it. Predicted observable: a change in the stored near-surface dislocation population. Measured: LAM (local misorientation). Mapping: LAM as a GND-density proxy, relative under one protocol. Parameters: none fitted to the EBSD data. Limitation: no quantitative prediction of the size of the change.}
 \end{frame}
@@ -773,7 +773,7 @@
    \textbf{The surface is an absorbing wall:} a sheath of ${\sim}\ell_D$ sets what the surface sees, hence emission and breakdown.\par}
   \vspace{-2pt}
   \raggedright
-  \claim{Weak, screened internal stresses set sources and structure inside the sheath; the strong external load drives mobile dislocations through it.}
+  \claim{In this picture, weak, screened internal stresses set sources and structure inside the sheath; the strong external load drives mobile dislocations through it.}
   \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}Ashkenazy et al., \condref.}
   \note{Left, a plasma at an absorbing wall: the bulk is screened and quasi-neutral; only particles in a sheath about one Debye length thick reach the wall and set its flux. Copper mirrors it. The field stops at the surface. Fluctuating internal stresses are screened within $\ell_D\propto1/\sqrt{\rho}$, about 25 nanometers, an order-of-magnitude estimate (2D single slip, Groma 2006) on which the picture does not depend; only dislocations in that sheath exchange stress with the surface, and EBSD samples that layer. The mean stress cannot be screened: dislocation fields are self-equilibrated and the free surface is a sink, so $\sigma_M$ reaches every depth. Q\&A parallels: plasma sheath; semiconductor depletion layer, many Debye lengths wide when surface potential far exceeds kT; dielectric, which reduces but does not nullify.}
 \end{frame}
@@ -781,13 +781,13 @@
 % ══ PART III — Limits and the future ═════════════════════════════════════════
 
 % ── 13. Established vs open ──────────────────────────────────────────────────
-\begin{frame}{Copper establishes the effect, not universality}
+\begin{frame}{Copper shows the effect, not universality}
   \begin{columns}[T]
     \column{0.48\textwidth}
-      \tagbox{good}{What is established}
+      \tagbox{good}{What is shown}
       \begin{itemize}\setlength\itemsep{0.22em}
         \item Large-area structural difference
-        \item Three independent metrics
+        \item Three metrics agree (LAM, KAM, LOS)
         \item Internal and external controls
         \item Supports the MDDF prediction
       \end{itemize}

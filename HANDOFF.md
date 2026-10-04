@@ -99,7 +99,7 @@ page counts and renders.
 | 12 | High-misorientation tail (~8×) | KS detail moved to notes |
 | 13 | The large-area test supports the model's prediction | payoff; "to our knowledge, the first large-area observation"; the one E_S line; "one mechanism, two starting populations" |
 | 14 | **Elastic screening: a sheath of dislocations at the surface** (retitled 4 Oct; was "dislocations respond like bound charge") | new; ℓ_D ≈ 25 nm, 200 nm ≈ 8 ℓ_D, "not predicted"; no E_S |
-| 15 | Copper establishes the effect, not universality | cooperation call; cross-ref Coman 11:30 |
+| 15 | Copper shows the effect, not universality | cooperation call; cross-ref Coman 11:30 |
 | 16 | Next: go deeper, and change the material | thumbnails |
 | 17 | Stainless steel: a test chosen to be hard on the model | status line as of 29 Sep: all 26 maps, apex inside unexposed range, "no field indication yet"; note names H_saturated as a hypothesis; cross-ref Pilan 12:30 |
 | 18 | Conditioning appears to leave a subsurface memory | conclusion, 2025 bookend, new infographic |
