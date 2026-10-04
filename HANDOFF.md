@@ -554,3 +554,26 @@ frame 21 decodes to `https://arxiv.org/pdf/2606.19192` in both PDFs.
 | E | 6c148e8 | 6 note (L392), 15 note (L697) | frustrated-crystal definition; hand-off 'Which of the stored dislocations matter? ... next slide.' |
 
 Renders (not committed): `renders_tmp/p06.png`, `p16.png`, `p18.png`, `p21.png`.
+
+## Author review, 4 Oct 2026 (afternoon)
+
+Baseline 4d8e762 (25 pages). Result `make`: 25 pages in main.pdf and main-notes.pdf, worst overfull **1.61 pt**
+(frame 4, the pre-existing line; the frame 18 overfull of 1.97 pt is gone), no undefined references, no vbox
+overfull in either PDF, QR on frame 21 decodes to `https://arxiv.org/pdf/2606.19192` in both.
+
+**Source rule (author, binding from now on):** keyed markers and Sources entries are only for published papers
+and arXiv preprints. Internal records (interim work plan, RFX project record and EBSD passes, SEM report,
+results.json, cond26 tables, talks) are not sources; image credits go in caption text.
+**Superseded decision:** the dielectric drawing on frame 16 (binding since 2 Oct, "keep the dielectric drawing,
+do not rename the charges") is replaced by a plasma-at-an-absorbing-wall drawing (author decision, 4 Oct afternoon).
+
+| Item | Commit | Frame (main.tex lines) | Change |
+|---|---|---|---|
+| 1 | 2fd57c8, 503b1c9 | 5 (L345-357), 7 (L409-434), 8 (L458), 18 (L869), 19 (L896-917), 21 (L954-971), 22, 24, 25 | internal entries and markers dropped, markers re-lettered; credits as captions (frames 5, 7, 22, 24, 25); Bjelland completed as arXiv:2606.21259; frame 18 b = Jacewicz 2025; Sources lines removed on frames 21, 22, 24 |
+| 2 | 98747fc | 16 (L702-777) | plasma-at-a-wall drawing; copper drawing mirrored with sheath band, labels 1-3 top to bottom; box 2 shortened, Observable on its own line, widths 2.3/6.6/3.6 cm; b,c moved to the screening line; note rewritten (125 words) |
+| 3 | 6a06477 | 18 (L824-866) | claim 'Depth continues our STEM line; ...'; bullet 1 rewritten and merged with the sheath question; columns 0.55/0.43, diagram x = 0.84 cm; note says 'our own STEM line, HUJI, published with Uppsala' |
+| 4 | fb6b163, e778e9d | 19 (bullet, note) | 'References exist (unexposed electrodes, side regions) but no same-area before-and-after; with 2--4 maps per group a field effect cannot yet be resolved'; note matched and shortened to fit the notes page; heats caveat in the note only |
+
+Renders (not committed): `renders_tmp/p05.png`, `p07.png`, `p16.png`, `p18.png`, `p19.png`, `p21.png`.
+Open for the author: frame 18 b sources the ~200 nm tick to Jacewicz 2025 as instructed, but the paper's text
+gives no thickness (the ~200 nm is read from its Fig. 10; proj26/own_work/papers/jacewicz2025.md L46-54).
