@@ -4,20 +4,20 @@
 The note text is not duplicated anywhere: main.tex stays the single source.
 Usage: python3 tools/extract_notes.py [main.tex] [speaker_text.tex]
 
-Layout (author spec, 5 Oct 2026): a presentation-like PDF for the presenter's
-laptop while main.pdf is on the projector. One page per page of main.pdf, same
-order (backup included), so both documents advance in step; a frame whose text
-does not fit gets continuation pages "N / 21 (cont.)". Each page: muted bold
-header "N / 21 · title"; the spoken sentences in bold, one paragraph each, at
-\\Large, stepped down to \\large only if needed (never smaller); the transition
-sentence (last spoken sentence) in copper; a thumbnail of main.pdf page N
-(4.2 cm, thin gray frame) top right; bracketed asides at the bottom in \\small
-gray under a thin rule (cut to the first two plus "... (more in notes)" when
-space is short); footer with venue left and page words plus cumulative minute
-mark (130 wpm) right. Word-count summary on the last page.
+Layout (author spec, 5 Oct 2026, second version): a presentation-like PDF for
+the presenter's laptop while main.pdf is on the projector, one page per page of
+main.pdf in the same order (backup included). Header row: muted bold
+"N / 21 · title" at left, a 3.4 cm thumbnail of main.pdf page N (thin gray
+frame) at right. Below it the spoken sentences span the full text width, bold,
+\\large (BODY_SIZE; 12 pt at the 11 pt base, \\Large would be 14.4 pt), line spacing 1.12, one paragraph per sentence, the transition
+sentence (last spoken sentence) in copper. A continuation page "N / 21 (cont.)"
+is used only when the spoken text alone does not fit. Bracketed asides go under
+a thin rule at the bottom in \\small gray when they fit; otherwise all of them
+go on one extra page "N / 21 · Q&A" right after the frame. Footer: venue left;
+page words and cumulative minute mark (130 wpm) right. Word-count summary last.
 
 Fit is decided by measuring every candidate text block in a first pdflatex run
-(speaker_measure.tex) with the same fonts and widths as the final document.
+(speaker_text_measure.tex) with the same fonts and widths as the final document.
 Words inside bracketed asides are not counted as spoken.
 """
 import os
@@ -114,16 +114,18 @@ for m in re.finditer(r"\\begin\{frame\}", text):
 nmain = sum(1 for f in frames if not f[2])
 
 # ---- layout constants (beamer 16:9, 16 cm x 9 cm) --------------------------
-REGION = 6.78          # cm: body + asides region below the header line
-ASIDE_GAP = 0.42       # cm: space taken by the rule and gaps above the asides
-SIZES = ["Large", "large"]
+REGION = 5.75          # cm: body + asides region below the header row
+ASIDE_GAP = 0.42       # cm: rule and gaps above the asides
+BODY_SIZE = "large"    # \\large = 12 pt at the 11 pt base (\\Large = 14.4 pt)
+QA_SIZES = ["small", "normalsize", "footnotesize", "scriptsize"]  # [0]: under the rule
+THUMB_W = 3.4          # cm: thumbnail width in the header row
+PT = 72.27 / 2.54
 
-PREAMBLE = r"""\documentclass[aspectratio=169,12pt]{beamer}
+PREAMBLE = r"""\documentclass[aspectratio=169,11pt]{beamer}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{tikz}
 \definecolor{ink}{HTML}{17243A}
 \definecolor{copper}{HTML}{C7663A}
 \definecolor{muted}{HTML}{5D6978}
@@ -137,13 +139,21 @@ PREAMBLE = r"""\documentclass[aspectratio=169,12pt]{beamer}
 \setbeamertemplate{footline}{%
   \hbox to \paperwidth{\hskip0.45cm{\tiny\color{muted}MeVArc 2026 \textperiodcentered{} Mon 5 Oct 12:00}%
   \hfill{\tiny\color{muted}\pagefoot}\hskip0.45cm}\vskip0.22cm}
-\newlength{\textcol}
-\newcommand{\body}[1]{{\csname #1\endcsname\bfseries\linespread{1.15}\selectfont
-  \setlength{\parskip}{0.32em}\raggedright #2}}
-\newcommand{\asides}[1]{{\small\mdseries\color{muted}\linespread{1.0}\selectfont
-  \setlength{\parskip}{0.15em}\raggedright #1}}
-"""
-PREAMBLE = PREAMBLE.replace(r"\newcommand{\body}[1]", r"\newcommand{\body}[2]")
+\newlength{\bodyw}
+\newcommand{\BODYSIZE}{\%(bs)s}
+\newcommand{\body}[1]{{\BODYSIZE\bfseries\linespread{1.12}\selectfont
+  \setlength{\parskip}{0.30em}\raggedright #1}}
+\newcommand{\asides}[2]{{\csname #1\endcsname\mdseries\color{muted}\linespread{1.0}\selectfont
+  \setlength{\parskip}{0.18em}\raggedright #2}}
+\newcommand{\headrow}[2]{%
+  \vspace*{-0.25cm}%
+  \begin{minipage}[t]{\dimexpr\textwidth-%(tw)scm-0.3cm\relax}\vspace{0pt}%
+    {\large\bfseries\color{muted}\raggedright #1\par}\end{minipage}\hfill
+  \begin{minipage}[t]{%(tw)scm}\vspace{0pt}%
+    {\color{thumb}\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}%
+    \fbox{\includegraphics[page=#2,width=\dimexpr%(tw)scm-0.8pt\relax]{main.pdf}}}\end{minipage}\par
+  \vspace{0.12cm}}
+""".replace("%(tw)s", "%.2f" % THUMB_W).replace("%(bs)s", BODY_SIZE)
 
 
 def body_tex(sents, last_is_transition):
@@ -156,15 +166,8 @@ def body_tex(sents, last_is_transition):
     return "\n".join(out)
 
 
-CUTS = (0, 2, 1)       # keep all asides; else the first two; else the first one
-
-
-def aside_tex(asides, cut):
-    a = asides[:cut] if cut and len(asides) > cut else asides
-    tex = "\n".join(x + r"\par" for x in a)
-    if len(a) < len(asides):
-        tex += r"\ldots (more in notes)\par"
-    return tex
+def aside_tex(asides):
+    return "\n".join(x + r"\par" for x in asides)
 
 
 items = []
@@ -177,28 +180,20 @@ for idx, (title, note, backup) in enumerate(frames):
 
 # ---- measurement pass -------------------------------------------------------
 meas = [PREAMBLE, r"\begin{document}\begin{frame}",
-        r"\setlength{\textcol}{0.68\textwidth}",
-        r"\typeout{MEAS textheight \the\textheight}"]
+        r"\setlength{\bodyw}{0.95\textwidth}",
+        ]
 for it in items:
     n = len(it["say"])
-    for size in SIZES:
-        for i in range(n):
-            for j in range(i + 1, n + 1):
-                meas.append(r"\setbox0=\vbox{\hsize=\textcol\body{%s}{%s}}"
-                            r"\typeout{MEAS %d %s %d %d \the\dimexpr\ht0+\dp0\relax}"
-                            % (size, body_tex(it["say"][i:j], j == n), it["page"], size, i, j))
-    for cut in CUTS:
-        if it["asides"]:
-            meas.append(r"\setbox0=\vbox{\hsize=\textwidth\asides{%s}}"
+    for i in range(n):
+        for j in range(i + 1, n + 1):
+            meas.append(r"\setbox0=\vbox{\hsize=\bodyw\body{%s}}"
+                        r"\typeout{MEAS %d body %d %d \the\dimexpr\ht0+\dp0\relax}"
+                        % (body_tex(it["say"][i:j], j == n), it["page"], i, j))
+    if it["asides"]:
+        for c, size in enumerate(QA_SIZES):
+            meas.append(r"\setbox0=\vbox{\hsize=\bodyw\asides{%s}{%s}}"
                         r"\typeout{MEAS %d aside %d 0 \the\dimexpr\ht0+\dp0\relax}"
-                        % (aside_tex(it["asides"], cut), it["page"], cut))
-HEAD = r"{\large\bfseries %s \textperiodcentered{} %s\par}"
-meas.append(r"\setbox0=\vbox{\hsize=\textwidth%s}\typeout{MEAS 0 head 0 0 \the\dimexpr\ht0+\dp0\relax}"
-            % (HEAD % ("1 / 21", "X")))
-for it in items:   # first page and continuation label (a long title may wrap)
-    for c, lab in ((0, "22 / 21"), (1, "22 / 21 (cont.)")):
-        meas.append(r"\setbox0=\vbox{\hsize=\textwidth%s}\typeout{MEAS %d head %d 0 \the\dimexpr\ht0+\dp0\relax}"
-                    % (HEAD % (lab, it["title"]), it["page"], c))
+                        % (size, aside_tex(it["asides"]), it["page"], c))
 meas.append(r"\end{frame}\end{document}")
 base = os.path.splitext(dst)[0] + "_measure"
 open(base + ".tex", "w", encoding="utf-8").write("\n".join(meas))
@@ -208,112 +203,105 @@ H = {}
 log = open(base + ".log", encoding="latin-1").read().replace("\n", " ")
 for m in re.finditer(r"MEAS (\d+) (\w+) (\d+) (\d+) ([\d.]+)pt", log):
     H[(int(m.group(1)), m.group(2), int(m.group(3)), int(m.group(4)))] = float(m.group(5))
-PT = 72.27 / 2.54
 region = REGION * PT
 gap = ASIDE_GAP * PT
-THUMB = 2.45 * PT      # the thumbnail column (4.2 cm wide, 16:9, framed) sets a floor
 
 
-def h(page, size, i, j):
-    return H[(page, size, i, j)]
+def h(page, kind, i, j):
+    return H[(page, kind, i, j)]
 
 
 # ---- layout decision --------------------------------------------------------
-pages = []           # dicts: item, size, i, j, cont, aside_cut (None = no asides)
-report = {}
+pages = []       # dicts: it, kind ('body' or 'qa'), i, j, cont, asides_here, qa_size
+cont_frames, qa_frames = [], []
 for it in items:
-    p, n, has_a = it["page"], len(it["say"]), bool(it["asides"])
-    def reg_of(cont):  # body + asides height left under a (possibly wrapped) header
-        return REGION * PT - max(0.0, h(p, "head", int(cont), 0) - h(0, "head", 0, 0))
-    region = reg_of(False)
-    acost = [(c, h(p, "aside", c, 0) + gap if has_a else 0.0) for c in CUTS]
-    done = False
-    for size in SIZES:
-        for cut, a in acost:
-            if max(h(p, size, 0, n), THUMB) <= region - a:
-                pages.append(dict(it=it, size=size, i=0, j=n, cont=False,
-                                  cut=(cut if has_a else None)))
-                report[p] = size + (" (asides cut to %d)" % cut if has_a and cut else "")
-                done = True
-                break
-        if done:
-            break
-    if done:
-        continue
-    # split at \large: fill pages greedily; the last page also carries the asides
-    size, i, first = "large", 0, True
-    while i < n:
-        region = reg_of(not first)
-        fin = None
-        for cut, a in acost:
-            if max(h(p, size, i, n), THUMB) <= region - a:
-                fin = cut
-                break
-        if fin is not None:
-            pages.append(dict(it=it, size=size, i=i, j=n, cont=not first,
-                              cut=(fin if has_a else None)))
-            break
+    p, n = it["page"], len(it["say"])
+    spans = []
+    i = 0
+    while i < n:              # greedy fill; one page whenever the whole text fits
         j = i + 1
-        while j < n - 1 and h(p, size, i, j + 1) <= region:
+        while j < n and h(p, "body", i, j + 1) <= region:
             j += 1
-        pages.append(dict(it=it, size=size, i=i, j=j, cont=not first, cut=None))
-        i, first = j, False
-    report[p] = "large, %d pages" % sum(1 for q in pages if q["it"] is it)
+        spans.append((i, j))
+        i = j
+    if len(spans) > 1:
+        cont_frames.append(p)
+    under = False
+    if it["asides"]:
+        li, lj = spans[-1]
+        under = h(p, "body", li, lj) + gap + h(p, "aside", 0, 0) <= region
+    for k, (i, j) in enumerate(spans):
+        pages.append(dict(it=it, kind="body", i=i, j=j, cont=k > 0,
+                          asides_here=under and k == len(spans) - 1))
+    if it["asides"] and not under:
+        qa_frames.append(p)
+        fits = [c for c in (1, 0, 2, 3) if h(p, "aside", c, 0) <= region]
+        size = QA_SIZES[fits[0] if fits else 3]
+        pages.append(dict(it=it, kind="qa", qa_size=size, cont=False))
 
 # ---- write the document -----------------------------------------------------
-out = [PREAMBLE, r"\begin{document}", r"\setlength{\textcol}{0.68\textwidth}"]
+out = [PREAMBLE, r"\begin{document}", r"\setlength{\bodyw}{0.95\textwidth}"]
 cum = 0
 rows = []
 for q in pages:
     it = q["it"]
+    lab = "Backup" if it["backup"] else "%d / %d" % (it["page"], nmain)
+    if q["kind"] == "qa":
+        sec = int(round(cum / WPM * 60))
+        out.append(r"\renewcommand{\pagefoot}{Q\&A, not spoken \textperiodcentered{} at %d:%02d}" % (sec // 60, sec % 60))
+        out.append(r"\begin{frame}[t]")
+        out.append(r"\headrow{%s \textperiodcentered{} Q\&A}{%d}" % (lab, it["page"]))
+        out.append(r"\begin{minipage}[t][%.3fcm][t]{\bodyw}\vspace{0pt}\asides{%s}{%s}\end{minipage}"
+                   % (REGION, q["qa_size"], aside_tex(it["asides"])))
+        out.append(r"\end{frame}")
+        continue
     sents = it["say"][q["i"]:q["j"]]
     words = sum(plain_words(t) for t in sents)
     if not it["backup"]:
         cum += words
     sec = int(round(cum / WPM * 60))
-    if it["backup"]:
-        label = "Backup"
-    else:
-        label = "%d / %d" % (it["page"], nmain)
     if q["cont"]:
-        label += " (cont.)"
+        lab += " (cont.)"
     else:
-        rows.append((label, it["title"], sum(plain_words(t) for t in it["say"]), cum - words))
+        rows.append((lab, it["title"], sum(plain_words(t) for t in it["say"]), cum - words))
     last = q["j"] == len(it["say"])
     out.append(r"\renewcommand{\pagefoot}{%d words \textperiodcentered{} at %d:%02d}" % (words, sec // 60, sec % 60))
     out.append(r"\begin{frame}[t]")
-    out.append(r"\vspace*{-0.2cm}{\large\bfseries\color{muted}%s \textperiodcentered{} %s\par}\vspace{0.12cm}" % (label, it["title"]))
-    reg = r"\dimexpr%.3fcm-%.2fpt\relax" % (REGION, max(0.0, h(it["page"], "head", int(q["cont"]), 0) - h(0, "head", 0, 0)))
-    body_h = reg if q["cut"] is None else r"\dimexpr%s-%.3fcm-%.2fpt\relax" % (reg, ASIDE_GAP, h(it["page"], "aside", q["cut"], 0))
-    out.append(r"\begin{columns}[T,onlytextwidth]")
-    out.append(r"\column{0.68\textwidth}")
-    out.append(r"\begin{minipage}[t][%s][t]{\textcol}\vspace{0pt}" % body_h)
-    out.append(r"\body{%s}{%s}" % (q["size"], body_tex(sents, last)))
+    out.append(r"\headrow{%s \textperiodcentered{} %s}{%d}" % (lab, it["title"], it["page"]))
+    body_h = "%.3fcm" % REGION
+    if q["asides_here"]:
+        body_h = r"\dimexpr%.3fcm-%.3fcm-%.2fpt\relax" % (REGION, ASIDE_GAP, h(it["page"], "aside", 0, 0))
+    out.append(r"\begin{minipage}[t][%s][t]{\bodyw}\vspace{0pt}" % body_h)
+    out.append(r"\body{%s}" % body_tex(sents, last))
     out.append(r"\end{minipage}")
-    out.append(r"\column{0.30\textwidth}")
-    out.append(r"\vspace{0pt}\hfill{\color{thumb}\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}"
-               r"\fbox{\includegraphics[page=%d,width=4.2cm]{main.pdf}}}" % it["page"])
-    out.append(r"\end{columns}")
-    if q["cut"] is not None:
-        out.append(r"\par\vspace{0.12cm}{\color{thumb}\rule{\textwidth}{0.4pt}}\par\vspace{0.06cm}")
-        out.append(r"\asides{%s}" % aside_tex(it["asides"], q["cut"]))
+    if q["asides_here"]:
+        out.append(r"\par\vspace{0.12cm}{\color{thumb}\rule{\bodyw}{0.4pt}}\par\vspace{0.06cm}")
+        out.append(r"\begin{minipage}[t]{\bodyw}\asides{small}{%s}\end{minipage}" % aside_tex(it["asides"]))
     out.append(r"\end{frame}")
+
 # summary page (after the last frame, so the pages above stay in step with main.pdf)
 total = cum
 half = (len(rows) + 1) // 2
+
+
+def mmss(words):
+    t = int(round(words / WPM * 60))
+    return "%d:%02d" % (t // 60, t % 60)
+
+
 def tab(rs):
     return (r"\begin{tabular}{@{}l p{4.3cm} r r@{}}\textbf{Frame}&\textbf{Title}&\textbf{Words}&\textbf{Starts}\\" + "\n"
-            + "\n".join(r"%s & %s & %d & %d:%02d\\" % (l, t, w, int(round(c / WPM * 60)) // 60,
-                                                        int(round(c / WPM * 60)) % 60) for l, t, w, c in rs)
+            + "\n".join(r"%s & %s & %d & %s\\" % (l, t, w, mmss(c)) for l, t, w, c in rs)
             + r"\end{tabular}")
+
+
 out.append(r"\renewcommand{\pagefoot}{%d spoken words, %.1f min at %d wpm}" % (total, total / WPM, WPM))
 out.append(r"\begin{frame}[t]\relax{\large\bfseries\color{muted}Word count \textperiodcentered{} %d spoken words over %d main frames, %.1f min read aloud at %d words per minute\par}\vspace{0.15cm}" % (total, nmain, total / WPM, WPM))
 out.append(r"{\tiny\begin{columns}[T,onlytextwidth]\column{0.5\textwidth}%s\column{0.5\textwidth}%s\end{columns}}" % (tab(rows[:half]), tab(rows[half:])))
 out.append(r"\end{frame}")
 out.append(r"\end{document}")
 open(dst, "w", encoding="utf-8").write("%% Generated by tools/extract_notes.py from %s; do not edit by hand.\n" % src + "\n".join(out))
-print("%s: %d pages (%d frames, %d main, + summary), %d spoken words, %.1f min at %d wpm"
-      % (dst, len(pages) + 1, len(frames), nmain, total, total / WPM, WPM))
-for p in sorted(report):
-    if report[p] != "Large":
-        print("  page %d: %s" % (p, report[p]))
+print("%s: %d pages (%d frames, %d main, + summary), %d spoken words, %.1f min at %d wpm; body font %s"
+      % (dst, len(pages) + 1, len(frames), nmain, total, total / WPM, WPM, {"large": "12 pt (\\large)", "Large": "14.4 pt (\\Large)"}[BODY_SIZE]))
+print("  continuation pages:", ", ".join(str(x) for x in cont_frames) or "none")
+print("  Q&A pages:", ", ".join(str(x) for x in qa_frames) or "none")
