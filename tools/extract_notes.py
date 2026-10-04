@@ -6,10 +6,10 @@ Usage: python3 tools/extract_notes.py [main.tex] [speaker_text.tex]
 
 Output: article, 12 pt, one page per frame, header "N / 21  Frame title"
 (backup frames "B1", "B2", ...), one short paragraph per spoken sentence,
-[optional: ...] and [if asked: ...] blocks in muted gray, per-frame word
+bracketed asides ([optional: ...], [if asked: ...], [two time constants: ...]) in muted gray, per-frame word
 count, and on the first page the total spoken words and read-aloud time at
-130 words per minute. Words inside [optional: ...] and [if asked: ...] are
-not counted as spoken.
+130 words per minute. Words inside bracketed asides are not counted as
+spoken.
 """
 import re
 import sys
@@ -50,11 +50,18 @@ def plain_words(latex):
     return len(re.findall(r"[A-Za-z0-9][\w'\-\.,]*", t))
 
 
-ASIDE = re.compile(r"\[(optional|if asked)([^\]]*)\]")
+# any bracketed block that starts with a lowercase word, e.g. [optional: ...],
+# [if asked: ...], [two time constants: ...]
+ASIDE = re.compile(r"\[[a-z][^\]]*\]")
 
 
 def split_note(note):
     """Return list of (kind, latex): kind 'say' for spoken sentences, 'aside' for brackets."""
+    # unwrap \qa{...} (main.tex macro that sets asides small and muted on the notes page)
+    while "\\qa{" in note:
+        k = note.index("\\qa{")
+        inner, after = braced(note, k + 3)
+        note = note[:k] + " " + inner + " " + note[after:]
     parts, last = [], 0
     for m in ASIDE.finditer(note):
         parts.append(("say", note[last:m.start()]))
