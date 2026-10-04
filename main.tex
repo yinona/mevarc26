@@ -510,7 +510,7 @@
     \draw[ink] (1.6,0.3) -- (1.6,1.07);
     \draw[<->,ink] (1.0,0.2) -- (1.6,0.2) node[midway,below=-1pt] {\SI{3}{\micro m} step\src{a}};
     \draw[ink] (3.0,0.95) -- (3.0,1.07); \draw[ink] (2.93,0.95) -- (3.07,0.95); \draw[ink] (2.93,1.07) -- (3.07,1.07);
-    \node[anchor=west,color=ink,align=left] at (3.1,1.01) {top ${\sim}\SI{40}{nm}$\src{b}\\makes the pattern};
+    \node[anchor=west,color=ink,align=left] at (3.1,1.01) {top ${\sim}\SI{40}{nm}$\src{b,c}\\makes the pattern};
     \node[anchor=north west,color=muted,align=left] at (3.1,0.62) {depth: beam physics\\lateral: scan step};
     % ===== panel 2: Kikuchi pattern -> orientation =====
     \begin{scope}[shift={(6.53,0)}]
@@ -570,13 +570,13 @@
         \node[anchor=north,color=purple] at (0.7,1.0) {curved: $\theta>0$};
       \end{scope}
       \node[anchor=north west,align=flush left,text width=2.3cm] at (3.8,2.55)
-        {Bending a crystal by an angle over a distance needs \textbf{geometrically necessary dislocations}, so \textbf{LAM is a proxy for GND density}.\src{c}};
+        {Bending a crystal by an angle over a distance needs \textbf{geometrically necessary dislocations}, so \textbf{LAM is a proxy for GND density}.\src{d}};
       \node[anchor=north,color=ink,align=center,text width=3.5cm] at (1.95,0.65) {a dislocation proxy over \SI{500}{\micro m}, not a dislocation image};
     \end{scope}
   \end{tikzpicture}
   \vspace{0.1cm}
-  {\bfseries Each \SI{3}{\micro m} point yields one angle, read from the top ${\sim}\SI{40}{nm}$ of copper.\src{b}}
-  \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}information depth: Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{c}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
+  {\bfseries Each \SI{3}{\micro m} point yields one angle, read from the top ${\sim}\SI{40}{nm}$ of copper.\src{b,c}}
+  \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}${\sim}40$~nm at \SI{15}{kV}: CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{c}measured 38--72~nm over 5--30~kV, Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{d}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
   \note{Every colored pixel on the next slides is one angle, read from the top 40 nanometers. The 15-kilovolt beam visits the surface point by point on a 3-micrometer grid. Each point gives a Kikuchi pattern, and indexing turns it into one lattice orientation. LAM averages the rotation to the six neighbors, dropping pairs above five degrees, so grain boundaries are excluded. On this scale the reference sits at 0.68 degrees and high field at about 1.2. A bent lattice needs geometrically necessary dislocations, so LAM is a dislocation proxy over half a millimeter, not a dislocation image. Next: how to read a LAM map.}
 \end{frame}
 
