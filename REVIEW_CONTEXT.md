@@ -60,7 +60,7 @@ Slot: Monday 5 Oct 2026, 12:00–12:30, Conditioning session (K/mevarc26_program
 
 ## 2. Slide-by-slide map with claims and sources
 
-Frame numbers = PDF page numbers (25 pages = 21 core + 4 backup since 3 Oct 2026, when the infographic backup was dropped; 26 pages after the design pass of 2 Oct 2026; HANDOFF 'Design pass, 2 Oct' and 'Author decisions, 3 Oct 2026 (morning)'). Line = `main.tex` frame start; rows 1 and 18–25 updated 3 Oct, other line numbers are from 2 Oct and may be off by a few lines.
+Frame numbers = PDF page numbers (22 pages = 21 core + 1 backup since 4 Oct 2026 night, when the three RFX backups were commented out; 25 pages = 21 core + 4 backup from 3 Oct 2026, when the infographic backup was dropped; 26 pages after the design pass of 2 Oct 2026; HANDOFF 'Design pass, 2 Oct' and 'Author decisions, 3 Oct 2026 (morning)'). Line = `main.tex` frame start; rows 1 and 18–25 updated 3 Oct, other line numbers are from 2 Oct and may be off by a few lines.
 
 | # | L | Title | Claim(s) on the slide | Strength | Source pointers |
 |---|---|---|---|---|---|
@@ -85,13 +85,13 @@ Frame numbers = PDF page numbers (25 pages = 21 core + 4 backup since 3 Oct 2026
 | 19 | 835 | Steel: different material, different structural evolution | what differs (lower SFE and planar slip, different mobility; steady ~16 kPa traction, not ~10⁹ pulses; metastable austenite as a built-in strain gauge, ε and α′ above a few 0.1 % plastic strain); first run with Consorzio RFX as facts (90 h and 73 h at 59–61 MV/m, zero breakdowns; 26 EBSD maps, exposed apex inside or below the unexposed range; nothing mapped before exposure, so no field effect can be established); next campaign before and after on one electrode with ε and α′ in the phase list; credit and hand-over to N. Pilan | Outlook — no field effect claimed | ../rfx/HANDOFF.md L20–23, L179, L291; FINDINGS L82–84; QA_PREP L92, L101, L112, L131, L141; Bayerlein et al. MSEA 114, L11 (1989) |
 | 20 | 866 | Conditioning appears to leave a subsurface memory | recap; four-bar result card 1.21/1.19/0.79/0.68° with ~75 % bracket (figures/result_card.pdf) at its drawn size, 7.0 cm wide, labels ≥ 8 pt (3 Oct) | — | results.json; design B8 |
 | 21 | 891 | Conclusions, and an invitation | three one-line conclusions (third ends '— a stainless-steel test with Consorzio RFX is under way'); invitation box ('same-area before-and-after mapping'); right column: small result chart (figures/result_card_small.pdf), 2 cm QR and arXiv link | — | arXiv:2606.19192; interim work plan (2026); RFX project record |
-| 22–25 | 924– | Backup | RFX first look; RFX status table (29 Sep); RFX apex vs unexposed range (null at low power); 2025 STEM pair. The manuscript-infographic backup was dropped 3 Oct (commented out in main.tex, restorable) | Preliminary / Established | §6 |
+| 22 | 1057 | Backup: field-exposed vs reference STEM (2025) | 2025 STEM pair, 300 K cathode (walls strongly reduced, Jacewicz 2025 Fig. 9; denuded zone clearest at 30 K, Fig. 10). The three RFX backups (first look; status table, 29 Sep; apex vs unexposed range) were commented out 4 Oct 2026 night, and the manuscript-infographic backup on 3 Oct; both restorable in main.tex | Established | Jacewicz et al. JAP 137, 193302 (2025) |
 
 ---
 
 ## 3. Every number on the slides, with its derivation
 
-Slide numbers in the §3 headings are the pre-design-pass numbers (23-page deck). After 2 Oct: 3→3, 4→5, 5→6, 7→8, 8→9, 11→13, 12→14, 13→15, 14→16, 17→19, 18→20, backup 22→25.
+Slide numbers in the §3 headings are the pre-design-pass numbers (23-page deck). After 2 Oct: 3→3, 4→5, 5→6, 7→8, 8→9, 11→13, 12→14, 13→15, 14→16, 17→19, 18→20, backup 22→25; after 4 Oct night the STEM backup is 22 and the RFX backups are gone.
 
 ### 3.1 MDDF model (slide 3) — what "one model" means
 

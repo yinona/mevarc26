@@ -870,10 +870,10 @@
 % ── 15. Stainless steel test (RFX 2) ─────────────────────────────────────────
 % Restructured 2 Oct late (author instruction): different material, different
 % structural evolution; no phase-transformation story in the main path (the XRD
-% fact stays in backup 23). Sources: SFE and planar slip QA_PREP.md L92; 16 kPa
+% fact stays in the RFX record; RFX backups removed 4 Oct night). Sources: SFE and planar slip QA_PREP.md L92; 16 kPa
 % QA_PREP.md L101, L141 (= eps0 E^2/2 at 60 MV/m); run facts ../rfx/HANDOFF.md
 % L20-23; apex inside or below the unexposed range ../rfx/analysis/
-% ebsd_orientations_all_2026-09-29/FINDINGS.md L82-84 (as backup 24); nothing
+% ebsd_orientations_all_2026-09-29/FINDINGS.md L82-84 (former backup 24); nothing
 % mapped before exposure QA_PREP.md L101, L131; before-and-after campaign
 % ../rfx/HANDOFF.md L291, ../rfx/NEEDED.md L341, QA_PREP.md L112.
 % 3 Oct (author-approved): metastable austenite as a strain gauge. 304L at
@@ -973,83 +973,86 @@
 % ══ Backup ═══════════════════════════════════════════════════════════════════
 \appendix
 
-\begin{frame}{Backup: RFX first look (preliminary)}
-  \tagbox{warn}{Preliminary --- no field effect claimed}
-  \vspace{0.05cm}
-  \begin{columns}[T]
-    \column{0.44\textwidth}
-      \footnotesize
-      \begin{itemize}\setlength\itemsep{0.25em}
-        \item AISI 304L at RFX HVPTF; continuous DC: 90 h (\#3-25), 73 h (\#4-25); peak 59--$\SI{61}{MV/m}$; zero breakdowns (stopped at emission switch-on)
-        \item SEM: ``exploded'' near-surface inclusions (3--\SI{7}{\micro m}) on field-exposed samples; reference cavities round and clean
-        \item EBSD: \#1-25, \#2-25, \#3-25 index (97--99.5\%); \#4-25: two maps, one an outlier on confidence index, position unrecorded
-        \item Apex-vs-side contrast reproduces on never-installed \#2-25: forming geography
-      \end{itemize}
-    \column{0.54\textwidth}
-      % Final pass 2 Oct: four large panels instead of the four multi-image SEM
-      % report pages (labels were illegible). SEM crops = the three panels of
-      % sem_page-6.png without the instrument data bar; HFW read from that bar.
-      \centering
-      \begin{minipage}[t]{0.49\linewidth}\centering
-        \includegraphics[width=\linewidth]{rfx_sem_cavity_ref1.png}\\[-0.5mm]
-        {\scriptsize \#1-25 reference: round, clean (HFW \SI{16.6}{\micro m})\par}
-      \end{minipage}\hfill
-      \begin{minipage}[t]{0.49\linewidth}\centering
-        \includegraphics[width=\linewidth]{rfx_sem_cavity_fe3.png}\\[-0.5mm]
-        {\scriptsize \#3-25 field-exposed: ``exploded'' (HFW \SI{10}{\micro m})\par}
-      \end{minipage}\par\vspace{0.12cm}
-      \includegraphics[width=\linewidth,height=1.55cm,keepaspectratio]{cut_samples.png}\par
-      {\scriptsize Sectioned electrode\par
-       \color{muted}SEM: I.~Popov, HUJI; selected panels.\par}
-  \end{columns}
-  \note{Backup for questions on the stainless-steel first look. SEM survey plus EBSD quality: three samples index well; the field-exposed \#4-25 has two maps, one of them an outlier on confidence index, and its position on the electrode was not recorded, so the cause is open. The July apex-versus-side contrast reproduced on a never-installed reference, so it reflects forming geography. No structural field effect is claimed.}
-\end{frame}
-
-\begin{frame}{Backup: RFX sample and data status (29 Sep 2026)}
-  \footnotesize
-  \begin{tabular}{@{}ll>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{6.2cm}@{}}
-    \toprule
-    Sample & Role & Exposure & Status \\
-    \midrule
-    \#1-25 & reference & none & SEM; EBSD apex $+$ side, 97\% indexed \\
-    \#2-25 & reference & none & EBSD apex (18 Aug, 3 maps) $+$ side; LAM done \\
-    \#3-25 & field-exposed & 90 h DC, peak $\SI{61}{MV/m}$ & SEM; EBSD apex $+$ side, 99.5\% indexed; LAM done \\
-    \#4-25 & field-exposed & 73 h DC, peak $\SI{59}{MV/m}$ & SEM/EDS; EBSD two maps, one an outlier on confidence index \\
-    \bottomrule
-  \end{tabular}
-  \vspace{0.05cm}
-  \footnotesize
-  \begin{itemize}\setlength\itemsep{0.05em}
-    \item Received since July: conditioning report and $E(\theta)$; alloy confirmed as 304L, mill certificate unrecoverable; electropolishing partly documented; all 26 catalog EBSD maps (36 scans), 28 Sep.
-    \item XRD: $\delta$-ferrite content differs between the reference and exposed pairs, so the clean comparison is apex vs side within one electrode.
-    \item Wide-vs-narrow map class $=$ grain size and indexing quality (also on never-installed \#2-25), not field.
-    \item Still open: thermal history of \#3-25 and \#4-25 (vacuum firing?); matrix Cr/Ni EDS on all four under identical conditions; SEM $\theta$-survey as the first exposure marker.
-  \end{itemize}
-  \note{Use only if asked about readiness or missing inputs. Reflects the written project record through 29 September 2026.}
-\end{frame}
-
-\begin{frame}{Backup: RFX apex vs unexposed range (29 Sep 2026)}
-  \tagbox{warn}{Null so far --- not a field effect, not proof of saturation}
-  \vspace{0.05cm}
-  \begin{columns}[T]
-    \column{0.565\textwidth}
-      \centering
-      % Final pass 2 Oct: two of the four board panels (wide map class) redrawn at
-      % slide size by figures/make_rfx_board_backup.py from the RFX per-map table;
-      % descriptive and quality rows omitted (full board in the RFX record).
-      \includegraphics[width=\linewidth]{rfx_board_wide_2panel.png}\par
-      {\scriptsize\color{muted}Wide map class, 2 of 4 panels; EBSD: I.~Popov, HUJI. Only point above range: map $\theta(L)$ slope ($n=2$ baseline).\par}
-    \column{0.415\textwidth}
-      \footnotesize
-      \begin{itemize}\setlength\itemsep{0.1em}
-        \item Unit $=$ one EBSD map; \#3-25 apex vs same-class unexposed apex ($n = 2$--$3$ vs $3$--$4$).
-        \item Inside or below the unexposed range (GOS, in-grain $\theta(L)$ slope, interior KAM, histogram indicators), also at matched confidence index.
-        \item Where it differs it is \emph{cleaner}, not rougher ($p \ge 0.10$).
-        \item Power: 80\% at 1 SD needs ${\approx}17$ maps per group; the data exclude only a uniform apex shift ${\gtrsim}2.5$ map-SD. Runs stopped at emission switch-on, zero breakdowns.
-      \end{itemize}
-  \end{columns}
-  \note{Use only if someone asks whether the steel shows anything. The exposed apex sits inside or below the unexposed apex maps of the same grain-size class, including when we match indexing confidence; the one value above is a map-level slope against only two baseline maps. That is a null at low power, not evidence of absence, and not evidence for the saturation hypothesis. The dose was about ten to the minus four of yield and the runs never reached breakdown conditioning, so the next campaign is annealed versus as-received steel, each with a sham electrode, driven into breakdowns.}
-\end{frame}
+% RFX backups (first look; sample and data status; apex vs unexposed range)
+% removed 4 Oct 2026 (night, author decision): the deck keeps one backup (STEM
+% pair). Uncomment the three frames below to restore them.
+% \begin{frame}{Backup: RFX first look (preliminary)}
+%   \tagbox{warn}{Preliminary --- no field effect claimed}
+%   \vspace{0.05cm}
+%   \begin{columns}[T]
+%     \column{0.44\textwidth}
+%       \footnotesize
+%       \begin{itemize}\setlength\itemsep{0.25em}
+%         \item AISI 304L at RFX HVPTF; continuous DC: 90 h (\#3-25), 73 h (\#4-25); peak 59--$\SI{61}{MV/m}$; zero breakdowns (stopped at emission switch-on)
+%         \item SEM: ``exploded'' near-surface inclusions (3--\SI{7}{\micro m}) on field-exposed samples; reference cavities round and clean
+%         \item EBSD: \#1-25, \#2-25, \#3-25 index (97--99.5\%); \#4-25: two maps, one an outlier on confidence index, position unrecorded
+%         \item Apex-vs-side contrast reproduces on never-installed \#2-25: forming geography
+%       \end{itemize}
+%     \column{0.54\textwidth}
+%       % Final pass 2 Oct: four large panels instead of the four multi-image SEM
+%       % report pages (labels were illegible). SEM crops = the three panels of
+%       % sem_page-6.png without the instrument data bar; HFW read from that bar.
+%       \centering
+%       \begin{minipage}[t]{0.49\linewidth}\centering
+%         \includegraphics[width=\linewidth]{rfx_sem_cavity_ref1.png}\\[-0.5mm]
+%         {\scriptsize \#1-25 reference: round, clean (HFW \SI{16.6}{\micro m})\par}
+%       \end{minipage}\hfill
+%       \begin{minipage}[t]{0.49\linewidth}\centering
+%         \includegraphics[width=\linewidth]{rfx_sem_cavity_fe3.png}\\[-0.5mm]
+%         {\scriptsize \#3-25 field-exposed: ``exploded'' (HFW \SI{10}{\micro m})\par}
+%       \end{minipage}\par\vspace{0.12cm}
+%       \includegraphics[width=\linewidth,height=1.55cm,keepaspectratio]{cut_samples.png}\par
+%       {\scriptsize Sectioned electrode\par
+%        \color{muted}SEM: I.~Popov, HUJI; selected panels.\par}
+%   \end{columns}
+%   \note{Backup for questions on the stainless-steel first look. SEM survey plus EBSD quality: three samples index well; the field-exposed \#4-25 has two maps, one of them an outlier on confidence index, and its position on the electrode was not recorded, so the cause is open. The July apex-versus-side contrast reproduced on a never-installed reference, so it reflects forming geography. No structural field effect is claimed.}
+% \end{frame}
+%
+% \begin{frame}{Backup: RFX sample and data status (29 Sep 2026)}
+%   \footnotesize
+%   \begin{tabular}{@{}ll>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{6.2cm}@{}}
+%     \toprule
+%     Sample & Role & Exposure & Status \\
+%     \midrule
+%     \#1-25 & reference & none & SEM; EBSD apex $+$ side, 97\% indexed \\
+%     \#2-25 & reference & none & EBSD apex (18 Aug, 3 maps) $+$ side; LAM done \\
+%     \#3-25 & field-exposed & 90 h DC, peak $\SI{61}{MV/m}$ & SEM; EBSD apex $+$ side, 99.5\% indexed; LAM done \\
+%     \#4-25 & field-exposed & 73 h DC, peak $\SI{59}{MV/m}$ & SEM/EDS; EBSD two maps, one an outlier on confidence index \\
+%     \bottomrule
+%   \end{tabular}
+%   \vspace{0.05cm}
+%   \footnotesize
+%   \begin{itemize}\setlength\itemsep{0.05em}
+%     \item Received since July: conditioning report and $E(\theta)$; alloy confirmed as 304L, mill certificate unrecoverable; electropolishing partly documented; all 26 catalog EBSD maps (36 scans), 28 Sep.
+%     \item XRD: $\delta$-ferrite content differs between the reference and exposed pairs, so the clean comparison is apex vs side within one electrode.
+%     \item Wide-vs-narrow map class $=$ grain size and indexing quality (also on never-installed \#2-25), not field.
+%     \item Still open: thermal history of \#3-25 and \#4-25 (vacuum firing?); matrix Cr/Ni EDS on all four under identical conditions; SEM $\theta$-survey as the first exposure marker.
+%   \end{itemize}
+%   \note{Use only if asked about readiness or missing inputs. Reflects the written project record through 29 September 2026.}
+% \end{frame}
+%
+% \begin{frame}{Backup: RFX apex vs unexposed range (29 Sep 2026)}
+%   \tagbox{warn}{Null so far --- not a field effect, not proof of saturation}
+%   \vspace{0.05cm}
+%   \begin{columns}[T]
+%     \column{0.565\textwidth}
+%       \centering
+%       % Final pass 2 Oct: two of the four board panels (wide map class) redrawn at
+%       % slide size by figures/make_rfx_board_backup.py from the RFX per-map table;
+%       % descriptive and quality rows omitted (full board in the RFX record).
+%       \includegraphics[width=\linewidth]{rfx_board_wide_2panel.png}\par
+%       {\scriptsize\color{muted}Wide map class, 2 of 4 panels; EBSD: I.~Popov, HUJI. Only point above range: map $\theta(L)$ slope ($n=2$ baseline).\par}
+%     \column{0.415\textwidth}
+%       \footnotesize
+%       \begin{itemize}\setlength\itemsep{0.1em}
+%         \item Unit $=$ one EBSD map; \#3-25 apex vs same-class unexposed apex ($n = 2$--$3$ vs $3$--$4$).
+%         \item Inside or below the unexposed range (GOS, in-grain $\theta(L)$ slope, interior KAM, histogram indicators), also at matched confidence index.
+%         \item Where it differs it is \emph{cleaner}, not rougher ($p \ge 0.10$).
+%         \item Power: 80\% at 1 SD needs ${\approx}17$ maps per group; the data exclude only a uniform apex shift ${\gtrsim}2.5$ map-SD. Runs stopped at emission switch-on, zero breakdowns.
+%       \end{itemize}
+%   \end{columns}
+%   \note{Use only if someone asks whether the steel shows anything. The exposed apex sits inside or below the unexposed apex maps of the same grain-size class, including when we match indexing confidence; the one value above is a map-level slope against only two baseline maps. That is a null at low power, not evidence of absence, and not evidence for the saturation hypothesis. The dose was about ten to the minus four of yield and the runs never reached breakdown conditioning, so the next campaign is annealed versus as-received steel, each with a sham electrode, driven into breakdowns.}
+% \end{frame}
 
 \begin{frame}{Backup: field-exposed vs reference STEM (2025)}
   \begin{columns}[T]
