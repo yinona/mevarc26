@@ -821,9 +821,9 @@
 % copper: frame 17 note (L758).
 \begin{frame}{Next: go deeper, and change the material}
   \begin{columns}[T]
-    \column{0.60\textwidth}
+    \column{0.55\textwidth}
       \centering
-      \begin{tikzpicture}[font=\scriptsize,>={Stealth[length=2.2mm]}]
+      \begin{tikzpicture}[x=0.84cm,font=\scriptsize,>={Stealth[length=2.2mm]}]
         % axes
         \draw[->,muted,thick] (1.9,0) -- (1.9,3.85) node[above,font=\footnotesize\bfseries,ink] {probed depth};
         \draw[->,muted,thick] (1.9,0) -- (7.4,0) node[anchor=south east,inner sep=1pt,muted] at (7.45,0.04) {material};
@@ -837,33 +837,32 @@
         \foreach \x in {3.2,6.3} \draw[muted,thick] (\x,-0.08) -- (\x,0.08);
         % go deeper
         \draw[->,purple,line width=1.6pt] (3.2,1.08) -- (3.2,3.1);
-        \node[rotate=90,anchor=south,purple,font=\footnotesize\bfseries] at (3.05,2.0) {go deeper};
+        \node[rotate=90,anchor=south,purple,font=\footnotesize\bfseries] at (3.05,2.2) {go deeper};
         \draw[purple,thick,dashed,fill=white] (3.2,3.3) circle (1.25mm);
         \node[anchor=west,align=left,purple] at (3.4,3.3) {matched lamellae,\\[-1pt]high field and reference};
         \fill[muted] (3.2,2.1) circle (1.25mm);
         \node[anchor=west,align=left,muted] at (3.4,2.1) {2025 STEM, hard Cu};
         % change the material
         \draw[->,steel,line width=1.6pt] (3.42,0.9) -- (6.08,0.9);
-        \node[anchor=south,steel,font=\footnotesize\bfseries] at (4.72,0.95) {change the material};
+        \node[anchor=south,steel,font=\footnotesize\bfseries] at (4.95,0.95) {change the material};
         \draw[steel,line width=1.2pt,fill=white] (6.3,0.9) circle (1.4mm);
         \node[anchor=west,align=left,steel] at (6.48,0.9) {first run\\[-1pt]2026};
         % present result
         \fill[tierhigh] (3.2,0.9) circle (1.5mm);
         \node[anchor=north west,align=left] at (3.3,0.72) {{\bfseries\color{tierhigh}this work}\\[-1pt]heat-treated Cu};
       \end{tikzpicture}
-    \column{0.38\textwidth}
+    \column{0.43\textwidth}
       \small
       \begin{itemize}\setlength\itemsep{0.1em}
-        \item Matched high-field and reference FIB lamellae; TEM, STEM and EBSD through the top ${\sim}\SI{1}{\micro m}$
+        \item Cross-sections from a mapped high-field region and from the reference, through the top ${\sim}\SI{1}{\micro m}$: do the EBSD layer (${\sim}\SI{40}{nm}$) and the STEM denuded zone (${\sim}\SI{200}{nm}$) belong to one depth profile~--- is the denuded zone the sheath (${\approx}\,8\,\ell_D$)?
         \item Artifact controls from the 2025 ``red herrings''
-        \item Is the denuded zone the sheath~--- width set by the local $\ell_D$ (${\approx}\,8\,\ell_D$)?
-        \item Stainless steel under continuous DC, with Consorzio RFX --- next slide
+        \item Stainless steel under continuous DC, with Consorzio RFX~---~next~slide
       \end{itemize}
   \end{columns}
   \vspace{0.02cm}
-  \claim{Depth continues the Uppsala STEM line; material tests the mechanism itself.}
+  \claim{Depth continues our STEM line; material tests the mechanism itself.}
   \sources{\srcl{a}CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
-  \note{Two coordinates on one picture. Today's result sits at about 40 nanometers, EBSD in heat-treated copper; the 2025 STEM depletion was about 200 nanometers deep, in hard copper. Going deeper means matched high-field and reference FIB lamellae, TEM, STEM and EBSD through the top micron, with the artifact controls learned in 2025. The question it asks: is the denuded zone the sheath, its width set by the local screening length, about eight of them? Along the material axis: AISI 304L under continuous DC, a first campaign with Consorzio RFX. Next slide.}
+  \note{Two coordinates on one picture. Today's result sits at about 40 nanometers, EBSD in heat-treated copper; the 2025 STEM depletion was about 200 nanometers deep, in hard copper. Going deeper means cross-sections, TEM, STEM and EBSD, from a mapped high-field region and from the reference through the top micron, with the artifact controls learned in 2025, to ask whether the 40-nanometer EBSD layer and the 200-nanometer STEM denuded zone belong to one depth profile, and whether the denuded zone is the sheath, its width set by the local screening length, about eight of them. Depth continues our own STEM line, HUJI, published with Uppsala. Along the material axis: AISI 304L under continuous DC, a first campaign with Consorzio RFX. Next slide.}
 \end{frame}
 
 % ── 15. Stainless steel test (RFX 2) ─────────────────────────────────────────
