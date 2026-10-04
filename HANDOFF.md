@@ -538,3 +538,19 @@ Checklist (b) and numbers (c): all pass; details in the report. Left for the aut
 10, 16; frame 7 caption "zone" alone; backup 22 bullet tight on the Sources line; two note wordings (frames 6, 9).
 
 - 4 Oct 2026 (author-approved, "sheath picture"), frame 16 (main.tex L701-780), title kept: box 2 (L763-767) now generic, 'l_D ∝ 1/sqrt(rho) ≈ 25 nm (order of magnitude)', 'Debye-like screening of fluctuations', 'At rho ~ 1e14 m^-2, only dislocations within ~l_D of the surface exchange fluctuating stress with it; deeper ones are driven by the load but silent at the surface. Observable: LAM; denuded ~200 nm ≈ 8 l_D', with no 'Groma' in the body (Groma et al. 2006 keyed a in Sources only); box 3 (L770-772) adds 'Dislocation stress is self-equilibrated'; two teal lines (L774-775) 'A plasma of dipoles: ... it reduces, it does not nullify.' and 'The surface is an absorbing wall: a sheath of ~l_D sets what the surface sees, hence emission and breakdown.'; claim (L777) shortened to the 'inside the sheath' version without 'the' before 'mobile'; note (L779, 130 words) covers the three scales, the Debye-Hückel 2D Coulomb-gas reading with l_D ∝ 1/sqrt(rho) as an order-of-magnitude estimate (2D single slip, Groma 2006), the self-equilibrated mean stress with the surface as a sink, the sheath, depletion-layer and dielectric parallels, tenfold depletion tripling l_D, and the caveat that it is analogy, not derivation. Dropped for space: 'in hard Cu' after the denuded zone, 'Saint-Venant', 'screening' in 'it reduces', the explicit 1/(4.2 sqrt rho); the copper and dielectric drawings are now drawn at y = 0.40 cm per unit. `make`: 25 pages in both PDFs, worst overfull 1.97 pt (frame 18, unchanged), no undefined references, QR decodes. Render `renders_tmp/p16.png`.
+
+## Flow edits A-E, 4 Oct 2026
+
+Baseline cf1a140 (25 pages). Author-approved flow edits, one commit each; result `make`: 25 pages in main.pdf
+and main-notes.pdf, worst overfull 1.97 pt (frame 18 depth ticks, unchanged), no undefined references, QR on
+frame 21 decodes to `https://arxiv.org/pdf/2606.19192` in both PDFs.
+
+| Item | Commit | Frame (main.tex lines) | Change |
+|---|---|---|---|
+| A | 2000a25 | 21 (L946-975) | conclusions become what, where, what next (memory supported on one cathode, not replicated, keyed c to the arXiv line under the QR; within a screening length of the surface; what would settle it, depth keyed a, steel keyed b); invitation box, chart, QR kept; spacing tightened to fit; note 88 words, Mircea aside optional |
+| B | 38d6795 | 18 (L859-869), 16 (L701) | bullet 'Is the denuded zone the sheath --- width set by the local l_D (~8 l_D)?' and note; frame 16 title 'Elastic screening: a sheath of dislocations at the surface' (one line); REVIEW_CONTEXT.md L82, HANDOFF.md L101 |
+| C | 4da065b | 6 (L390) | claim 'The model predicts a large-area signature. / Is it there?'; grep for 'we looked', 'this year we', 'finally looked', 'first time we': no other hit |
+| D | 704dbbf | 16 box 2, 9 note | ', the layer EBSD samples' after the sheath clause in box 2 (the parenthesis on the absorbing-wall line wrapped at 8 pt); frame 9 note sentence on the 40 nm depth being one to two screening lengths |
+| E | 6c148e8 | 6 note (L392), 15 note (L697) | frustrated-crystal definition; hand-off 'Which of the stored dislocations matter? ... next slide.' |
+
+Renders (not committed): `renders_tmp/p06.png`, `p16.png`, `p18.png`, `p21.png`.
