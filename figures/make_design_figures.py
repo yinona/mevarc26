@@ -68,7 +68,7 @@ def f07():
         for d in grp[g]:
             ax2.plot(d["r_mm"],np.interp(d["r_mm"],ef[:,0],ef[:,1])*80,m,ms=5.5,color=c,mec=INK,mew=0.6,zorder=5)
     ax2.text(3.3,66,"center\n~80 MV/m",ha="center",va="top",fontsize=8,color=HIGH,fontweight="bold",linespacing=1.0)
-    ax2.text(13.2,66,"edge\n73–74 MV/m",ha="center",va="top",fontsize=8,color=HIGH,fontweight="bold",linespacing=1.0)
+    ax2.text(13.2,66,"edge\n~69–77 MV/m",ha="center",va="top",fontsize=8,color=HIGH,fontweight="bold",linespacing=1.0)
     ax2.text(25.2,12,"periphery\n≤2.5 MV/m",ha="center",va="bottom",fontsize=8,color=PERIPH,fontweight="bold",linespacing=1.0)
     ax2.text(13.2,30,"markers = EBSD regions",ha="center",va="center",fontsize=7.5,color=MUTED)
     ax2.set_xlim(0,30); ax2.set_ylim(0,92); ax2.set_yticks([0,40,80])
@@ -121,7 +121,7 @@ def f11():
         for d in grp[g]:
             ax.errorbar(d["r_mm"],d["mean"],yerr=d["sem_grain"],fmt=m,ms=6.5,color=c,mec=INK,mew=0.6,ecolor=c,capsize=2.5,lw=1.2,zorder=5)
     ax.text(3.5,1.31,"center\n~80 MV/m",ha="center",va="bottom",fontsize=8.5,color=HIGH,fontweight="bold",linespacing=1.0)
-    ax.text(8.9,1.09,"edge\n73–74 MV/m",ha="center",va="top",fontsize=8.5,color=HIGH,fontweight="bold",linespacing=1.0)
+    ax.text(8.9,1.09,"edge\n~69–77 MV/m",ha="center",va="top",fontsize=8.5,color=HIGH,fontweight="bold",linespacing=1.0)
     ax.text(26.0,0.86,"periphery\n≤2.5 MV/m",ha="center",va="bottom",fontsize=8.5,color=PERIPH,fontweight="bold",linespacing=1.0)
     ax.text(0.6,0.715,"unexposed reference (±1 s.e.)",ha="left",va="bottom",fontsize=8.5,color=REF,fontweight="bold")
     ax.annotate("",xy=(19.2,hf_mean),xytext=(19.2,ref_mean),arrowprops=dict(arrowstyle="<->",color=INK,lw=1.1))
@@ -158,7 +158,7 @@ def f12():
 # ---- frame 18: result card, 6.8 x 5.4 cm ---------------------------------------
 def f18():
     fig,ax=plt.subplots(figsize=(7.0*CM,5.4*CM),dpi=300)
-    labels=["center\n~80","edge\n73–74","periphery\n≤2.5","reference\n0"]
+    labels=["center\n~80","edge\n69–77","periphery\n≤2.5","reference\n0"]
     vals=[np.mean([d["mean"] for d in grp[g]]) for g in ("center","edge","periph","ref")]
     errs=[np.sqrt(np.mean([d["sem_grain"]**2 for d in grp[g]])) for g in ("center","edge","periph","ref")]
     cols=[HIGH,HIGH,PERIPH,REF]
