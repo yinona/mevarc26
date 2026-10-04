@@ -185,7 +185,7 @@
     \includegraphics[height=0.95cm]{logo_cern.png}
   \end{center}
   \vspace{0.15cm}
-  \note{Sequel to last year's MeVArc talk. 2025 showed the dislocation model and cross-sectional STEM finding a modified near-surface layer; I closed asking for more comparative forensics---other materials, more samples. This year answers that: a large-area copper measurement testing the model's central prediction, and a stainless-steel experiment testing whether it generalizes. $E_S$ is not on any slide (Q\&A only).}
+  \note{Today we ask whether conditioning leaves a structural memory in the metal. Last year at MeVArc we showed our dislocation model and STEM cross-sections of a modified near-surface layer, and we closed by asking for more comparative forensics. This talk brings the large-area answer on copper, and a first look at stainless steel. We start with what conditioning does.}
 \end{frame}
 
 % ══ PART I — A model, local microscopy, and the missing large-area test ══════
@@ -223,7 +223,7 @@
   \end{columns}
   \claim{Something in the metal stores the improvement. We do not know~what.\src{a}}
   \sources{\srcl{a}Wuensch et al., Rev. Mod. Phys. 98, 025004 (2026); \srcl{b}Degiovanni et al., PRAB 19, 032001 (2016).}
-  \note{Two macroscopic clues constrain the answer: the near-thirtieth-power field dependence, and conditioning following pulse count not breakdown count. Both say the applied field, not the arc, drives the work. Look for a field-driven change in the metal itself. (Optional aside: Walter covered this in his invited talk this morning.)}
+  \note{Conditioning works, but we do not know what it changes in the metal. Every high-gradient device reaches its usable field by conditioning. The breakdown rate rises roughly as the thirtieth power of the field. Conditioning tracks the number of high-field pulses, not the number of breakdowns, so the field, more than the arcs, drives it. The curve is a schematic: field holding climbs over about a billion pulses. Something in the metal stores that improvement. [optional: Walter set out these clues in his invited talk this morning.] Our answer starts from a model.}
 \end{frame}
 
 % ── 3. MDDF model ───────────────────────────────────────────────────────────
@@ -244,7 +244,7 @@
   \end{columns}
   \claim{Central prediction: conditioning \emph{evolves the near-surface dislocation structure}.\src{d}}
   \sources{\srcl{a}Engelberg et al., PRL 120, 124801 (2018); \srcl{b}PRAB 22, 083501 (2019); \srcl{c}PRAB 23, 123501 (2020); \srcl{d}Wuensch et al., RMP 98, 025004 (2026).}
-  \note{MDDF model is our own (2018--2020). Cartoon shows birth-death dynamics of the mobile-dislocation population: below critical density it decays, above it a runaway triggers nucleation. The plot is the fit to the field dependence of breakdown rate: parameters were fitted to rate and temperature data; the dark-current spike histogram was the prediction. Key line for this talk: conditioning should leave an evolving dislocation structure just below the surface. Next slide: what that sentence means for a measurement.}
+  \note{Our model treats breakdown as collective dislocation dynamics. Field holding rises from FCC to BCC to HCP metals, matching the order of barriers to dislocation motion. In MDDF, the mobile dislocations driven by the Maxwell stress fluctuate, and breakdown nucleates when that population runs away. We fitted the same model to the thirtieth-power rate and its temperature dependence, and it then reproduced the histogram of dark-current spikes, which was a prediction. Its central prediction for this talk is that conditioning evolves the near-surface dislocation structure. Next: what that means for a microscope.}
 \end{frame}
 
 % ── 3b. From the model to a measurable trace (design C1) ────────────────────
@@ -333,7 +333,7 @@
   {\small\tagbox{good}{predicts} where, and in which order
    \qquad\tagbox{warn}{does not predict} size, depth, or sign}
   \sources{\srcl{a}Engelberg et al., PRL 120, 124801 (2018); \srcl{b}PRAB 22, 083501 (2019); \srcl{c}PRAB 23, 123501 (2020); Wuensch et al., RMP 98, 025004 (2026).}
-  \note{Slide three was one breakdown; this is what it implies for conditioning. In the model the mobile population is fast: it fluctuates and decays back. Conditioning means fewer breakdowns at the same field, so the hill must rise, and a memory lasting a billion pulses must sit in the stored dislocations that set the hill. Those bend the lattice, which EBSD reads. The field writes it, so look away from craters. The model fixes where and in which order, not size, depth, or sign.}
+  \note{This slide turns the model into something a microscope can look for. The mobile population is fast: it fluctuates and decays back. Conditioning means fewer breakdowns at the same field, so the barrier, the hill in this picture, must rise. A memory that lasts about a billion pulses must then sit in the slow, stored dislocations that set the hill, and those bend the lattice, which EBSD reads. The field writes the memory, so we look far from craters and expect the order to follow the local field. The model predicts where and in which order; it does not predict size, depth or sign. Last year's STEM gave a first look.}
 \end{frame}
 
 % ── 4. Prior microscopy (2025 STEM) ─────────────────────────────────────────
@@ -355,7 +355,7 @@
   \end{columns}
   \claim{Seen at specific locations. The large-area view was missing.}
   \sources{\srcl{a}Jacewicz et al., JAP 137, 193302 (2025); \srcl{b}Korsb\"ack et al., PRAB 23, 033102 (2020).}
-  \note{2025 STEM images. Dark band is the protective coating; just beneath it the field-exposed region is nearly free of dislocation walls while the reference keeps walls continuous to the surface. Published wording is conservative: 300 K shows significant reduction of walls; the denuded zone is clearly visible at 30 K. The paper gives no thickness; 200 nanometers is read from images, the number the manuscript uses. Hard-versus-soft copper contrast (Korsb\"ack 2020) is an independent macroscopic clue: hard copper conditioned within about 25 million pulses; soft samples began saturating near 600 million or stayed unsaturated longer, consistent with different starting dislocation populations. Two lessons: FIB preparation generates dislocations and loops, so only larger-scale structure is trustworthy; TEM and STEM are intrinsically local. Last year I asked for more comparative forensics: other materials, more samples. That is exactly the gap next slides fill.}
+  \note{STEM has already imaged an altered near-surface dislocation structure, but only at specific locations. These are our 2025 cross-sections of conditioned hard copper, imaged at HUJI by Inna Popov. Under the protective coating, the top 200 nanometers or so of the field-exposed region is nearly free of dislocation walls. We see fewer walls at 300 and at 30 kelvin, and the denuded layer is clearest at 30 kelvin. This fits an independent clue: soft copper conditions far more slowly than hard copper, so the starting population matters. Two cautions: FIB preparation plants its own dislocations, so we trust only large-scale structure, and one cross-section cannot speak for the whole electrode. What was missing was the large-area view. [if asked: the paper gives no thickness; about 200 nanometers is read from its Figure 10. Hard copper conditioned within about 25 million pulses; soft copper needed some 600 to 900 million.]}
 \end{frame}
 
 % ── 5. Maxwell stress + VHCF, and the bridge to results ──────────────────────
@@ -389,7 +389,7 @@
   \end{columns}
   \claim{The model predicts a large-area signature.\\Is it there?}
   \sources{\srcl{a}Mughrabi, MMTB 40, 431 (2009); \srcl{b}Stanzl-Tschegg et al., Int.\ J.\ Fatigue 29, 2050 (2007); \srcl{c}Ashkenazy et al., \condref.}
-  \note{Maxwell stress is three orders of magnitude below yield. The point is not amplitude but accumulation. VHCF shows oscillatory loading well below yield still rearranges dislocations irreversibly for a billion cycles---our regime. Pulsed-DC is cleaner than RF structures: no RF magnetic field, no pulsed surface heating, no bulk Ohmic current. Maxwell stress is the only cyclic mechanical load. Earlier RF-based studies could never fully separate thermal fatigue from field effects. MDDF has no threshold at the yield stress; the relevant stress is what moves mobile dislocations in a frustrated crystal, far below yield. Frustrated: a dense, pinned network in which the weak internal stresses, not the applied one, decide where mobile segments can move. That argument bridges the 2025 model-and-microscopy story to this year's large-area measurement. (Optional aside: Jianyu, with Guodong Meng, and Veronika show field-driven deformation at the nanoscale this afternoon, 16:00 and 16:30.)}
+  \note{The load is tiny, but it is repeated about a billion times. The Maxwell stress at 80 megavolts per meter is 0.028 megapascals, about a thousand times below the yield of annealed copper. Fatigue at ten to the eight to ten to the ten cycles rearranges dislocations irreversibly well below yield, which is our regime. Pulsed DC means no RF pulsed heating and no bulk currents, so the Maxwell stress is the dominant cyclic load. MDDF needs only the stress that moves mobile dislocations in a frustrated crystal, far below yield: a dense, pinned network in which weak internal stresses, not the applied one, decide where mobile segments move. [optional: Jianyu, with Guodong Meng, and Veronika show field-driven deformation at the nanoscale this afternoon, at 16:00 and 16:30.] So the model predicts a large-area signature: is it there?}
 \end{frame}
 
 % ── 5b. Last year / this year recap ─────────────────────────────────────────
@@ -432,7 +432,7 @@
       {\scriptsize Large-area EBSD across one cathode}
   \end{columns}
   \source{\srcl{a}Jacewicz et al., JAP 137, 193302 (2025).}
-  \note{Light visual bridge: 2025 showed the model and local cross-section; 2026 delivers the large-area structural comparison on one electrode. Do not quote the 75 percent effect here.}
+  \note{Last year we asked for more comparative forensics, and this slide shows what came back. On the left is what we showed in 2025: the model, and local STEM of the denuded zone, from a FIB lamella overview to a cross-section at the surface. We closed with two questions: other materials, and more samples. On the right is the large-area answer, an EBSD survey across one conditioned cathode. Let us look at how that cathode was exposed.}
 \end{frame}
 
 % ══ PART II — The copper result ══════════════════════════════════════════════
@@ -456,7 +456,7 @@
   \centering\tierkey\par
   \claim{The field gradient gives us internal controls on a single specimen.}
   \sources{\srcl{a}geometry: Bjelland et al., arXiv:2606.21259 (2026); Ashkenazy et al., \condref, $E(r)$: Fig.~3.}
-  \note{One figure: cross-section on top, surface field below, same radius axis. The sloped anode maps radius onto local field: about 80 MV/m under the flat center, 73 to 74 at the edge regions under the sloped gap, below about 2.5 MV/m beyond the anode radius at 20 mm. Markers are the EBSD regions; the colors---copper for high field, purple for the low-field periphery, teal for the unexposed reference---stay the same on every data slide. Comparing positions on one cathode removes cathode-to-cathode preparation differences; the identically treated, never-installed cathode is the external reference. That geometry is the "more comparative forensics" design from last year's outlook. (Optional aside: this is CERN's vacuum breakdown lab; Victoria gave its update this morning.)}
+  \note{One cathode gives us a controlled range of field exposure. The anode is sloped, so radius maps onto local field: about 80 megavolts per meter under the flat center, 73 to 74 at the edge, and below about 2.5 beyond the anode radius. The cathode is heat-treated OFE copper, conditioned with 1-microsecond pulses at 1 kilohertz, about ten to the nine pulses. We mapped nine EBSD regions: center, edge, periphery, and an identically treated reference that never saw field. Copper for high field, purple for the periphery and teal for the reference stay the same on every data slide. Comparing regions on one specimen removes cathode-to-cathode differences. [optional: this is the CERN pulsed-DC system; Victoria gave its update this morning.] Here is what EBSD sees on that surface.}
 \end{frame}
 
 % ── 7. EBSD away from craters ────────────────────────────────────────────────
@@ -477,7 +477,7 @@
   \end{columns}
   \claim{Target: the cumulative response to the field, measured far from~craters.\src{a}}
   \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}${\sim}40$~nm at \SI{15}{kV}: CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{c}measured 38--72~nm over 5--30~kV, Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{d}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
-  \note{EBSD chosen for large-area where TEM is local. On the SEM overview: the copper box is one 500-micron EBSD map after a shallow FIB clean that removes the oxide (under 10 nm by AFM); the dashed teal circles are breakdown craters, the nearest about half a millimeter away. The 3 micron step and kernel fix only lateral resolution; backscattered electrons come from the top 40 nanometers of copper at 15 kV, so this is a near-surface measurement. All ROIs deliberately far from craters, measuring the cumulative material response to the field, not arc damage. LAM, local average misorientation, is the primary metric; KAM and LOS check the result does not depend on one analysis choice. The ${\sim}40$~nm information depth is about one to two screening lengths, so EBSD reads exactly the layer that talks to the surface.}
+  \note{We use EBSD because it covers a large area far from breakdown craters. The copper box is one 500-micrometer map; the dashed circles are craters, the nearest about half a millimeter away. The 3-micrometer step sets only the lateral resolution; the signal comes from the top 40 nanometers of copper at 15 kilovolts, so this is a near-surface measurement. Each region has about 24,000 indexed points. Our main metric is LAM, the local average misorientation, with KAM and LOS as cross-checks, and misorientation is a proxy for the density of geometrically necessary dislocations. Our target is the cumulative response to the field, not crater damage. Next: what one pixel measures. [if asked: a shallow FIB clean removes the oxide, under 10 nanometers by AFM, with the same protocol on all nine regions.]}
 \end{frame}
 
 % ── 8b. What one EBSD pixel measures (design A P2) ──────────────────────────
@@ -569,7 +569,7 @@
   \vspace{0.1cm}
   {\bfseries Each \SI{3}{\micro m} point yields one angle, read from the top ${\sim}\SI{40}{nm}$ of copper.\src{b}}
   \sources{\srcl{a}Ashkenazy et al., \condref; \srcl{b}information depth: Chen et al., Ultramicroscopy 111, 1488 (2011); \srcl{c}Pantleon, Scr.\ Mater.\ 58, 994 (2008).}
-  \note{Every colored pixel on the next slides is this one angle. The beam reads the top forty nanometers of copper at each point of a three-micron grid; the Kikuchi pattern gives one lattice orientation per point. LAM averages the rotation to the six neighbors, dropping pairs above five degrees, so grain boundaries are excluded. A bent lattice needs geometrically necessary dislocations, so LAM is a dislocation proxy over half a millimeter, not a dislocation image.}
+  \note{Every colored pixel on the next slides is one angle, read from the top 40 nanometers. The 15-kilovolt beam visits the surface point by point on a 3-micrometer grid. Each point gives a Kikuchi pattern, and indexing turns it into one lattice orientation. LAM averages the rotation to the six neighbors, dropping pairs above five degrees, so grain boundaries are excluded. On this scale the reference sits at 0.68 degrees and high field at about 1.2. A bent lattice needs geometrically necessary dislocations, so LAM is a dislocation proxy over half a millimeter, not a dislocation image. Next: how to read a LAM map.}
 \end{frame}
 
 % ── 8. How to read a LAM map ─────────────────────────────────────────────────
@@ -586,7 +586,7 @@
   \end{columns}
   \claim{Rescaling to $0$--$\ang{5}$ exposes the intragrain misorientation we care about.}
   \source{Ashkenazy et al., \condref. Same area, two color scales.}
-  \note{Teach the metric before comparison. At wide 0-50 degree scale only grain boundaries are visible. Rescaling to 0-5 degrees reveals intragrain lattice curvature---the low-angle misorientation proxying geometrically necessary dislocations. Every LAM map following uses this same 0-5 degree scale.}
+  \note{The color scale decides what a LAM map shows. On a zero-to-50-degree scale, only grain boundaries stand out. Rescaling to zero to five degrees reveals the curvature inside the grains, the low-angle misorientation that tracks geometrically necessary dislocations. That intragrain signal is what we care about. Every map from here on uses the same zero-to-five-degree scale. Now we compare high field with the reference.}
 \end{frame}
 
 % ── 9. Visual comparison ─────────────────────────────────────────────────────
@@ -596,7 +596,7 @@
   \vspace{0.05cm}
   \claim{Same scale, same magnification: field-exposed grains carry more curvature.}
   \source{Ashkenazy et al., \condref. Both maps cropped to the same $485\times\SI{279}{\micro m}$ field; LAM $0$--$\ang{5}$.}
-  \note{Same color scale and now the same magnification, both maps cropped to the same field of view with identical hundred-micron bars. Look at the spatial texture, not just the average color: the field-exposed region carries far more green and yellow, high-misorientation structure inside the grains, where the reference stays blue. Pair shown is representative; the quantitative conclusion uses all nine ROIs.}
+  \note{High-field copper carries more curvature inside its grains. Both maps use the same color scale and the same magnification, cropped to the same field of view. Look at the texture, not only the average color: the field-exposed grains are full of green and yellow, while the reference stays mostly blue. This pair is representative; the numbers come from all nine regions. Here are those numbers.}
 \end{frame}
 
 % ── 10. Three-tier hierarchy ─────────────────────────────────────────────────
@@ -615,7 +615,7 @@
   \end{columns}
   \claim{The ordering follows field history; grain size does not track it.}
   \source{Ashkenazy et al., \condref. Error bars: grain-corrected standard errors; band: unexposed reference $\pm1$ s.e.}
-  \note{Same colors as the geometry slide: copper is high field, purple the periphery, teal the reference band. Three tiers: high-field center and edge highest and similar; field-exposed periphery intermediate; unexposed references lowest. Periphery is powerful: it shared machining, heat treatment, mounting, vacuum, and handling with high-field regions but saw at most 2.5 MV/m---a low-field control, not zero-field. Intermediate value consistent with residual fringe-field exposure. The 75 percent figure characterizes this cathode and history, not a universal constant.}
+  \note{The signal separates into three tiers, and the tiers follow field exposure. Center and edge, both at high field, sit at about 1.2 degrees, and the external reference at about 0.68, so high field is about 75 percent higher. The periphery, on the same cathode, saw at most 2.5 megavolts per meter and sits in between. It shared machining, heat treatment, mounting, vacuum and handling with the high-field regions, so it is a low-field internal control. Grain size does not follow this hierarchy; the ordering follows field history. The 75 percent describes this cathode and its history, not a universal constant. Next, the shape of the distributions. [if asked: breakdown density falls from about 24 to 12 to 5 per square centimeter from center outward; center and edge differ twofold in breakdown density but not in LAM.]}
 \end{frame}
 
 % ── 11. Distribution tail ────────────────────────────────────────────────────
@@ -637,7 +637,7 @@
   \end{columns}
   \claim{The whole distribution stretches; a uniform offset cannot do that.}
   \source{Ashkenazy et al., \condref. One ROI per tier (histograms faded, gamma fits solid, edge dashed); shaded: tail above $\ang{2}$.}
-  \note{Tier colors again; the dotted line is two degrees and the shaded areas are the tails beyond it. Low-angle distribution broadens and grows a long tail: fraction above two degrees rises roughly eightfold. Gamma shape parameter stays near 2.7 while scale roughly doubles---a fixed-shape stretch, signature of progressive deformation. LAM, KAM, and LOS agree. KS, chi-squared, and Anderson-Darling separate the distributions; every center or edge ROI differs from unexposed ones with KS distance above 0.25. Quote effect sizes and grain-corrected errors rather than extreme pixel-pair p-values.}
+  \note{Field exposure does more than shift the distribution: it builds a high-misorientation tail. The dotted line marks two degrees, and the shaded areas are the tails beyond it. The fraction above two degrees is about 0.14 at high field against 0.016 on the reference, roughly eightfold. A gamma fit keeps its shape, k near 2.7, while the scale roughly doubles. The whole distribution stretches, and a uniform offset cannot do that. LAM, KAM and LOS all agree. So what does this say about the model? [if asked: KS, chi-squared and Anderson--Darling tests all separate the distributions; we quote effect sizes and grain-corrected errors rather than pixel-level p-values.]}
 \end{frame}
 
 % ── 12. Supports the MDDF prediction ─────────────────────────────────────────
@@ -695,7 +695,7 @@
   \end{itemize}
   \claim{Before, dislocations were plausible.\\Now a dislocation-sensitive state tracks field exposure.}
   \sources{\srcl{a}Ashkenazy et al., \condref, discussion; \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
-  \note{The measured hierarchy is the large-area signature the model predicted and STEM saw locally. The cartoon is the manuscript's interpretation: one mechanism, two starting populations. Dense as-machined copper depletes, the layer STEM saw, about 200 nanometers; heat-treated copper, with little to deplete, builds curvature that EBSD records. Size, depth and sign were not predicted; the sign is set by the starting population. Which of the stored dislocations matter? Only those near enough to the surface to exchange stress with it---next slide. If asked about $E_S$: the ordering matches its simulated profile, a candidate basis; we never measured it. Predicted observable: a change in the stored near-surface dislocation population. Measured: LAM (local misorientation). Mapping: LAM as a GND-density proxy, relative under one protocol. Parameters: none fitted to the EBSD data. Limitation: no quantitative prediction of the size of the change.}
+  \note{The large-area test supports the model's prediction. To our knowledge, this is the first large-area observation that conditioned regions carry a different near-surface dislocation structure, ordered as MDDF predicts and following the simulated local field. The cartoon is our interpretation from the manuscript: one load acting on two starting populations. Dense, as-machined copper loses dislocations near the surface, the layer STEM saw; heat-treated copper has little to lose, so the same load builds the curvature EBSD records. Size, depth and sign were not predicted. Which of the stored dislocations matter? Those near enough to the surface to exchange stress with it, and that is the next slide. [if asked, the theory--experiment record: predicted observable, a change in the stored near-surface population; measured, LAM; mapping, a relative GND proxy under one protocol; no parameters fitted to the EBSD data; no prediction of the size of the change.] [if asked about E\textsubscript{S}: its simulated profile has the same order; a candidate basis, not a measurement.]}
 \end{frame}
 
 % ── 12b. Elastic screening analogy ──────────────────────────────────────────
@@ -775,7 +775,7 @@
   \raggedright
   \claim{In this picture, weak, screened internal stresses set sources and structure inside the sheath; the strong external load drives mobile dislocations through it.}
   \sources{\srcl{a}Groma et al., PRL 96, 165503 (2006); \srcl{b}Lema\^{\i}tre et al., PRE 104, 024904 (2021); \srcl{c}Livne et al., PRE 107, 055004 (2023); \srcl{d}Ashkenazy et al., \condref.}
-  \note{Left, a plasma at an absorbing wall: the bulk is screened and quasi-neutral; only particles in a sheath about one Debye length thick reach the wall and set its flux. Copper mirrors it. The field stops at the surface. Fluctuating internal stresses are screened within $\ell_D\propto1/\sqrt{\rho}$, about 25 nanometers, an order-of-magnitude estimate (2D single slip, Groma 2006) on which the picture does not depend; only dislocations in that sheath exchange stress with the surface, and EBSD samples that layer. The mean stress cannot be screened: dislocation fields are self-equilibrated and the free surface is a sink, so $\sigma_M$ reaches every depth. Q\&A parallels: plasma sheath; semiconductor depletion layer, many Debye lengths wide when surface potential far exceeds kT; dielectric, which reduces but does not nullify.}
+  \note{Three length scales decide what the surface sees. Left: a plasma at an absorbing wall, where only particles in a sheath one Debye length thick reach the wall, and copper mirrors it. First, the field stops at the surface, within 0.1 nanometers. Second, fluctuating internal stresses are screened within a characteristic distance of about 25 nanometers, an order-of-magnitude estimate; only dislocations in that sheath talk to the surface, and EBSD samples that layer. Third, the applied load is not screened and reaches millimeter depths. Screening reduces, it does not nullify: in our picture, weak screened stresses set sources and structure inside the sheath, and the strong load drives mobile dislocations through it. Next, what copper does and does not show. [if asked: the estimate is Debye-like screening in a two-dimensional single-slip dislocation gas (Groma 2006); parallels are the semiconductor depletion layer and a dielectric.]}
 \end{frame}
 
 % ══ PART III — Limits and the future ═════════════════════════════════════════
@@ -812,7 +812,7 @@
   \vspace{0.02cm}
   \claim{A stronger test changes both the material and the loading history.}
   \source{Ashkenazy et al., \condref, discussion and limitations.}
-  \note{The honest limitations: one conditioned cathode and one external reference; field level and breakdown density covary; LAM is a relative proxy. The invitation to replicate and compare across facilities comes on the last slide. Depth matters: STEM depletion in hard copper, EBSD curvature in heat-treated copper, each in the top few hundred nanometers at most. A depth profile on one material would show whether they are two ends of one redistribution. Next experiments add depth and change material and loading mode.}
+  \note{Copper shows the effect; it does not show universality. What is shown: a large-area structural difference, three metrics that agree, internal and external controls, and support for the MDDF prediction. What remains open: one conditioned cathode in one experiment, no full depth profile, no grain-orientation dependence yet, no further cathodes and no second material. On this cathode, field level and breakdown density vary together, and LAM is a relative proxy, compared under one protocol. A stronger test changes both the depth we probe and the material. That is where we go next.}
 \end{frame}
 
 % ── 14. Two next coordinates (RFX 1) ─────────────────────────────────────────
@@ -864,7 +864,7 @@
   \vspace{0.02cm}
   \claim{Depth continues our STEM line; material tests the mechanism itself.}
   \sources{\srcl{a}CASINO Monte Carlo, Drouin et al., Scanning 29, 92 (2007); \srcl{b}Jacewicz et al., JAP 137, 193302 (2025).}
-  \note{Two coordinates on one picture. Today's result sits at about 40 nanometers, EBSD in heat-treated copper; the 2025 STEM depletion was about 200 nanometers deep, in hard copper. Going deeper means cross-sections, TEM, STEM and EBSD, from a mapped high-field region and from the reference through the top micron, with the artifact controls learned in 2025, to ask whether the 40-nanometer EBSD layer and the 200-nanometer STEM denuded zone belong to one depth profile, and whether the denuded zone is the sheath, its width set by the local screening length, about eight of them. Depth continues our own STEM line, HUJI, published with Uppsala. Along the material axis: AISI 304L under continuous DC, a first campaign with Consorzio RFX. Next slide.}
+  \note{Our next steps run along two axes, depth and material. Today's result sits at about 40 nanometers in heat-treated copper; the 2025 STEM depletion in hard copper was about 200 nanometers deep. Going deeper means cross-sections from a mapped high-field region and from the reference, through the top micrometer. They ask whether the EBSD layer and the denuded zone belong to one depth profile, and whether the denuded zone is the sheath, about eight screening lengths wide. We carry over the artifact controls from the 2025 red herrings. Depth continues our own STEM line, published with Uppsala. Along the material axis comes stainless steel under continuous DC, with Consorzio RFX, on the next slide.}
 \end{frame}
 
 % ── 15. Stainless steel test (RFX 2) ─────────────────────────────────────────
@@ -912,7 +912,7 @@
   % Next-campaign line removed from the slide 3 Oct evening (author); kept in the note as the Q&A answer.
   \claim{Copper supports the memory; steel asks whether it is universal.}
   \source{\srcl{a}Bayerlein et al., MSEA 114, L11 (1989).}
-  \note{Steel is a different material, so the dislocation picture expects a different structural evolution: lower stacking-fault energy and planar slip, and a steady traction of about 16 kilopascals instead of about a billion pulses. Its metastable austenite is a built-in strain gauge: epsilon and alpha-prime martensite appear above a few tenths of a percent of plastic strain. With Consorzio RFX---Antonio De Lorenzi, Nicola Pilan and Emanuele Spada---two 304L electrodes ran 90 and 73 hours at 59 to 61 MV/m, zero breakdowns. The exposed apex lies inside or below the unexposed range. References exist, but no same-area before and after; with two to four maps per group no field effect can yet be resolved. The references are a different heat. For Q\&A, what next on steel: one electrode mapped before and after being driven into breakdowns, with epsilon and alpha-prime in the phase list so that absent martensite becomes a strain bound. Also for Q\&A: we have not yet looked for martensite on an exposed surface; the plan is to use its absence as a strain gauge. The copper signal itself is a low-strain rearrangement (a 0.5 deg LAM rise over a 3~$\mu$m step is of order $10^{13}$~m$^{-2}$ GND), so steel and copper would then say the same thing from two sides. Nicola's talk follows.}
+  \note{Steel is a different material, so we expect different structural evolution. Lower stacking-fault energy means planar slip, and continuous DC gives a steady traction of about 16 kilopascals not a billion pulses. Its metastable austenite is a built-in strain gauge: epsilon and alpha-prime martensite mark plastic strain above a few tenths of a percent. With Consorzio RFX, Antonio De Lorenzi, Nicola Pilan and Emanuele Spada, two 304L electrodes ran 90 and 73 hours at 59 to 61 megavolts per meter, zero breakdowns. On 26 EBSD maps the exposed apex lies inside or below the unexposed range, and with two to four maps per group a field effect cannot yet be resolved. Copper supports the memory; steel asks whether it is universal. Nicola will tell you about the RFX program next. [if asked: we have not yet looked for martensite on an exposed surface. Next on steel: one electrode mapped before and after being driven into breakdowns, with epsilon and alpha-prime in the phase list, so that absent martensite becomes a strain bound. 80 percent power at one standard deviation needs about 17 maps per group.]}
 \end{frame}
 
 % ── 16. Conclusion + 2025 bookend ────────────────────────────────────────────
@@ -937,7 +937,7 @@
     Last year: ``other materials? more samples?'' --- here is the large-area~answer.
   \end{beamercolorbox}
   {\footnotesize\color{muted}Copper result: Ashkenazy et al., \condref.}
-  \note{Close the loop from the title and from last year. Model predicted a structural memory; STEM saw it at a few specific locations; large-area EBSD supports it across the electrode: the four bars are the tier means, 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery, 0.68 on the reference, about 75 percent higher at high field. Stainless-steel and depth programs are the next round of comparative forensics promised in 2025. The invitation and the paper link are on the next slide. Cite arXiv:2606.19192.}
+  \note{Conditioning appears to leave a subsurface memory. Our model predicts that conditioning evolves the near-surface dislocation structure. STEM saw it locally in 2025, and large-area EBSD now supports it. The four bars are the tier means: 1.21 and 1.19 degrees at center and edge, 0.79 at the periphery and 0.68 on the reference, about 75 percent higher at high field. Depth and stainless steel now test whether the memory survives a change of scale, alloy and loading. The paper is on arXiv, 2606.19192. To close, what we found and what we are asking for.}
 \end{frame}
 
 % ── 19. Conclusions and invitation ──────────────────────────────────────────
@@ -967,7 +967,7 @@
       \href{https://arxiv.org/pdf/2606.19192}{\footnotesize\bfseries\color{purple}arxiv.org/pdf/2606.19192}\\[0.05cm]
       {\tiny\color{muted}\srcl{a}Ashkenazy et al., arXiv:2606.19192\par}
   \end{columns}
-  \note{What, where, what next. Conditioning leaves a structural memory in the near-surface dislocation population; supported on one cathode, not yet replicated. It lives within a screening length of the surface: the layer EBSD sees and the layer that sets emission. What would settle it: the same area mapped before and after, a depth profile, and a second material, steel with Consorzio RFX. Then the invitation; the QR code and link open the paper. (Optional aside: Mircea's resistivity measurements, just before this talk, probe the same state.) Thank you.}
+  \note{Three conclusions, and an invitation. Conditioning leaves a structural memory in the near-surface dislocation population; it is supported on one cathode and not yet replicated. In our picture it lives within a screening length of the surface, the layer EBSD sees and the layer that sets emission. What would settle it is the same area mapped before and after, a depth profile, and a second material, steel with Consorzio RFX. So talk to me about new materials, other electrode configurations and same-area mapping, and the QR code opens the paper. [optional: Mircea's resistivity measurements, at 11:30 just before us, probe the same state.] Thank you. Nicola will tell you about the RFX program next.}
 \end{frame}
 
 % ══ Backup ═══════════════════════════════════════════════════════════════════
@@ -1067,7 +1067,7 @@
   \end{columns}
   {\centering\tiny\color{muted}STEM: HUJI, I.~Popov.\par}
   \source{Jacewicz et al., J.\ Appl.\ Phys.\ 137, 193302 (2025), Figs.\ 8--10.}
-  \note{The field-exposed versus reference STEM pair from the 300 K cathode. In the published paper this pair shows a strong reduction of dislocation walls (Fig. 9); the zone the paper calls dislocation-denuded and clearly visible is the 30 K cathode (Fig. 10). No thickness is stated in the paper.}
+  \note{This is the field-exposed versus reference pair from the 300-kelvin cathode. On the field-exposed side the dislocation walls are strongly reduced, while the reference keeps walls up to the surface. In the published paper this pair is Figure 9; the zone the paper calls denuded, and shows most clearly, is on the 30-kelvin cathode, Figure 10. The paper states no thickness. Back to the questions. [if asked: the 200 nanometers is read from the Figure 10 scale bar.]}
 \end{frame}
 
 % Backup 'copper result in one figure' (manuscript infographic) dropped 3 Oct 2026
