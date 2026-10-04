@@ -715,7 +715,8 @@
       \centering
       % Author decision 4 Oct: plasma at an absorbing wall replaces the dielectric drawing.
       \begin{tikzpicture}[x=0.70cm,y=0.42cm,font=\scriptsize]
-        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=teal] at (0.3,3.1) {Plasma at an absorbing wall};
+        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=teal] (t1) at (0.3,3.1) {Plasma at an absorbing wall};
+        \node[anchor=base west,font=\tiny,text=muted,inner sep=1pt] at ([xshift=4pt]t1.base east) {schematic};
         \fill[steel!55] (0.3,2.45) rectangle (4.0,2.95);
         \node[color=white,font=\scriptsize\bfseries] at (2.15,2.7) {wall};
         \fill[teal!14] (0.3,1.75) rectangle (4.0,2.45);
@@ -733,7 +734,8 @@
     \column{0.53\textwidth}
       \centering
       \begin{tikzpicture}[x=0.70cm,y=0.42cm,font=\scriptsize]
-        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=copper] at (0.3,3.1) {Copper under the Maxwell traction};
+        \node[anchor=south west,inner xsep=0pt,font=\footnotesize\bfseries,color=copper] (t2) at (0.3,3.1) {Copper under the Maxwell traction};
+        \node[anchor=base west,font=\tiny,text=muted,inner sep=1pt] at ([xshift=4pt]t2.base east) {schematic};
         \foreach \x in {0.7,1.5,2.3,3.1} {\draw[->,thick,teal] (\x,3.05) -- (\x,2.55);}
         \fill[purple!10] (0.3,1.75) rectangle (4.0,2.45);
         \fill[copper!8] (0.3,0.2) rectangle (4.0,1.75);
