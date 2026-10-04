@@ -5,7 +5,7 @@ Last updated: **2026-09-28, 02:00** (end of a long session; resume 2026-09-29).
 **Talk slot (from Indico, verified 2026-09-28): Monday 5 October 2026, 12:00–12:30,
 Conditioning session, Montreux.** Registered title: *Does conditioning leave a
 structural memory? Large-area evidence for the dislocation picture.* 30 min
-excluding questions. W. Wuensch (09:15) and V. Bjelland (10:00) speak before
+including questions (confirmed by the author 3 Oct). W. Wuensch (09:15) and V. Bjelland (10:00) speak before
 us, N. Pilan (RFX) right after. Programme notes: `knowledge/mevarc26_programme.md`.
 
 ---
@@ -275,13 +275,14 @@ untracked again, that is the same symptom: rebuild the index, do not reset.
 
 ## 5. Decisions already made — do not re-open
 
-30 min excluding questions; review-weighted balance; `E_S` delayed to one line
-on the payoff slide (and the infographic on the conclusion); "candidate
-structural basis for `E_S`" claim strength; ~200 nm denuded zone; two RFX
+30 min including questions (confirmed by the author 3 Oct); review-weighted balance; `E_S` on no slide,
+Q&A only (the infographic backup is dropped); "candidate structural basis for `E_S`" claim strength (Q&A); ~200 nm denuded zone; two RFX
 main-path slides with RFX framed as ongoing work, no field claim; 2025 figure
 reuse; template branding per `ea22740`; slide 14 states the manuscript's
 screening claim (ℓ_D ≈ 25 nm, thickness not predicted) and does not name `E_S`;
 title and subtitle follow the Indico registration.
+(Updated 5 Oct 2026 from the external review: the two lines above on timing and `E_S` were stale;
+`CHANGES_2-4_OCT.md` §2 is the current wording record.)
 
 ## Final touches, 2 Oct 2026 (talk agent, afternoon)
 
