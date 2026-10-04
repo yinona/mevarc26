@@ -82,10 +82,10 @@ def f08():
     fig,ax=plt.subplots(figsize=(7.4*CM,4.95*CM),dpi=300); fig.subplots_adjust(0,0,1,1); ax.imshow(sem); ax.set_axis_off()
     ax.add_patch(Rectangle((730,530),340,140,fill=False,ec=HIGH,lw=1.6))
     ax.annotate("EBSD map\n500 µm wide",xy=(1070,650),xytext=(1130,780),fontsize=8.5,fontweight="bold",color="white",
-                bbox=dict(boxstyle="round,pad=0.25",fc=HIGH,ec="none"),arrowprops=dict(arrowstyle="-",color=HIGH,lw=1.4))
-    for (x,y) in [(490,170),(830,220),(1420,1040)]: ax.add_patch(plt.Circle((x,y),70,fill=False,ec=REF,lw=1.4,ls="--"))
+                bbox=dict(boxstyle="round,pad=0.25",fc=INK,ec="none"),arrowprops=dict(arrowstyle="-",color=HIGH,lw=1.4))
+    for (x,y) in [(490,170),(830,220),(1420,1040)]: ax.add_patch(plt.Circle((x,y),70,fill=False,ec=COPPER,lw=1.4,ls="--"))
     ax.annotate("breakdown craters",xy=(560,170),xytext=(120,330),fontsize=8.5,fontweight="bold",color="white",
-                bbox=dict(boxstyle="round,pad=0.25",fc=REF,ec="none"),arrowprops=dict(arrowstyle="-",color=REF,lw=1.4))
+                bbox=dict(boxstyle="round,pad=0.25",fc=COPPER,ec="none"),arrowprops=dict(arrowstyle="-",color=COPPER,lw=1.4))
     ax.annotate("",xy=(830,220),xytext=(830,530),arrowprops=dict(arrowstyle="<->",color="white",lw=1.2))
     ax.text(850,400,"0.47 mm",color="white",fontsize=8,fontweight="bold",va="center",path_effects=[pe.withStroke(linewidth=2,foreground=INK)])
     ax.add_patch(Rectangle((60,1120),660,22,color="white"))
