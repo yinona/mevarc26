@@ -584,8 +584,8 @@ gives no thickness (the ~200 nm is read from its Fig. 10; proj26/own_work/papers
 
 Baseline 2c4db20 (25 pages). Result `make`: main.pdf and main-notes.pdf **22 pages** each (21 main + 1 backup),
 speaker_text.pdf 23 pages (summary page + 22 frames); worst hbox overfull 1.61 pt (frame 4, L337, unchanged);
-one vbox overfull of 2.21 pt at L779 (frame 16), already present at 2c4db20 (checked by building `git show
-2c4db20:main.tex` in a scratch copy); no undefined references; QR on frame 21 decodes to
+the 2.21 pt vbox overfull on frame 16 (present since 2c4db20) is gone with the de-load below; no vbox
+overfull in any PDF; no undefined references; QR on frame 21 decodes to
 `https://arxiv.org/pdf/2606.19192` in main.pdf and main-notes.pdf.
 
 | Item | Commit | Where | Change |
@@ -593,9 +593,13 @@ one vbox overfull of 2.21 pt at L779 (frame 16), already present at 2c4db20 (che
 | 1 | 495e254 | main.tex L976-1054; REVIEW_CONTEXT §2 | three RFX backups commented out with a dated note (restorable); STEM backup kept as page 22; comment pointers L873, L876 reworded; no pointer to the RFX backups remained in slide or note text |
 | 2 | 55dff6c | all 22 `\note{}` | spoken speaker text: point first, transition last, "we" register; 2064 spoken words over 21 main frames (15.9 min read aloud at 130 wpm); `[optional: ...]` asides (Walter f2, Jianyu with Guodong Meng and Veronika f6, Victoria f8, Mircea f21); `[if asked: ...]` facts (paper gives no thickness f5, f22; FIB oxide clean f9; BD density f13; tests f14; theory-experiment record and E_S f15; Groma and parallels f16; martensite not yet looked for, next steel campaign, 17 maps per group f19) |
 | 3 | 3f7f4c7 | tools/extract_notes.py, Makefile | option (a): `make speaker` extracts titles and notes from main.tex into speaker_text.tex (generated, ignored) and speaker_text.pdf; default `make` builds all three PDFs |
-| 4 | (this commit) | main.pdf, main-notes.pdf, HANDOFF | rebuilt |
+| 4 | c0a3f50 | main.pdf, main-notes.pdf, HANDOFF | rebuilt |
+| 5 | 15a45a8 | frame 16 (L702-777) | de-loaded (author addition): short drawing labels; boxes = headline plus one line at 10 pt, widths 3.2/5.0/4.0 cm, at most 4 lines; the two teal sentences removed (now in the speaker text); one claim 'In this picture, weak screened internal stresses set the structure; the strong unscreened load drives the mobile dislocations through it.'; sources unchanged |
+| 6 | see git log | frame 16 note; `\qa`; note page | frame 16 speaker text (139 spoken words) carries the three scales, plasma of dipoles, absorbing wall, roles sentence, hand-off, plus the author's three bracketed lines; `\qa{}` sets all bracketed asides scriptsize and muted; compact note-page header (frame title, build date); without these the notes page overflowed by 81 pt |
+| 7 | see git log | tools/extract_notes.py | unwraps `\qa{}`; any bracket starting with a lowercase word is an aside |
 
-Per-frame spoken words: 59, 81, 92, 111, 117, 119, 77, 115, 110, 104, 64, 65, 107, 85, 107, 120, 92, 114, 130,
-94, 101; backup 65. Frames 11 and 12 sit near the 60-word floor (64, 65). Renders (not committed):
-`renders_tmp/speaker_p01.png`, `speaker_p02.png`, `main_p19.png`, `main_p22.png`, `main_p21.png`.
+Per-frame spoken words: 59, 81, 92, 111, 117, 119, 77, 115, 110, 104, 64, 65, 107, 85, 107, 139, 92, 114, 130,
+94, 101 (total 2083, 16.0 min at 130 wpm); backup 65. Frames 11 and 12 sit near the 60-word floor (64, 65). Renders (not committed):
+`renders_tmp/speaker_p01.png`, `speaker_p02.png`, `speaker_p17.png`, `main_p16.png`, `notes_p16.png`, `main_p19.png`,
+`main_p21.png`, `main_p22.png`.
 Not changed: proj26 MORNING_POINTS and QA_PREP still describe 25 pages and backups 23-24 (lead to update).
