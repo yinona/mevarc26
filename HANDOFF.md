@@ -577,3 +577,5 @@ do not rename the charges") is replaced by a plasma-at-an-absorbing-wall drawing
 Renders (not committed): `renders_tmp/p05.png`, `p07.png`, `p16.png`, `p18.png`, `p19.png`, `p21.png`.
 Open for the author: frame 18 b sources the ~200 nm tick to Jacewicz 2025 as instructed, but the paper's text
 gives no thickness (the ~200 nm is read from its Fig. 10; proj26/own_work/papers/jacewicz2025.md L46-54).
+
+- 4 Oct 2026 (author-approved, four items): 833471f frame 3 bullet 3 'fitted to ... then reproduced' and note (fit vs prediction); 92988ba frame 21 item 2 'Our picture: it lives within a screening length of the surface --- ...' (list spacing tightened); 1bd5b2b frame 16 'schematic' tags on both drawings; 2134135 frame 15 note with the five-clause theory-experiment record (139 words; 'The depth connection is still open' dropped). `make`: 25 pages both PDFs, worst overfull 1.61 pt, no undefined references, QR decodes. Renders `renders_tmp/p03.png`, `p15.png` (unchanged slide, note only), `p16.png`, `p21.png`.
